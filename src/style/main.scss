@@ -1,3 +1,18 @@
 @import "./variable.scss";
-@import url("https://fonts.googleapis.com/css?family=Oxygen|Poiret+One");
 
+
+h1 {
+    font-size: 32px;
+    font-family: "Oh Now!";
+    color: $highlight;
+  
+    @media (max-width: $screen-sm) {
+      font-size: 60px !important;
+      letter-spacing: 16px;
+    }
+  
+    @media (max-width: $screen-xs) {
+      font-size: 36px !important;
+      letter-spacing: 8px;
+    }
+  }

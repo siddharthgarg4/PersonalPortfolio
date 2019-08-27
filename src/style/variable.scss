@@ -18,3 +18,8 @@ $screen-lg: 1200px;
 //     font-family: "Oh Now";
 //     src: url("../fonts/Oh Now!.ttf") format("tff");
 // }
+
+@font-face {
+    font-family: "Oh Now!";
+    src: url("/src/fonts/Oh\ Now!.otf") format("opentype");
+}
