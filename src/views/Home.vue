@@ -1,7 +1,6 @@
 <template>
   <div class="home" id="home">
     <b-container class="homePage" fluid>
-
       <b-row class="navigation d-flex align-items-center">
         <b-col lg="2" sm="3" md="2" xl="1" cols="3" class="pagination-centered">
           <img class="img-fluid logo" src="../assets/sgLogo.png" />
@@ -29,49 +28,133 @@
 
       <b-row class="center-name align-items-center d-flex" align-h="center">
         <b-col class="col-auto">
-          <img class="img-fluid center-image" src="../assets/center.png">
+          <img class="img-fluid center-image" src="../assets/center.png" />
         </b-col>
       </b-row>
 
       <b-row align-h="end">
         <b-col class="col-auto">
-          <img src="../assets/gitHub.png" class="img-fluid fixed-icon">
+          <img src="../assets/gitHub.png" class="img-fluid fixed-icon" />
         </b-col>
       </b-row>
 
       <b-row class="justify-content-end d-flex" align-v="end">
         <b-col cols="4" class="d-flex justify-content-center">
-          <img src="../assets/scrollMore.png" class="img-fluid scroll-icon">
+          <img src="../assets/scrollMore.png" class="img-fluid scroll-icon" />
         </b-col>
         <b-col cols="4" class="d-flex justify-content-end">
-          <img src="../assets/linkedIn.png" class="img-fluid fixed-icon">
+          <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
+        </b-col>
+      </b-row>
+    </b-container>
+    <b-container class="project-page" fluid>
+      <b-row class="remove-all-padding d-flex">
+        <b-col class="d-flex justify-content-center remove-all-padding">
+          <p class="page-title">Personal Portfolio</p>
         </b-col>
       </b-row>
 
+      <b-row>
+        <b-col md="6" sm="12" xs="12" class="remove-all-padding">
+          <b-row>
+            <b-col cols="12" class="blindsight remove-all-padding">
+              <flip-card
+                :active-hover="true"
+                height="100%"
+                width="100%"
+                transition="1s"
+                class="simple-test"
+                cardColour="#E29188"
+              >
+              </flip-card>
+            </b-col>
+            <b-col cols="12" class="grow remove-all-padding">
+              <flip-card
+                :active-hover="true"
+                height="100%"
+                width="100%"
+                transition="1s"
+                class="simple-test"
+                cardColour="#A88A8C"
+              >
+              </flip-card>
+            </b-col>
+          </b-row>
+        </b-col>
+
+        <b-col md="6" sm="12" xs="12" class="remove-all-padding">
+          <b-row>
+            <b-col cols="12" class="easy-gr remove-all-padding">
+              <flip-card
+                :active-hover="true"
+                height="100%"
+                width="100%"
+                transition="1s"
+                class="simple-test"
+                cardColour="#898C95"
+              >
+              </flip-card>
+            </b-col>
+            <b-col cols="12" class="healthline remove-all-padding">
+              <flip-card
+                :active-hover="true"
+                height="100%"
+                width="100%"
+                transition="1s"
+                class="simple-test"
+                cardColour="#FEF4F3"
+              >
+              </flip-card>
+            </b-col>
+            <b-col cols="12" class="kinemagic remove-all-padding">
+              <flip-card
+                :active-hover="true"
+                height="100%"
+                width="100%"
+                transition="1s"
+                class="simple-test"
+                cardColour="#FAB2AF"
+              >
+              </flip-card>
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-export default class Home extends Vue {}
+export default Vue.extend({
+  name: "home"
+});
 </script>
 
 <style lang="scss">
 @import "../style/main.scss";
 @import "../style/variable.scss";
 .home {
-  min-height: 400vh;
+  min-height: 2400px;
   max-height: 400vh;
+  width: 100vw !important;
+  max-width: 100vw;
+  max-width: 100vw;
   height: 400vh;
   background-color: $tint;
-  padding-left: 2%;
-  padding-right: 2%;
-  padding-top: 3%;
-  padding-bottom: 3%;
+  @media (max-width: $screen-sm) {
+    min-height: 3350px;
+  }
   .homePage {
-    height: 90vh;
-    // background-color: white;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    height: 97vh;
+    min-height: 600px;
+    @media (max-width: $screen-xs) {
+      margin-bottom: 75px;
+    }
   }
   .navigation-item {
     font-size: 30px;
@@ -106,6 +189,9 @@ export default class Home extends Vue {}
       max-width: 40px;
       max-width: 40px;
     }
+    @media (max-width: $screen-xs) {
+      padding-top: 40px;
+    }
   }
   .scroll-icon {
     max-width: 50px;
@@ -119,6 +205,45 @@ export default class Home extends Vue {}
   .center-name {
     height: 65%;
   }
-  
+}
+.remove-all-padding {
+  padding: 0 !important;
+}
+.project-page {
+  height: 150vh;
+  min-height: 1200px;
+  background-color: $tint;
+  margin-top: 20px;
+  @media (max-width: $screen-sm) {
+    min-height: 2150px;
+  }
+  .page-title {
+    font-size: 45px;
+    margin: 0;
+    font-family: "Oh Now!", sans-serif;
+    @media (max-width: $screen-lg) {
+      font-size: 35px !important;
+    }
+  }
+  .blindsight {
+    height: 55vh;
+    min-height: 440px;
+  }
+  .easy-gr {
+    height: 40vh;
+    min-height: 320px;
+  }
+  .healthline {
+    height: 50vh;
+    min-height: 400px;
+  }
+  .grow {
+    height: 75vh;
+    min-height: 600px;
+  }
+  .kinemagic {
+    height: 40vh;
+    min-height: 320px;
+  }
 }
 </style>
