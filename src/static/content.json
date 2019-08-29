@@ -1,1 +1,17 @@
-{ }
+{ 
+    "blindsight" : {
+        "name" : "blindsight"
+    },
+    "grow" : {
+        "name" : "grow"
+    },
+    "easygr" : {
+        "name" : "easygr"
+    },
+    "healthline" : {
+        "name" : "healthline"
+    },
+    "kinemagic" : {
+        "name" : "kinemagic"
+    }
+}

@@ -65,6 +65,7 @@
                 transition="1s"
                 class="simple-test"
                 cardColour="#E29188"
+                projectName="blindsight"
               >
               </flip-card>
             </b-col>
@@ -76,6 +77,7 @@
                 transition="1s"
                 class="simple-test"
                 cardColour="#A88A8C"
+                projectName="grow"
               >
               </flip-card>
             </b-col>
@@ -92,6 +94,7 @@
                 transition="1s"
                 class="simple-test"
                 cardColour="#898C95"
+                projectName="easygr"
               >
               </flip-card>
             </b-col>
@@ -103,6 +106,7 @@
                 transition="1s"
                 class="simple-test"
                 cardColour="#FEF4F3"
+                projectName="healthline"
               >
               </flip-card>
             </b-col>
@@ -114,6 +118,7 @@
                 transition="1s"
                 class="simple-test"
                 cardColour="#FAB2AF"
+                projectName="kinemagic"
               >
               </flip-card>
             </b-col>
@@ -126,8 +131,17 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+var json = require("@/static/content.json");
 export default Vue.extend({
-  name: "home"
+  name: "home",
+  data() {
+    return {
+      json: {}
+    };
+  },
+  mounted() {
+    this.json = json;
+  }
 });
 </script>
 
@@ -244,6 +258,10 @@ export default Vue.extend({
   .kinemagic {
     height: 40vh;
     min-height: 320px;
+  }
+  .fullSize {
+    height: 100%;
+    width: 100%;
   }
 }
 </style>

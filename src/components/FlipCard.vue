@@ -7,9 +7,13 @@
   >
     <div class="flipper" :style="cardStyle">
       <div class="front" :style="cardStyle">
-        <b-row class="fullSize">
-          <b-col class="fullSize" :style="{ 'background-color': cardColour }">
-            <slot name="front"></slot>
+        <b-row class="fullSize d-flex align-items-center">
+          <b-col
+            class="fullSize align-items-center"
+            :style="{ 'background-color': cardColour }"
+          >
+            <p>{{ json[projectName].name }}</p>
+            <img class="img-fluid project-logo" :src="projectImage" />
           </b-col>
         </b-row>
       </div>
@@ -25,8 +29,12 @@
 </template>
 
 <script>
+var json = require("@/static/content.json");
 export default {
   name: "flip",
+  mounted() {
+    this.json = json;
+  },
   props: {
     activeClick: {
       type: Boolean,
@@ -55,11 +63,16 @@ export default {
     cardColour: {
       type: String,
       required: false
+    },
+    projectName: {
+      type: String,
+      required: false
     }
   },
   data() {
     return {
-      hover: false
+      hover: false,
+      json: {}
     };
   },
   computed: {
@@ -79,6 +92,11 @@ export default {
       }
 
       return result;
+    },
+    projectImage() {
+      return require("../assets/" +
+        this.json[this.projectName].name +
+        "Logo.png");
     }
   },
   methods: {
@@ -151,5 +169,9 @@ export default {
 .fullSize {
   height: 100%;
   width: 100%;
+}
+.project-logo {
+  height: 100px;
+  width: 100px;
 }
 </style>
