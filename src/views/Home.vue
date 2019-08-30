@@ -28,22 +28,18 @@
 
       <b-row class="center-name align-items-center d-flex" align-h="center">
         <b-col class="col-auto">
-          <img class="img-fluid center-image" src="../assets/center.png" />
+          <img class="img-fluid center-image" src="../assets/center.png"/>
         </b-col>
       </b-row>
 
-      <b-row align-h="end">
-        <b-col class="col-auto">
-          <img src="../assets/gitHub.png" class="img-fluid fixed-icon" />
-        </b-col>
-      </b-row>
-      <b-row align-h="end">
-        <b-col class="col-auto">
-          <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
-        </b-col>
-      </b-row>
+      <div class="fixed-icon-container github">
+        <img src="../assets/gitHub.png" class="img-fluid fixed-icon" />
+      </div>
+      <div class="fixed-icon-container linkedin">
+        <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
+      </div>
 
-      <b-row align-v="end" align-h="center">
+      <b-row align-v="end" align-h="center scroll-container">
         <b-col cols="4" class="d-flex justify-content-center">
           <img src="../assets/scrollMore.png" class="img-fluid scroll-icon" />
         </b-col>
@@ -181,6 +177,12 @@ html,body
       height: 90vh;
     }
   }
+  .scroll-container {
+    margin-top: 10%;
+    @media (max-width: $screen-sm) {
+      margin-top: 30%;
+    }
+  }
   .menu-container {
     height: 50px;
     @media (max-width: $screen-sm) {
@@ -212,19 +214,36 @@ html,body
       min-width: 100px;
     }
   }
+  .fixed-icon-container {
+    position: fixed;
+    z-index: 4000 !important;
+    right: 25px !important;
+    @media (max-width: $screen-sm) {
+      right: 15px !important;
+    }
+  }
+  .github {
+    bottom: 105px;
+    @media (max-width: $screen-sm) {
+      bottom: 65px;
+    }
+  }
+  .linkedin {
+    bottom: 45px;
+    @media (max-width: $screen-sm) {
+      bottom: 20px;
+    }
+  }
   .fixed-icon {
     max-width: 50px;
     min-width: 50px;
     max-height: 75px;
     height: auto;
-    padding-top: 10px;
     @media (max-width: $screen-sm) {
       max-width: 40px;
       min-width: 40px;
-      padding-top: 10px;
     }
     @media (max-width: $screen-xs) {
-      padding-top: 10px;
     }
   }
   .scroll-icon {

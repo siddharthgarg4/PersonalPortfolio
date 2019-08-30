@@ -4,7 +4,7 @@
         <router-link v-if="menuUrlList[n-1].isLink" :to="menuUrlList[n-1].url" :target="openNewTab" :style="subMenuStyle" @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu">
           <i :class="iconClass[n-1]" ref="icon"></i>
         </router-link>
-        <a v-else :style="subMenuStyle" @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu" @click="processCallback(key)">
+        <a :style="subMenuStyle" @mouseover.stop="mouseEnterSubMenu" @mouseout.stop="mouseOutSubMenu" @click="processCallback(key)">
           <i :class="iconClass[n-1]" ref="icon"></i>
         </a>
 

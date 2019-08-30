@@ -1,6 +1,10 @@
 <template>
 	<b-container fluid class="quick-menu" ref="quick-menu" id="quick-menu">
-        <div class="menu fixed-top" :style="menuStyle"></div>
+        <div class="menu fixed-top" :style="menuStyle">
+            <div class='core-menu' @click="toggleMenu">
+                <div class='bar'></div>
+            </div>
+        </div>
     </b-container>
 </template>
 
@@ -18,12 +22,41 @@ export default Vue.extend({
             default:'#fff'
         }
     },
+    computed: {
+        data(){
+            return{
+            menuSize:40
+            }
+        }
+    },
     methods: {
+        getSubMenu(n: any){
+            let menuPosition = [["0","-160"],["80", "-138.6"],["138.6","-80"],["160","0"]]
+            return {top:menuPosition[n][0]+'px',left:menuPosition[n][1]+'px'}
+        },
         menuStyle(){
             return {
                 backgroundColor: this.backgroundColor,
                 color: this.color
             }
+        },
+        toggleMenu(e: any){
+            // let menuEl = this.$refs.quickMenu
+            // let menuIconEl = this.$refs.icon
+            // if(!~menuEl.className.indexOf(' active')){
+            //     menuEl.className += ' active';
+            //     menuIconEl.forEach( function(element, index) {
+            //     element.className += ' menu-animate';
+            //     });
+            // } else {
+            //     menuEl.className = menuEl.className.replace(' active','')
+            //     menuIconEl.forEach( function(element, index) {
+            //     element.className = element.className.replace(' menu-animate','')
+            //     });
+            // }
+        },
+        processCallback(key: any){
+            this.$emit('process',key)
         }
     }
 })
@@ -58,6 +91,7 @@ export default Vue.extend({
     border-radius: 50% !important;
     width: 50px;
     height: 50px;
+    background-color: #050F19;
     text-align: center;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
     color: #fff;
@@ -76,8 +110,6 @@ export default Vue.extend({
       position: absolute;
       left: 0px;
       top: 0px;
-      width: 60px;
-      height: 60px;
       -webkit-transform: rotate(180deg);
       -moz-transform: rotate(180deg);
       -ms-transform: rotate(180deg);
@@ -86,6 +118,11 @@ export default Vue.extend({
       -webkit-transition: all 1s ease;
       -moz-transition: all 1s ease;
       transition: all 1s ease;
+      margin-left: 6px;
+      @media (max-width: $screen-sm) {
+          margin-top: 2px;
+          margin-left: 10px;
+        }
       .bar {
         -webkit-transition: all 1s ease;
         -moz-transition: all 1s ease;
