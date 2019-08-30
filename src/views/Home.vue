@@ -37,13 +37,15 @@
           <img src="../assets/gitHub.png" class="img-fluid fixed-icon" />
         </b-col>
       </b-row>
+      <b-row align-h="end">
+        <b-col class="col-auto">
+          <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
+        </b-col>
+      </b-row>
 
-      <b-row class="justify-content-end d-flex" align-v="end">
+      <b-row align-v="end" align-h="center">
         <b-col cols="4" class="d-flex justify-content-center">
           <img src="../assets/scrollMore.png" class="img-fluid scroll-icon" />
-        </b-col>
-        <b-col cols="4" class="d-flex justify-content-end">
-          <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
         </b-col>
       </b-row>
     </b-container>
@@ -174,8 +176,9 @@ html,body
     padding-bottom: 3%;
     height: 97vh;
     min-height: 600px;
-    @media (max-width: $screen-xs) {
+    @media (max-width: $screen-sm) {
       margin-bottom: 75px;
+      height: 90vh;
     }
   }
   .navigation-item {
@@ -205,14 +208,17 @@ html,body
   }
   .fixed-icon {
     max-width: 50px;
-    max-width: 50px;
-    padding-top: 20px;
+    min-width: 50px;
+    max-height: 75px;
+    height: auto;
+    padding-top: 10px;
     @media (max-width: $screen-sm) {
       max-width: 40px;
-      max-width: 40px;
+      min-width: 40px;
+      padding-top: 10px;
     }
     @media (max-width: $screen-xs) {
-      padding-top: 40px;
+      padding-top: 10px;
     }
   }
   .scroll-icon {

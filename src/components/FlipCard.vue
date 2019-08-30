@@ -12,8 +12,14 @@
             class="fullSize align-items-center"
             :style="{ 'background-color': cardColour }"
           >
-            <p>{{ json[projectName].name }}</p>
-            <img class="img-fluid project-logo" :src="projectImage" />
+            <b-row class="fullSize">
+              <b-col>
+                <p class="project-title">{{ json[projectName].name }}</p>
+              </b-col>
+              <b-col>
+                <img class="img-fluid project-logo" :src="projectImage" />    
+              </b-col>
+            </b-row>
           </b-col>
         </b-row>
       </div>
@@ -120,6 +126,9 @@ export default {
 </script>
 
 <style>
+.remove-all-padding {
+  padding: 0 !important;
+}
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
@@ -171,7 +180,13 @@ export default {
   width: 100%;
 }
 .project-logo {
-  height: 100px;
-  width: 100px;
+  height: 25%;
+  max-height: 150px;
+  width: auto;
+}
+.project-title {
+  font-size: 75px;
+  font-family: "Oh Now!", sans-serif;
+  padding-top: 8pt;
 }
 </style>
