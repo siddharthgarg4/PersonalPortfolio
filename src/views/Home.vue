@@ -148,6 +148,14 @@ export default Vue.extend({
 <style lang="scss">
 @import "../style/main.scss";
 @import "../style/variable.scss";
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
 .home {
   min-height: 2400px;
   max-height: 400vh;
