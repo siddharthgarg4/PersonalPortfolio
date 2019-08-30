@@ -13,11 +13,20 @@
             :style="{ 'background-color': cardColour }"
           >
             <b-row class="fullSize d-flex justify-content-center">
-              <b-col cols="12" class="d-flex justify-content-center" align-self="end">
-                <p class="project-title" :style="{ 'color': json[projectName].titleColour }">{{ json[projectName].name }}</p>
+              <b-col
+                cols="12"
+                class="d-flex justify-content-center"
+                align-self="end"
+              >
+                <p
+                  class="project-title"
+                  :style="{ color: json[projectName].titleColour }"
+                >
+                  {{ json[projectName].name }}
+                </p>
               </b-col>
               <b-col cols="12">
-                <img class="img-fluid project-logo" :src="projectImage" />    
+                <img class="img-fluid project-logo" :src="projectImage" />
               </b-col>
             </b-row>
           </b-col>
@@ -134,6 +143,7 @@ export default {
   -moz-perspective: 1000;
   perspective: 1000;
   z-index: 1000 !important;
+  pointer-events: all;
 }
 
 .flip-container.active-hover:hover .flipper,

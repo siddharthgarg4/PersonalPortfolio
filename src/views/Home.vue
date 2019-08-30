@@ -21,14 +21,21 @@
             </b-col>
           </b-row>
         </b-col>
-        <b-col sm="3" md="2" lg="2" xl="1" cols="3" class="menu-container remove-all-padding">
+        <b-col
+          sm="3"
+          md="2"
+          lg="2"
+          xl="1"
+          cols="3"
+          class="menu-container remove-all-padding"
+        >
           <custom-menu></custom-menu>
         </b-col>
       </b-row>
 
       <b-row class="center-name align-items-center d-flex" align-h="center">
         <b-col class="col-auto">
-          <img class="img-fluid center-image" src="../assets/center.png"/>
+          <img class="img-fluid center-image" src="../assets/center.png" />
         </b-col>
       </b-row>
 
@@ -146,13 +153,13 @@ export default Vue.extend({
 <style lang="scss">
 @import "../style/main.scss";
 @import "../style/variable.scss";
-html,body
-{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 .home {
   min-height: 2400px;
@@ -170,7 +177,7 @@ html,body
     padding-right: 2%;
     padding-top: 3%;
     padding-bottom: 3%;
-    height: 97vh;
+    height: 98vh;
     min-height: 600px;
     @media (max-width: $screen-sm) {
       margin-bottom: 75px;
@@ -307,6 +314,6 @@ html,body
   }
   .buttonTwo {
     background-colour: blue;
-  } 
+  }
 }
 </style>
