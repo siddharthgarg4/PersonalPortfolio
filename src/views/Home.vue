@@ -21,8 +21,8 @@
             </b-col>
           </b-row>
         </b-col>
-        <b-col sm="3" md="2" lg="2" xl="1" cols="3">
-          "something goes here"
+        <b-col sm="3" md="2" lg="2" xl="1" cols="3" class="menu-container remove-all-padding">
+          <custom-menu></custom-menu>
         </b-col>
       </b-row>
 
@@ -181,6 +181,12 @@ html,body
       height: 90vh;
     }
   }
+  .menu-container {
+    height: 50px;
+    @media (max-width: $screen-sm) {
+      height: 40px !important;
+    }
+  }
   .navigation-item {
     font-size: 30px;
     font-family: "Oh Now!", sans-serif;
@@ -277,5 +283,11 @@ html,body
     height: 100%;
     width: 100%;
   }
+  .buttonOne {
+    background-colour: red;
+  }
+  .buttonTwo {
+    background-colour: blue;
+  } 
 }
 </style>

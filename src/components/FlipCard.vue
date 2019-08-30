@@ -7,16 +7,16 @@
   >
     <div class="flipper" :style="cardStyle">
       <div class="front" :style="cardStyle">
-        <b-row class="fullSize d-flex align-items-center">
+        <b-row class="fullSize d-flex justify-content-center">
           <b-col
-            class="fullSize align-items-center"
+            class="fullSize justify-content-center d-flex"
             :style="{ 'background-color': cardColour }"
           >
-            <b-row class="fullSize">
-              <b-col>
-                <p class="project-title">{{ json[projectName].name }}</p>
+            <b-row class="fullSize d-flex justify-content-center">
+              <b-col cols="12" class="d-flex justify-content-center" align-self="end">
+                <p class="project-title" :style="{ 'color': json[projectName].titleColour }">{{ json[projectName].name }}</p>
               </b-col>
-              <b-col>
+              <b-col cols="12">
                 <img class="img-fluid project-logo" :src="projectImage" />    
               </b-col>
             </b-row>
@@ -133,6 +133,7 @@ export default {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   perspective: 1000;
+  z-index: 1000 !important;
 }
 
 .flip-container.active-hover:hover .flipper,
@@ -180,12 +181,12 @@ export default {
   width: 100%;
 }
 .project-logo {
-  height: 25%;
+  height: 45%;
   max-height: 150px;
   width: auto;
 }
 .project-title {
-  font-size: 75px;
+  font-size: 70px;
   font-family: "Oh Now!", sans-serif;
   padding-top: 8pt;
 }
