@@ -9,19 +9,19 @@
     <div class="sub-menu" :class="{ 'icon-container': !isActivated }">
       <a
         :class="{ 'menu-animate icon1': isActivated }"
-        @click="processCallback(key)"
+        @click="scrollToSection('homePage')"
       ></a>
       <a
         :class="{ 'menu-animate icon2': isActivated }"
-        @click="processCallback(key)"
+        @click="scrollToSection('project-page')"
       ></a>
       <a
         :class="{ 'menu-animate icon3': isActivated }"
-        @click="processCallback(key)"
+        @click="scrollToSection('project-page')"
       ></a>
       <a
         :class="{ 'menu-animate icon4': isActivated }"
-        @click="processCallback(key)"
+        @click="scrollToSection('project-page')"
       ></a>
     </div>
     <div class="menu fixed-top" :style="menuStyle">
@@ -79,6 +79,17 @@ export default Vue.extend({
     },
     processCallback(key: any) {
       this.$emit("process", key);
+    },
+    scrollToSection(section: string) {
+      let sectionElement = document.getElementById(section);
+      if (sectionElement != null) {
+        sectionElement.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+        this.isActivated = !this.isActivated;
+      } else {
+        console.log(
+          "The element associated with the menu item is null / could not be found."
+        );
+      }
     }
   }
 });

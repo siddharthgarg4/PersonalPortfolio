@@ -1,6 +1,6 @@
 <template>
   <div class="home" id="home">
-    <b-container class="homePage" fluid>
+    <b-container class="homePage" id="homePage" fluid>
       <b-row class="navigation d-flex align-items-center">
         <b-col lg="2" sm="3" md="2" xl="1" cols="3" class="pagination-centered">
           <img class="img-fluid logo" src="../assets/sgLogo.png" />
@@ -39,20 +39,20 @@
         </b-col>
       </b-row>
 
-      <div class="fixed-icon-container github">
+      <div class="fixed-icon-container github" @click="goToGithub()">
         <img src="../assets/gitHub.png" class="img-fluid fixed-icon" />
       </div>
-      <div class="fixed-icon-container linkedin">
+      <div class="fixed-icon-container linkedin" @click="goToLinkedIn()">
         <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
       </div>
 
       <b-row align-v="end" align-h="center scroll-container">
-        <b-col cols="4" class="d-flex justify-content-center">
+        <b-col cols="4" class="d-flex justify-content-center" @click="scrollMore()">
           <img src="../assets/scrollMore.png" class="img-fluid scroll-icon" />
         </b-col>
       </b-row>
     </b-container>
-    <b-container class="project-page" fluid>
+    <b-container class="project-page" id="project-page" fluid>
       <b-row class="remove-all-padding d-flex">
         <b-col class="d-flex justify-content-center remove-all-padding">
           <p class="page-title">Personal Portfolio</p>
@@ -143,6 +143,20 @@ export default Vue.extend({
     return {
       json: {}
     };
+  },
+  methods: {
+    goToGithub() {
+      window.open('https://github.com/siddharthgarg-waterloo','_blank');
+    },
+    goToLinkedIn() {
+      window.open('https://www.linkedin.com/in/siddharthgarg-waterloo/','_blank');
+    },
+    scrollMore() {
+      let sectionElement = document.getElementById('project-page');
+      if (sectionElement != null) {
+        sectionElement.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+      }
+    }
   },
   mounted() {
     this.json = json;
