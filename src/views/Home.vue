@@ -27,7 +27,7 @@
           lg="2"
           xl="1"
           cols="3"
-          class="menu-container remove-all-padding"
+          class="menu-container d-flex justify-content-end"
         >
           <custom-menu></custom-menu>
         </b-col>
@@ -48,7 +48,9 @@
 
       <b-row align-v="end" align-h="center scroll-container">
         <b-col cols="4" class="d-flex justify-content-center" @click="scrollMore()">
-          <img src="../assets/scrollMore.png" class="img-fluid scroll-icon" />
+            <div class="chevron"></div>
+            <div class="chevron"></div>
+            <div class="chevron"></div>
         </b-col>
       </b-row>
     </b-container>
@@ -206,8 +208,13 @@ body {
   }
   .menu-container {
     height: 50px;
+    padding-right: 5%;
     @media (max-width: $screen-sm) {
       height: 40px !important;
+      padding-right: 7% !important;   
+    }
+    @media (max-width: $screen-sm) {
+      padding-right: 12% !important;   
     }
   }
   .navigation-item {
@@ -238,10 +245,6 @@ body {
   .fixed-icon-container {
     position: fixed;
     z-index: 4000 !important;
-    right: 25px !important;
-    @media (max-width: $screen-sm) {
-      right: 15px !important;
-    }
   }
   .github {
     bottom: 105px;
@@ -265,15 +268,6 @@ body {
       min-width: 40px;
     }
     @media (max-width: $screen-xs) {
-    }
-  }
-  .scroll-icon {
-    max-width: 50px;
-    max-height: 25px;
-
-    @media (max-width: $screen-sm) {
-      max-width: 40px;
-      max-height: 22px;
     }
   }
   .center-name {
@@ -323,11 +317,61 @@ body {
     height: 100%;
     width: 100%;
   }
-  .buttonOne {
-    background-colour: red;
-  }
-  .buttonTwo {
-    background-colour: blue;
-  }
+}
+$base: 0.6rem;
+.chevron {
+  position: absolute;
+  width: $base * 3.5;
+  height: $base * 0.8;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+ content: '';
+ position: absolute;
+ top: 0;
+ height: 100%;
+ width: 50%;
+ background: #050F19;
+}
+
+.chevron:before {
+ left: 0;
+ transform: skewY(30deg);
+}
+
+.chevron:after {
+ right: 0;
+ width: 50%;
+ transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+ 25% {
+  opacity: 1;
+	}
+ 33.3% {
+  opacity: 1;
+  transform: translateY($base * 3.8);
+ }
+ 66.6% {
+  opacity: 1;
+  transform: translateY($base * 5.2);
+ }
+ 100% {
+  opacity: 0;
+  transform: translateY($base * 8) scale(0.5);
+ }
 }
 </style>
