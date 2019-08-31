@@ -6,21 +6,21 @@
     ref="quick-menu"
     :class="{ active: isActivated }"
   >
-    <div class="sub-menu" :class="{ 'icon-container': !isActivated }">
+    <div :class="{ 'sub-menu': isActivated, 'sizeZero': !isActivated}">
       <a
-        :class="{ 'menu-animate icon1': isActivated }"
+        :class="{ 'menu-animate icon1': isActivated, 'sizeZero': !isActivated }"
         @click="scrollToSection('homePage')"
       ></a>
       <a
-        :class="{ 'menu-animate icon2': isActivated }"
+        :class="{ 'menu-animate icon2': isActivated, 'sizeZero': !isActivated }"
         @click="scrollToSection('project-page')"
       ></a>
       <a
-        :class="{ 'menu-animate icon3': isActivated }"
+        :class="{ 'menu-animate icon3': isActivated, 'sizeZero': !isActivated }"
         @click="scrollToSection('project-page')"
       ></a>
       <a
-        :class="{ 'menu-animate icon4': isActivated }"
+        :class="{ 'menu-animate icon4': isActivated, 'sizeZero': !isActivated }"
         @click="scrollToSection('project-page')"
       ></a>
     </div>
@@ -188,6 +188,12 @@ export default Vue.extend({
           -o-transform-origin: 0% 50%;
           transform-origin: 0% 50%;
         }
+        &:before {
+          margin-top: 30%;
+        }
+        &:after {
+          margin-top: 60%;
+        }
       }
     }
   }
@@ -349,12 +355,12 @@ export default Vue.extend({
     transform: translateY(-2px);
   }
 }
-.icon-container {
-  left: -100px;
-  top: -100px;
-}
 .margin-reduce {
   margin-left: 5px !important;
+}
+.sizeZero {
+  height: 0px;
+  width: 0px;
 }
 .icon1 {
   background-image: url("../assets/homeLogo.png");
