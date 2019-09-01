@@ -47,7 +47,7 @@
       </div>
 
       <b-row align-v="end" align-h="center scroll-container">
-        <b-col cols="4" class="d-flex justify-content-center" @click="scrollMore()">
+        <b-col cols="4" class="d-flex justify-content-center" @click="scrollMore()" style="height: 100px;">
             <div class="chevron"></div>
             <div class="chevron"></div>
             <div class="chevron"></div>
@@ -71,7 +71,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#E29188"
+                cardColour="#F37C74"
                 projectName="blindsight"
               >
               </flip-card>
@@ -83,7 +83,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#A88A8C"
+                cardColour="#122D40"
                 projectName="grow"
               >
               </flip-card>
@@ -100,7 +100,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#898C95"
+                cardColour="#122D40"
                 projectName="easygr"
               >
               </flip-card>
@@ -112,7 +112,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#FEF4F3"
+                cardColour="#FFFFFF"
                 projectName="healthline"
               >
               </flip-card>
@@ -124,7 +124,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#FAB2AF"
+                cardColour="#F37C74"
                 projectName="kinemagic"
               >
               </flip-card>

@@ -1,22 +1,22 @@
 { 
     "blindsight" : {
         "name" : "blindsight",
-        "titleColour": "#FFEAEA"
+        "titleColour": "#FFFFFF"
     },
     "grow" : {
         "name" : "grow",
-        "titleColour": "#FFEAEA"
+        "titleColour": "#FFFFFF"
     },
     "easygr" : {
         "name" : "easygr",
-        "titleColour": "#55403C"
+        "titleColour": "#F37C74"
     },
     "healthline" : {
         "name" : "healthline",
-        "titleColour": "#002C3E"
+        "titleColour": "#122D40"
     },
     "kinemagic" : {
         "name" : "kinemagic",
-        "titleColour": "#55403C"
+        "titleColour": "#122D40"
     }
 }
