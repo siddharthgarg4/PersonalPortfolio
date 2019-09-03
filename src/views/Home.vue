@@ -10,10 +10,10 @@
         </b-col>
         <b-col lg="4" xl="4" sm="0" md="0" class="d-none d-lg-block">
           <b-row class="justify-content-around d-flex align-items-start">
-            <b-col class="align-items-center no-gutters col-auto">
+            <b-col class="align-items-center no-gutters col-auto" @click="scrollToSection('project-page')">
               <p class="navigation-item">projects</p>
             </b-col>
-            <b-col class="align-items-center no-gutters col-auto">
+            <b-col class="align-items-center no-gutters col-auto" @click="scrollToSection('about-page')">
               <p class="navigation-item">about</p>
             </b-col>
             <b-col class="align-items-center no-gutters col-auto">
@@ -62,11 +62,11 @@
     </b-container>
     <b-container class="project-page" id="project-page" fluid>
 
-      <b-row class="remove-all-padding d-flex">
-        <b-col class="d-flex justify-content-center remove-all-padding">
-          <p class="page-title">Personal Portfolio</p>
-        </b-col>
-      </b-row>
+        <b-row class="remove-all-padding d-flex title-container" align-v="center" align-h="center">
+          <b-col class="d-flex justify-content-center remove-all-padding col-auto">
+            <p class="page-title">Personal Portfolio</p>
+          </b-col>
+        </b-row>
 
       <b-row>
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
@@ -140,11 +140,25 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-container fluid>
+    <b-container fluid id="about-page" class="about-page">
 
-        <b-row class="remove-all-padding d-flex">
-          <b-col class="d-flex justify-content-center remove-all-padding">
+        <b-row class="remove-all-padding d-flex title-container" align-v="center" align-h="center">
+          <b-col class="d-flex justify-content-center remove-all-padding col-auto">
             <p class="page-title">This is me</p>
+          </b-col>
+        </b-row>
+
+        <b-row>
+          <b-col>
+            <about backgroundColour="#122D40" aboutSection='myself'></about>
+          </b-col>
+        </b-row>
+
+        <b-row class="divider"></b-row>
+
+        <b-row>
+          <b-col>
+            <about backgroundColour="#F37C74" aboutSection='experience' rightPicture='true'></about>
           </b-col>
         </b-row>
 
@@ -201,16 +215,7 @@ body {
   overflow-x: hidden;
 }
 .home {
-  min-height: 2400px;
-  max-height: 400vh;
-  width: 100vw !important;
-  max-width: 100vw;
-  max-width: 100vw;
-  height: 400vh;
   background-color: $tint;
-  @media (max-width: $screen-sm) {
-    min-height: 3350px;
-  }
   .homePage {
     padding-left: 2%;
     padding-right: 2%;
@@ -293,13 +298,8 @@ body {
     font-size: 45px;
     margin: 0;
     font-family: "Oh Now!", sans-serif;
-    @media (max-width: $screen-lg) {
-      font-size: 35px !important;
-    }
   }
 .project-page {
-  background-color: $tint;
-  margin-top: 20px;
   .blindsight {
     height: 55vh;
     min-height: 440px;
@@ -379,6 +379,17 @@ $base: 0.6rem;
   100% {
     opacity: 0;
     transform: translateY($base * 8) scale(0.5);
+  }
+}
+.title-container {
+  height: 10vh;
+  min-height: 75px;
+}
+
+.about-page {
+  min-height: 100vh;
+  .divider {
+    height: 1vh;
   }
 }
 </style>

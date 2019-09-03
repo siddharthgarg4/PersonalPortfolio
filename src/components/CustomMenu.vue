@@ -17,7 +17,7 @@
       ></a>
       <a
         :class="{ 'menu-animate icon3': isActivated, sizeZero: !isActivated }"
-        @click="scrollToSection('project-page')"
+        @click="scrollToSection('about-page')"
       ></a>
       <a
         :class="{ 'menu-animate icon4': isActivated, sizeZero: !isActivated }"

@@ -18,5 +18,15 @@
     "kinemagic" : {
         "name" : "kinemagic",
         "titleColour": "#122D40"
+    },
+    "myself" : {
+        "title" : "\"tell me about yourself ?\"",
+        "titleColour" : "#F37C74",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque lectus, euismod in augue eu, pulvinar convallis orci. Sed vehicula erat at ligula mattis, ac rhoncus lacus sagittis. Quisque sem sapien, tempor id consectetur sed, molestie id orci. Praesent lacinia elementum scelerisque. "
+    },
+    "experience" : {
+        "title" : "\"What Experience do you have?\"",
+        "titleColour" : "#122D40",
+        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque lectus, euismod in augue eu, pulvinar convallis orci. Sed vehicula erat at ligula mattis, ac rhoncus lacus sagittis. Quisque sem sapien, tempor id consectetur sed, molestie id orci. Praesent lacinia elementum scelerisque. "
     }
 }
