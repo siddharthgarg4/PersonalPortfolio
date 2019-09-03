@@ -47,14 +47,21 @@
       </div>
 
       <b-row align-v="end" align-h="center scroll-container">
-        <b-col cols="4" class="d-flex justify-content-center" @click="scrollMore()" style="height: 100px;">
-            <div class="chevron"></div>
-            <div class="chevron"></div>
-            <div class="chevron"></div>
+        <b-col
+          cols="4"
+          class="d-flex justify-content-center"
+          @click="scrollMore()"
+          style="height: 100px;"
+        >
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
         </b-col>
       </b-row>
+
     </b-container>
     <b-container class="project-page" id="project-page" fluid>
+
       <b-row class="remove-all-padding d-flex">
         <b-col class="d-flex justify-content-center remove-all-padding">
           <p class="page-title">Personal Portfolio</p>
@@ -93,7 +100,7 @@
 
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
           <b-row>
-            <b-col cols="12" class="easy-gr remove-all-padding">
+            <b-col cols="12" class="easy-gr remove-all-padding order-last order-md-first">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -133,6 +140,15 @@
         </b-col>
       </b-row>
     </b-container>
+    <b-container fluid>
+
+        <b-row class="remove-all-padding d-flex">
+          <b-col class="d-flex justify-content-center remove-all-padding">
+            <p class="page-title">This is me</p>
+          </b-col>
+        </b-row>
+
+    </b-container>
   </div>
 </template>
 
@@ -148,15 +164,18 @@ export default Vue.extend({
   },
   methods: {
     goToGithub() {
-      window.open('https://github.com/siddharthgarg-waterloo','_blank');
+      window.open("https://github.com/siddharthgarg-waterloo", "_blank");
     },
     goToLinkedIn() {
-      window.open('https://www.linkedin.com/in/siddharthgarg-waterloo/','_blank');
+      window.open(
+        "https://www.linkedin.com/in/siddharthgarg-waterloo/",
+        "_blank"
+      );
     },
     scrollMore() {
-      let sectionElement = document.getElementById('project-page');
+      let sectionElement = document.getElementById("project-page");
       if (sectionElement != null) {
-        sectionElement.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+        sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
       }
     }
   },
@@ -193,28 +212,17 @@ body {
     padding-right: 2%;
     padding-top: 3%;
     padding-bottom: 3%;
-    height: 98vh;
-    min-height: 600px;
-    @media (max-width: $screen-sm) {
-      margin-bottom: 75px;
-      height: 90vh;
-    }
-  }
-  .scroll-container {
-    margin-top: 10%;
-    @media (max-width: $screen-sm) {
-      margin-top: 30%;
-    }
+    min-height: 99vh;
   }
   .menu-container {
     height: 50px;
     padding-right: 5%;
     @media (max-width: $screen-sm) {
       height: 40px !important;
-      padding-right: 7% !important;   
+      padding-right: 7% !important;
     }
     @media (max-width: $screen-sm) {
-      padding-right: 12% !important;   
+      padding-right: 12% !important;
     }
   }
   .navigation-item {
@@ -271,21 +279,13 @@ body {
     }
   }
   .center-name {
-    height: 65%;
+    min-height: 75vh;
   }
 }
 .remove-all-padding {
   padding: 0 !important;
 }
-.project-page {
-  height: 150vh;
-  min-height: 1200px;
-  background-color: $tint;
-  margin-top: 20px;
-  @media (max-width: $screen-sm) {
-    min-height: 2150px;
-  }
-  .page-title {
+.page-title {
     font-size: 45px;
     margin: 0;
     font-family: "Oh Now!", sans-serif;
@@ -293,6 +293,9 @@ body {
       font-size: 35px !important;
     }
   }
+.project-page {
+  background-color: $tint;
+  margin-top: 20px;
   .blindsight {
     height: 55vh;
     min-height: 440px;
@@ -335,43 +338,46 @@ $base: 0.6rem;
 .chevron:nth-child(2) {
   animation: move-chevron 3s ease-out 2s infinite;
 }
+.scroll-container {
+  margin-top: 20px;
+}
 
 .chevron:before,
 .chevron:after {
- content: '';
- position: absolute;
- top: 0;
- height: 100%;
- width: 50%;
- background: #050F19;
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #050f19;
 }
 
 .chevron:before {
- left: 0;
- transform: skewY(30deg);
+  left: 0;
+  transform: skewY(30deg);
 }
 
 .chevron:after {
- right: 0;
- width: 50%;
- transform: skewY(-30deg);
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
 }
 
 @keyframes move-chevron {
- 25% {
-  opacity: 1;
-	}
- 33.3% {
-  opacity: 1;
-  transform: translateY($base * 3.8);
- }
- 66.6% {
-  opacity: 1;
-  transform: translateY($base * 5.2);
- }
- 100% {
-  opacity: 0;
-  transform: translateY($base * 8) scale(0.5);
- }
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY($base * 3.8);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY($base * 5.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY($base * 8) scale(0.5);
+  }
 }
 </style>

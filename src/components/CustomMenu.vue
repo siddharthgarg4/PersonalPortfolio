@@ -6,21 +6,21 @@
     ref="quick-menu"
     :class="{ active: isActivated }"
   >
-    <div :class="{ 'sub-menu': isActivated, 'sizeZero': !isActivated}">
+    <div :class="{ 'sub-menu': isActivated, sizeZero: !isActivated }">
       <a
-        :class="{ 'menu-animate icon1': isActivated, 'sizeZero': !isActivated }"
+        :class="{ 'menu-animate icon1': isActivated, sizeZero: !isActivated }"
         @click="scrollToSection('homePage')"
       ></a>
       <a
-        :class="{ 'menu-animate icon2': isActivated, 'sizeZero': !isActivated }"
+        :class="{ 'menu-animate icon2': isActivated, sizeZero: !isActivated }"
         @click="scrollToSection('project-page')"
       ></a>
       <a
-        :class="{ 'menu-animate icon3': isActivated, 'sizeZero': !isActivated }"
+        :class="{ 'menu-animate icon3': isActivated, sizeZero: !isActivated }"
         @click="scrollToSection('project-page')"
       ></a>
       <a
-        :class="{ 'menu-animate icon4': isActivated, 'sizeZero': !isActivated }"
+        :class="{ 'menu-animate icon4': isActivated, sizeZero: !isActivated }"
         @click="scrollToSection('project-page')"
       ></a>
     </div>
@@ -83,12 +83,12 @@ export default Vue.extend({
     scrollToSection(section: string) {
       let sectionElement = document.getElementById(section);
       if (sectionElement != null) {
-        sectionElement.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+        sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
         this.isActivated = !this.isActivated;
       } else {
-        console.log(
-          "The element associated with the menu item is null / could not be found."
-        );
+        // console.log(
+        //   "The element associated with the menu item is null / could not be found."
+        // );
       }
     }
   }
