@@ -46,11 +46,11 @@
         <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
       </div>
 
-      <b-row align-v="end" align-h="center scroll-container">
+      <b-row align-v="end" align-h="center">
         <b-col
           cols="4"
           class="d-flex justify-content-center"
-          @click="scrollMore()"
+          @click="scrollToSection('project-page')"
           style="height: 100px;"
         >
           <div class="chevron"></div>
@@ -172,10 +172,14 @@ export default Vue.extend({
         "_blank"
       );
     },
-    scrollMore() {
-      let sectionElement = document.getElementById("project-page");
-      if (sectionElement != null) {
-        sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
+      scrollToSection(section: string) {
+        let sectionElement = document.getElementById(section);
+        if (sectionElement != null) {
+          sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
+        } else {
+        // console.log(
+        //   "The element associated with the menu item is null / could not be found."
+        // );
       }
     }
   },
@@ -337,9 +341,6 @@ $base: 0.6rem;
 
 .chevron:nth-child(2) {
   animation: move-chevron 3s ease-out 2s infinite;
-}
-.scroll-container {
-  margin-top: 20px;
 }
 
 .chevron:before,
