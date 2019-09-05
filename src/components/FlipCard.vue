@@ -7,33 +7,46 @@
   >
     <div class="flipper" :style="cardStyle">
       <div class="front" :style="cardStyle">
-        <b-row class="fullSize d-flex justify-content-center">
+        <b-row class="fullSize d-flex remove-all-margin" align-v="center">
           <b-col
-            class="fullSize justify-content-center d-flex"
+            class="fullSize"
             :style="{ 'background-color': cardColour }"
           >
-            <b-row class="fullSize d-flex justify-content-center">
-              <b-col
-                cols="12"
-                class="d-flex justify-content-center"
-                align-self="end"
-              >
-                <p
-                  class="project-title"
-                  :style="{ color: json[projectName].titleColour }"
-                >
-                  {{ json[projectName].name }}
-                </p>
-              </b-col>
-              <b-col cols="12">
-                <img class="img-fluid project-logo" :src="projectImage" />
+            <b-row class="d-flex fullSize remove-all-margin" align-v="center">
+              <b-col>
+                <b-row>
+                  <b-col
+                    cols="12"
+                    class="align-self-end"
+                  >
+                    <p
+                      class="project-title"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].title }}
+                    </p>
+                  </b-col>
+                  <b-col cols="12" class="project-logo-container">
+                    <img class="img-fluid project-logo" :src="projectImage" />
+                  </b-col>
+                  <b-col
+                    cols="12"
+                  >
+                    <p
+                      class="project-short-description"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].description }}
+                    </p>
+                  </b-col>
+                </b-row>
               </b-col>
             </b-row>
           </b-col>
         </b-row>
       </div>
       <div class="back" :style="cardStyle">
-        <b-row class="fullSize">
+        <b-row class="fullSize remove-all-margin">
           <b-col class="fullSize" :style="{ 'background-color': cardColour }">
             <slot name="back"></slot>
           </b-col>
@@ -135,6 +148,8 @@ export default {
 </script>
 
 <style>
+@import "../style/main.scss";
+@import "../style/variable.scss";
 .remove-all-padding {
   padding: 0 !important;
 }
@@ -190,14 +205,29 @@ export default {
   height: 100%;
   width: 100%;
 }
-.project-logo {
-  height: 45%;
-  max-height: 150px;
+.project-logo-container {
+  max-height: 100px;
   width: auto;
+  margin: 0;
 }
 .project-title {
-  font-size: 70px;
-  font-family: "Oh Now!", sans-serif;
+  font-size: 60px;
+  font-family: "coves", "Oh Now!";
+  margin: 0;
+}
+.project-logo {
+  width: auto;
+  height: 100%;
+}
+.project-short-description {
+  font-size: 30px;
+  font-family: "coves", "Oh Now!";
   padding-top: 8pt;
+}
+.remove-all-margin {
+  margin: 0px;
+}
+.full-height {
+  height: 100%;
 }
 </style>

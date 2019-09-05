@@ -16,7 +16,7 @@
             <b-col class="align-items-center no-gutters col-auto" @click="scrollToSection('about-page')">
               <p class="navigation-item">about</p>
             </b-col>
-            <b-col class="align-items-center no-gutters col-auto">
+            <b-col class="align-items-center no-gutters col-auto" @click="scrollToSection('contact-page')">
               <p class="navigation-item">contact</p>
             </b-col>
           </b-row>
@@ -35,7 +35,7 @@
 
       <b-row class="center-name align-items-center d-flex" align-h="center">
         <b-col class="col-auto">
-          <img class="img-fluid center-image" src="../assets/center.png" />
+          <img class="img-fluid center-image" src="../assets/center_new.png" />
         </b-col>
       </b-row>
 
@@ -70,7 +70,7 @@
 
       <b-row>
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
-          <b-row>
+          <b-row class="fullSize remove-all-margin">
             <b-col cols="12" class="blindsight remove-all-padding">
               <flip-card
                 :active-hover="true"
@@ -99,7 +99,7 @@
         </b-col>
 
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
-          <b-row>
+          <b-row class="fullSize remove-all-margin">
             <b-col cols="12" class="easy-gr remove-all-padding order-last order-md-first">
               <flip-card
                 :active-hover="true"
@@ -136,6 +136,18 @@
               >
               </flip-card>
             </b-col>
+            <b-col cols="12" class="paypool remove-all-padding">
+              <flip-card
+                :active-hover="true"
+                height="100%"
+                width="100%"
+                transition="1s"
+                class="simple-test"
+                cardColour="#FFFFFF"
+                projectName="paypool"
+              >
+              </flip-card>
+            </b-col>
           </b-row>
         </b-col>
       </b-row>
@@ -162,6 +174,20 @@
           </b-col>
         </b-row>
 
+    </b-container>
+
+    <b-container fluid id="contact-page" class="contact-page">
+      <b-row class="remove-all-padding d-flex title-container" align-v="end" align-h="center">
+          <b-col class="d-flex justify-content-center remove-all-padding col-auto">
+            <p class="contact-page-title">Like what you see ? lets talk!</p>
+          </b-col>
+      </b-row>
+        <b-col>
+          <contact></contact>
+        </b-col>
+      <b-row>
+
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -284,8 +310,6 @@ body {
       max-width: 40px;
       min-width: 40px;
     }
-    @media (max-width: $screen-xs) {
-    }
   }
   .center-name {
     min-height: 75vh;
@@ -294,31 +318,39 @@ body {
 .remove-all-padding {
   padding: 0 !important;
 }
+.remove-all-margin {
+  margin: 0 !important;
+}
 .page-title {
-    font-size: 45px;
-    margin: 0;
-    font-family: "Oh Now!", sans-serif;
-  }
+  font-size: 45px;
+  margin: 0;
+  font-family: "Oh Now!", sans-serif;
+}
 .project-page {
+  padding-bottom: 2%;
   .blindsight {
-    height: 55vh;
+    height: 90vh;
     min-height: 440px;
   }
   .easy-gr {
-    height: 40vh;
-    min-height: 320px;
+    height: 45vh;
+    min-height: 220px;
   }
   .healthline {
-    height: 50vh;
-    min-height: 400px;
+    height: 45vh;
+    min-height: 220px;
   }
   .grow {
-    height: 75vh;
-    min-height: 600px;
+    height: 90vh;
+    min-height: 440px;
   }
   .kinemagic {
-    height: 40vh;
-    min-height: 320px;
+    height: 45vh;
+    min-height: 220px;
+  }
+  .paypool {
+    height: 45vh;
+    min-height: 220px;
   }
   .fullSize {
     height: 100%;
@@ -391,5 +423,19 @@ $base: 0.6rem;
   .divider {
     height: 1vh;
   }
+}
+
+.contact-page {
+  margin-top: 50px;
+  .contact-page-title {
+    font-size: 35px;
+    margin: 0;
+    font-family: "Oh Now!", sans-serif;
+    @media (max-width: $screen-xs) {
+      font-size: 30px;
+    }
+  }
+
+  
 }
 </style>

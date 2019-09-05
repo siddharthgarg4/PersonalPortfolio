@@ -21,7 +21,7 @@
       ></a>
       <a
         :class="{ 'menu-animate icon4': isActivated, sizeZero: !isActivated }"
-        @click="scrollToSection('project-page')"
+        @click="scrollToSection('contact-page')"
       ></a>
     </div>
     <div class="menu fixed-top" :style="menuStyle">

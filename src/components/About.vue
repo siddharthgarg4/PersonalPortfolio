@@ -81,12 +81,12 @@ export default {
     width: 100vw;
 }
 .about-section-title {
-    font-family: "Oh Now!", sans-serif;
+    font-family: "coves", "Oh Now!";
     font-size: 35px;
 }
 .about-section-description {
     color: white;
-    font-family: "Oh Now!", sans-serif;
+    font-family: "coves", "Oh Now!";
     font-size: 20px;
 }
 
