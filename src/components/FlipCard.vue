@@ -48,7 +48,32 @@
       <div class="back" :style="cardStyle">
         <b-row class="fullSize remove-all-margin">
           <b-col class="fullSize" :style="{ 'background-color': cardColour }">
-            <slot name="back"></slot>
+            <b-row class="fullSize remove-all-margin">
+
+              <b-col sm="12" md="4" class="remove-all-padding d-flex align-items-center justify-content-center">
+                <b-carousel
+                  id="carousel-1"
+                  v-model="slide"
+                  :interval="4000"
+                  class="size"
+                  controls
+                  indicators
+                  :background="cardColour"
+                  img-width="1000"
+                  img-height="2000"
+                  style="text-shadow: 1px 1px 2px #333;"
+                  @sliding-start="onSlideStart"
+                  @sliding-end="onSlideEnd"
+                >
+                  <b-carousel-slide img-src="../assets/grow1.png" class="size"></b-carousel-slide>
+                  <b-carousel-slide img-src="../assets/grow1.png"></b-carousel-slide>
+                </b-carousel>
+              </b-col>
+              <b-col sm="12" md="8">
+
+              </b-col>
+
+            </b-row>
           </b-col>
         </b-row>
       </div>
@@ -100,7 +125,9 @@ export default {
   data() {
     return {
       hover: false,
-      json: {}
+      json: {},
+      slide: 0,
+      sliding: null
     };
   },
   computed: {
@@ -132,6 +159,12 @@ export default {
       if (this.activeClick) {
         this.hover = !this.hover;
       }
+    },
+    onSlideStart(slide) {
+      this.sliding = true
+    },
+    onSlideEnd(slide) {
+      this.sliding = false
     }
   },
   watch: {
@@ -147,7 +180,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 @import "../style/main.scss";
 @import "../style/variable.scss";
 .remove-all-padding {
@@ -219,6 +252,10 @@ export default {
   width: auto;
   height: 100%;
 }
+.project-screenshot {
+  height: auto;
+  width: 100%;
+}
 .project-short-description {
   font-size: 30px;
   font-family: "coves", "Oh Now!";
@@ -229,5 +266,11 @@ export default {
 }
 .full-height {
   height: 100%;
+}
+.size {
+  height: 30vh;
+  width: 15vh;
+  min-height: 200px;
+  min-width: 100px;
 }
 </style>

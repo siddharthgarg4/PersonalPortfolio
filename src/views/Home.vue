@@ -71,7 +71,7 @@
       <b-row>
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
           <b-row class="fullSize remove-all-margin">
-            <b-col cols="12" class="blindsight remove-all-padding">
+            <b-col cols="12" class="left-project remove-all-padding">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -83,7 +83,7 @@
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="grow remove-all-padding">
+            <b-col cols="12" class="left-project remove-all-padding">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -100,7 +100,7 @@
 
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
           <b-row class="fullSize remove-all-margin">
-            <b-col cols="12" class="easy-gr remove-all-padding order-last order-md-first">
+            <b-col cols="12" class="right-project remove-all-padding order-last order-md-first">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -112,7 +112,7 @@
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="healthline remove-all-padding">
+            <b-col cols="12" class="right-project remove-all-padding">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -124,7 +124,7 @@
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="kinemagic remove-all-padding">
+            <b-col cols="12" class="right-project remove-all-padding">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -136,7 +136,7 @@
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="paypool remove-all-padding">
+            <b-col cols="12" class="right-project remove-all-padding">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -328,29 +328,20 @@ body {
 }
 .project-page {
   padding-bottom: 2%;
-  .blindsight {
+  .left-project {
     height: 90vh;
-    min-height: 440px;
+    min-height: 600px;
+    @media (max-width: $screen-sm) {
+      min-height: 1200px;
+    }
   }
-  .easy-gr {
+  .right-project {
     height: 45vh;
-    min-height: 220px;
-  }
-  .healthline {
-    height: 45vh;
-    min-height: 220px;
-  }
-  .grow {
-    height: 90vh;
-    min-height: 440px;
-  }
-  .kinemagic {
-    height: 45vh;
-    min-height: 220px;
-  }
-  .paypool {
-    height: 45vh;
-    min-height: 220px;
+    min-height: 300px;
+    @media (max-width: $screen-sm) {
+      min-height: 600px;
+    }
+
   }
   .fullSize {
     height: 100%;
