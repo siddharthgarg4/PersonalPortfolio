@@ -10,13 +10,22 @@
         </b-col>
         <b-col lg="4" xl="4" sm="0" md="0" class="d-none d-lg-block">
           <b-row class="justify-content-around d-flex align-items-start">
-            <b-col class="align-items-center no-gutters col-auto" @click="scrollToSection('project-page')">
+            <b-col
+              class="align-items-center no-gutters col-auto cursor-pointer"
+              @click="scrollToSection('project-page')"
+            >
               <p class="navigation-item">projects</p>
             </b-col>
-            <b-col class="align-items-center no-gutters col-auto" @click="scrollToSection('about-page')">
+            <b-col
+              class="align-items-center no-gutters col-auto cursor-pointer"
+              @click="scrollToSection('about-page')"
+            >
               <p class="navigation-item">about</p>
             </b-col>
-            <b-col class="align-items-center no-gutters col-auto" @click="scrollToSection('contact-page')">
+            <b-col
+              class="align-items-center no-gutters col-auto cursor-pointer"
+              @click="scrollToSection('contact-page')"
+            >
               <p class="navigation-item">contact</p>
             </b-col>
           </b-row>
@@ -29,7 +38,7 @@
           cols="3"
           class="menu-container d-flex justify-content-end"
         >
-          <custom-menu></custom-menu>
+          <custom-menu class="cursor-pointer"></custom-menu>
         </b-col>
       </b-row>
 
@@ -39,17 +48,17 @@
         </b-col>
       </b-row>
 
-      <div class="fixed-icon-container github" @click="goToGithub()">
+      <div class="fixed-icon-container cursor-pointer github" @click="goToGithub()">
         <img src="../assets/gitHub.png" class="img-fluid fixed-icon" />
       </div>
-      <div class="fixed-icon-container linkedin" @click="goToLinkedIn()">
+      <div class="fixed-icon-container cursor-pointer linkedin" @click="goToLinkedIn()">
         <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
       </div>
 
       <b-row align-v="end" align-h="center">
         <b-col
           cols="4"
-          class="d-flex justify-content-center"
+          class="d-flex justify-content-center cursor-pointer"
           @click="scrollToSection('project-page')"
           style="height: 100px;"
         >
@@ -58,15 +67,19 @@
           <div class="chevron"></div>
         </b-col>
       </b-row>
-
     </b-container>
     <b-container class="project-page" id="project-page" fluid>
-
-        <b-row class="remove-all-padding d-flex title-container" align-v="center" align-h="center">
-          <b-col class="d-flex justify-content-center remove-all-padding col-auto">
-            <p class="page-title">Personal Portfolio</p>
-          </b-col>
-        </b-row>
+      <b-row
+        class="remove-all-padding d-flex title-container"
+        align-v="center"
+        align-h="center"
+      >
+        <b-col
+          class="d-flex justify-content-center remove-all-padding col-auto"
+        >
+          <p class="page-title">Personal Portfolio</p>
+        </b-col>
+      </b-row>
 
       <b-row>
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
@@ -102,7 +115,10 @@
 
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
           <b-row class="fullSize remove-all-margin">
-            <b-col cols="12" class="right-project remove-all-padding order-last order-md-first">
+            <b-col
+              cols="12"
+              class="right-project remove-all-padding order-last order-md-first"
+            >
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -159,41 +175,53 @@
       </b-row>
     </b-container>
     <b-container fluid id="about-page" class="about-page">
+      <b-row
+        class="remove-all-padding d-flex title-container"
+        align-v="center"
+        align-h="center"
+      >
+        <b-col
+          class="d-flex justify-content-center remove-all-padding col-auto"
+        >
+          <p class="page-title">This is me</p>
+        </b-col>
+      </b-row>
 
-        <b-row class="remove-all-padding d-flex title-container" align-v="center" align-h="center">
-          <b-col class="d-flex justify-content-center remove-all-padding col-auto">
-            <p class="page-title">This is me</p>
-          </b-col>
-        </b-row>
+      <b-row>
+        <b-col>
+          <about backgroundColour="#F37C74" aboutSection="myself"></about>
+        </b-col>
+      </b-row>
 
-        <b-row>
-          <b-col>
-            <about backgroundColour="#F37C74" aboutSection='myself'></about>
-          </b-col>
-        </b-row>
+      <b-row class="divider"></b-row>
 
-        <b-row class="divider"></b-row>
-
-        <b-row>
-          <b-col>
-            <about backgroundColour="#122D40" aboutSection='experience' rightPicture='true'></about>
-          </b-col>
-        </b-row>
-
+      <b-row>
+        <b-col>
+          <about
+            backgroundColour="#122D40"
+            aboutSection="experience"
+            rightPicture="true"
+          ></about>
+        </b-col>
+      </b-row>
     </b-container>
 
     <b-container fluid id="contact-page" class="contact-page">
-      <b-row class="remove-all-padding d-flex title-container" align-v="end" align-h="center">
-          <b-col class="d-flex justify-content-center remove-all-padding col-auto">
-            <p class="contact-page-title">Like what you see ? lets talk!</p>
-          </b-col>
-      </b-row>
-        <b-col>
-          <contact></contact>
+      <b-row
+        class="remove-all-padding d-flex title-container"
+        align-v="end"
+        align-h="center"
+      >
+        <b-col
+          class="d-flex justify-content-center remove-all-padding col-auto"
+        >
+          <p class="contact-page-title">Like what you see ? lets talk!</p>
         </b-col>
-      <b-row>
-
       </b-row>
+      <b-col>
+        <contact></contact>
+      </b-col>
+      <b-row> </b-row>
     </b-container>
   </div>
 </template>
@@ -218,11 +246,11 @@ export default Vue.extend({
         "_blank"
       );
     },
-      scrollToSection(section: string) {
-        let sectionElement = document.getElementById(section);
-        if (sectionElement != null) {
-          sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
-        } else {
+    scrollToSection(section: string) {
+      let sectionElement = document.getElementById(section);
+      if (sectionElement != null) {
+        sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
+      } else {
         // console.log(
         //   "The element associated with the menu item is null / could not be found."
         // );
@@ -347,7 +375,6 @@ body {
     @media (max-width: $screen-sm) {
       min-height: 600px;
     }
-
   }
   .fullSize {
     height: 100%;
@@ -414,14 +441,12 @@ $base: 0.6rem;
   height: 10vh;
   min-height: 75px;
 }
-
 .about-page {
   min-height: 100vh;
   .divider {
     height: 1vh;
   }
 }
-
 .contact-page {
   margin-top: 50px;
   .contact-page-title {
@@ -432,7 +457,8 @@ $base: 0.6rem;
       font-size: 30px;
     }
   }
-
-  
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 </style>

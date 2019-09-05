@@ -8,17 +8,11 @@
     <div class="flipper" :style="cardStyle">
       <div class="front" :style="cardStyle">
         <b-row class="fullSize d-flex remove-all-margin" align-v="center">
-          <b-col
-            class="fullSize"
-            :style="{ 'background-color': cardColour }"
-          >
+          <b-col class="fullSize" :style="{ 'background-color': cardColour }">
             <b-row class="d-flex fullSize remove-all-margin" align-v="center">
               <b-col>
                 <b-row>
-                  <b-col
-                    cols="12"
-                    class="align-self-end"
-                  >
+                  <b-col cols="12" class="align-self-end">
                     <p
                       class="project-title"
                       :style="{ color: json[projectName].titleColour }"
@@ -29,9 +23,7 @@
                   <b-col cols="12" class="project-logo-container">
                     <img class="img-fluid project-logo" :src="projectImage" />
                   </b-col>
-                  <b-col
-                    cols="12"
-                  >
+                  <b-col cols="12">
                     <p
                       class="project-short-description"
                       :style="{ color: json[projectName].titleColour }"
@@ -49,8 +41,11 @@
         <b-row class="fullSize remove-all-margin">
           <b-col class="fullSize" :style="{ 'background-color': cardColour }">
             <b-row class="fullSize remove-all-margin">
-
-              <b-col sm="12" md="4" class="remove-all-padding d-flex align-items-center justify-content-center">
+              <b-col
+                sm="12"
+                md="4"
+                class="remove-all-padding d-flex align-items-center justify-content-center"
+              >
                 <b-carousel
                   id="carousel-1"
                   v-model="slide"
@@ -65,20 +60,49 @@
                   @sliding-start="onSlideStart"
                   @sliding-end="onSlideEnd"
                 >
-                  <b-carousel-slide :img-src="findImageLocation(image)" class="right-project-carousel" v-for="image in json[projectName].images" :key="image"></b-carousel-slide>
+                  <b-carousel-slide
+                    :img-src="findImageLocation(image)"
+                    class="right-project-carousel"
+                    v-for="image in json[projectName].images"
+                    :key="image"
+                  ></b-carousel-slide>
                 </b-carousel>
               </b-col>
-              <b-col sm="12" md="8" class="d-flex align-items-center justify-content-center">
+              <b-col
+                sm="12"
+                md="8"
+                class="d-flex align-items-center justify-content-center"
+              >
                 <b-row>
                   <b-col>
-                    <p class="title-back" :style="{ color: json[projectName].titleColour }">{{ json[projectName].title }}</p>
-                    <p class="information-back" :style="{ color: json[projectName].titleColour }">{{ json[projectName].extraInfo }}</p>
-                    <p class="information-back" :style="{ color: json[projectName].titleColour }">{{ json[projectName].information }}</p>
-                    <p class="explore-project-back" @click="goToLink(json[projectName].github)" :style="{ color: json[projectName].titleColour }"> Explore Project {{ json[projectName].title }} >>> </p>
+                    <p
+                      class="title-back"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].title }}
+                    </p>
+                    <p
+                      class="information-back"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].extraInfo }}
+                    </p>
+                    <p
+                      class="information-back"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].information }}
+                    </p>
+                    <p
+                      class="explore-project-back cursor-pointer"
+                      @click="goToLink(json[projectName].github)"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      Explore Project {{ json[projectName].title }} >>>
+                    </p>
                   </b-col>
                 </b-row>
               </b-col>
-
             </b-row>
           </b-col>
         </b-row>
@@ -131,7 +155,7 @@ export default {
       type: Boolean,
       required: false,
       default: false
-    },
+    }
   },
   data() {
     return {
@@ -172,14 +196,13 @@ export default {
       }
     },
     onSlideStart(slide) {
-      this.sliding = true
+      this.sliding = true;
     },
     onSlideEnd(slide) {
-      this.sliding = false
+      this.sliding = false;
     },
     findImageLocation(imageName) {
-      return require("../static/assets/" +
-      imageName + ".png");
+      return require("../static/assets/" + imageName + ".png");
     },
     goToLink(givenLink) {
       window.open(givenLink, "_blank");
@@ -294,15 +317,16 @@ export default {
 .title-back {
   font-size: 50px;
   font-family: "coves", "Oh Now!";
-
 }
 .information-back {
   font-size: 20px;
   font-family: "coves", "Oh Now!";
-
 }
 .explore-project-back {
   font-size: 30px;
   font-family: "coves", "Oh Now!";
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 </style>
