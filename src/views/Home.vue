@@ -80,6 +80,7 @@
                 class="simple-test"
                 cardColour="#F37C74"
                 projectName="blindsight"
+                leftProject="true"
               >
               </flip-card>
             </b-col>
@@ -92,6 +93,7 @@
                 class="simple-test"
                 cardColour="#122D40"
                 projectName="grow"
+                leftProject="true"
               >
               </flip-card>
             </b-col>
@@ -109,6 +111,7 @@
                 class="simple-test"
                 cardColour="#122D40"
                 projectName="easygr"
+                leftProject="false"
               >
               </flip-card>
             </b-col>
@@ -121,6 +124,7 @@
                 class="simple-test"
                 cardColour="#FFFFFF"
                 projectName="healthline"
+                leftProject="false"
               >
               </flip-card>
             </b-col>
@@ -133,6 +137,7 @@
                 class="simple-test"
                 cardColour="#F37C74"
                 projectName="kinemagic"
+                leftProject="false"
               >
               </flip-card>
             </b-col>
@@ -145,6 +150,7 @@
                 class="simple-test"
                 cardColour="#FFFFFF"
                 projectName="paypool"
+                leftProject="false"
               >
               </flip-card>
             </b-col>

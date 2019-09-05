@@ -55,7 +55,7 @@
                   id="carousel-1"
                   v-model="slide"
                   :interval="4000"
-                  class="size"
+                  class="right-project-carousel"
                   controls
                   indicators
                   :background="cardColour"
@@ -65,8 +65,7 @@
                   @sliding-start="onSlideStart"
                   @sliding-end="onSlideEnd"
                 >
-                  <b-carousel-slide img-src="../assets/grow1.png" class="size"></b-carousel-slide>
-                  <b-carousel-slide img-src="../assets/grow1.png"></b-carousel-slide>
+                  <b-carousel-slide :img-src="findImageLocation(image)" class="right-project-carousel" v-for="image in json[projectName].images" :key="image"></b-carousel-slide>
                 </b-carousel>
               </b-col>
               <b-col sm="12" md="8">
@@ -120,7 +119,12 @@ export default {
     projectName: {
       type: String,
       required: false
-    }
+    },
+    leftProject: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
   },
   data() {
     return {
@@ -165,6 +169,10 @@ export default {
     },
     onSlideEnd(slide) {
       this.sliding = false
+    },
+    findImageLocation(imageName) {
+      return require("../static/assets/" +
+      imageName + ".png");
     }
   },
   watch: {
@@ -267,7 +275,7 @@ export default {
 .full-height {
   height: 100%;
 }
-.size {
+.right-project-carousel {
   height: 30vh;
   width: 15vh;
   min-height: 200px;
