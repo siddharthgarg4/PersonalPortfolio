@@ -68,8 +68,15 @@
                   <b-carousel-slide :img-src="findImageLocation(image)" class="right-project-carousel" v-for="image in json[projectName].images" :key="image"></b-carousel-slide>
                 </b-carousel>
               </b-col>
-              <b-col sm="12" md="8">
-
+              <b-col sm="12" md="8" class="d-flex align-items-center justify-content-center">
+                <b-row>
+                  <b-col>
+                    <p class="title-back" :style="{ color: json[projectName].titleColour }">{{ json[projectName].title }}</p>
+                    <p class="information-back" :style="{ color: json[projectName].titleColour }">{{ json[projectName].extraInfo }}</p>
+                    <p class="information-back" :style="{ color: json[projectName].titleColour }">{{ json[projectName].information }}</p>
+                    <p class="explore-project-back" @click="goToLink(json[projectName].github)" :style="{ color: json[projectName].titleColour }"> Explore Project {{ json[projectName].title }} >>> </p>
+                  </b-col>
+                </b-row>
               </b-col>
 
             </b-row>
@@ -173,6 +180,9 @@ export default {
     findImageLocation(imageName) {
       return require("../static/assets/" +
       imageName + ".png");
+    },
+    goToLink(givenLink) {
+      window.open(givenLink, "_blank");
     }
   },
   watch: {
@@ -280,5 +290,19 @@ export default {
   width: 15vh;
   min-height: 200px;
   min-width: 100px;
+}
+.title-back {
+  font-size: 50px;
+  font-family: "coves", "Oh Now!";
+
+}
+.information-back {
+  font-size: 20px;
+  font-family: "coves", "Oh Now!";
+
+}
+.explore-project-back {
+  font-size: 30px;
+  font-family: "coves", "Oh Now!";
 }
 </style>
