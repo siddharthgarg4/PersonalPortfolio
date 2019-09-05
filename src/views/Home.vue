@@ -80,6 +80,11 @@
           <p class="page-title">Personal Portfolio</p>
         </b-col>
       </b-row>
+      <b-row>
+        <b-col class="subtitle-container">
+          <p class="contact-subtitle">&lt; click or hover over project to learn more &gt;</p>
+        </b-col>
+      </b-row>
 
       <b-row>
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
@@ -359,6 +364,9 @@ body {
   font-size: 45px;
   margin: 0;
   font-family: "Oh Now!", sans-serif;
+  @media (max-width: $screen-sm) {
+      font-size: 35px;
+    }
 }
 .project-page {
   padding-bottom: 2%;
@@ -460,5 +468,13 @@ $base: 0.6rem;
 }
 .cursor-pointer{
   cursor: pointer;
+}
+.contact-subtitle {
+  font-family: "coves", "Oh Now!";
+  font-size: 25px;
+}
+.subtitle-container {
+  padding-bottom: 10px;
+  margin-top: -20px;
 }
 </style>
