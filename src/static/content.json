@@ -3,46 +3,52 @@
         "name" : "blindsight",
         "titleColour": "#FFFFFF",
         "title" : "BlindSight",
-        "description" : "< iOS, Twilio API, Firebase API, CoreML >"
+        "description" : "< iOS, Twilio API, Firebase API, CoreML >",
+        "images" : ["blindsight1", "blindsight2", "blindsight3"]
     },
     "grow" : {
         "name" : "grow",
         "titleColour": "#FFFFFF",
         "title" : "Grow",
-        "description" : "< iOS, ARKit, CoreML >"
+        "description" : "< iOS, ARKit, CoreML >",
+        "images" : ["grow1", "grow2"]
     },
     "easygr" : {
         "name" : "easygr",
         "titleColour": "#F37C74",
         "title" : "EasyGr",
-        "description" : "< Android >"
+        "description" : "< Android >",
+        "images" : ["easygr1"]
     },
     "healthline" : {
         "name" : "healthline",
         "titleColour": "#122D40",
         "title" : "HealthLine",
-        "description" : "< iOS, Twilio API, Python, Google Maps API >"
+        "description" : "< iOS, Twilio API, Python, Google Maps API >",
+        "images" : ["healthline1", "healthline2", "healthline3", "healthline4"]
     },
     "kinemagic" : {
         "name" : "kinemagic",
         "titleColour": "#122D40",
         "title" : "KineMagic",
-        "description" : "< Web >"
+        "description" : "< Web >",
+        "images" : ["kinemagic1", "kinemagic2"]
     },
     "paypool" : {
         "name" : "paypool",
         "titleColour" : "#122D40",
         "title" : "PayPool",
-        "description" : "< iOS, Interac API, Firebase API, Alamofire API >"
+        "description" : "< iOS, Interac API, Firebase API, Alamofire API >",
+        "images" : ["paypool1", "paypool2"]
     },
     "myself" : {
         "title" : "\"Tell me about yourself ?\"",
-        "titleColour" : "#F37C74",
+        "titleColour" : "#122D40",
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque lectus, euismod in augue eu, pulvinar convallis orci. Sed vehicula erat at ligula mattis, ac rhoncus lacus sagittis. Quisque sem sapien, tempor id consectetur sed, molestie id orci. Praesent lacinia elementum scelerisque. "
     },
     "experience" : {
         "title" : "\"What experience do you have ?\"",
-        "titleColour" : "#122D40",
+        "titleColour" : "#F37C74",
         "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque lectus, euismod in augue eu, pulvinar convallis orci. Sed vehicula erat at ligula mattis, ac rhoncus lacus sagittis. Quisque sem sapien, tempor id consectetur sed, molestie id orci. Praesent lacinia elementum scelerisque. "
     }
 }

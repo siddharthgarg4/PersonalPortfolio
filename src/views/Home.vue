@@ -162,7 +162,7 @@
 
         <b-row>
           <b-col>
-            <about backgroundColour="#122D40" aboutSection='myself'></about>
+            <about backgroundColour="#F37C74" aboutSection='myself'></about>
           </b-col>
         </b-row>
 
@@ -170,7 +170,7 @@
 
         <b-row>
           <b-col>
-            <about backgroundColour="#F37C74" aboutSection='experience' rightPicture='true'></about>
+            <about backgroundColour="#122D40" aboutSection='experience' rightPicture='true'></about>
           </b-col>
         </b-row>
 
