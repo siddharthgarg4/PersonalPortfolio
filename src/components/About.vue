@@ -6,7 +6,7 @@
       align-v="center"
     >
       <b-col
-        md="5"
+        md="4"
         sm="12"
         class="container"
         :class="{ 'order-last': rightPicture }"
@@ -14,7 +14,7 @@
         <img class="img-fluid fullSize" :src="projectImage" />
       </b-col>
 
-      <b-col md="7" sm="12" class="container">
+      <b-col md="8" sm="12" class="text-container remove-all-margin">
         <b-row>
           <b-col>
             <p
@@ -75,12 +75,21 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "../style/main.scss";
+@import "../style/variable.scss";
 .container {
-  margin-top: 7.25vh;
-  margin-bottom: 7.25vh;
-  height: 30vh;
-  min-height: 200px;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  height: 250px;
+  width: 250px;
+}
+.text-container {
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+}
+.remove-all-margin {
+  margin: 0px;
 }
 .fullSize {
   height: 100%;
@@ -96,6 +105,9 @@ export default {
 .about-section-description {
   color: white;
   font-family: "coves", "Oh Now!";
-  font-size: 20px;
+  font-size: 25px;
+}
+.about-section-container {
+  min-height: 45vh;
 }
 </style>

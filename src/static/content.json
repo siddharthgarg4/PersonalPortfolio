@@ -63,11 +63,11 @@
     "myself" : {
         "title" : "\"Tell me about yourself ?\"",
         "titleColour" : "#122D40",
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque lectus, euismod in augue eu, pulvinar convallis orci. Sed vehicula erat at ligula mattis, ac rhoncus lacus sagittis. Quisque sem sapien, tempor id consectetur sed, molestie id orci. Praesent lacinia elementum scelerisque. "
+        "description" : "I currently study Computer Science at the University of Waterloo and Business at Wilfrid Laurier University. My philosophy involves seeking discomfort, as I believe we stop growing once we are unwilling to have new experiences. When I am not coding, I am usually sketching, travelling < I have been to 6 countries in the past 2 years >, playing soccer or volunteering at a local club."
     },
     "experience" : {
         "title" : "\"What experience do you have ?\"",
         "titleColour" : "#F37C74",
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi neque lectus, euismod in augue eu, pulvinar convallis orci. Sed vehicula erat at ligula mattis, ac rhoncus lacus sagittis. Quisque sem sapien, tempor id consectetur sed, molestie id orci. Praesent lacinia elementum scelerisque. "
+        "description" : "TD Innovation Lab, located in Kitchener-Waterloo, Ontario has given me a hands on experience that has introduced me to software development, business and technology. During my internship, I was responsible for developing and integrating features in an internal iOS and Android app to be used by TD Trust Bank employees. I was also engaged in developing and presenting prototypes to the executives."
     }
 }

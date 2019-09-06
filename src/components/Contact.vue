@@ -2,6 +2,11 @@
   <div>
     <b-row>
       <b-col>
+        <p class="contact-subtitle">I am currently seeking opportunities for Winter 2020.</p>
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
         <p class="contact-subtitle">made with</p>
         <p class="heart">♡</p>
         <p class="contact-subtitle">in waterloo</p>
