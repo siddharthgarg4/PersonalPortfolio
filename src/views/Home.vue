@@ -312,8 +312,8 @@ body {
     color: $highlight;
   }
   .logo {
-    height: 17pt;
-    width: 22px;
+    height: 30pt;
+    width: 35px;
   }
   .center-image {
     max-width: 400px;
