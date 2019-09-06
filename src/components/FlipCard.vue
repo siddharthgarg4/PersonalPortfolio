@@ -317,6 +317,9 @@ export default {
 .title-back {
   font-size: 50px;
   font-family: "coves", "Oh Now!";
+  @media (max-width: $screen-xs) {
+    font-size: 30px;
+  }
 }
 .information-back {
   font-size: 20px;
@@ -325,6 +328,9 @@ export default {
 .explore-project-back {
   font-size: 30px;
   font-family: "coves", "Oh Now!";
+  @media (max-width: $screen-xs) {
+  font-size: 25px;
+  }
 }
 .cursor-pointer{
   cursor: pointer;

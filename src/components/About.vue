@@ -105,7 +105,7 @@ export default {
 .about-section-description {
   color: white;
   font-family: "coves", "Oh Now!";
-  font-size: 25px;
+  font-size: 22px;
 }
 .about-section-container {
   min-height: 45vh;

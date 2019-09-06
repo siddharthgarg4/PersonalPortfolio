@@ -44,7 +44,7 @@
 
       <b-row class="center-name align-items-center d-flex" align-h="center">
         <b-col class="col-auto">
-          <img class="img-fluid center-image" src="../assets/center_new.png" />
+          <img class="img-fluid center-image" src="../assets/center.png" />
         </b-col>
       </b-row>
 
@@ -373,13 +373,19 @@ body {
   .left-project {
     height: 90vh;
     min-height: 600px;
+    @media (max-width: $screen-md) {
+      min-height: 900px;
+    }
     @media (max-width: $screen-sm) {
-      min-height: 1200px;
+      min-height: 900px;
     }
   }
   .right-project {
     height: 45vh;
     min-height: 300px;
+    @media (max-width: $screen-md) {
+      min-height: 450px;
+    }
     @media (max-width: $screen-sm) {
       min-height: 600px;
     }
