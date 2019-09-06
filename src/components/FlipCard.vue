@@ -50,7 +50,10 @@
                   id="carousel-1"
                   v-model="slide"
                   :interval="4000"
-                  v-bind:class="{'right-project-carousel' : rightProject, 'left-project-carousel' : leftProject}"
+                  v-bind:class="{
+                    'right-project-carousel': rightProject,
+                    'left-project-carousel': leftProject
+                  }"
                   controls
                   indicators
                   :background="cardColour"
@@ -62,7 +65,10 @@
                 >
                   <b-carousel-slide
                     :img-src="findImageLocation(image)"
-                    v-bind:class="{'right-project-carousel' : rightProject, 'left-project-carousel' : leftProject}"
+                    v-bind:class="{
+                      'right-project-carousel': rightProject,
+                      'left-project-carousel': leftProject
+                    }"
                     v-for="image in json[projectName].images"
                     :key="image"
                   ></b-carousel-slide>
@@ -343,10 +349,10 @@ export default {
   font-size: 30px;
   font-family: "coves", "Oh Now!";
   @media (max-width: $screen-xs) {
-  font-size: 25px;
+    font-size: 25px;
   }
 }
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 </style>

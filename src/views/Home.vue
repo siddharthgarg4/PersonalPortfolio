@@ -48,10 +48,16 @@
         </b-col>
       </b-row>
 
-      <div class="fixed-icon-container cursor-pointer github" @click="goToGithub()">
+      <div
+        class="fixed-icon-container cursor-pointer github"
+        @click="goToGithub()"
+      >
         <img src="../assets/gitHub.png" class="img-fluid fixed-icon" />
       </div>
-      <div class="fixed-icon-container cursor-pointer linkedin" @click="goToLinkedIn()">
+      <div
+        class="fixed-icon-container cursor-pointer linkedin"
+        @click="goToLinkedIn()"
+      >
         <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
       </div>
 
@@ -82,7 +88,9 @@
       </b-row>
       <b-row>
         <b-col class="subtitle-container">
-          <p class="contact-subtitle">&lt; click or hover over project to learn more &gt;</p>
+          <p class="contact-subtitle">
+            &lt; click or hover over project to learn more &gt;
+          </p>
         </b-col>
       </b-row>
 
@@ -136,7 +144,10 @@
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="right-project remove-all-padding order-sm-1 order-md-2">
+            <b-col
+              cols="12"
+              class="right-project remove-all-padding order-sm-1 order-md-2"
+            >
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -149,7 +160,10 @@
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="right-project remove-all-padding order-sm-3 order-md-3">
+            <b-col
+              cols="12"
+              class="right-project remove-all-padding order-sm-3 order-md-3"
+            >
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -162,7 +176,10 @@
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="right-project remove-all-padding order-sm-4 order-md-4">
+            <b-col
+              cols="12"
+              class="right-project remove-all-padding order-sm-4 order-md-4"
+            >
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -365,8 +382,8 @@ body {
   margin: 0;
   font-family: "Oh Now!", sans-serif;
   @media (max-width: $screen-sm) {
-      font-size: 35px;
-    }
+    font-size: 35px;
+  }
 }
 .project-page {
   padding-bottom: 2%;
@@ -472,7 +489,7 @@ $base: 0.6rem;
     }
   }
 }
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 .contact-subtitle {

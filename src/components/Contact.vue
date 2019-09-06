@@ -2,7 +2,9 @@
   <div>
     <b-row>
       <b-col>
-        <p class="contact-subtitle">I am currently seeking opportunities for Winter 2020.</p>
+        <p class="contact-subtitle">
+          I am currently seeking opportunities for Winter 2020.
+        </p>
       </b-col>
     </b-row>
     <b-row>
@@ -16,24 +18,24 @@
       <b-col class="col-auto contact-icons-container">
         <a href="mailto:s38garg@edu.uwaterloo.ca" class="cursor-pointer">
           <img
-          class="img-fluid contact-email-image"
-          src="../assets/email-icon.png"
+            class="img-fluid contact-email-image"
+            src="../assets/email-icon.png"
           />
         </a>
       </b-col>
       <b-col class="col-auto contact-icons-container">
         <a href="tel:+1-226-899-3621" class="cursor-pointer">
           <img
-          class="img-fluid contact-phone-image"
-          src="../assets/phone-icon.png"
+            class="img-fluid contact-phone-image"
+            src="../assets/phone-icon.png"
           />
         </a>
       </b-col>
       <b-col class="col-auto contact-icons-container">
         <a href="https://goo.gl/maps/DjrfywMkykwwLbzx8" class="cursor-pointer">
           <img
-          class="img-fluid contact-location-image"
-          src="../assets/location-icon.png"
+            class="img-fluid contact-location-image"
+            src="../assets/location-icon.png"
           />
         </a>
       </b-col>
@@ -96,7 +98,7 @@ export default {
   margin-top: 90px;
   margin-bottom: 40px;
 }
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
 }
 </style>
