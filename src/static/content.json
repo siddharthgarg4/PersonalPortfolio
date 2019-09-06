@@ -21,7 +21,7 @@
     },
     "easygr" : {
         "name" : "easygr",
-        "titleColour": "#F37C74",
+        "titleColour": "#122D40",
         "title" : "EasyGr",
         "description" : "< Android >",
         "images" : ["easygr1"],
@@ -52,7 +52,7 @@
     },
     "paypool" : {
         "name" : "paypool",
-        "titleColour" : "#122D40",
+        "titleColour" : "#F37C74",
         "title" : "PayPool",
         "description" : "< iOS, Interac API, Firebase API, Alamofire API >",
         "images" : ["paypool1", "paypool2"],

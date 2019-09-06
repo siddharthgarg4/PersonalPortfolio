@@ -122,7 +122,7 @@
           <b-row class="fullSize remove-all-margin">
             <b-col
               cols="12"
-              class="right-project remove-all-padding order-last order-md-first"
+              class="right-project remove-all-padding order-sm-2 order-md-1"
             >
               <flip-card
                 :active-hover="true"
@@ -131,12 +131,12 @@
                 transition="1s"
                 class="simple-test"
                 cardColour="#122D40"
-                projectName="easygr"
+                projectName="paypool"
                 rightProject="true"
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="right-project remove-all-padding">
+            <b-col cols="12" class="right-project remove-all-padding order-sm-1 order-md-2">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -149,7 +149,7 @@
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="right-project remove-all-padding">
+            <b-col cols="12" class="right-project remove-all-padding order-sm-3 order-md-3">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -162,7 +162,7 @@
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="right-project remove-all-padding">
+            <b-col cols="12" class="right-project remove-all-padding order-sm-4 order-md-4">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -170,7 +170,7 @@
                 transition="1s"
                 class="simple-test"
                 cardColour="#FFFFFF"
-                projectName="paypool"
+                projectName="easygr"
                 rightProject="true"
               >
               </flip-card>
