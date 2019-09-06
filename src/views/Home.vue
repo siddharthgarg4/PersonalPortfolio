@@ -130,7 +130,7 @@
           <b-row class="fullSize remove-all-margin">
             <b-col
               cols="12"
-              class="right-project remove-all-padding order-sm-2 order-md-1"
+              class="right-project remove-all-padding order-2 order-md-2"
             >
               <flip-card
                 :active-hover="true"
@@ -146,7 +146,7 @@
             </b-col>
             <b-col
               cols="12"
-              class="right-project remove-all-padding order-sm-1 order-md-2"
+              class="right-project remove-all-padding order-1 order-md-2"
             >
               <flip-card
                 :active-hover="true"
@@ -162,7 +162,7 @@
             </b-col>
             <b-col
               cols="12"
-              class="right-project remove-all-padding order-sm-3 order-md-3"
+              class="right-project remove-all-padding order-3"
             >
               <flip-card
                 :active-hover="true"
@@ -178,7 +178,7 @@
             </b-col>
             <b-col
               cols="12"
-              class="right-project remove-all-padding order-sm-4 order-md-4"
+              class="right-project remove-all-padding order-4"
             >
               <flip-card
                 :active-hover="true"
