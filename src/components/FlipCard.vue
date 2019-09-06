@@ -7,20 +7,103 @@
   >
     <div class="flipper" :style="cardStyle">
       <div class="front" :style="cardStyle">
-        <b-row class="fullSize d-flex align-items-center">
-          <b-col
-            class="fullSize align-items-center"
-            :style="{ 'background-color': cardColour }"
-          >
-            <p>{{ json[projectName].name }}</p>
-            <img class="img-fluid project-logo" :src="projectImage" />
+        <b-row class="fullSize d-flex remove-all-margin" align-v="center">
+          <b-col class="fullSize" :style="{ 'background-color': cardColour }">
+            <b-row class="d-flex fullSize remove-all-margin" align-v="center">
+              <b-col>
+                <b-row>
+                  <b-col cols="12" class="align-self-end">
+                    <p
+                      class="project-title"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].title }}
+                    </p>
+                  </b-col>
+                  <b-col cols="12" class="project-logo-container">
+                    <img class="img-fluid project-logo" :src="projectImage" />
+                  </b-col>
+                  <b-col cols="12">
+                    <p
+                      class="project-short-description"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].description }}
+                    </p>
+                  </b-col>
+                </b-row>
+              </b-col>
+            </b-row>
           </b-col>
         </b-row>
       </div>
       <div class="back" :style="cardStyle">
-        <b-row class="fullSize">
+        <b-row class="fullSize remove-all-margin">
           <b-col class="fullSize" :style="{ 'background-color': cardColour }">
-            <slot name="back"></slot>
+            <b-row class="fullSize remove-all-margin">
+              <b-col
+                sm="12"
+                md="4"
+                class="remove-all-padding d-flex align-items-center justify-content-center"
+              >
+                <b-carousel
+                  id="carousel-1"
+                  v-model="slide"
+                  :interval="4000"
+                  v-bind:class="{'right-project-carousel' : rightProject, 'left-project-carousel' : leftProject}"
+                  controls
+                  indicators
+                  :background="cardColour"
+                  img-width="1000"
+                  img-height="2000"
+                  style="text-shadow: 1px 1px 2px #333;"
+                  @sliding-start="onSlideStart"
+                  @sliding-end="onSlideEnd"
+                >
+                  <b-carousel-slide
+                    :img-src="findImageLocation(image)"
+                    v-bind:class="{'right-project-carousel' : rightProject, 'left-project-carousel' : leftProject}"
+                    v-for="image in json[projectName].images"
+                    :key="image"
+                  ></b-carousel-slide>
+                </b-carousel>
+              </b-col>
+              <b-col
+                sm="12"
+                md="8"
+                class="d-flex align-items-center justify-content-center"
+              >
+                <b-row>
+                  <b-col>
+                    <p
+                      class="title-back"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].title }}
+                    </p>
+                    <p
+                      class="information-back"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].extraInfo }}
+                    </p>
+                    <p
+                      class="information-back"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      {{ json[projectName].information }}
+                    </p>
+                    <p
+                      class="explore-project-back cursor-pointer"
+                      @click="goToLink(json[projectName].github)"
+                      :style="{ color: json[projectName].titleColour }"
+                    >
+                      Explore Project {{ json[projectName].title }} >>>
+                    </p>
+                  </b-col>
+                </b-row>
+              </b-col>
+            </b-row>
           </b-col>
         </b-row>
       </div>
@@ -67,12 +150,24 @@ export default {
     projectName: {
       type: String,
       required: false
+    },
+    leftProject: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    rightProject: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   },
   data() {
     return {
       hover: false,
-      json: {}
+      json: {},
+      slide: 0,
+      sliding: null
     };
   },
   computed: {
@@ -104,6 +199,18 @@ export default {
       if (this.activeClick) {
         this.hover = !this.hover;
       }
+    },
+    onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd(slide) {
+      this.sliding = false;
+    },
+    findImageLocation(imageName) {
+      return require("../static/assets/" + imageName + ".png");
+    },
+    goToLink(givenLink) {
+      window.open(givenLink, "_blank");
     }
   },
   watch: {
@@ -119,11 +226,18 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "../style/main.scss";
+@import "../style/variable.scss";
+.remove-all-padding {
+  padding: 0 !important;
+}
 .flip-container {
   -webkit-perspective: 1000;
   -moz-perspective: 1000;
   perspective: 1000;
+  z-index: 1000 !important;
+  pointer-events: all;
 }
 
 .flip-container.active-hover:hover .flipper,
@@ -170,8 +284,69 @@ export default {
   height: 100%;
   width: 100%;
 }
+.project-logo-container {
+  max-height: 100px;
+  width: auto;
+  margin: 0;
+}
+.project-title {
+  font-size: 60px;
+  font-family: "coves", "Oh Now!";
+  margin: 0;
+  @media (max-width: $screen-xs) {
+    font-size: 45px;
+  }
+}
 .project-logo {
-  height: 100px;
-  width: 100px;
+  width: auto;
+  height: 100%;
+}
+.project-screenshot {
+  height: auto;
+  width: 100%;
+}
+.project-short-description {
+  font-size: 30px;
+  font-family: "coves", "Oh Now!";
+  padding-top: 8pt;
+}
+.remove-all-margin {
+  margin: 0px;
+}
+.full-height {
+  height: 100%;
+}
+.right-project-carousel {
+  height: 30vh;
+  width: 15vh;
+  min-height: 200px;
+  min-width: 100px;
+}
+.left-project-carousel {
+  height: 30vh;
+  width: 15vh;
+  min-height: 300px;
+  min-width: 150px;
+}
+.title-back {
+  font-size: 50px;
+  font-family: "coves", "Oh Now!";
+  @media (max-width: $screen-xs) {
+    font-size: 30px;
+  }
+}
+.information-back {
+  font-size: 20px;
+  font-family: "coves", "Oh Now!";
+}
+.explore-project-back {
+  font-size: 30px;
+  font-family: "coves", "Oh Now!";
+  @media (max-width: $screen-xs) {
+  font-size: 25px;
+  }
+}
+.cursor-pointer{
+  cursor: pointer;
 }
 </style>

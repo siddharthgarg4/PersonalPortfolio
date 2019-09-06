@@ -1,25 +1,17 @@
 $tint: #FFEAEA;
 $highlight: #050F19;
 
-// $primary: #e23e57;
-// $secondary: #88304e;
-// $background-highlight: #522546;
-// $background: #311d3f;
-
-// $border: 1px;
-// $border-style: solid 3px $primary;
-
 $screen-xs: 576px;
 $screen-sm: 768px;
 $screen-md: 992px;
 $screen-lg: 1200px;
 
-// @font-face {
-//     font-family: "Oh Now";
-//     src: url("../fonts/Oh Now!.ttf") format("tff");
-// }
-
 @font-face {
     font-family: "Oh Now!";
     src: url("/src/fonts/Oh\ Now!.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "coves";
+    src: url("/src/fonts/Coves\ Light.otf") format("opentype");
 }

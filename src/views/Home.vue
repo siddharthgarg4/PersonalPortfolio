@@ -1,6 +1,6 @@
 <template>
   <div class="home" id="home">
-    <b-container class="homePage" fluid>
+    <b-container class="homePage" id="homePage" fluid>
       <b-row class="navigation d-flex align-items-center">
         <b-col lg="2" sm="3" md="2" xl="1" cols="3" class="pagination-centered">
           <img class="img-fluid logo" src="../assets/sgLogo.png" />
@@ -10,19 +10,35 @@
         </b-col>
         <b-col lg="4" xl="4" sm="0" md="0" class="d-none d-lg-block">
           <b-row class="justify-content-around d-flex align-items-start">
-            <b-col class="align-items-center no-gutters col-auto">
+            <b-col
+              class="align-items-center no-gutters col-auto cursor-pointer"
+              @click="scrollToSection('project-page')"
+            >
               <p class="navigation-item">projects</p>
             </b-col>
-            <b-col class="align-items-center no-gutters col-auto">
+            <b-col
+              class="align-items-center no-gutters col-auto cursor-pointer"
+              @click="scrollToSection('about-page')"
+            >
               <p class="navigation-item">about</p>
             </b-col>
-            <b-col class="align-items-center no-gutters col-auto">
+            <b-col
+              class="align-items-center no-gutters col-auto cursor-pointer"
+              @click="scrollToSection('contact-page')"
+            >
               <p class="navigation-item">contact</p>
             </b-col>
           </b-row>
         </b-col>
-        <b-col sm="3" md="2" lg="2" xl="1" cols="3">
-          "something goes here"
+        <b-col
+          sm="3"
+          md="2"
+          lg="2"
+          xl="1"
+          cols="3"
+          class="menu-container d-flex justify-content-end"
+        >
+          <custom-menu class="cursor-pointer"></custom-menu>
         </b-col>
       </b-row>
 
@@ -32,52 +48,70 @@
         </b-col>
       </b-row>
 
-      <b-row align-h="end">
-        <b-col class="col-auto">
-          <img src="../assets/gitHub.png" class="img-fluid fixed-icon" />
-        </b-col>
-      </b-row>
+      <div class="fixed-icon-container cursor-pointer github" @click="goToGithub()">
+        <img src="../assets/gitHub.png" class="img-fluid fixed-icon" />
+      </div>
+      <div class="fixed-icon-container cursor-pointer linkedin" @click="goToLinkedIn()">
+        <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
+      </div>
 
-      <b-row class="justify-content-end d-flex" align-v="end">
-        <b-col cols="4" class="d-flex justify-content-center">
-          <img src="../assets/scrollMore.png" class="img-fluid scroll-icon" />
-        </b-col>
-        <b-col cols="4" class="d-flex justify-content-end">
-          <img src="../assets/linkedIn.png" class="img-fluid fixed-icon" />
+      <b-row align-v="end" align-h="center">
+        <b-col
+          cols="4"
+          class="d-flex justify-content-center cursor-pointer"
+          @click="scrollToSection('project-page')"
+          style="height: 100px;"
+        >
+          <div class="chevron"></div>
+          <div class="chevron"></div>
+          <div class="chevron"></div>
         </b-col>
       </b-row>
     </b-container>
-    <b-container class="project-page" fluid>
-      <b-row class="remove-all-padding d-flex">
-        <b-col class="d-flex justify-content-center remove-all-padding">
+    <b-container class="project-page" id="project-page" fluid>
+      <b-row
+        class="remove-all-padding d-flex title-container"
+        align-v="center"
+        align-h="center"
+      >
+        <b-col
+          class="d-flex justify-content-center remove-all-padding col-auto"
+        >
           <p class="page-title">Personal Portfolio</p>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col class="subtitle-container">
+          <p class="contact-subtitle">&lt; click or hover over project to learn more &gt;</p>
         </b-col>
       </b-row>
 
       <b-row>
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
-          <b-row>
-            <b-col cols="12" class="blindsight remove-all-padding">
+          <b-row class="fullSize remove-all-margin">
+            <b-col cols="12" class="left-project remove-all-padding">
               <flip-card
                 :active-hover="true"
                 height="100%"
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#E29188"
+                cardColour="#F37C74"
                 projectName="blindsight"
+                leftProject="true"
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="grow remove-all-padding">
+            <b-col cols="12" class="left-project remove-all-padding">
               <flip-card
                 :active-hover="true"
                 height="100%"
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#A88A8C"
+                cardColour="#122D40"
                 projectName="grow"
+                leftProject="true"
               >
               </flip-card>
             </b-col>
@@ -85,46 +119,114 @@
         </b-col>
 
         <b-col md="6" sm="12" xs="12" class="remove-all-padding">
-          <b-row>
-            <b-col cols="12" class="easy-gr remove-all-padding">
+          <b-row class="fullSize remove-all-margin">
+            <b-col
+              cols="12"
+              class="right-project remove-all-padding order-sm-2 order-md-1"
+            >
               <flip-card
                 :active-hover="true"
                 height="100%"
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#898C95"
-                projectName="easygr"
+                cardColour="#122D40"
+                projectName="paypool"
+                rightProject="true"
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="healthline remove-all-padding">
+            <b-col cols="12" class="right-project remove-all-padding order-sm-1 order-md-2">
               <flip-card
                 :active-hover="true"
                 height="100%"
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#FEF4F3"
+                cardColour="#FFFFFF"
                 projectName="healthline"
+                rightProject="true"
               >
               </flip-card>
             </b-col>
-            <b-col cols="12" class="kinemagic remove-all-padding">
+            <b-col cols="12" class="right-project remove-all-padding order-sm-3 order-md-3">
               <flip-card
                 :active-hover="true"
                 height="100%"
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#FAB2AF"
+                cardColour="#F37C74"
                 projectName="kinemagic"
+                rightProject="true"
+              >
+              </flip-card>
+            </b-col>
+            <b-col cols="12" class="right-project remove-all-padding order-sm-4 order-md-4">
+              <flip-card
+                :active-hover="true"
+                height="100%"
+                width="100%"
+                transition="1s"
+                class="simple-test"
+                cardColour="#FFFFFF"
+                projectName="easygr"
+                rightProject="true"
               >
               </flip-card>
             </b-col>
           </b-row>
         </b-col>
       </b-row>
+    </b-container>
+    <b-container fluid id="about-page" class="about-page">
+      <b-row
+        class="remove-all-padding d-flex title-container"
+        align-v="center"
+        align-h="center"
+      >
+        <b-col
+          class="d-flex justify-content-center remove-all-padding col-auto"
+        >
+          <p class="page-title">This is me</p>
+        </b-col>
+      </b-row>
+
+      <b-row>
+        <b-col>
+          <about backgroundColour="#F37C74" aboutSection="myself"></about>
+        </b-col>
+      </b-row>
+
+      <b-row class="divider"></b-row>
+
+      <b-row>
+        <b-col>
+          <about
+            backgroundColour="#122D40"
+            aboutSection="experience"
+            rightPicture="true"
+          ></about>
+        </b-col>
+      </b-row>
+    </b-container>
+
+    <b-container fluid id="contact-page" class="contact-page">
+      <b-row
+        class="remove-all-padding d-flex title-container"
+        align-v="end"
+        align-h="center"
+      >
+        <b-col
+          class="d-flex justify-content-center remove-all-padding col-auto"
+        >
+          <p class="contact-page-title">Like what you see ? lets talk!</p>
+        </b-col>
+      </b-row>
+      <b-col>
+        <contact></contact>
+      </b-col>
+      <b-row> </b-row>
     </b-container>
   </div>
 </template>
@@ -139,6 +241,27 @@ export default Vue.extend({
       json: {}
     };
   },
+  methods: {
+    goToGithub() {
+      window.open("https://github.com/siddharthgarg-waterloo", "_blank");
+    },
+    goToLinkedIn() {
+      window.open(
+        "https://www.linkedin.com/in/siddharthgarg-waterloo/",
+        "_blank"
+      );
+    },
+    scrollToSection(section: string) {
+      let sectionElement = document.getElementById(section);
+      if (sectionElement != null) {
+        sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
+      } else {
+        // console.log(
+        //   "The element associated with the menu item is null / could not be found."
+        // );
+      }
+    }
+  },
   mounted() {
     this.json = json;
   }
@@ -148,26 +271,32 @@ export default Vue.extend({
 <style lang="scss">
 @import "../style/main.scss";
 @import "../style/variable.scss";
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
 .home {
-  min-height: 2400px;
-  max-height: 400vh;
-  width: 100vw !important;
-  max-width: 100vw;
-  max-width: 100vw;
-  height: 400vh;
   background-color: $tint;
-  @media (max-width: $screen-sm) {
-    min-height: 3350px;
-  }
   .homePage {
     padding-left: 2%;
     padding-right: 2%;
     padding-top: 3%;
     padding-bottom: 3%;
-    height: 97vh;
-    min-height: 600px;
-    @media (max-width: $screen-xs) {
-      margin-bottom: 75px;
+    min-height: 99vh;
+  }
+  .menu-container {
+    height: 50px;
+    padding-right: 5%;
+    @media (max-width: $screen-sm) {
+      height: 40px !important;
+      padding-right: 7% !important;
+    }
+    @media (max-width: $screen-sm) {
+      padding-right: 12% !important;
     }
   }
   .navigation-item {
@@ -183,8 +312,8 @@ export default Vue.extend({
     color: $highlight;
   }
   .logo {
-    height: 17pt;
-    width: 22px;
+    height: 30pt;
+    width: 35px;
   }
   .center-image {
     max-width: 400px;
@@ -195,73 +324,163 @@ export default Vue.extend({
       min-width: 100px;
     }
   }
-  .fixed-icon {
-    max-width: 50px;
-    max-width: 50px;
-    padding-top: 20px;
+  .fixed-icon-container {
+    position: fixed;
+    z-index: 4000 !important;
+  }
+  .github {
+    bottom: 105px;
     @media (max-width: $screen-sm) {
-      max-width: 40px;
-      max-width: 40px;
-    }
-    @media (max-width: $screen-xs) {
-      padding-top: 40px;
+      bottom: 65px;
     }
   }
-  .scroll-icon {
+  .linkedin {
+    bottom: 45px;
+    @media (max-width: $screen-sm) {
+      bottom: 20px;
+    }
+  }
+  .fixed-icon {
     max-width: 50px;
-    max-height: 25px;
-
+    min-width: 50px;
+    max-height: 75px;
+    height: auto;
     @media (max-width: $screen-sm) {
       max-width: 40px;
-      max-height: 22px;
+      min-width: 40px;
     }
   }
   .center-name {
-    height: 65%;
+    min-height: 75vh;
   }
 }
 .remove-all-padding {
   padding: 0 !important;
 }
-.project-page {
-  height: 150vh;
-  min-height: 1200px;
-  background-color: $tint;
-  margin-top: 20px;
+.remove-all-margin {
+  margin: 0 !important;
+}
+.page-title {
+  font-size: 45px;
+  margin: 0;
+  font-family: "Oh Now!", sans-serif;
   @media (max-width: $screen-sm) {
-    min-height: 2150px;
-  }
-  .page-title {
-    font-size: 45px;
-    margin: 0;
-    font-family: "Oh Now!", sans-serif;
-    @media (max-width: $screen-lg) {
-      font-size: 35px !important;
+      font-size: 35px;
+    }
+}
+.project-page {
+  padding-bottom: 2%;
+  .left-project {
+    height: 90vh;
+    min-height: 600px;
+    @media (max-width: $screen-md) {
+      min-height: 900px;
+    }
+    @media (max-width: $screen-sm) {
+      min-height: 900px;
     }
   }
-  .blindsight {
-    height: 55vh;
-    min-height: 440px;
-  }
-  .easy-gr {
-    height: 40vh;
-    min-height: 320px;
-  }
-  .healthline {
-    height: 50vh;
-    min-height: 400px;
-  }
-  .grow {
-    height: 75vh;
-    min-height: 600px;
-  }
-  .kinemagic {
-    height: 40vh;
-    min-height: 320px;
+  .right-project {
+    height: 45vh;
+    min-height: 300px;
+    @media (max-width: $screen-md) {
+      min-height: 450px;
+    }
+    @media (max-width: $screen-sm) {
+      min-height: 600px;
+    }
   }
   .fullSize {
     height: 100%;
     width: 100%;
   }
+}
+$base: 0.6rem;
+.chevron {
+  position: absolute;
+  width: $base * 3.5;
+  height: $base * 0.8;
+  opacity: 0;
+  transform: scale(0.3);
+  animation: move-chevron 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move-chevron 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move-chevron 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+  background: #050f19;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skewY(30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skewY(-30deg);
+}
+
+@keyframes move-chevron {
+  25% {
+    opacity: 1;
+  }
+  33.3% {
+    opacity: 1;
+    transform: translateY($base * 3.8);
+  }
+  66.6% {
+    opacity: 1;
+    transform: translateY($base * 5.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY($base * 8) scale(0.5);
+  }
+}
+.title-container {
+  height: 10vh;
+  min-height: 75px;
+}
+.about-page {
+  min-height: 100vh;
+  .divider {
+    height: 1vh;
+  }
+}
+.contact-page {
+  margin-top: 50px;
+  .contact-page-title {
+    font-size: 35px;
+    margin: 0;
+    font-family: "Oh Now!", sans-serif;
+    @media (max-width: $screen-xs) {
+      font-size: 30px;
+    }
+  }
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.contact-subtitle {
+  font-family: "coves", "Oh Now!";
+  font-size: 25px;
+}
+.subtitle-container {
+  padding-bottom: 10px;
+  margin-top: -20px;
 }
 </style>
