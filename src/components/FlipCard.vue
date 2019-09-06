@@ -50,7 +50,7 @@
                   id="carousel-1"
                   v-model="slide"
                   :interval="4000"
-                  class="right-project-carousel"
+                  v-bind:class="{'right-project-carousel' : rightProject, 'left-project-carousel' : leftProject}"
                   controls
                   indicators
                   :background="cardColour"
@@ -62,7 +62,7 @@
                 >
                   <b-carousel-slide
                     :img-src="findImageLocation(image)"
-                    class="right-project-carousel"
+                    v-bind:class="{'right-project-carousel' : rightProject, 'left-project-carousel' : leftProject}"
                     v-for="image in json[projectName].images"
                     :key="image"
                   ></b-carousel-slide>
@@ -152,6 +152,11 @@ export default {
       required: false
     },
     leftProject: {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    rightProject: {
       type: Boolean,
       required: false,
       default: false
@@ -288,6 +293,9 @@ export default {
   font-size: 60px;
   font-family: "coves", "Oh Now!";
   margin: 0;
+  @media (max-width: $screen-xs) {
+    font-size: 45px;
+  }
 }
 .project-logo {
   width: auto;
@@ -313,6 +321,12 @@ export default {
   width: 15vh;
   min-height: 200px;
   min-width: 100px;
+}
+.left-project-carousel {
+  height: 30vh;
+  width: 15vh;
+  min-height: 300px;
+  min-width: 150px;
 }
 .title-back {
   font-size: 50px;

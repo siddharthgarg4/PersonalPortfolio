@@ -132,7 +132,7 @@
                 class="simple-test"
                 cardColour="#122D40"
                 projectName="easygr"
-                leftProject="false"
+                rightProject="true"
               >
               </flip-card>
             </b-col>
@@ -145,7 +145,7 @@
                 class="simple-test"
                 cardColour="#FFFFFF"
                 projectName="healthline"
-                leftProject="false"
+                rightProject="true"
               >
               </flip-card>
             </b-col>
@@ -158,7 +158,7 @@
                 class="simple-test"
                 cardColour="#F37C74"
                 projectName="kinemagic"
-                leftProject="false"
+                rightProject="true"
               >
               </flip-card>
             </b-col>
@@ -171,7 +171,7 @@
                 class="simple-test"
                 cardColour="#FFFFFF"
                 projectName="paypool"
-                leftProject="false"
+                rightProject="true"
               >
               </flip-card>
             </b-col>
