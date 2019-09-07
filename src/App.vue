@@ -5,8 +5,8 @@
 </template>
 
 <style lang="scss">
-@import "style/main.scss";
-
+@import "styles/main.scss";
+@import "styles/variable.scss";
 html {
   scroll-behavior: smooth;
 }

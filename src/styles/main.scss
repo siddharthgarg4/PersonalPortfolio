@@ -1,0 +1,27 @@
+@import "./variable.scss";
+
+$font_path: '~@/assets/fonts/';
+
+@font-face {
+  font-family: 'OhNow';
+  src:url($font_path + 'OhNow.eot'),
+      url($font_path + 'OhNow.eot?#iefix') format('embedded-opentype'),
+      url($font_path + 'OhNow.svg#OhNow') format('svg'),
+      url($font_path + 'OhNow.ttf') format('truetype'),
+      url($font_path + 'OhNow.woff') format('woff'),
+      url($font_path + 'OhNow.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Coves-Light';
+  src:url($font_path + 'Coves-Light.eot'),
+      url($font_path + 'Coves-Light.eot?#iefix') format('embedded-opentype'),
+      url($font_path + 'Coves-Light.svg#Coves-Light') format('svg'),
+      url($font_path + 'Coves-Light.ttf') format('truetype'),
+      url($font_path + 'Coves-Light.woff') format('woff'),
+      url($font_path + 'Coves-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

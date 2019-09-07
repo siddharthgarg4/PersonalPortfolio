@@ -1,5 +1,5 @@
 {
-  "name": "website-portfolio",
+  "name": "website-personal-portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,9 +9,8 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "bootstrap-vue": "^2.0.0-rc.28",
+    "bootstrap-vue": "^2.0.0",
     "core-js": "^2.6.5",
-    "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0",
@@ -28,11 +27,12 @@
     "eslint": "^5.16.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^7.3.1",
     "typescript": "^3.4.3",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.39.3"
   },
   "eslintConfig": {
     "root": true,

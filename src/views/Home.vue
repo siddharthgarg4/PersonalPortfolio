@@ -160,10 +160,7 @@
               >
               </flip-card>
             </b-col>
-            <b-col
-              cols="12"
-              class="right-project remove-all-padding order-3"
-            >
+            <b-col cols="12" class="right-project remove-all-padding order-3">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -176,10 +173,7 @@
               >
               </flip-card>
             </b-col>
-            <b-col
-              cols="12"
-              class="right-project remove-all-padding order-4"
-            >
+            <b-col cols="12" class="right-project remove-all-padding order-4">
               <flip-card
                 :active-hover="true"
                 height="100%"
@@ -286,8 +280,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-@import "../style/main.scss";
-@import "../style/variable.scss";
+@import "../styles/main.scss";
+@import "../styles/variable.scss";
 html,
 body {
   width: 100%;
@@ -295,6 +289,7 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 .home {
   background-color: $tint;
@@ -318,7 +313,7 @@ body {
   }
   .navigation-item {
     font-size: 30px;
-    font-family: "Oh Now!", sans-serif;
+    font-family: "OhNow", sans-serif;
     padding-top: 8pt;
     @media (max-width: $screen-lg) {
       font-size: 25px !important;
@@ -380,7 +375,7 @@ body {
 .page-title {
   font-size: 45px;
   margin: 0;
-  font-family: "Oh Now!", sans-serif;
+  font-family: "OhNow", sans-serif;
   @media (max-width: $screen-sm) {
     font-size: 35px;
   }
@@ -483,7 +478,7 @@ $base: 0.6rem;
   .contact-page-title {
     font-size: 35px;
     margin: 0;
-    font-family: "Oh Now!", sans-serif;
+    font-family: "OhNow", sans-serif;
     @media (max-width: $screen-xs) {
       font-size: 30px;
     }
@@ -493,7 +488,7 @@ $base: 0.6rem;
   cursor: pointer;
 }
 .contact-subtitle {
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   font-size: 25px;
 }
 .subtitle-container {

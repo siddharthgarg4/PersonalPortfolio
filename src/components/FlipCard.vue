@@ -233,8 +233,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../style/main.scss";
-@import "../style/variable.scss";
+@import "../styles/main.scss";
+@import "../styles/variable.scss";
 .remove-all-padding {
   padding: 0 !important;
 }
@@ -297,7 +297,7 @@ export default {
 }
 .project-title {
   font-size: 60px;
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   margin: 0;
   @media (max-width: $screen-xs) {
     font-size: 45px;
@@ -313,7 +313,7 @@ export default {
 }
 .project-short-description {
   font-size: 30px;
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   padding-top: 8pt;
 }
 .remove-all-margin {
@@ -336,18 +336,18 @@ export default {
 }
 .title-back {
   font-size: 50px;
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   @media (max-width: $screen-xs) {
     font-size: 30px;
   }
 }
 .information-back {
   font-size: 20px;
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
 }
 .explore-project-back {
   font-size: 30px;
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   @media (max-width: $screen-xs) {
     font-size: 25px;
   }

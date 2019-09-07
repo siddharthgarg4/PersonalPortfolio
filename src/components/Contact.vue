@@ -59,13 +59,15 @@ export default {
 </script>
 
 <style>
+@import "../styles/main.scss";
+@import "../styles/variable.scss";
 .contact-subtitle {
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   font-size: 25px;
   display: inline;
 }
 .heart {
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   font-size: 18px;
   display: inline;
   padding-right: 7px;
@@ -91,7 +93,7 @@ export default {
   padding-left: 20px;
 }
 .copyright {
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   font-size: 18px;
 }
 .copyright-container {

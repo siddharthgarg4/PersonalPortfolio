@@ -76,8 +76,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../style/main.scss";
-@import "../style/variable.scss";
+@import "../styles/main.scss";
+@import "../styles/variable.scss";
 .container {
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -99,12 +99,12 @@ export default {
   width: 100vw;
 }
 .about-section-title {
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   font-size: 35px;
 }
 .about-section-description {
   color: white;
-  font-family: "coves", "Oh Now!";
+  font-family: "Coves-Light", sans-serif;
   font-size: 22px;
 }
 .about-section-container {

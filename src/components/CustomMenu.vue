@@ -96,8 +96,8 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-@import "../style/main.scss";
-@import "../style/variable.scss";
+@import "../styles/main.scss";
+@import "../styles/variable.scss";
 .menu-animate {
   -webkit-animation: bounce 1s linear 1s;
   -moz-animation: bounce 1s linear 1s;
