@@ -234,10 +234,11 @@
           <p class="contact-page-title">Like what you see ? lets talk!</p>
         </b-col>
       </b-row>
-      <b-col>
-        <contact></contact>
-      </b-col>
-      <b-row> </b-row>
+      <b-row>
+        <b-col>
+          <contact></contact>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -289,6 +290,7 @@ body {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
 .home {
