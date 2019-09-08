@@ -10,6 +10,8 @@ Pursuing co-op in my academic program, I regularly have to apply to jobs and loo
 
 ## How I built it
 
+**Sketch** - Wireframing for UI/UX
+
 **Vue JS** - Framework (TypeScript, HTML, SCSS)
 
 **Bootstrap 4** - Styling library 
