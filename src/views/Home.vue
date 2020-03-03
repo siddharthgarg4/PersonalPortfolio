@@ -255,12 +255,11 @@ export default Vue.extend({
   },
   methods: {
     goToGithub() {
-      window.open("https://github.com/siddharthgarg-waterloo", "_blank");
+      window.open("https://github.com/siddharthgarg4", "_blank");
     },
     goToLinkedIn() {
       window.open(
-        "https://www.linkedin.com/in/siddharthgarg-waterloo/",
-        "_blank"
+        "https://www.linkedin.com/in/siddharthgarg4/", "_blank"
       );
     },
     scrollToSection(section: string) {

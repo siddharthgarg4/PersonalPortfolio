@@ -6,7 +6,7 @@
         "description" : "< iOS, Twilio API, Firebase API, CoreML >",
         "images" : ["blindsight1", "blindsight2", "blindsight3"],
         "extraInfo" : "< 2nd Place at PCHacks >",
-        "github" : "https://github.com/siddharthgarg-waterloo/BlindSight",
+        "github" : "https://github.com/siddharthgarg4/BlindSight",
         "information" : "An iOS app focused on assistive technology that helps the visually impaired through object recognition and live video remote assistance and maps integration."
     },
     "grow" : {
@@ -16,7 +16,7 @@
         "description" : "< iOS, ARKit, CoreML >",
         "images" : ["grow1", "grow2"],
         "extraInfo" : "< 1st Place at HackLassonde >",
-        "github" : "https://github.com/siddharthgarg-waterloo/Grow",
+        "github" : "https://github.com/siddharthgarg4/Grow",
         "information" : "An iOS app that allows users to find eco-friendliness of companies using CoreML and ARKit. It also allows users to work towards personal sustainability goals."
     },
     "easygr" : {
@@ -26,7 +26,7 @@
         "description" : "< Android >",
         "images" : ["easygr1"],
         "extraInfo" : "< Passion Project >",
-        "github" : "https://siddharth-garg-easygr.herokuapp.com/",
+        "github" : "https://github.com/siddharthgarg4/EasyGr",
         "information" : "Website assisting students in calculating their GPA as well as grades required to meet a required GPA."
     },
     "healthline" : {
@@ -36,7 +36,7 @@
         "description" : "< iOS, Twilio API, Python, Google Maps API >",
         "images" : ["healthline1", "healthline2", "healthline3", "healthline4"],
         "extraInfo" : "< Top 5 at RUHacks >",
-        "github" : "https://github.com/siddharthgarg-waterloo/HealthLine",
+        "github" : "https://github.com/siddharthgarg4/HealthLine",
         "information" : "An iOS app that provides medical diagnosis, rash recognition as well as finding nearby hospitals without internet."
     },
     "kinemagic" : {
@@ -46,7 +46,7 @@
         "description" : "< Web >",
         "images" : ["kinemagic1", "kinemagic2"],
         "extraInfo" : "< ConuHacks >",
-        "github" : "https://github.com/siddharthgarg-waterloo/KineMagic",
+        "github" : "https://github.com/siddharthgarg4/KineMagic",
         "information" : "An android app that solves various kinematic equations with the option of graphing the solution."
 
     },

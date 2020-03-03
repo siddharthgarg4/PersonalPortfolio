@@ -24,7 +24,7 @@ Pursuing co-op in my academic program, I regularly have to apply to jobs and loo
 **Deployment** - deploying the website on Github Pages
 
 ## Link to the project
-https://siddharthgarg-waterloo.github.io/
+https://siddharthgarg4.github.io/
 
 
 # Project setup

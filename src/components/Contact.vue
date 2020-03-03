@@ -3,7 +3,7 @@
     <b-row>
       <b-col>
         <p class="contact-subtitle">
-          I am currently seeking opportunities for Winter 2020.
+          I am currently seeking opportunities for Winter 2021.
         </p>
       </b-col>
     </b-row>
@@ -42,7 +42,7 @@
     </b-row>
     <b-row class="copyright-container">
       <b-col>
-        <p class="copyright">© Siddharth Garg &lt; 2019 &gt;</p>
+        <p class="copyright">© Siddharth Garg &lt; 2020 &gt;</p>
       </b-col>
     </b-row>
   </div>
