@@ -44,7 +44,7 @@
 
       <b-row class="center-name align-items-center d-flex" align-h="center">
         <b-col class="col-auto">
-          <img class="img-fluid center-image" src="../assets/center.png" />
+          <img class="img-fluid center-image" src="../assets/darkBackground.png" />
         </b-col>
       </b-row>
 
@@ -138,7 +138,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#000311"
+                cardColour="#171D40"
                 projectName="paypool"
                 rightProject="true"
               >
