@@ -117,7 +117,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#000311"
+                cardColour="#171D40"
                 projectName="grow"
                 leftProject="true"
               >
@@ -433,7 +433,7 @@ $base: 0.6rem;
   top: 0;
   height: 100%;
   width: 50%;
-  background: #050f19;
+  background: #FBFBF2;
 }
 
 .chevron:before {

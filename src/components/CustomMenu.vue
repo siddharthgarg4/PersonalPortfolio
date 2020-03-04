@@ -123,9 +123,10 @@ export default Vue.extend({
     border-radius: 50% !important;
     width: 50px;
     height: 50px;
-    background-color: #050f19;
+    background-color: #FBFBF2;
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 5px rgba(0, 0, 0, 0.16);
+
     color: #fff;
     -webkit-transition: all 1s ease;
     -moz-transition: all 1s ease;
@@ -161,7 +162,7 @@ export default Vue.extend({
         transition: all 1s ease;
         width: 28px;
         height: 3px;
-        background: #ffeaea;
+        background: #779ECB;
         position: absolute;
         top: 35%;
         margin-top: -1.5px;
@@ -179,7 +180,7 @@ export default Vue.extend({
           content: "";
           width: 28px;
           height: 3px;
-          background: #ffeaea;
+          background: #779ECB;
           position: absolute;
           left: 0px;
           -webkit-transform-origin: 0% 50%;
@@ -364,7 +365,7 @@ export default Vue.extend({
 }
 .icon1 {
   background-image: url("../assets/homeLogo.png");
-  background-color: #050f19;
+  background-color: #FBFBF2;
   background-size: 40px;
   @media (max-width: $screen-sm) {
     background-size: 30px;
@@ -376,7 +377,7 @@ export default Vue.extend({
 }
 .icon2 {
   background-image: url("../assets/projectsLogo.png");
-  background-color: #050f19;
+  background-color: #FBFBF2;
   top: 60px;
   right: 40px;
   background-size: 40px;
@@ -388,7 +389,7 @@ export default Vue.extend({
 }
 .icon3 {
   background-image: url("../assets/aboutLogo.png");
-  background-color: #050f19;
+  background-color: #FBFBF2;
   top: 110px;
   right: 10px;
   background-size: 40px;
@@ -400,7 +401,7 @@ export default Vue.extend({
 }
 .icon4 {
   background-image: url("../assets/contactLogo.png");
-  background-color: #050f19;
+  background-color: #FBFBF2;
   top: 160px;
   right: 10px;
   background-size: 40px;
