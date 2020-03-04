@@ -1,7 +1,7 @@
 { 
     "blindsight" : {
         "name" : "blindsight",
-        "titleColour": "#FFFFFF",
+        "titleColour": "#FBFBF2",
         "title" : "BlindSight",
         "description" : "< iOS, Twilio API, Firebase API, CoreML >",
         "images" : ["blindsight1", "blindsight2", "blindsight3"],
@@ -11,7 +11,7 @@
     },
     "grow" : {
         "name" : "grow",
-        "titleColour": "#FFFFFF",
+        "titleColour": "#FBFBF2",
         "title" : "Grow",
         "description" : "< iOS, ARKit, CoreML >",
         "images" : ["grow1", "grow2"],
@@ -21,7 +21,7 @@
     },
     "easygr" : {
         "name" : "easygr",
-        "titleColour": "#122D40",
+        "titleColour": "#FBFBF2",
         "title" : "EasyGr",
         "description" : "< Android >",
         "images" : ["easygr1"],
@@ -31,7 +31,7 @@
     },
     "healthline" : {
         "name" : "healthline",
-        "titleColour": "#122D40",
+        "titleColour": "#FBFBF2",
         "title" : "HealthLine",
         "description" : "< iOS, Twilio API, Python, Google Maps API >",
         "images" : ["healthline1", "healthline2", "healthline3", "healthline4"],
@@ -41,7 +41,7 @@
     },
     "kinemagic" : {
         "name" : "kinemagic",
-        "titleColour": "#122D40",
+        "titleColour": "#FBFBF2",
         "title" : "KineMagic",
         "description" : "< Web >",
         "images" : ["kinemagic1", "kinemagic2"],
@@ -52,7 +52,7 @@
     },
     "paypool" : {
         "name" : "paypool",
-        "titleColour" : "#F37C74",
+        "titleColour" : "#FBFBF2",
         "title" : "PayPool",
         "description" : "< iOS, Interac API, Firebase API, Alamofire API >",
         "images" : ["paypool1", "paypool2"],
@@ -62,12 +62,12 @@
     },
     "myself" : {
         "title" : "\"Tell me about yourself ?\"",
-        "titleColour" : "#122D40",
+        "titleColour" : "#FBFBF2",
         "description" : "I currently study Computer Science at the University of Waterloo and Business at Wilfrid Laurier University. My philosophy involves seeking discomfort, as I believe we stop growing once we are unwilling to have new experiences. When I am not coding, I am usually sketching, travelling < I have been to 6 countries in the past 2 years >, playing soccer or volunteering at a local club."
     },
     "experience" : {
         "title" : "\"What experience do you have ?\"",
-        "titleColour" : "#F37C74",
+        "titleColour" : "#FBFBF2",
         "description" : "TD Innovation Lab, located in Kitchener-Waterloo, Ontario has given me a hands on experience that has introduced me to software development, business and technology. During my internship, I was responsible for developing and integrating features in an internal iOS and Android app to be used by TD Trust Bank employees. Being a part of the innovation lab also gave me the opportunity to utilise new and emerging technologies for raid prototyping and presenting them to senior TD Bank executives."
     }
 }

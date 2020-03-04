@@ -104,7 +104,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#F37C74"
+                cardColour="#A9BCD0"
                 projectName="blindsight"
                 leftProject="true"
               >
@@ -117,7 +117,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#122D40"
+                cardColour="#000311"
                 projectName="grow"
                 leftProject="true"
               >
@@ -138,7 +138,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#122D40"
+                cardColour="#000311"
                 projectName="paypool"
                 rightProject="true"
               >
@@ -154,7 +154,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#FFFFFF"
+                cardColour="#2B4570"
                 projectName="healthline"
                 rightProject="true"
               >
@@ -167,7 +167,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#F37C74"
+                cardColour="#A9BCD0"
                 projectName="kinemagic"
                 rightProject="true"
               >
@@ -180,7 +180,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#FFFFFF"
+                cardColour="#2B4570"
                 projectName="easygr"
                 rightProject="true"
               >
@@ -205,7 +205,7 @@
 
       <b-row>
         <b-col>
-          <about backgroundColour="#F37C74" aboutSection="myself"></about>
+          <about backgroundColour="#2B4570" aboutSection="myself"></about>
         </b-col>
       </b-row>
 
@@ -214,7 +214,7 @@
       <b-row>
         <b-col>
           <about
-            backgroundColour="#122D40"
+            backgroundColour="#A9BCD0"
             aboutSection="experience"
             rightPicture="true"
           ></about>
