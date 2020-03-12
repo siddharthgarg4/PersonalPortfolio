@@ -44,7 +44,7 @@
 
       <b-row class="center-name align-items-center d-flex" align-h="center">
         <b-col class="col-auto">
-          <img class="img-fluid center-image" src="../assets/darkBackground.png" />
+          <img class="img-fluid center-image" src="../assets/californiaBackground.png" />
         </b-col>
       </b-row>
 
