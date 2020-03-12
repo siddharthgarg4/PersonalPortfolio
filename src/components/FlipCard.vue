@@ -8,7 +8,7 @@
     <div class="flipper" :style="cardStyle">
       <div class="front" :style="cardStyle">
         <b-row class="fullSize d-flex remove-all-margin" align-v="center">
-          <b-col class="fullSize" :style="{ 'background-color': cardColour }">
+          <b-col class="fullSize backgroundImage" :style="{ 'background-image': 'url(' + getImgUrl(cardBackgroundImage)  + ')' }">
             <b-row class="d-flex fullSize remove-all-margin" align-v="center">
               <b-col>
                 <b-row>
@@ -39,7 +39,7 @@
       </div>
       <div class="back" :style="cardStyle">
         <b-row class="fullSize remove-all-margin">
-          <b-col class="fullSize" :style="{ 'background-color': cardColour }">
+          <b-col class="fullSize backgroundImage" :style="{ 'background-image': 'url(' + getImgUrl(cardBackgroundImage) + ')' }">
             <b-row class="fullSize remove-all-margin">
               <b-col
                 sm="12"
@@ -56,7 +56,6 @@
                   }"
                   controls
                   indicators
-                  :background="cardColour"
                   img-width="1000"
                   img-height="2000"
                   style="text-shadow: 1px 1px 2px #333;"
@@ -153,6 +152,10 @@ export default {
       type: String,
       required: false
     },
+    cardBackgroundImage: {
+      type: String,
+      required: false
+    },
     projectName: {
       type: String,
       required: false
@@ -217,6 +220,9 @@ export default {
     },
     goToLink(givenLink) {
       window.open(givenLink, "_blank");
+    },
+    getImgUrl(pic) {
+    return require('../assets/'+pic)
     }
   },
   watch: {
@@ -354,5 +360,9 @@ export default {
 }
 .cursor-pointer {
   cursor: pointer;
+}
+.backgroundImage {
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>

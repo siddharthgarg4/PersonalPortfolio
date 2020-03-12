@@ -104,7 +104,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#A9BCD0"
+                cardBackgroundImage="blueBigBackground.png"
                 projectName="blindsight"
                 leftProject="true"
               >
@@ -117,7 +117,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#171D40"
+                cardBackgroundImage="purpleBigBackground.png"
                 projectName="grow"
                 leftProject="true"
               >
@@ -138,7 +138,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#171D40"
+                cardBackgroundImage="purpleMedBackground.png"
                 projectName="paypool"
                 rightProject="true"
               >
@@ -154,7 +154,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#2B4570"
+                cardBackgroundImage="peachBackground.png"
                 projectName="healthline"
                 rightProject="true"
               >
@@ -167,7 +167,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#A9BCD0"
+                cardBackgroundImage="blueMedBackground.png"
                 projectName="kinemagic"
                 rightProject="true"
               >
@@ -180,7 +180,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardColour="#2B4570"
+                cardBackgroundImage="peachBackground.png"
                 projectName="easygr"
                 rightProject="true"
               >
@@ -205,7 +205,7 @@
 
       <b-row>
         <b-col>
-          <about backgroundColour="#2B4570" aboutSection="myself"></about>
+          <about backgroundImage="purpleLongBackground.png" aboutSection="myself"></about>
         </b-col>
       </b-row>
 
@@ -214,7 +214,7 @@
       <b-row>
         <b-col>
           <about
-            backgroundColour="#A9BCD0"
+            backgroundImage="peachLongBackground.png"
             aboutSection="experience"
             rightPicture="true"
           ></about>
@@ -267,9 +267,9 @@ export default Vue.extend({
       if (sectionElement != null) {
         sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
       } else {
-        // console.log(
-        //   "The element associated with the menu item is null / could not be found."
-        // );
+        console.log(
+          "The element associated with the menu item is null / could not be found."
+        );
       }
     }
   },

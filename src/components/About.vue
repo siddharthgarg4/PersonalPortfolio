@@ -2,7 +2,7 @@
   <div>
     <b-row
       class="about-section-container d-flex"
-      :style="{ 'background-color': backgroundColour }"
+      :style="{ 'background-image': 'url(' + getImgUrl(backgroundImage)  + ')' }"
       align-v="center"
     >
       <b-col
@@ -65,11 +65,20 @@ export default {
       type: String,
       required: false,
       default: "myself"
+    },
+    backgroundImage: {
+      type: String,
+      required: false
     }
   },
   computed: {
     projectImage() {
       return require("../assets/" + this.aboutSection + ".png");
+    }
+  },
+  methods: {
+    getImgUrl(pic) {
+    return require('../assets/'+pic)
     }
   }
 };
@@ -109,5 +118,7 @@ export default {
 }
 .about-section-container {
   min-height: 45vh;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 </style>
