@@ -2,7 +2,6 @@
   <div>
     <b-row
       class="about-section-container d-flex"
-      :style="{ 'background-image': 'url(' + getImgUrl(backgroundImage)  + ')' }"
       align-v="center"
     >
       <b-col
