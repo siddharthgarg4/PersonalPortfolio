@@ -44,7 +44,7 @@
 
       <b-row class="center-name align-items-center d-flex" align-h="center">
         <b-col class="col-auto">
-          <img class="img-fluid center-image" src="../assets/californiaBackground.png" />
+          <img class="img-fluid center-image" src="../assets/californiaBackground.jpg" />
         </b-col>
       </b-row>
 
@@ -104,7 +104,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardBackgroundImage="blueBigBackground.png"
+                cardBackgroundImage="blueBigBackground.jpg"
                 projectName="blindsight"
                 leftProject="true"
               >
@@ -117,7 +117,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardBackgroundImage="purpleBigBackground.png"
+                cardBackgroundImage="purpleBigBackground.jpg"
                 projectName="grow"
                 leftProject="true"
               >
@@ -138,7 +138,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardBackgroundImage="purpleMedBackground.png"
+                cardBackgroundImage="purpleMedBackground.jpg"
                 projectName="paypool"
                 rightProject="true"
               >
@@ -154,7 +154,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardBackgroundImage="peachBackground.png"
+                cardBackgroundImage="peachBackground.jpg"
                 projectName="healthline"
                 rightProject="true"
               >
@@ -167,7 +167,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardBackgroundImage="blueMedBackground.png"
+                cardBackgroundImage="blueMedBackground.jpg"
                 projectName="kinemagic"
                 rightProject="true"
               >
@@ -180,7 +180,7 @@
                 width="100%"
                 transition="1s"
                 class="simple-test"
-                cardBackgroundImage="peachBackground.png"
+                cardBackgroundImage="peachBackground.jpg"
                 projectName="easygr"
                 rightProject="true"
               >
@@ -205,7 +205,7 @@
 
       <b-row>
         <b-col>
-          <about backgroundImage="purpleLongBackground.png" aboutSection="myself"></about>
+          <about backgroundImage="purpleLongBackground.jpg" aboutSection="myself"></about>
         </b-col>
       </b-row>
 
@@ -214,7 +214,7 @@
       <b-row>
         <b-col>
           <about
-            backgroundImage="peachLongBackground.png"
+            backgroundImage="peachLongBackground.jpg"
             aboutSection="experience"
             rightPicture="true"
           ></about>
@@ -267,9 +267,7 @@ export default Vue.extend({
       if (sectionElement != null) {
         sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
       } else {
-        console.log(
-          "The element associated with the menu item is null / could not be found."
-        );
+        // console.log("hey")
       }
     }
   },
