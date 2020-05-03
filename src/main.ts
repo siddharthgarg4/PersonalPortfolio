@@ -3,17 +3,11 @@ import App from "./App.vue";
 import router from "./router";
 import "bootstrap/scss/bootstrap.scss";
 import BootstrapVue from "bootstrap-vue";
-import Flip from "@/components/FlipCard.vue";
-import CustomMenu from "@/components/CustomMenu.vue";
-import About from "@/components/About.vue";
-import Contact from "@/components/Contact.vue";
+import Cover from "@/components/Cover.vue";
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
-Vue.component("flip-card", Flip);
-Vue.component("about", About);
-Vue.component("custom-menu", CustomMenu);
-Vue.component("contact", Contact);
+Vue.component("cover", Cover);
 
 new Vue({
   router,

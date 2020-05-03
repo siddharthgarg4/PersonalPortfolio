@@ -1,0 +1,147 @@
+<template>
+  <b-container class="coverContainer" fluid>
+    <b-row class="align-items-start">
+      <img class="sgLogo " src="../assets/sgLogo.png" />
+    </b-row>
+    <b-row align-v="center" class="coverCenter align-items-center d-flex">
+      <b-col sm="6" class="coverText">
+        <b-row>
+          <b-col class="align-items-center removePadding">
+            <p class="coverTitle">Hi, I’m Sid</p>
+          </b-col>
+        </b-row>
+        <b-row>
+          <p class="coverPara">
+            As a <span class="blueFont">Software Engineer</span>
+            , talk about something more original and professional like solving
+            solutions etc.
+          </p>
+        </b-row>
+      </b-col>
+      <b-col sm="6" class="extraPadding">
+        <img
+          class="img-responsive fitImage"
+          src="../assets/coverMainPicture.png"
+        />
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-row>
+        <b-col cols="12">
+          <div class="solidVerticalLine"></div>
+        </b-col>
+        <b-col cols="12">
+          <p class="scrollMoreText">Scroll to Learn More</p>
+        </b-col>
+      </b-row>
+    </b-row>
+  </b-container>
+</template>
+
+<style lang="scss">
+@import "../styles/main.scss";
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.removePadding {
+  padding: 0;
+}
+.coverContainer {
+  height: 100vh;
+  overflow: auto;
+  background: linear-gradient(
+    90deg,
+    $offWhiteColor 72.5%,
+    $darkBlueColor 27.5%
+  );
+  padding: 1.5%;
+  @media (max-width: $screen-xs) {
+    background: linear-gradient(
+      180deg,
+      $offWhiteColor 72.5%,
+      $darkBlueColor 27.5%
+    );
+  }
+}
+.sgLogo {
+  height: 27px;
+  width: auto;
+  margin: 0;
+  @media (max-width: $screen-md) {
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 20px;
+  }
+  @media (max-width: $screen-xs) {
+    margin-left: 15px;
+    margin-top: 15px;
+    height: 15px;
+  }
+}
+.fitImage {
+  width: 35vw;
+  object-fit: contain;
+  height: auto;
+  @media (max-width: $screen-xs) {
+    width: 65vw;
+  }
+}
+.coverTitle {
+  font-size: 3.125vw;
+  font-weight: 400;
+  text-align: start;
+  @media (max-width: $screen-xs) {
+    font-size: 6.7vw;
+    text-align: center;
+  }
+}
+.coverPara {
+  font-size: 2.5vw;
+  font-weight: 600;
+  text-align: start;
+  line-height: 3.25vw;
+  @media (max-width: $screen-xs) {
+    font-size: 5.58vw;
+    line-height: 6.5vw;
+    text-align: center;
+  }
+}
+.blueFont {
+  color: $darkBlueColor;
+}
+.coverCenter {
+  min-height: 80vh;
+  @media (max-width: $screen-xs) {
+    min-height: 85vh;
+  }
+}
+.coverText {
+  @media (max-width: $screen-xs) {
+    padding-top: 10vh;
+  }
+}
+.solidVerticalLine {
+  border-left: 2px solid $darkBlueColor;
+  height: 7.5vh;
+  margin: 2px;
+  @media (max-width: $screen-xs) {
+    border-left: 2px solid $offWhiteColor;
+    height: 6vh;
+  }
+}
+.scrollMoreText {
+  font-size: 1.5vw;
+  font-weight: 600;
+  text-align: start;
+  padding-top: 5px;
+  margin-bottom: 0;
+  @media (max-width: $screen-xs) {
+    font-size: 3vw;
+    color: $offWhiteColor;
+  }
+  @media (max-width: $screen-md) and (min-width: $screen-xs) {
+    font-size: 2vw;
+  }
+}
+</style>
