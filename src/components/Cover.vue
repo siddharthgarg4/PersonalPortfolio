@@ -68,7 +68,7 @@
   height: 27px;
   width: auto;
   margin: 0;
-  @media (max-width: $screen-md) {
+  @media (max-width: $screen-md) and (min-width: $screen-xs) {
     margin-left: 10px;
     margin-top: 10px;
     height: 20px;
@@ -118,7 +118,7 @@
 }
 .coverText {
   @media (max-width: $screen-xs) {
-    padding-top: 10vh;
+    padding-top: 6.5vh;
   }
 }
 .solidVerticalLine {
@@ -127,7 +127,7 @@
   margin: 2px;
   @media (max-width: $screen-xs) {
     border-left: 2px solid $offWhiteColor;
-    height: 6vh;
+    height: 5vh;
   }
 }
 .scrollMoreText {
