@@ -1,6 +1,7 @@
 <template>
   <div class="homePage" id="homePage">
     <cover></cover>
+    <expereinceAndProjects></expereinceAndProjects>
     <!-- <div class="customMenu">
       <p>Menu</p>
     </div> -->

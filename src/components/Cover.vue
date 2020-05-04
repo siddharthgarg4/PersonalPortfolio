@@ -4,7 +4,7 @@
       <img class="sgLogo " src="../assets/sgLogo.png" />
     </b-row>
     <b-row align-v="center" class="coverCenter align-items-center d-flex">
-      <b-col sm="6" class="coverText">
+      <b-col lg="6" class="coverText">
         <b-row>
           <b-col class="align-items-center removePadding">
             <p class="coverTitle">Hi, I’m Sid</p>
@@ -18,7 +18,7 @@
           </p>
         </b-row>
       </b-col>
-      <b-col sm="6" class="extraPadding">
+      <b-col lg="6" class="extraPadding">
         <img
           class="img-responsive fitImage"
           src="../assets/coverMainPicture.png"
@@ -26,7 +26,6 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-row>
         <b-col cols="12">
           <div class="solidVerticalLine"></div>
         </b-col>
@@ -34,7 +33,6 @@
           <p class="scrollMoreText">Scroll to Learn More</p>
         </b-col>
       </b-row>
-    </b-row>
   </b-container>
 </template>
 
@@ -47,16 +45,18 @@
 .removePadding {
   padding: 0;
 }
+.removeMargin {
+  margin: 0;
+}
 .coverContainer {
-  height: 100vh;
-  overflow: auto;
+  min-height: 100vh;
   background: linear-gradient(
     90deg,
     $offWhiteColor 72.5%,
     $darkBlueColor 27.5%
   );
   padding: 1.5%;
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-md) {
     background: linear-gradient(
       180deg,
       $offWhiteColor 72.5%,
@@ -83,6 +83,9 @@
   width: 35vw;
   object-fit: contain;
   height: auto;
+  @media (max-width: $screen-md) and (min-width: $screen-xs) {
+    width: 45vw;
+  }
   @media (max-width: $screen-xs) {
     width: 65vw;
   }
@@ -91,7 +94,7 @@
   font-size: 3.125vw;
   font-weight: 400;
   text-align: start;
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-md) {
     font-size: 6.7vw;
     text-align: center;
   }
@@ -101,7 +104,7 @@
   font-weight: 600;
   text-align: start;
   line-height: 3.25vw;
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-md) {
     font-size: 5.58vw;
     line-height: 6.5vw;
     text-align: center;
@@ -117,7 +120,7 @@
   }
 }
 .coverText {
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-md) {
     padding-top: 6.5vh;
   }
 }
@@ -125,7 +128,7 @@
   border-left: 2px solid $darkBlueColor;
   height: 7.5vh;
   margin: 2px;
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-md) {
     border-left: 2px solid $offWhiteColor;
     height: 5vh;
   }
@@ -135,13 +138,9 @@
   font-weight: 600;
   text-align: start;
   padding-top: 5px;
-  margin-bottom: 0;
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-md) {
     font-size: 3vw;
     color: $offWhiteColor;
-  }
-  @media (max-width: $screen-md) and (min-width: $screen-xs) {
-    font-size: 2vw;
   }
 }
 </style>
