@@ -10,7 +10,6 @@
 
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-var json = require("@/static/content.json");
 export default Vue.extend({
   name: "homePage"
 });

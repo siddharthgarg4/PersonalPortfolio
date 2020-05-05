@@ -18,7 +18,7 @@
           </p>
         </b-row>
       </b-col>
-      <b-col lg="6" class="extraPadding">
+      <b-col lg="6" class="extraPadding" v-scrollAnimation>
         <img
           class="img-responsive fitImage"
           src="../assets/coverMainPicture.png"
@@ -26,13 +26,13 @@
       </b-col>
     </b-row>
     <b-row>
-        <b-col cols="12">
-          <div class="solidVerticalLine"></div>
-        </b-col>
-        <b-col cols="12">
-          <p class="scrollMoreText">Scroll to Learn More</p>
-        </b-col>
-      </b-row>
+      <b-col cols="12">
+        <div class="solidVerticalLine"></div>
+      </b-col>
+      <b-col cols="12">
+        <p class="scrollMoreText removeMargin">Scroll to Learn More</p>
+      </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -142,5 +142,14 @@
     font-size: 3vw;
     color: $offWhiteColor;
   }
+}
+.beforeEnter {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 2s ease-out;
+}
+.enter {
+  opacity: 1;
+  transform: translateY(0px);
 }
 </style>

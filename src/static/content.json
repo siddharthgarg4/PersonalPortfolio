@@ -1,73 +1,18 @@
 { 
-    "blindsight" : {
-        "name" : "blindsight",
-        "titleColour": "#FFFFFF",
-        "title" : "BlindSight",
-        "description" : "< iOS, Twilio API, Firebase API, CoreML >",
-        "images" : ["blindsight1", "blindsight2", "blindsight3"],
-        "extraInfo" : "< 2nd Place at PCHacks >",
-        "github" : "https://github.com/siddharthgarg4/BlindSight",
-        "information" : "An iOS app focused on assistive technology that helps the visually impaired through object recognition and live video remote assistance and maps integration."
+    "tile" : {
+        "title" : "Software Engineer Intern at Tile",
+        "subtitle" : "Winter 2020 - San Mateo, California" ,
+        "coverImageName" : "tile.png",
+        "description" : "Collarborated with product team to this, this, and this.",
+        "overlayTitle" : "Learn More About Tile",
+        "link" : "https://www.thetileapp.com/"
     },
-    "grow" : {
-        "name" : "grow",
-        "titleColour": "#FFFFFF",
-        "title" : "Grow",
-        "description" : "< iOS, ARKit, CoreML >",
-        "images" : ["grow1", "grow2"],
-        "extraInfo" : "< 1st Place at HackLassonde >",
-        "github" : "https://github.com/siddharthgarg4/Grow",
-        "information" : "An iOS app that allows users to find eco-friendliness of companies using CoreML and ARKit. It also allows users to work towards personal sustainability goals."
-    },
-    "easygr" : {
-        "name" : "easygr",
-        "titleColour": "#122D40",
-        "title" : "EasyGr",
-        "description" : "< Android >",
-        "images" : ["easygr1"],
-        "extraInfo" : "< Passion Project >",
-        "github" : "https://github.com/siddharthgarg4/EasyGr",
-        "information" : "Website assisting students in calculating their GPA as well as grades required to meet a required GPA."
-    },
-    "healthline" : {
-        "name" : "healthline",
-        "titleColour": "#122D40",
-        "title" : "HealthLine",
-        "description" : "< iOS, Twilio API, Python, Google Maps API >",
-        "images" : ["healthline1", "healthline2", "healthline3", "healthline4"],
-        "extraInfo" : "< Top 5 at RUHacks >",
-        "github" : "https://github.com/siddharthgarg4/HealthLine",
-        "information" : "An iOS app that provides medical diagnosis, rash recognition as well as finding nearby hospitals without internet."
-    },
-    "kinemagic" : {
-        "name" : "kinemagic",
-        "titleColour": "#122D40",
-        "title" : "KineMagic",
-        "description" : "< Web >",
-        "images" : ["kinemagic1", "kinemagic2"],
-        "extraInfo" : "< ConuHacks >",
-        "github" : "https://github.com/siddharthgarg4/KineMagic",
-        "information" : "An android app that solves various kinematic equations with the option of graphing the solution."
-
-    },
-    "paypool" : {
-        "name" : "paypool",
-        "titleColour" : "#F37C74",
-        "title" : "PayPool",
-        "description" : "< iOS, Interac API, Firebase API, Alamofire API >",
-        "images" : ["paypool1", "paypool2"],
-        "extraInfo" : "< TD Innovation Lab >",
-        "github" : "https://tdlab.io/project/payPool",
-        "information" : "An iOS app utilising firebase backend and an Interac e-transfer API focused prototype for splitting bills."
-    },
-    "myself" : {
-        "title" : "\"Tell me about yourself ?\"",
-        "titleColour" : "#122D40",
-        "description" : "I currently study Computer Science at the University of Waterloo and Business at Wilfrid Laurier University. My philosophy involves seeking discomfort, as I believe we stop growing once we are unwilling to have new experiences. When I am not coding, I am usually sketching, travelling < I have been to 6 countries in the past 2 years >, playing soccer or volunteering at a local club."
-    },
-    "experience" : {
-        "title" : "\"What experience do you have ?\"",
-        "titleColour" : "#F37C74",
-        "description" : "TD Innovation Lab, located in Kitchener-Waterloo, Ontario has given me a hands on experience that has introduced me to software development, business and technology. During my internship, I was responsible for developing and integrating features in an internal iOS and Android app to be used by TD Trust Bank employees. Being a part of the innovation lab also gave me the opportunity to utilise new and emerging technologies for raid prototyping and presenting them to senior TD Bank executives."
+    "td" : {
+        "title" : "Software Developer Intern at TD",
+        "subtitle" : "Winter 2019 - Kitchener, Ontario" ,
+        "coverImageName" : "td.png",
+        "description" : "Collarborated with product team to this, this, and this.",
+        "overlayTitle" : "Learn More About TD Innovation Lab",
+        "link" : "https://tdlab.io/"
     }
 }

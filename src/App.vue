@@ -6,6 +6,8 @@
 
 <style lang="scss">
 @import "styles/main.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-vue/dist/bootstrap-vue.css";
 html {
   scroll-behavior: smooth;
 }
