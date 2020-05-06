@@ -48,11 +48,6 @@
 .card {
   margin-bottom: 35px;
 }
-
-.row {
-  margin-right: 0px;
-  margin-left: 0px;
-}
 .experienceProjectContainer {
   background: $lightWhiteColor;
   padding: 5% 7.5% 5% 7.5%;

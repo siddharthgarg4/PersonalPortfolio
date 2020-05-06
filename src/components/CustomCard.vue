@@ -2,8 +2,7 @@
     <b-container fluid class="removePadding">
         <b-card
           :img-src="require('../static/assets/'+json[projectName].coverImageName)"
-          img-alt="Tile"
-          img-top
+          :img-alt="json[projectName].title"
           class="customCard"
           @click="goToLink(json[projectName].link)"
         >

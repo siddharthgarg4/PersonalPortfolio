@@ -62,5 +62,14 @@
         "description" : "iOS, Azure, Xe",
         "overlayTitle" : "View Project FlySafe",
         "link" : "https://github.com/siddharthgarg4/FlySafe"
+    },
+    "me" : {
+        "description": "I currently study Computer Science at the University of Waterloo and Business at Wilfrid Laurier University.\n\nI currently study Computer Science at the University of Waterloo and Business at Wilfrid Laurier University.  currently study Computer Science at the University of Waterloo and Business at Wilfrid Laurier  University.  currently study Computer Sci"
+    },
+    "dummyRecommendation" : {
+        "recommenderImage" : "andre.png",
+        "recommenderName" : "Andre Gatti, Tile",
+        "recommenderPosition" : "Senior iOS Software Engineer",
+        "recommendationDescription" : "Siddharth is an excellent kid who works very hard ipsum blah blah blah blah blah blah blah blah blah blah blah"
     }
 }
