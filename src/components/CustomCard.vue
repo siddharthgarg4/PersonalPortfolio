@@ -77,7 +77,7 @@ export default {
 .cardParagraph {
   font-size: 1.5vw;
   font-weight: 400;
-  text-align: start;
+  text-align: center;
   @media (max-width: $screen-md) {
     font-size: 3vw;
   }
@@ -102,8 +102,15 @@ export default {
   color: $lightWhiteColor;
   font-size: 2.5vw;
   font-weight: 400;
+  padding: 1.25rem;
   @media (max-width: $screen-md) {
     font-size: 5.58vw;
   }
+}
+.liftAnimation:hover, .liftAnimation:focus {
+box-shadow: 0 1vh 1vh -1vh darkgray;
+transform: translateY(-3vh);
+-webkit-transition: 300ms ease;
+  transition: 300ms ease;
 }
 </style>

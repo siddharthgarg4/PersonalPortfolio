@@ -13,6 +13,33 @@
           <customCard projectName="td"></customCard>
       </b-col>
     </b-row>
+    <b-row>
+        <b-col class="componentTitleContainer">
+            <p class="componentTitle removeMargin">Personal Projects</p>
+        </b-col>
+    </b-row>
+    <b-row>
+        <b-col lg="4">
+            <customCard projectName="grow"></customCard>
+        </b-col>
+        <b-col lg="4">
+            <customCard projectName="healthline"></customCard>
+        </b-col>
+        <b-col lg="4">
+            <customCard projectName="blindsight"></customCard>
+        </b-col>
+    </b-row>
+    <b-row>
+        <b-col lg="4">
+            <customCard projectName="instameet"></customCard>
+        </b-col>
+        <b-col lg="4">
+            <customCard projectName="paypool"></customCard>
+        </b-col>
+        <b-col lg="4">
+            <customCard projectName="flysafe"></customCard>
+        </b-col>
+    </b-row>
   </b-container>
 </template>
 
@@ -21,12 +48,6 @@
 .card {
   margin-bottom: 35px;
 }
-// .dummyClass:hover, .dummyClass:focus {
-// box-shadow: 0 1vh 1vh -1vh darkgray;
-// transform: translateY(-3vh);
-// -webkit-transition: 300ms ease;
-//   transition: 300ms ease;
-// }
 
 .row {
   margin-right: 0px;
