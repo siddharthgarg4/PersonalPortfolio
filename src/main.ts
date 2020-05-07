@@ -10,6 +10,7 @@ import CustomCard from "@/components/CustomCard.vue";
 import RecommendationCard from "@/components/RecommendationCard.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import CustomMenu from "@/components/CustomMenu.vue";
+import Contact from "@/components/Contact.vue";
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
@@ -20,6 +21,7 @@ Vue.component("customCard", CustomCard);
 Vue.component("recommendationCard", RecommendationCard);
 Vue.component("aboutMe", AboutMe);
 Vue.component("customMenu", CustomMenu);
+Vue.component("contact", Contact);
 
 Vue.directive("scrollAnimation", ScrollAnimation);
 

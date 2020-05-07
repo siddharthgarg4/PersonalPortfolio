@@ -27,7 +27,7 @@
                 </div>
                 <div 
                 class="optionContainer"
-                @click="scrollToSection('about')"
+                @click="scrollToSection('contact')"
                 >
                     <img src="../static/assets/contactNav.png" alt="Contact" class="img-fluid navIcon">
                 </div>

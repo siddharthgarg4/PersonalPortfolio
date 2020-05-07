@@ -1,0 +1,58 @@
+<template>
+    <b-container class="contactContainer" fluid>
+        <b-row>
+            <b-col cols="12">
+                <p class="coverTitle removeMargin">Like what you see ? Let’s talk !</p>
+            </b-col>
+            <b-col cols="12">
+                <p class="aboutMeDescription">I am currently seeking opportunities for Winter 2021.
+                    Made with ♡ in Waterloo
+                </p>
+            </b-col>
+        </b-row>
+        <b-row class="contactIconContainer">
+            <b-col>
+                <img src="../static/assets/linkedinContact.png" class="img-fluid contactIcon">
+                <img src="../static/assets/emailContact.png" class="img-fluid contactIcon emailIcon">
+                <img src="../static/assets/githubContact.png" class="img-fluid contactIcon">
+            </b-col>
+        </b-row>
+    </b-container>
+</template>
+
+<style lang="scss">
+@import "../styles/main.scss";
+.contactContainer {
+    background: $darkBlueColor;
+    padding: 5% 7.5% 5% 7.5%;
+    .coverTitle, .aboutMeDescription {
+        color: $lightWhiteColor;
+        text-align: center;
+    }
+    .coverTitle {
+        font-weight: 600;
+        line-height: 3.5vw;
+        @media (max-width: $screen-md) {
+            line-height: 7vw;
+        }
+    }
+    .aboutMeDescription {
+        margin: 15px 0 0 0;
+        font-weight: 500;
+    }
+}
+.contactIcon {
+    height: auto;
+    width: 3vw;
+    margin: 30px 2.5vw 15px 2.5vw;
+    @media (max-width: $screen-lg) and (min-width: $screen-sm) {
+        width: 50px;
+    }
+    @media (max-width: $screen-sm) and (min-width: $screen-xs) {
+        width: 40px;
+    }
+    @media (max-width: $screen-xs) {
+        width: 30px;
+    }
+}
+</style>

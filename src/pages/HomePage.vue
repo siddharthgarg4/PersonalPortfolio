@@ -3,6 +3,7 @@
     <cover id="cover"></cover>
     <expereinceAndProjects id="experience"></expereinceAndProjects>
     <aboutMe id="about"></aboutMe>
+    <contact id="contact"></contact>
   </div>
 </template>
 
