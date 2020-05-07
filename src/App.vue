@@ -17,7 +17,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  color: #1c1c1e;
+  color: $darkBlackColor;
 }
 </style>
 

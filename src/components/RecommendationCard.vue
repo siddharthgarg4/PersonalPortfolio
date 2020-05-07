@@ -58,12 +58,13 @@ export default {
   border: none;
   align-items: center;
   .card-img {
-    width: 7.5vw;
     height: 7.5vw;
+    width: auto;
     margin-top: 1.25rem;
   }
   .card-img-left {
     height: 15vw;
+    width: auto;
     margin-left: 1.25rem;;
   }
 }

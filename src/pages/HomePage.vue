@@ -3,9 +3,6 @@
     <cover></cover>
     <expereinceAndProjects></expereinceAndProjects>
     <aboutMe></aboutMe>
-    <!-- <div class="customMenu">
-      <p>Menu</p>
-    </div> -->
   </div>
 </template>
 
@@ -31,12 +28,4 @@ body {
 .homePage {
   background-color: $offWhiteColor;
 }
-// .customMenu {
-//   height: 30pt;
-//   width: 35px;
-//   position: fixed;
-//   top: 0;
-//   left: 50%;
-//   z-index: 4000;
-// }
 </style>

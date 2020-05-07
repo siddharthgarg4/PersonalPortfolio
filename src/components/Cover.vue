@@ -1,7 +1,9 @@
 <template>
   <b-container class="coverContainer" fluid>
-    <b-row class="align-items-start">
-      <img class="sgLogo " src="../assets/sgLogo.png" />
+    <b-row>
+      <b-col class="justify-content-start d-flex">
+        <img class="sgLogo" src="../assets/sgLogo.png" />
+      </b-col>
     </b-row>
     <b-row align-v="center" class="coverCenter align-items-center d-flex">
       <b-col lg="6" class="coverText">
@@ -65,18 +67,15 @@
   }
 }
 .sgLogo {
-  height: 27px;
+  height: 3.5vw;
   width: auto;
-  margin: 0;
+  margin: 15px 0 0 0;
+  min-height: 30px;
   @media (max-width: $screen-md) and (min-width: $screen-xs) {
-    margin-left: 10px;
-    margin-top: 10px;
-    height: 20px;
+    height: 5.5vw;
   }
   @media (max-width: $screen-xs) {
-    margin-left: 15px;
-    margin-top: 15px;
-    height: 15px;
+    height: 7vw;
   }
 }
 .fitImage {
@@ -114,9 +113,12 @@
   color: $darkBlueColor;
 }
 .coverCenter {
-  min-height: 80vh;
+  min-height: 70vh;
+  @media (max-width: $screen-md) and (min-width: $screen-xs) {
+    min-height: 75vh;
+  }
   @media (max-width: $screen-xs) {
-    min-height: 85vh;
+    min-height: 80vh;
   }
 }
 .coverText {
