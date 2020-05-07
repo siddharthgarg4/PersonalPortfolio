@@ -4,6 +4,9 @@
       <b-col class="justify-content-start d-flex">
         <img class="sgLogo" src="../assets/sgLogo.png" />
       </b-col>
+      <b-col class="justify-content-end d-flex menuContainer removePadding">
+        <customMenu></customMenu>
+      </b-col>
     </b-row>
     <b-row align-v="center" class="coverCenter align-items-center d-flex">
       <b-col lg="6" class="coverText">
@@ -67,15 +70,11 @@
   }
 }
 .sgLogo {
-  height: 3.5vw;
+  height: 50px;
   width: auto;
   margin: 15px 0 0 0;
-  min-height: 30px;
-  @media (max-width: $screen-md) and (min-width: $screen-xs) {
-    height: 5.5vw;
-  }
-  @media (max-width: $screen-xs) {
-    height: 7vw;
+  @media (max-width: $screen-sm) {
+    height: 35px !important;
   }
 }
 .fitImage {
@@ -153,5 +152,8 @@
 .enter {
   opacity: 1;
   transform: translateY(0px);
+}
+.menuContainer {
+  margin: 0 15px 0 15px;
 }
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="homePage" id="homePage">
-    <cover></cover>
-    <expereinceAndProjects></expereinceAndProjects>
-    <aboutMe></aboutMe>
+    <cover id="cover"></cover>
+    <expereinceAndProjects id="experience"></expereinceAndProjects>
+    <aboutMe id="about"></aboutMe>
   </div>
 </template>
 
