@@ -107,10 +107,4 @@ export default Vue.extend({
     font-size: 5.58vw;
   }
 }
-.liftAnimation:hover, .liftAnimation:focus {
-box-shadow: 0 1vh 1vh -1vh darkgray;
-transform: translateY(-3vh);
--webkit-transition: 300ms ease;
-  transition: 300ms ease;
-}
 </style>

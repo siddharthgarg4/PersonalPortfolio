@@ -67,5 +67,17 @@ export default {
     width: auto;
     margin-left: 1.25rem;;
   }
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
+    -webkit-transform: translate3d(0px, -1px, 0px);
+    -moz-transform: translate3d(0px, -1px, 0px);
+    -ms-transform: translate3d(0px, -1px, 0px);
+    -o-transform: translate3d(0px, -1px, 0px);
+    transform: translate3d(0px, -1px, 0px);
+
+    -webkit-transition: all 500ms ease;
+    -moz-transition: all 500ms ease;
+    transition: all 500ms ease;
+  }
 }
 </style>
