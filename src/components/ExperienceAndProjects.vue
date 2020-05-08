@@ -49,8 +49,19 @@
   margin-bottom: 35px;
 }
 .experienceProjectContainer {
-  background: $lightWhiteColor;
+  background-color: $lightWhiteColor;
+  background-image: url('../static/assets/dotBackground.png'), 
+  url('../static/assets/dotBackground.png'), 
+  url('../static/assets/dotBackground.png'),
+  url('../static/assets/dotBackground.png');
+  background-position: top 3% left, top 27% right, top 52% left, top 95% right;
   padding: 5% 7.5% 5% 7.5%;
+  background-repeat: no-repeat;
+  background-size: 30%;
+  @media (max-width: $screen-md) {
+    background-size: 70%;
+    background-position: top 2.25% left, top 35% right, top 60% left, top 100% right;
+  }
 }
 .componentTitleContainer {
   margin-top: 35px;
