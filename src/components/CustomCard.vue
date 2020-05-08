@@ -18,7 +18,8 @@
 
 <script>
 var json = require("@/static/content.json");
-export default {
+import Vue from "vue";
+export default Vue.extend({
     created() {
         this.json = json;
     },
@@ -33,7 +34,7 @@ export default {
             window.open(givenLink, "_blank");
         }
     }
-}
+});
 </script>
 
 <style lang="scss">

@@ -12,13 +12,40 @@
         </b-row>
         <b-row class="contactIconContainer">
             <b-col>
-                <img src="../static/assets/linkedinContact.png" class="img-fluid contactIcon">
-                <img src="../static/assets/emailContact.png" class="img-fluid contactIcon emailIcon">
-                <img src="../static/assets/githubContact.png" class="img-fluid contactIcon">
+                <img 
+                src="../static/assets/linkedinContact.png" 
+                class="img-fluid contactIcon"
+                @click="goToLink(json['linkedin'])"
+                >
+                <img 
+                src="../static/assets/emailContact.png" 
+                class="img-fluid contactIcon emailIcon"
+                @click="goToLink(json['email'])"
+                >
+                <img 
+                src="../static/assets/githubContact.png" 
+                class="img-fluid contactIcon"
+                @click="goToLink(json['github'])"
+                >
             </b-col>
         </b-row>
     </b-container>
 </template>
+
+<script>
+var json = require("@/static/content.json");
+import Vue from "vue";
+export default Vue.extend({
+    created() {
+        this.json = json;
+    },
+    methods: {
+        goToLink(givenLink) {
+            window.open(givenLink, "_blank");
+        }
+    }
+});
+</script>
 
 <style lang="scss">
 @import "../styles/main.scss";
