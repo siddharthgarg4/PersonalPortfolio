@@ -17,8 +17,8 @@
         </b-row>
         <b-row>
           <p class="coverPara">
-            As a <span class="blueFont">Software Engineer</span> I specialize
-            in building exceptional apps, websites and everything in between.
+            As a <span class="blueFont">Software Engineer</span> I specialize in
+            building exceptional apps, websites and everything in between.
           </p>
         </b-row>
       </b-col>
@@ -31,14 +31,18 @@
     </b-row>
     <b-row>
       <b-col cols="12" class="d-flex justify-content-start">
-        <div class="solidVerticalLine cursorPointer" @click="scrollToExperience"></div>
+        <div
+          class="solidVerticalLine cursorPointer"
+          @click="scrollToExperience"
+        ></div>
       </b-col>
       <b-col cols="12" class="d-flex justify-content-start">
-        <p 
-        class="scrollMoreText removeMargin cursorPointer"
-        @click="scrollToExperience"
+        <p
+          class="scrollMoreText removeMargin cursorPointer"
+          @click="scrollToExperience"
         >
-        Scroll to Learn More</p>
+          Scroll to Learn More
+        </p>
       </b-col>
     </b-row>
   </b-container>
@@ -47,16 +51,18 @@
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
-    methods: {
-        scrollToExperience() {
-            let sectionElement = document.getElementById('experience');
-            if (sectionElement != null) {
-                sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
-            } else {
-                console.log("The element associated with the menu item is null / could not be found.");
-            }
-        }
+  methods: {
+    scrollToExperience() {
+      let sectionElement = document.getElementById("experience");
+      if (sectionElement != null) {
+        sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
+      } else {
+        console.log(
+          "The element associated with the menu item is null / could not be found."
+        );
+      }
     }
+  }
 });
 </script>
 

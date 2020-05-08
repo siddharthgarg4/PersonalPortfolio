@@ -1,39 +1,41 @@
 <template>
-    <b-container fluid class="removePadding h-100">
-        <b-card
-          :img-src="require('../static/assets/'+json[projectName].coverImageName)"
-          :img-alt="json[projectName].title"
-          class="customCard cursorPointer h-100"
-          @click="goToLink(json[projectName].link)"
-        >
-          <p class="cardTitle removeMargin">{{ json[projectName].title }}</p>
-          <p class="cardSubtitle">{{ json[projectName].subtitle }}</p>
-          <p class="cardParagraph">{{ json[projectName].description }}</p>
-        </b-card>
-        <div class="viewProjectOverlay">
-          <p class="overlayText removeMargin">{{ json[projectName].overlayTitle }}</p>
-        </div>
-    </b-container>
+  <b-container fluid class="removePadding h-100">
+    <b-card
+      :img-src="require('../static/assets/' + json[projectName].coverImageName)"
+      :img-alt="json[projectName].title"
+      class="customCard cursorPointer h-100"
+      @click="goToLink(json[projectName].link)"
+    >
+      <p class="cardTitle removeMargin">{{ json[projectName].title }}</p>
+      <p class="cardSubtitle">{{ json[projectName].subtitle }}</p>
+      <p class="cardParagraph">{{ json[projectName].description }}</p>
+    </b-card>
+    <div class="viewProjectOverlay">
+      <p class="overlayText removeMargin">
+        {{ json[projectName].overlayTitle }}
+      </p>
+    </div>
+  </b-container>
 </template>
 
 <script>
 var json = require("@/static/content.json");
 import Vue from "vue";
 export default Vue.extend({
-    created() {
-        this.json = json;
-    },
-    props: {
-        projectName: {
-            type: String,
-            required: true
-        }
-    },
-    methods: {
-        goToLink(givenLink) {
-            window.open(givenLink, "_blank");
-        }
+  created() {
+    this.json = json;
+  },
+  props: {
+    projectName: {
+      type: String,
+      required: true
     }
+  },
+  methods: {
+    goToLink(givenLink) {
+      window.open(givenLink, "_blank");
+    }
+  }
 });
 </script>
 
