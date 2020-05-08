@@ -14,17 +14,17 @@
             <b-col>
                 <img 
                 src="../static/assets/linkedinContact.png" 
-                class="img-fluid contactIcon"
+                class="img-fluid contactIcon cursorPointer"
                 @click="goToLink(json['linkedin'])"
                 >
                 <img 
                 src="../static/assets/emailContact.png" 
-                class="img-fluid contactIcon emailIcon"
+                class="img-fluid contactIcon emailIcon cursorPointer"
                 @click="goToLink(json['email'])"
                 >
                 <img 
                 src="../static/assets/githubContact.png" 
-                class="img-fluid contactIcon"
+                class="img-fluid contactIcon cursorPointer"
                 @click="goToLink(json['github'])"
                 >
             </b-col>

@@ -34,12 +34,32 @@
       <b-col cols="12">
         <div class="solidVerticalLine"></div>
       </b-col>
-      <b-col cols="12">
-        <p class="scrollMoreText removeMargin">Scroll to Learn More</p>
+      <b-col cols="12" class="d-flex justify-content-start">
+        <p 
+        class="scrollMoreText removeMargin cursorPointer"
+        @click="scrollToExperience"
+        >
+        Scroll to Learn More</p>
       </b-col>
     </b-row>
   </b-container>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+export default Vue.extend({
+    methods: {
+        scrollToExperience() {
+            let sectionElement = document.getElementById('experience');
+            if (sectionElement != null) {
+                sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
+            } else {
+                console.log("The element associated with the menu item is null / could not be found.");
+            }
+        }
+    }
+});
+</script>
 
 <style lang="scss">
 @import "../styles/main.scss";
@@ -139,6 +159,7 @@
   font-weight: 600;
   text-align: start;
   padding-top: 5px;
+  display: inline-block;
   @media (max-width: $screen-md) {
     font-size: 3vw;
     color: $offWhiteColor;

@@ -75,6 +75,7 @@ export default Vue.extend({
     overflow: hidden;
 }
 .optionContainer {
+    cursor: pointer;
     display: block;
     height: 50px;
     width: 50px;

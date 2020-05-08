@@ -3,7 +3,7 @@
         <b-card
           :img-src="require('../static/assets/'+json[projectName].coverImageName)"
           :img-alt="json[projectName].title"
-          class="customCard"
+          class="customCard cursorPointer"
           @click="goToLink(json[projectName].link)"
         >
           <p class="cardTitle removeMargin">{{ json[projectName].title }}</p>

@@ -29,4 +29,7 @@ body {
 .homePage {
   background-color: $offWhiteColor;
 }
+.cursorPointer {
+  cursor: pointer;
+}
 </style>
