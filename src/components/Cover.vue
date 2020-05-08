@@ -31,8 +31,8 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col cols="12">
-        <div class="solidVerticalLine"></div>
+      <b-col cols="12" class="d-flex justify-content-start">
+        <div class="solidVerticalLine cursorPointer" @click="scrollToExperience"></div>
       </b-col>
       <b-col cols="12" class="d-flex justify-content-start">
         <p 
@@ -149,6 +149,7 @@ export default Vue.extend({
   border-left: 2px solid $darkBlueColor;
   height: 7.5vh;
   margin: 2px;
+  display: inline-block;
   @media (max-width: $screen-md) {
     border-left: 2px solid $offWhiteColor;
     height: 5vh;
