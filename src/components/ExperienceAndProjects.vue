@@ -2,10 +2,10 @@
   <b-container class="experienceProjectContainer" fluid>
     <b-row>
       <b-col class="componentTitleContainer">
-        <p class="componentTitle removeMargin">Work Experience</p>
+        <p class="componentTitle removeMargin" v-scrollAnimation>Work Experience</p>
       </b-col>
     </b-row>
-    <b-row>
+    <b-row v-scrollAnimation>
       <b-col lg="6">
         <customCard projectName="tile"></customCard>
       </b-col>
@@ -15,10 +15,10 @@
     </b-row>
     <b-row>
         <b-col class="componentTitleContainer">
-            <p class="componentTitle removeMargin">Personal Projects</p>
+            <p class="componentTitle removeMargin" v-scrollAnimation>Personal Projects</p>
         </b-col>
     </b-row>
-    <b-row>
+    <b-row v-scrollAnimation>
         <b-col lg="4">
             <customCard projectName="grow"></customCard>
         </b-col>
@@ -29,7 +29,7 @@
             <customCard projectName="blindsight"></customCard>
         </b-col>
     </b-row>
-    <b-row>
+    <b-row v-scrollAnimation>
         <b-col lg="4">
             <customCard projectName="instameet"></customCard>
         </b-col>

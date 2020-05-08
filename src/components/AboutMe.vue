@@ -1,6 +1,6 @@
 <template>
     <b-container class="aboutMeContainer" fluid>
-        <b-row class="aboutMeDescriptionContainer">
+        <b-row class="aboutMeDescriptionContainer" v-scrollAnimation>
             <b-col lg="6">
                 <p class="componentTitle">This is Me</p>
                 <p class="aboutMeDescription removeMargin">{{ json["me"].description }}</p>
@@ -12,7 +12,7 @@
                 />
             </b-col>
         </b-row>
-        <b-row>
+        <b-row v-scrollAnimation>
             <b-col lg="4">
                 <recommendationCard recommendation="dummyRecommendation"></recommendationCard>
             </b-col>
