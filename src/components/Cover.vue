@@ -17,9 +17,8 @@
         </b-row>
         <b-row>
           <p class="coverPara">
-            As a <span class="blueFont">Software Engineer</span>
-            , talk about something more original and professional like solving
-            solutions etc.
+            As a <span class="blueFont">Software Engineer</span> I specialize
+            in building exceptional apps, websites and everything in between.
           </p>
         </b-row>
       </b-col>

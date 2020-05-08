@@ -1,9 +1,9 @@
 <template>
-    <b-container fluid class="removePadding">
+    <b-container fluid class="removePadding h-100">
         <b-card
           :img-src="require('../static/assets/'+json[projectName].coverImageName)"
           :img-alt="json[projectName].title"
-          class="customCard cursorPointer"
+          class="customCard cursorPointer h-100"
           @click="goToLink(json[projectName].link)"
         >
           <p class="cardTitle removeMargin">{{ json[projectName].title }}</p>
@@ -86,7 +86,6 @@ export default Vue.extend({
   position: absolute;
   margin-right: 15px;
   margin-left: 15px;
-  margin-bottom: 35px;
   left: 0%;
   right: 0%;
   top: 0%;

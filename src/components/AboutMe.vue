@@ -5,10 +5,18 @@
                 <p class="componentTitle">This is Me</p>
                 <p class="aboutMeDescription removeMargin">{{ json["me"].description }}</p>
             </b-col>
-            <b-col lg="6" class="align-items-end">
+            <b-col lg="6" class="myImageContainer">
                 <img
-                class="img-fluid"
+                class="img-fluid divider"
+                src="../static/assets/divider.png"
+                />
+                <img
+                class="img-fluid myImage"
                 src="../static/assets/me.png"
+                />
+                <img
+                class="img-fluid divider"
+                src="../static/assets/divider.png"
                 />
             </b-col>
         </b-row>
@@ -57,5 +65,18 @@ export default {
 }
 .aboutMeImageContainer {
     justify-content: flex-end;
+}
+.divider {
+    width: 50%;
+    opacity: 0.25;
+    margin: 0 25% 0 25%;
+}
+.myImage {
+    margin: 20px 0 20px 0;
+}
+.myImageContainer {
+display: flex;
+    align-items: center;
+    flex-wrap: wrap;
 }
 </style>
