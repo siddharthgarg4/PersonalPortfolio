@@ -25,7 +25,7 @@
     },
     "healthline" : {
         "title" : "HealthLine",
-        "subtitle" : "2nd Place at PCHacks" ,
+        "subtitle" : "Top 5 at RUHacks" ,
         "coverImageName" : "healthline.png",
         "description" : "iOS, Twilio, Python",
         "overlayTitle" : "View Project HealthLine",
@@ -33,7 +33,7 @@
     },
     "blindsight" : {
         "title" : "BlindSight",
-        "subtitle" : "Top 5 at RUHacks" ,
+        "subtitle" : "2nd Place at PCHacks" ,
         "coverImageName" : "blindsight.png",
         "description" : "iOS, Twilio, CoreML",
         "overlayTitle" : "View Project BlindSight",
@@ -43,7 +43,7 @@
         "title" : "InstaMeet",
         "subtitle" : "MHacks Project" ,
         "coverImageName" : "instameet.png",
-        "description" : "iOS, Twilio, Google Maps",
+        "description" : "iOS, Firebase, Google Cloud",
         "overlayTitle" : "View Project InstaMeet",
         "link" : "https://github.com/siddharthgarg4/InstaMeet"
     },
@@ -59,7 +59,7 @@
         "title" : "FlySafe",
         "subtitle" : "Hack The North Project" ,
         "coverImageName" : "flysafe.png",
-        "description" : "iOS, Azure, Xe",
+        "description" : "iOS, Azure, Xe, BlinkId",
         "overlayTitle" : "View Project FlySafe",
         "link" : "https://github.com/siddharthgarg4/FlySafe"
     },
