@@ -17,7 +17,7 @@
           <b-col class="align-items-center removePadding" cols="12">
             <p class="coverPara">
               Using <span class="blueFont">software engineering</span> as a gateway to 
-              translate problems into empowering humanistic opportunities.
+              translate problems into empowering humanistic solutions.
             </p>
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
