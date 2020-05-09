@@ -21,6 +21,13 @@
             building exceptional apps, websites and everything in between.
           </p>
         </b-row>
+        <b-row>
+          <b-col class="align-items-center removePadding">
+            <p class="coverResume cursorPointer" @click="goToResume">
+              In a hurry? Check out my <span class="blueFont">resume</span>.
+            </p>
+          </b-col>
+        </b-row>
       </b-col>
       <b-col lg="6" class="extraPadding" v-scrollAnimation>
         <img
@@ -61,6 +68,9 @@ export default Vue.extend({
           "The element associated with the menu item is null / could not be found."
         );
       }
+    },
+    goToResume() {
+      window.open('https://drive.google.com/open?id=1znD9D40aV2y3--KMBDNguyxXOTcXZnXw', "_blank");
     }
   }
 });
@@ -182,5 +192,14 @@ export default Vue.extend({
 }
 .menuContainer {
   margin: 0 15px 0 15px;
+}
+.coverResume {
+  font-size: 1.5vw;
+  font-weight: 600;
+  text-align: start;
+  @media (max-width: $screen-md) {
+    font-size: 3vw;
+    text-align: center;
+  }
 }
 </style>
