@@ -16,8 +16,8 @@
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
             <p class="coverPara">
-              As a <span class="blueFont">Software Engineer</span>, I specialize in
-              building exceptional apps, websites and everything in between.
+              Using <span class="blueFont">software engineering</span> as a gateway to 
+              translate problems into empowering humanistic opportunities.
             </p>
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
@@ -134,10 +134,10 @@ export default Vue.extend({
   font-size: 2.5vw;
   font-weight: 600;
   text-align: start;
-  line-height: 3.25vw;
+  line-height: 3vw;
   @media (max-width: $screen-md) {
-    font-size: 5.58vw;
-    line-height: 6.5vw;
+    font-size: 5vw;
+    line-height: 5.5vw;
     text-align: center;
   }
 }
