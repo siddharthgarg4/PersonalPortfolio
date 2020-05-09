@@ -11,18 +11,16 @@
     <b-row align-v="center" class="coverCenter align-items-center d-flex">
       <b-col lg="6" class="coverText">
         <b-row>
-          <b-col class="align-items-center removePadding">
+          <b-col class="align-items-center removePadding" cols="12">
             <p class="coverTitle">Hi, I’m Sid</p>
           </b-col>
-        </b-row>
-        <b-row>
-          <p class="coverPara">
-            As a <span class="blueFont">Software Engineer</span>, I specialize in
-            building exceptional apps, websites and everything in between.
-          </p>
-        </b-row>
-        <b-row>
-          <b-col class="align-items-center removePadding">
+          <b-col class="align-items-center removePadding" cols="12">
+            <p class="coverPara">
+              As a <span class="blueFont">Software Engineer</span>, I specialize in
+              building exceptional apps, websites and everything in between.
+            </p>
+          </b-col>
+          <b-col class="align-items-center removePadding" cols="12">
             <p class="coverResume cursorPointer" @click="goToResume">
               In a hurry? Check out my <span class="blueFont">resume</span>.
             </p>
