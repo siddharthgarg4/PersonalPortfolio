@@ -1,11 +1,11 @@
 <template>
-  <b-container fluid class="removePadding">
+  <b-container fluid class="removePadding h-100">
     <b-card
       :img-src="
         require('../static/assets/' + json[recommendation].recommenderImage)
       "
       :img-alt="json[recommendation].recommenderName"
-      class="recommendationCard"
+      class="recommendationCard h-100"
       :img-left="shouldRotateCard"
     >
       <p class="cardTitle removeMargin">
@@ -67,11 +67,13 @@ export default {
     height: 7.5vw;
     width: auto;
     margin-top: 1.25rem;
+    border-radius: 50%;
   }
   .card-img-left {
     height: 15vw;
     width: auto;
     margin-left: 1.25rem;
+    border-radius: 50%;
   }
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.22) 0px 19px 43px;
@@ -84,6 +86,14 @@ export default {
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     transition: all 500ms ease;
+  }
+  .cardParagraph {
+    font-size: 1.25vw;
+    font-weight: 400;
+    text-align: center;
+    @media (max-width: $screen-md) {
+      font-size: 2.5vw;
+    }
   }
 }
 </style>

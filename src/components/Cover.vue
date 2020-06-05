@@ -16,8 +16,9 @@
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
             <p class="coverPara">
-              Using <span class="blueFont">software engineering</span> as a gateway to 
-              translate problems into empowering humanistic solutions.
+              Using <span class="blueFont">software engineering</span> as a
+              gateway to translate problems into empowering humanistic
+              solutions.
             </p>
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
@@ -62,13 +63,17 @@ export default Vue.extend({
       if (sectionElement != null) {
         sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
       } else {
+        // eslint-disable-next-line
         console.log(
           "The element associated with the menu item is null / could not be found."
         );
       }
     },
     goToResume() {
-      window.open('https://drive.google.com/open?id=1znD9D40aV2y3--KMBDNguyxXOTcXZnXw', "_blank");
+      window.open(
+        "https://drive.google.com/open?id=1znD9D40aV2y3--KMBDNguyxXOTcXZnXw",
+        "_blank"
+      );
     }
   }
 });

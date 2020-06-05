@@ -16,17 +16,17 @@
     <b-row v-scrollAnimation>
       <b-col lg="4" class="cardContainer">
         <recommendationCard
-          recommendation="dummyRecommendation"
+          recommendation="andreGattiRecommendation"
         ></recommendationCard>
       </b-col>
       <b-col lg="4" class="cardContainer">
         <recommendationCard
-          recommendation="dummyRecommendation"
+          recommendation="kellyWengertRecommendation"
         ></recommendationCard>
       </b-col>
       <b-col lg="4" class="cardContainer">
         <recommendationCard
-          recommendation="dummyRecommendation"
+          recommendation="aaronStuartRecommendation"
         ></recommendationCard>
       </b-col>
     </b-row>

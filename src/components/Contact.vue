@@ -6,8 +6,8 @@
       </b-col>
       <b-col cols="12">
         <p class="aboutMeDescription">
-          I am currently seeking opportunities for Winter 2021.
-          Made with ♡ in Waterloo
+          <!-- eslint-disable-next-line -->
+          I am currently seeking opportunities for Winter 2021.<br />Made with ♡ in Waterloo
         </p>
       </b-col>
     </b-row>

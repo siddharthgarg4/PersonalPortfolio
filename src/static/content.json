@@ -66,11 +66,23 @@
     "me" : {
         "description": "If I had to describe myself ..., it would be that I am constantly looking for ways to be better, to change or just try something new. This manifests in me seeking both professional and personal opportunities that push me outside my comfort zone. I truly believe that we stop growing once we are unwilling to have new experiences.\n\nCurrently I am studying a dual degree in Computer Science and Business at two different universities (University of Waterloo and Wilfrid Laurier University respectively).\n\nAt my previous internships, I was given the opportunity to explore the field of mobile development in collaborative and fast paced environments. These opportunities allowed me to refine my leadership and creative skills while working on a product currently in market.\n\nOutside school and work, I love exploring new cities, trying new food, going on unplanned adventures and watching soccer."
     },
-    "dummyRecommendation" : {
-        "recommenderImage" : "andre.png",
-        "recommenderName" : "Andre Gatti, Tile",
+    "andreGattiRecommendation" : {
+        "recommenderImage" : "andreGatti.png",
+        "recommenderName" : "André Gatti, Tile",
         "recommenderPosition" : "Senior iOS Software Engineer",
-        "recommendationDescription" : "Siddharth is an excellent kid who works very hard ipsum blah blah blah blah blah blah blah blah blah blah blah"
+        "recommendationDescription" : "\"Sid was able to successfully deliver a very complex project utilizing his strong technical skills. He was very proactive in suggesting solutions while interacting with the different groups such as backend, product management and design, while taking full ownership of the project.\""
+    },
+    "kellyWengertRecommendation" : {
+        "recommenderImage" : "kellyWengert.png",
+        "recommenderName" : "Kelly Wengert, Tile",
+        "recommenderPosition" : "Manager, Product Design",
+        "recommendationDescription" : "\"Sid always asked thoughtful questions. He cared about the quality of the experience and would pro-actively seek me out for my thoughts as he progressed. I'm excited for future designers to work with Sid as he demonstrates the joy and power of a collaborative developer/designer relationship.\""
+    },
+    "aaronStuartRecommendation" : {
+        "recommenderImage" : "aaronStuart.png",
+        "recommenderName" : "Aaron Stuart, TD Lab",
+        "recommenderPosition" : "Product Management Leader",
+        "recommendationDescription" : "\"Siddharth did exceptional work and was a pleasure to work with for the time he was with us at TD Lab. He demonstrated both curiosity and drive with projects. He had equal interest and aptitude in the technical and business aspects of the work. He's a quick learner and I recommend him as top talent.\""
     },
     "github" : "https://github.com/siddharthgarg4",
     "linkedin" : "https://www.linkedin.com/in/siddharthgarg4/",
