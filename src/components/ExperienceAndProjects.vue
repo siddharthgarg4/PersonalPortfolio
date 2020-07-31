@@ -24,24 +24,24 @@
     </b-row>
     <b-row v-scrollAnimation>
       <b-col lg="4" class="cardContainer">
+        <customCard projectName="endgame"></customCard>
+      </b-col>
+      <b-col lg="4" class="cardContainer">
         <customCard projectName="grow"></customCard>
       </b-col>
       <b-col lg="4" class="cardContainer">
         <customCard projectName="healthline"></customCard>
       </b-col>
+    </b-row>
+    <b-row v-scrollAnimation>
       <b-col lg="4" class="cardContainer">
         <customCard projectName="blindsight"></customCard>
       </b-col>
-    </b-row>
-    <b-row v-scrollAnimation>
       <b-col lg="4" class="cardContainer">
         <customCard projectName="instameet"></customCard>
       </b-col>
       <b-col lg="4" class="cardContainer">
         <customCard projectName="paypool"></customCard>
-      </b-col>
-      <b-col lg="4" class="cardContainer">
-        <customCard projectName="flysafe"></customCard>
       </b-col>
     </b-row>
   </b-container>

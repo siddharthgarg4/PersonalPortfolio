@@ -12,7 +12,7 @@
       <b-col lg="6" class="coverText">
         <b-row>
           <b-col class="align-items-center removePadding" cols="12">
-            <p class="coverTitle">Hi, I’m Sid</p>
+            <p class="coverTitle">Hi, I’m Siddharth</p>
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
             <p class="coverPara">
