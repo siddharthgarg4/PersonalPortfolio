@@ -1,106 +1,87 @@
 <template>
-  <div>
+  <b-container class="contactContainer" fluid>
     <b-row>
-      <b-col>
-        <p class="contact-subtitle">
-          I am currently seeking opportunities for Winter 2021.
+      <b-col cols="12">
+        <p class="coverTitle removeMargin">Like what you see ? Let’s talk !</p>
+      </b-col>
+      <b-col cols="12">
+        <p class="aboutMeDescription">
+          <!-- eslint-disable-next-line -->
+          I am currently seeking opportunities for Spring/Winter 2021.<br />Made with ♡ in Waterloo
         </p>
       </b-col>
     </b-row>
-    <b-row>
+    <b-row class="contactIconContainer">
       <b-col>
-        <p class="contact-subtitle">made with</p>
-        <p class="heart">♡</p>
-        <p class="contact-subtitle">in waterloo</p>
+        <img
+          src="../static/assets/linkedinContact.png"
+          class="img-fluid contactIcon cursorPointer"
+          @click="goToLink(json['linkedin'])"
+        />
+        <img
+          src="../static/assets/emailContact.png"
+          class="img-fluid contactIcon emailIcon cursorPointer"
+          @click="goToLink(json['email'])"
+        />
+        <img
+          src="../static/assets/githubContact.png"
+          class="img-fluid contactIcon cursorPointer"
+          @click="goToLink(json['github'])"
+        />
       </b-col>
     </b-row>
-    <b-row class="contact-icons" align-h="center">
-      <b-col class="col-auto contact-icons-container">
-        <a href="mailto:s38garg@edu.uwaterloo.ca" class="cursor-pointer">
-          <img
-            class="img-fluid contact-email-image"
-            src="../assets/email-icon.png"
-          />
-        </a>
-      </b-col>
-      <b-col class="col-auto contact-icons-container">
-        <a href="tel:+1-226-899-3621" class="cursor-pointer">
-          <img
-            class="img-fluid contact-phone-image"
-            src="../assets/phone-icon.png"
-          />
-        </a>
-      </b-col>
-      <b-col class="col-auto contact-icons-container">
-        <a href="https://goo.gl/maps/DjrfywMkykwwLbzx8" class="cursor-pointer">
-          <img
-            class="img-fluid contact-location-image"
-            src="../assets/location-icon.png"
-          />
-        </a>
-      </b-col>
-    </b-row>
-    <b-row class="copyright-container">
-      <b-col>
-        <p class="copyright">© Siddharth Garg &lt; 2020 &gt;</p>
-      </b-col>
-    </b-row>
-  </div>
+  </b-container>
 </template>
 
 <script>
 var json = require("@/static/content.json");
-export default {
-  name: "about",
-  mounted() {
+import Vue from "vue";
+export default Vue.extend({
+  created() {
     this.json = json;
+  },
+  methods: {
+    goToLink(givenLink) {
+      window.open(givenLink, "_blank");
+    }
   }
-};
+});
 </script>
 
-<style>
+<style lang="scss">
 @import "../styles/main.scss";
-@import "../styles/variable.scss";
-.contact-subtitle {
-  font-family: "Coves-Light", sans-serif;
-  font-size: 25px;
-  display: inline;
+.contactContainer {
+  background: $darkBlueColor;
+  padding: 5% 7.5% 5% 7.5%;
+  .coverTitle,
+  .aboutMeDescription {
+    color: $lightWhiteColor;
+    text-align: center;
+  }
+  .coverTitle {
+    font-weight: 600;
+    line-height: 3.5vw;
+    @media (max-width: $screen-md) {
+      line-height: 7vw;
+    }
+  }
+  .aboutMeDescription {
+    margin: 15px 0 0 0;
+    font-weight: 500;
+  }
 }
-.heart {
-  font-family: "Coves-Light", sans-serif;
-  font-size: 18px;
-  display: inline;
-  padding-right: 7px;
-  padding-left: 7px;
-}
-.contact-icons {
-  margin-top: 35px;
-}
-.contact-email-image {
+.contactIcon {
   height: auto;
-  width: 40.5px;
-}
-.contact-phone-image {
-  height: auto;
-  width: 49.5px;
-}
-.contact-location-image {
-  height: auto;
-  width: 54px;
-}
-.contact-icons-container {
-  padding-right: 20px;
-  padding-left: 20px;
-}
-.copyright {
-  font-family: "Coves-Light", sans-serif;
-  font-size: 18px;
-}
-.copyright-container {
-  margin-top: 90px;
-  margin-bottom: 40px;
-}
-.cursor-pointer {
-  cursor: pointer;
+  width: 3vw;
+  margin: 30px 2.5vw 15px 2.5vw;
+  @media (max-width: $screen-lg) and (min-width: $screen-sm) {
+    width: 50px;
+  }
+  @media (max-width: $screen-sm) and (min-width: $screen-xs) {
+    width: 40px;
+  }
+  @media (max-width: $screen-xs) {
+    width: 30px;
+  }
 }
 </style>

@@ -6,7 +6,8 @@
 
 <style lang="scss">
 @import "styles/main.scss";
-@import "styles/variable.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "~bootstrap-vue/dist/bootstrap-vue.css";
 html {
   scroll-behavior: smooth;
 }
@@ -15,7 +16,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $highlight;
+  font-family: "Montserrat", sans-serif;
+  color: $darkBlackColor;
 }
 </style>
 
@@ -25,7 +27,7 @@ var json = require("@/static/content.json");
 // @ is an alias to /src
 
 export default Vue.extend({
-  name: "home",
+  name: "homePage",
   components: {},
   data() {
     return {

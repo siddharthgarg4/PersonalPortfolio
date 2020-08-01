@@ -1,73 +1,98 @@
 { 
-    "blindsight" : {
-        "name" : "blindsight",
-        "titleColour": "#FFFFFF",
-        "title" : "BlindSight",
-        "description" : "< iOS, Twilio API, Firebase API, CoreML >",
-        "images" : ["blindsight1", "blindsight2", "blindsight3"],
-        "extraInfo" : "< 2nd Place at PCHacks >",
-        "github" : "https://github.com/siddharthgarg4/BlindSight",
-        "information" : "An iOS app focused on assistive technology that helps the visually impaired through object recognition and live video remote assistance and maps integration."
+    "tile" : {
+        "title" : "Software Engineer Intern at Tile",
+        "subtitle" : "Winter 2020 - San Mateo, California" ,
+        "coverImageName" : "tile.png",
+        "description" : "Spearheaded a cross functional project within the Tile iOS app, aimed at creatively engaging new consumers into the Tile premium ecosystem.",
+        "overlayTitle" : "Learn More About Tile",
+        "link" : "https://www.thetileapp.com/"
+    },
+    "td" : {
+        "title" : "Software Developer Intern at TD",
+        "subtitle" : "Winter 2019 - Kitchener, Ontario" ,
+        "coverImageName" : "td.png",
+        "description" : "Worked on an internal Android and iOS POC focused on an innovative way of scheduling meetings, finding colleagues and building resources in a flexible working environment.",
+        "overlayTitle" : "Learn More About TD Innovation Lab",
+        "link" : "https://tdlab.io/"
     },
     "grow" : {
-        "name" : "grow",
-        "titleColour": "#FFFFFF",
         "title" : "Grow",
-        "description" : "< iOS, ARKit, CoreML >",
-        "images" : ["grow1", "grow2"],
-        "extraInfo" : "< 1st Place at HackLassonde >",
-        "github" : "https://github.com/siddharthgarg4/Grow",
-        "information" : "An iOS app that allows users to find eco-friendliness of companies using CoreML and ARKit. It also allows users to work towards personal sustainability goals."
-    },
-    "easygr" : {
-        "name" : "easygr",
-        "titleColour": "#122D40",
-        "title" : "EasyGr",
-        "description" : "< Android >",
-        "images" : ["easygr1"],
-        "extraInfo" : "< Passion Project >",
-        "github" : "https://github.com/siddharthgarg4/EasyGr",
-        "information" : "Website assisting students in calculating their GPA as well as grades required to meet a required GPA."
+        "subtitle" : "1st Place at HackLassonde" ,
+        "coverImageName" : "grow.png",
+        "description" : "iOS, ARKit, CoreML",
+        "overlayTitle" : "View Project Grow",
+        "link" : "https://github.com/siddharthgarg4/Grow"
     },
     "healthline" : {
-        "name" : "healthline",
-        "titleColour": "#122D40",
         "title" : "HealthLine",
-        "description" : "< iOS, Twilio API, Python, Google Maps API >",
-        "images" : ["healthline1", "healthline2", "healthline3", "healthline4"],
-        "extraInfo" : "< Top 5 at RUHacks >",
-        "github" : "https://github.com/siddharthgarg4/HealthLine",
-        "information" : "An iOS app that provides medical diagnosis, rash recognition as well as finding nearby hospitals without internet."
+        "subtitle" : "Top 5 at RUHacks" ,
+        "coverImageName" : "healthline.png",
+        "description" : "iOS, Twilio, Python",
+        "overlayTitle" : "View Project HealthLine",
+        "link" : "https://github.com/siddharthgarg4/HealthLine"
     },
-    "kinemagic" : {
-        "name" : "kinemagic",
-        "titleColour": "#122D40",
-        "title" : "KineMagic",
-        "description" : "< Web >",
-        "images" : ["kinemagic1", "kinemagic2"],
-        "extraInfo" : "< ConuHacks >",
-        "github" : "https://github.com/siddharthgarg4/KineMagic",
-        "information" : "An android app that solves various kinematic equations with the option of graphing the solution."
-
+    "blindsight" : {
+        "title" : "BlindSight",
+        "subtitle" : "2nd Place at PCHacks" ,
+        "coverImageName" : "blindsight.png",
+        "description" : "iOS, Twilio, CoreML",
+        "overlayTitle" : "View Project BlindSight",
+        "link" : "https://github.com/siddharthgarg4/BlindSight"
+    },
+    "instameet" : {
+        "title" : "InstaMeet",
+        "subtitle" : "MHacks Project" ,
+        "coverImageName" : "instameet.png",
+        "description" : "iOS, Firebase, Google Cloud",
+        "overlayTitle" : "View Project InstaMeet",
+        "link" : "https://github.com/siddharthgarg4/InstaMeet"
     },
     "paypool" : {
-        "name" : "paypool",
-        "titleColour" : "#F37C74",
         "title" : "PayPool",
-        "description" : "< iOS, Interac API, Firebase API, Alamofire API >",
-        "images" : ["paypool1", "paypool2"],
-        "extraInfo" : "< TD Innovation Lab >",
-        "github" : "https://tdlab.io/project/payPool",
-        "information" : "An iOS app utilising firebase backend and an Interac e-transfer API focused prototype for splitting bills."
+        "subtitle" : "TD Lab Project" ,
+        "coverImageName" : "paypool.png",
+        "description" : "iOS, Interac, Firebase",
+        "overlayTitle" : "View Project PayPool",
+        "link" : "https://tdlab.io/project/payPool"
     },
-    "myself" : {
-        "title" : "\"Tell me about yourself ?\"",
-        "titleColour" : "#122D40",
-        "description" : "I currently study Computer Science at the University of Waterloo and Business at Wilfrid Laurier University. My philosophy involves seeking discomfort, as I believe we stop growing once we are unwilling to have new experiences. When I am not coding, I am usually sketching, travelling < I have been to 6 countries in the past 2 years >, playing soccer or volunteering at a local club."
+    "flysafe" : {
+        "title" : "FlySafe",
+        "subtitle" : "Hack The North Project" ,
+        "coverImageName" : "flysafe.png",
+        "description" : "iOS, Azure, Xe, BlinkId",
+        "overlayTitle" : "View Project FlySafe",
+        "link" : "https://github.com/siddharthgarg4/FlySafe"
     },
-    "experience" : {
-        "title" : "\"What experience do you have ?\"",
-        "titleColour" : "#F37C74",
-        "description" : "TD Innovation Lab, located in Kitchener-Waterloo, Ontario has given me a hands on experience that has introduced me to software development, business and technology. During my internship, I was responsible for developing and integrating features in an internal iOS and Android app to be used by TD Trust Bank employees. Being a part of the innovation lab also gave me the opportunity to utilise new and emerging technologies for raid prototyping and presenting them to senior TD Bank executives."
-    }
+    "endgame" : {
+        "title" : "EndGame Engine",
+        "subtitle" : "Passion Project" ,
+        "coverImageName" : "pacman.png",
+        "description" : "C++, OpenGL, GLFW, GLM",
+        "overlayTitle" : "View Project EndGame",
+        "link" : "https://github.com/siddharthgarg4/EndGame"
+    },
+    "me" : {
+        "description": "I am currently a 4th year student pursuing a dual degree in Computer Science and Business at two different universities(University of Waterloo and Wilfrid Laurier University respectively).\n\nAt my previous internships, I was given the opportunity to explore the field of mobile development in collaborative and fast paced environments. These opportunities have allowed me to refine my leadership and technical skills while working on a product currently in market.\n\nAs a software engineer, I am constantly looking for new challenges to push me outside my comfort zone, as I believe that we stop growing once we are unwilling to have new experiences.\n\nOutside of school and work, I love exploring new cities, going on unplanned adventures, watching soccer and trying new food."
+    },
+    "andreGattiRecommendation" : {
+        "recommenderImage" : "andreGatti.png",
+        "recommenderName" : "André Gatti, Tile",
+        "recommenderPosition" : "Senior iOS Software Engineer",
+        "recommendationDescription" : "\"Sid was able to successfully deliver a very complex project utilizing his strong technical skills. He was very proactive in suggesting solutions while interacting with the different groups such as backend, product management and design, while taking full ownership of the project.\""
+    },
+    "kellyWengertRecommendation" : {
+        "recommenderImage" : "kellyWengert.png",
+        "recommenderName" : "Kelly Wengert, Tile",
+        "recommenderPosition" : "Manager, Product Design",
+        "recommendationDescription" : "\"Sid always asked thoughtful questions. He cared about the quality of the experience and would pro-actively seek me out for my thoughts as he progressed. I'm excited for future designers to work with Sid as he demonstrates the joy and power of a collaborative developer/designer relationship.\""
+    },
+    "aaronStuartRecommendation" : {
+        "recommenderImage" : "aaronStuart.png",
+        "recommenderName" : "Aaron Stuart, TD Lab",
+        "recommenderPosition" : "Product Management Leader",
+        "recommendationDescription" : "\"Siddharth did exceptional work and was a pleasure to work with for the time he was with us at TD Lab. He demonstrated both curiosity and drive with projects. He had equal interest and aptitude in the technical and business aspects of the work. He's a quick learner and I recommend him as top talent.\""
+    },
+    "github" : "https://github.com/siddharthgarg4",
+    "linkedin" : "https://www.linkedin.com/in/siddharthgarg4/",
+    "email" : "mailto:s38garg@uwaterloo.ca"
 }
