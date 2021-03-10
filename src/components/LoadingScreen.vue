@@ -12,7 +12,7 @@ export default {
 <style lang="scss">
 @import "../styles/main.scss";
 .loader {
-  background-color: $darkBlueColor;
+  background-color: $babyBlueColor;
   bottom: 0;
   color: white;
   display: block;

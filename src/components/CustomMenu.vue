@@ -62,6 +62,7 @@ export default Vue.extend({
         sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
         this.isActivated = !this.isActivated;
       } else {
+        // eslint-disable-next-line
         console.log(
           "The element associated with the menu item is null / could not be found."
         );

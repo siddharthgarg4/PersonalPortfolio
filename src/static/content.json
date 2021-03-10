@@ -15,6 +15,14 @@
         "overlayTitle" : "Learn More About TD Innovation Lab",
         "link" : "https://tdlab.io/"
     },
+    "shopify" : {
+        "title" : "Software Engineer Intern at Shopify",
+        "subtitle" : "Winter 2021 - Remote, Canada" ,
+        "coverImageName" : "shopify.png",
+        "description" : "Currently working on a Fulfillment Order Processing Workflow Engine aimed at improving developer transparency and addressing scalability concerns for Shopify Fulfillment Network.",
+        "overlayTitle" : "Learn More About Shopify",
+        "link" : "https://www.shopify.ca"
+    },
     "grow" : {
         "title" : "Grow",
         "subtitle" : "1st Place at HackLassonde" ,
