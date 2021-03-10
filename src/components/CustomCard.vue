@@ -93,14 +93,20 @@ export default Vue.extend({
   top: 0%;
   bottom: 0%;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0);
   opacity: 0;
   pointer-events: none;
   align-items: center;
   justify-content: center;
+  backdrop-filter: saturate(180%) blur(30px);
+  -webkit-backdrop-filter: saturate(180%) blur(30px);
+  -moz-backdrop-filter: saturate(180%) blur(30px);
+  -ms-backdrop-filter: saturate(180%) blur(30px);
+  -o-backdrop-filter: saturate(180%) blur(30px);
 }
 .overlayText {
-  color: $lightWhiteColor;
+  color: $darkBlackColor;
+  text-shadow: 30px 30px 30px $offWhiteColor;
   font-size: 2.5vw;
   font-weight: 400;
   padding: 1.25rem;
