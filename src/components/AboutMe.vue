@@ -9,7 +9,7 @@
       </b-col>
       <b-col lg="6" class="myImageContainer">
         <img class="img-fluid divider" src="../static/assets/divider.png" />
-        <img class="img-fluid myImage" src="../static/assets/me-collage.png" />
+        <img class="img-fluid myImage" src="../static/assets/me-2.png" />
         <img class="img-fluid divider" src="../static/assets/divider.png" />
       </b-col>
     </b-row>
