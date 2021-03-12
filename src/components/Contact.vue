@@ -59,7 +59,7 @@ export default Vue.extend({
     text-align: center;
   }
   .coverTitle {
-    font-weight: 600;
+    font-weight: 500;
     line-height: 3.5vw;
     @media (max-width: $screen-md) {
       line-height: 7vw;

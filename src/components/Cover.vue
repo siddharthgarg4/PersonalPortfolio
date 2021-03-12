@@ -137,7 +137,7 @@ export default Vue.extend({
 }
 .coverPara {
   font-size: 2.5vw;
-  font-weight: 600;
+  font-weight: 500;
   text-align: start;
   line-height: 3vw;
   @media (max-width: $screen-md) {

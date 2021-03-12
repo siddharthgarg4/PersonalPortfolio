@@ -4,7 +4,7 @@
         "subtitle" : "Winter 2020 - San Mateo, California" ,
         "coverImageName" : "tile.png",
         "description" : "Spearheaded a cross functional project within the Tile iOS app, aimed at creatively engaging new consumers into the Tile premium ecosystem.",
-        "overlayTitle" : "Learn More About Tile",
+        "overlayTitle" : "Learn more about Tile",
         "link" : "https://www.thetileapp.com/"
     },
     "td" : {
@@ -12,7 +12,7 @@
         "subtitle" : "Winter 2019 - Kitchener, Ontario" ,
         "coverImageName" : "td.png",
         "description" : "Worked on an internal Android and iOS POC focused on an innovative way of scheduling meetings, finding colleagues and building resources in a flexible working environment.",
-        "overlayTitle" : "Learn More About TD Innovation Lab",
+        "overlayTitle" : "Learn more about TD Innovation Lab",
         "link" : "https://tdlab.io/"
     },
     "shopify" : {
@@ -20,7 +20,7 @@
         "subtitle" : "Winter 2021 - Remote, Canada" ,
         "coverImageName" : "shopify.png",
         "description" : "Currently working on a Fulfillment Order Processing Workflow Engine aimed at improving developer transparency and addressing scalability concerns for Shopify Fulfillment Network.",
-        "overlayTitle" : "Learn More About Shopify",
+        "overlayTitle" : "Learn more about Shopify",
         "link" : "https://www.shopify.ca"
     },
     "grow" : {

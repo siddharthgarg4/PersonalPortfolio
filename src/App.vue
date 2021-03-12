@@ -16,7 +16,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  font-family: "Cairo", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: $darkBlackColor;
 }
 </style>
