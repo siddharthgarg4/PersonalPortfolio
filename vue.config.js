@@ -1,11 +1,4 @@
-module.exports = {
-  publicPath: "/",
-  css: {
-    sourceMap: true,
-    loaderOptions: {
-      sass: {
-        data: `@import "@/styles/main.scss";`
-      }
-    }
-  }
-};
+const { defineConfig } = require("@vue/cli-service");
+module.exports = defineConfig({
+  transpileDependencies: true,
+});

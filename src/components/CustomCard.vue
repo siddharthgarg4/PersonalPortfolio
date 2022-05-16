@@ -9,12 +9,12 @@
       <p class="cardTitle removeMargin">{{ json[projectName].title }}</p>
       <p class="cardSubtitle">{{ json[projectName].subtitle }}</p>
       <p class="cardParagraph">{{ json[projectName].description }}</p>
+      <div class="viewProjectOverlay">
+        <p class="overlayText removeMargin">
+          {{ json[projectName].overlayTitle }}
+        </p>
+      </div>
     </b-card>
-    <div class="viewProjectOverlay">
-      <p class="overlayText removeMargin">
-        {{ json[projectName].overlayTitle }}
-      </p>
-    </div>
   </b-container>
 </template>
 
@@ -28,14 +28,14 @@ export default Vue.extend({
   props: {
     projectName: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     goToLink(givenLink) {
       window.open(givenLink, "_blank");
-    }
-  }
+    },
+  },
 });
 </script>
 
@@ -52,13 +52,8 @@ export default Vue.extend({
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
 }
-.customCard:hover + .viewProjectOverlay {
+.customCard:hover .viewProjectOverlay {
   opacity: 1;
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
-  -webkit-transition: 300ms ease;
-  transition: 300ms ease;
 }
 .cardTitle {
   font-weight: 600;
@@ -86,8 +81,6 @@ export default Vue.extend({
 }
 .viewProjectOverlay {
   position: absolute;
-  margin-right: 15px;
-  margin-left: 15px;
   left: 0%;
   right: 0%;
   top: 0%;
@@ -98,6 +91,7 @@ export default Vue.extend({
   pointer-events: none;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 .overlayText {
   color: $lightWhiteColor;

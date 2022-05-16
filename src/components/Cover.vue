@@ -74,8 +74,8 @@ export default Vue.extend({
         "https://drive.google.com/open?id=1znD9D40aV2y3--KMBDNguyxXOTcXZnXw",
         "_blank"
       );
-    }
-  }
+    },
+  },
 });
 </script>
 

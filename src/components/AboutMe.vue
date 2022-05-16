@@ -38,7 +38,7 @@ var json = require("@/static/content.json");
 export default {
   created() {
     this.json = json;
-  }
+  },
 };
 </script>
 

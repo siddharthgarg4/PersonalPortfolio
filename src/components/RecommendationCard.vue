@@ -26,7 +26,7 @@ export default {
     this.json = json;
   },
   mounted() {
-    this.$nextTick(function() {
+    this.$nextTick(function () {
       window.addEventListener("resize", this.onResize);
       this.onResize();
     });
@@ -35,25 +35,25 @@ export default {
     window.removeEventListener("resize", this.onResize);
   },
   methods: {
-    onResize(event) {
+    onResize() {
       if (document.documentElement.clientWidth < 992) {
         this.shouldRotateCard = true;
       } else {
         this.shouldRotateCard = false;
       }
-    }
+    },
   },
   data() {
     return {
-      shouldRotateCard: false
+      shouldRotateCard: false,
     };
   },
   props: {
     recommendation: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 

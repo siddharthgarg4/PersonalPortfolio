@@ -31,11 +31,11 @@ export default Vue.extend({
   components: {},
   data() {
     return {
-      json: {}
+      json: {},
     };
   },
   mounted() {
     this.json = json;
-  }
+  },
 });
 </script>

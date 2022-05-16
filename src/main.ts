@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import store from "./store";
 import "bootstrap/scss/bootstrap.scss";
 import BootstrapVue from "bootstrap-vue";
 import Cover from "@/components/Cover.vue";
@@ -27,5 +28,6 @@ Vue.directive("scrollAnimation", ScrollAnimation);
 
 new Vue({
   router,
-  render: h => h(App)
+  store,
+  render: (h) => h(App),
 }).$mount("#app");

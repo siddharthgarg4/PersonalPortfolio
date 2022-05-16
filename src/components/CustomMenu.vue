@@ -49,11 +49,11 @@ import Vue from "vue";
 export default Vue.extend({
   data() {
     return {
-      isActivated: false
+      isActivated: false,
     };
   },
   methods: {
-    toggleMenu(element: any) {
+    toggleMenu() {
       this.isActivated = !this.isActivated;
     },
     scrollToSection(section: string) {
@@ -67,8 +67,8 @@ export default Vue.extend({
           "The element associated with the menu item is null / could not be found."
         );
       }
-    }
-  }
+    },
+  },
 });
 </script>
 
@@ -162,12 +162,14 @@ export default Vue.extend({
   right: 0;
   display: none;
   margin-top: 65px;
+  width: unset;
+  padding: unset;
   @media (max-width: $screen-sm) {
     margin-top: 50px;
   }
   .optionContainer {
     position: relative;
-    margin-top: 0;
+    margin-top: 0px;
     margin-bottom: 10px;
   }
   &.active {

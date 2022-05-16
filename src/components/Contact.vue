@@ -43,8 +43,8 @@ export default Vue.extend({
   methods: {
     goToLink(givenLink) {
       window.open(givenLink, "_blank");
-    }
-  }
+    },
+  },
 });
 </script>
 
