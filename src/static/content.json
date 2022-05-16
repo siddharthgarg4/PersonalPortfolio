@@ -1,17 +1,17 @@
 { 
     "tile" : {
         "title" : "Software Engineer Intern at Tile",
-        "subtitle" : "Winter 2020 - San Mateo, California" ,
+        "subtitle" : "Winter 2020 - California, USA" ,
         "coverImageName" : "tile.png",
         "description" : "Spearheaded a cross functional project within the Tile iOS app, aimed at creatively engaging new consumers into the Tile premium ecosystem.",
         "overlayTitle" : "Learn more about Tile",
         "link" : "https://www.thetileapp.com/"
     },
     "td" : {
-        "title" : "Software Developer Intern at TD",
-        "subtitle" : "Winter 2019 - Kitchener, Ontario" ,
+        "title" : "Software Engineer Intern at TD",
+        "subtitle" : "Winter 2019 - Ontario, Canada" ,
         "coverImageName" : "td.png",
-        "description" : "Worked on an internal Android and iOS POC focused on an innovative way of scheduling meetings, finding colleagues and building resources in a flexible working environment.",
+        "description" : "Enhanced an Android and iOS POC focused at innovative ways of scheduling meetings, finding colleagues and resources in a flexible workspace.",
         "overlayTitle" : "Learn more about TD Innovation Lab",
         "link" : "https://tdlab.io/"
     },
@@ -19,9 +19,17 @@
         "title" : "Software Engineer Intern at Shopify",
         "subtitle" : "Winter 2021 - Remote, Canada" ,
         "coverImageName" : "shopify.png",
-        "description" : "Currently working on a Fulfillment Order Processing Workflow Engine aimed at improving developer transparency and addressing scalability concerns for Shopify Fulfillment Network.",
+        "description" : "Streamlined resource life-cycle through a dynamic workflow engine aimed at improving transparency and scalability for Shopify Fulfillment Network.",
         "overlayTitle" : "Learn more about Shopify",
         "link" : "https://www.shopify.ca"
+    },
+    "uplift" : {
+        "title" : "Product Manager Intern at Uplift",
+        "subtitle" : "Fall 2021 - Remote, Canada" ,
+        "coverImageName" : "uplift.png",
+        "description" : "Project lead for the redesign, development and resource management of the developer portal and document submission platform.",
+        "overlayTitle" : "Learn more about Uplift",
+        "link" : "https://www.uplift.com"
     },
     "grow" : {
         "title" : "Grow",
@@ -87,6 +95,12 @@
         "recommenderName" : "André Gatti, Tile",
         "recommenderPosition" : "Senior iOS Software Engineer",
         "recommendationDescription" : "\"Sid was able to successfully deliver a very complex project utilizing his strong technical skills. He was very proactive in suggesting solutions while interacting with the different groups such as backend, product management and design, while taking full ownership of the project.\""
+    },
+    "nathanAptRecommendation" : {
+        "recommenderImage" : "nathanApt.png",
+        "recommenderName" : "Nathan Apt, Uplift",
+        "recommenderPosition" : "Product Manager",
+        "recommendationDescription" : "\"As an intern in the Product team at Uplift, Sid was able to take ownership of the modernization of our developer documentation. He successfully navigated ambiguity and collaborated cross-functionally with the Data Engineering, Data Analytics, Application Engineering, and Merchant Success teams to guide the creation of new documentation that was up-to-date with our functionality and product offering and also guided developers to integrate with Uplift. As a result, we saw improvements in the time-to-onboard and data quality from partners as well as operational efficiencies in our internal processes.\""
     },
     "kellyWengertRecommendation" : {
         "recommenderImage" : "kellyWengert.png",

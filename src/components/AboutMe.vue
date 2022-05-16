@@ -9,14 +9,14 @@
       </b-col>
       <b-col lg="6" class="myImageContainer">
         <img class="img-fluid divider" src="../static/assets/divider.png" />
-        <img class="img-fluid myImage" src="../static/assets/me-2.png" />
+        <img class="img-fluid myImage" src="../static/assets/me-3.png" />
         <img class="img-fluid divider" src="../static/assets/divider.png" />
       </b-col>
     </b-row>
     <b-row v-scrollAnimation>
       <b-col lg="4" class="cardContainer">
         <recommendationCard
-          recommendation="andreGattiRecommendation"
+          recommendation="nathanAptRecommendation"
         ></recommendationCard>
       </b-col>
       <b-col lg="4" class="cardContainer">
@@ -71,7 +71,8 @@ export default {
   margin: 0 25% 0 25%;
 }
 .myImage {
-  margin: 20px 0 20px 0;
+  margin: auto;
+  height: 60%;
 }
 .myImageContainer {
   display: flex;

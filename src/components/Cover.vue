@@ -96,14 +96,14 @@ export default Vue.extend({
   background: linear-gradient(
     90deg,
     $offWhiteColor 72.5%,
-    $babyBlueColor 27.5%
+    $honeyYellowColor 27.5%
   );
   padding: 1.5%;
   @media (max-width: $screen-md) {
     background: linear-gradient(
       180deg,
       $offWhiteColor 72.5%,
-      $babyBlueColor 27.5%
+      $honeyYellowColor 27.5%
     );
   }
 }
@@ -147,7 +147,7 @@ export default Vue.extend({
   }
 }
 .blueFont {
-  color: $babyBlueColor;
+  color: $honeyYellowColor;
 }
 .coverCenter {
   min-height: 70vh;
@@ -164,7 +164,7 @@ export default Vue.extend({
   }
 }
 .solidVerticalLine {
-  border-left: 2px solid $babyBlueColor;
+  border-left: 2px solid $honeyYellowColor;
   height: 7.5vh;
   margin: 2px;
   display: inline-block;
