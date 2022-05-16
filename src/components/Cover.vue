@@ -16,14 +16,14 @@
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
             <p class="coverPara">
-              Using <span class="blueFont">software engineering</span> as a
-              gateway to translate problems into empowering humanistic
+              Using <span class="tintFont">{{ position[0] }}</span>
+              as a gateway to translate problems into empowering humanistic
               solutions.
             </p>
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
             <p class="coverResume cursorPointer" @click="goToResume">
-              In a hurry? Check out my <span class="blueFont">resume</span>.
+              In a hurry? Check out my <span class="tintFont">resume</span>.
             </p>
           </b-col>
         </b-row>
@@ -57,6 +57,15 @@
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
+  data() {
+    return {
+      position: [
+        "software engineering",
+        "product management",
+        "social entrepreneurship",
+      ],
+    };
+  },
   methods: {
     scrollToExperience() {
       let sectionElement = document.getElementById("experience");
@@ -75,6 +84,16 @@ export default Vue.extend({
         "_blank"
       );
     },
+    changePositionText() {
+      // eslint-disable-next-line
+      const firstElement = this.position.shift()!;
+      this.position.push(firstElement);
+    },
+  },
+  mounted() {
+    window.setInterval(() => {
+      this.changePositionText();
+    }, 1750);
   },
 });
 </script>
@@ -146,7 +165,7 @@ export default Vue.extend({
     text-align: center;
   }
 }
-.blueFont {
+.tintFont {
   color: $honeyYellowColor;
 }
 .coverCenter {
