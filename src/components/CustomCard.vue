@@ -56,7 +56,7 @@ export default Vue.extend({
   opacity: 1;
 }
 .cardTitle {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.9vw;
   text-align: center;
   @media (max-width: $screen-md) {
@@ -65,18 +65,19 @@ export default Vue.extend({
 }
 .cardSubtitle {
   font-size: 1.5vw;
-  font-weight: 500;
+  font-weight: 400;
   text-align: center;
   @media (max-width: $screen-md) {
     font-size: 3vw;
   }
 }
 .cardParagraph {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   font-weight: 400;
   text-align: center;
+  line-height: 1.25;
   @media (max-width: $screen-md) {
-    font-size: 3vw;
+    font-size: 2.6vw;
   }
 }
 .viewProjectOverlay {
