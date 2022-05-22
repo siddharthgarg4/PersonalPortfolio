@@ -4,7 +4,29 @@
       <b-col lg="6">
         <p class="componentTitle">This is Me</p>
         <p class="aboutMeDescription removeMargin">
-          {{ json["me"].description }}
+          Hello again! 👋🏽<br /><br />My name’s Siddharth (Sid) and I am
+          currently in my last semester of the Computer Science (University of
+          Waterloo) and Business Administration (Wilfrid Laurier University)
+          Double Degree program.<br /><br />As part of the co-operative
+          <!-- eslint-disable-next-line -->
+          (internship) program, I took the opportunity to explore multiple roles ranging
+          <!-- eslint-disable-next-line -->
+          from <span class="tintFont">software development to product management</span>
+          at companies in various industries and stages of growth. These
+          opportunities have allowed me to refine my leadership and technical
+          skills while working on products currently in the market.<br /><br />
+          With a strong desire to contribute to the greater
+          <span class="tintFont">social good</span>, I am currently seeking a
+          full-time position in companies with similar goals to create a
+          <span class="tintFont">long-term, positive societal impact</span>.
+          Furthermore, as a professional at the intersection of software and
+          product, I am constantly challenging myself to push outside my comfort
+          zone, as I believe that we stop growing once we are unwilling to have
+          new experiences and tread the unknown.<br /><br />Outside of school
+          and work, I love exploring new cities, going on unplanned adventures,
+          hiking and meeting new people. Feel free to message me using any of
+          the socials at the bottom of this page to discuss opportunities, grab
+          a coffee or even just to say hi 💬 ☕ 🙌🏽
         </p>
       </b-col>
       <b-col lg="6" class="myImageContainer">
@@ -53,12 +75,18 @@ export default {
   font-size: 1.5vw;
   text-align: start;
   white-space: pre-line;
+  line-height: 1.25;
   @media (max-width: $screen-md) {
     font-size: 3vw;
     margin: 1rem;
     text-align: center;
   }
+
+  .tintFont {
+    font-weight: 600;
+  }
 }
+
 .aboutMeDescriptionContainer {
   margin-bottom: 35px;
 }
