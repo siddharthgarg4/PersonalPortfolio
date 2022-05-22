@@ -8,16 +8,15 @@
           currently in my last semester of the Computer Science (University of
           Waterloo) and Business Administration (Wilfrid Laurier University)
           Double Degree program.<br /><br />As part of the co-operative
+          (internship) program, I explored multiple roles ranging from
           <!-- eslint-disable-next-line -->
-          (internship) program, I took the opportunity to explore multiple roles ranging
-          <!-- eslint-disable-next-line -->
-          from <span class="tintFont">software development to product management</span>
+          <span class="tintFont">software development to product management</span>
           at companies in various industries and stages of growth. These
           opportunities have allowed me to refine my leadership and technical
           skills while working on products currently in the market.<br /><br />
           With a strong desire to contribute to the greater
           <span class="tintFont">social good</span>, I am currently seeking a
-          full-time position in companies with similar goals to create a
+          full-time position in a company with similar goals to create a
           <span class="tintFont">long-term, positive societal impact</span>.
           Furthermore, as a professional at the intersection of software and
           product, I am constantly challenging myself to push outside my comfort
