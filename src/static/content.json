@@ -31,6 +31,14 @@
         "overlayTitle" : "Learn more about Uplift",
         "link" : "https://www.uplift.com"
     },
+    "upliftFT" : {
+        "title" : "Junior Product Manager at Uplift",
+        "subtitle" : "Fall 2021 - Remote, Canada" ,
+        "coverImageName" : "upliftFT.png",
+        "description" : "Project lead for the redesign, development and resource management of the developer portal and document submission platform.",
+        "overlayTitle" : "Learn more about Uplift",
+        "link" : "https://www.uplift.com"
+    },
     "grow" : {
         "title" : "Grow",
         "subtitle" : "1st Place at HackLassonde" ,

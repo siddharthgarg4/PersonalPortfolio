@@ -76,7 +76,7 @@ export default {
     border-radius: 50%;
   }
   &:hover {
-    box-shadow: rgba(244, 172, 12, 0.75) 0px 19px 43px;
+    box-shadow: rgba(34, 129, 102, 0.75) 0px 19px 43px;
     -webkit-transform: translate3d(0px, -1px, 0px);
     -moz-transform: translate3d(0px, -1px, 0px);
     -ms-transform: translate3d(0px, -1px, 0px);
