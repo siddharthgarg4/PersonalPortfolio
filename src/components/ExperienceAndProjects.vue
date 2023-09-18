@@ -8,19 +8,19 @@
       </b-col>
     </b-row>
     <b-row v-scrollAnimation>
-      <b-col lg="6" class="cardContainer">
+      <b-col lg="12" class="cardContainer">
         <customCard projectName="upliftFT"></customCard>
       </b-col>
       <b-col lg="6" class="cardContainer">
         <customCard projectName="uplift"></customCard>
       </b-col>
-      <b-col lg="4" class="cardContainer">
+      <b-col lg="6" class="cardContainer">
         <customCard projectName="shopify"></customCard>
       </b-col>
-      <b-col lg="4" class="cardContainer">
+      <b-col lg="6" class="cardContainer">
         <customCard projectName="tile"></customCard>
       </b-col>
-      <b-col lg="4" class="cardContainer">
+      <b-col lg="6" class="cardContainer">
         <customCard projectName="td"></customCard>
       </b-col>
     </b-row>

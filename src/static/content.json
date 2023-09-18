@@ -3,41 +3,46 @@
         "title" : "Software Engineer Intern at Tile",
         "subtitle" : "Winter 2020 - California, USA" ,
         "coverImageName" : "tile.png",
-        "description" : "Spearheaded a cross functional project within the Tile iOS app, aimed at creatively engaging new consumers into the Tile premium ecosystem.",
+        "description" : "Spearheaded a cross-functional project within the Tile iOS application, aimed at creatively engaging new consumers into the Tile premium ecosystem.",
         "overlayTitle" : "Learn more about Tile",
-        "link" : "https://www.thetileapp.com/"
+        "link" : "https://www.thetileapp.com/",
+        "positionType" : "internship"
     },
     "td" : {
         "title" : "Software Engineer Intern at TD",
         "subtitle" : "Winter 2019 - Ontario, Canada" ,
         "coverImageName" : "td.png",
-        "description" : "Enhanced an Android and iOS POC focused at innovative ways of scheduling meetings, finding colleagues and resources in a flexible workspace.",
+        "description" : "Enhanced a POC mobile application focused on innovative methods for scheduling meetings, finding colleagues and resources in a flex-workspace.",
         "overlayTitle" : "Learn more about TD",
-        "link" : "https://www.td.com/ca/en/about-td/"
+        "link" : "https://www.td.com/ca/en/about-td/",
+        "positionType" : "internship"
     },
     "shopify" : {
         "title" : "Software Engineer Intern at Shopify",
         "subtitle" : "Winter 2021 - Remote, Canada" ,
         "coverImageName" : "shopify.png",
-        "description" : "Streamlined resource life-cycle through a dynamic workflow engine aimed at improving transparency and scalability for Shopify Fulfillment Network.",
+        "description" : "Streamlined the order resource life-cycle through a dynamic workflow engine, aimed at improving transparency and scalability for Shopify Fulfillment Network.",
         "overlayTitle" : "Learn more about Shopify",
-        "link" : "https://www.shopify.ca"
+        "link" : "https://www.shopify.ca",
+        "positionType" : "internship"
     },
     "uplift" : {
         "title" : "Product Manager Intern at Uplift",
         "subtitle" : "Fall 2021 - Remote, Canada" ,
         "coverImageName" : "uplift.png",
-        "description" : "Project lead for the redesign, development and resource management of the developer portal and document submission platform.",
+        "description" : "Project lead for the design, development and subsequent release of the revamped developer portal and the first customer document submission platform.",
         "overlayTitle" : "Learn more about Uplift",
-        "link" : "https://www.uplift.com"
+        "link" : "https://www.uplift.com",
+        "positionType" : "internship"
     },
     "upliftFT" : {
         "title" : "Junior Product Manager at Uplift",
         "subtitle" : "Fall 2021 - Remote, Canada" ,
         "coverImageName" : "upliftFT.png",
-        "description" : "Project lead for the redesign, development and resource management of the developer portal and document submission platform.",
+        "description" : "Lending (Fraud) product owner responsible for:;End-to-end product process and delivery of multiple compliance projects as a prerequisite to partner bank migration.;Technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing process documentation and key areas for redesign across business operations and engineering domains.;Assisting engineering counterparts in managing cross-functional relationships, resource management, blockers and tracking goals.",
         "overlayTitle" : "Learn more about Uplift",
-        "link" : "https://www.uplift.com"
+        "link" : "https://www.uplift.com",
+        "positionType" : "full-time"
     },
     "grow" : {
         "title" : "Grow",
