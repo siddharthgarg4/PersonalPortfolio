@@ -77,10 +77,10 @@
 }
 .experienceProjectContainer {
   background-color: $lightWhiteColor;
-  background-image: url("../static/assets/dotBackground-3.png"),
-    url("../static/assets/dotBackground-3.png"),
-    url("../static/assets/dotBackground-3.png"),
-    url("../static/assets/dotBackground-3.png");
+  background-image: url("../static/assets/dotBackground-2.png"),
+    url("../static/assets/dotBackground-2.png"),
+    url("../static/assets/dotBackground-2.png"),
+    url("../static/assets/dotBackground-2.png");
   background-position: top 3% left, top 27% right, top 55% left, top 97% right;
   padding: 5% 7.5% 5% 7.5%;
   background-repeat: no-repeat;

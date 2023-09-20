@@ -7,7 +7,7 @@
       <b-col cols="12">
         <p class="aboutMeDescription">
           <!-- eslint-disable-next-line -->
-          I am currently seeking New Grad opportunities starting Winter/Spring 2023.<br />Made with ♡ in Waterloo
+          I am currently seeking full-time opportunities starting Winter/Spring 2024.<br />Made with ♡ in Waterloo
         </p>
       </b-col>
     </b-row>
