@@ -4,33 +4,53 @@
       <b-col lg="6">
         <p class="componentTitle">This is Me</p>
         <p class="aboutMeDescription removeMargin">
-          Hello again! 👋🏽<br /><br />My name’s Siddharth (Sid) and I am
-          currently in my last semester of the Computer Science (University of
-          Waterloo) and Business Administration (Wilfrid Laurier University)
-          Double Degree program.<br /><br />As part of the co-operative
-          (internship) program, I explored multiple roles ranging from
+          Hello again! 👋🏽<br /><br />My name’s Siddharth (Sid), and I am
+          thrilled that you have taken an interest in learning more about me. My
+          motto in life, one that I have always stood by and is a common theme
+          underlying my personal and professional journey thus far, is to
+          <span class="tintFont">“Seek Discomfort”</span>. That is, to
+          constantly challenge myself to push outside my comfort zone, as I
+          believe that we stop growing once we are unwilling to have new
+          experiences and tread the unknown. <br /><br />
+          I stumbled across this slogan as a high-school teenager through a
+          Youtube channel called “Yes Theory”; a group of young individuals open
+          to new possibilities and an unwavering quest to seek opportunities to
+          fulfil their goals. Such an inspiring message resonated deeply within
+          me to the extent that I embarked on a journey of higher education as
+          an <span class="tintFont">international student in Canada</span>, away
+          from my family, at the age of nineteen. <br /><br />
+          However, this did not diminish my inner desire to seek further
+          challenges. I participated in hackathons across North America, an
+          academic exchange in Europe, worked part-time at the university
+          library and engaged in extracurriculars such as Habitat for Humanity
+          among others during my studies. In October of 2022, I had the pleasure
+          of graduating with
           <!-- eslint-disable-next-line -->
-          <span class="tintFont">software development to product management</span>
-          at companies in various industries and stages of growth. These
-          opportunities have allowed me to refine my leadership and technical
-          skills while working on products currently in the market.<br /><br />
-          With a strong desire to contribute to the greater
-          <span class="tintFont">social good</span>, I am currently seeking a
-          full-time position in a company with similar goals to create a
+          <span class="tintFont">dean’s honors in a dual degree program</span>
+          with a Bachelor of Computer Science (University of Waterloo) and a
+          Bachelor of Business Administration (Wilfrid Laurier University).<br /><br />
+          Furthermore, as a part of the co-op work (internship) program during
+          my education, I explored multiple roles ranging from
+          <!-- eslint-disable-next-line -->
+          <span class="tintFont">software engineering to product management</span>
+          at companies in different industries, locations and stages of growth.
+          These experiences taught me a diverse range of technical skills while
+          providing me the opportunity to apply theoretical business knowledge
+          on a wide breadth of products and markets. <br /><br />
+          With a strong desire to contribute to the greater social good, I am
+          currently
+          <span class="tintFont">seeking a full-time position</span>
+          in a company with similar goals of creating a
+          <!-- eslint-disable-next-line -->
           <span class="tintFont">long-term, positive societal impact</span>.
-          Furthermore, as a professional at the intersection of software and
-          product, I am constantly challenging myself to push outside my comfort
-          zone, as I believe that we stop growing once we are unwilling to have
-          new experiences and tread the unknown.<br /><br />Outside of school
-          and work, I love exploring new cities, going on unplanned adventures,
-          hiking and meeting new people. Feel free to message me using any of
-          the socials at the bottom of this page to discuss opportunities, grab
-          a coffee or even just to say hi 💬 ☕ 🙌🏽
+          Feel free to message me using any of the socials at the bottom of the
+          page to discuss opportunities, grab a coffee or even just to say hi 💬
+          ☕ 🙌🏽
         </p>
       </b-col>
       <b-col lg="6" class="myImageContainer">
         <img class="img-fluid divider" src="../static/assets/divider.png" />
-        <img class="img-fluid myImage" src="../static/assets/me-5.png" />
+        <img class="img-fluid myImage" src="../static/assets/me-2.png" />
         <img class="img-fluid divider" src="../static/assets/divider.png" />
       </b-col>
     </b-row>
