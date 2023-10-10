@@ -8,47 +8,64 @@
       </b-col>
     </b-row>
     <b-row v-scrollAnimation>
-      <b-col lg="6" class="cardContainer">
-        <customCard projectName="uplift"></customCard>
-      </b-col>
-      <b-col lg="6" class="cardContainer">
-        <customCard projectName="shopify"></customCard>
-      </b-col>
-      <b-col lg="6" class="cardContainer">
-        <customCard projectName="tile"></customCard>
-      </b-col>
-      <b-col lg="6" class="cardContainer">
-        <customCard projectName="td"></customCard>
-      </b-col>
-    </b-row>
-    <b-row>
-      <b-col class="componentTitleContainer">
-        <p class="componentTitle removeMargin" v-scrollAnimation>
-          Personal Projects
-        </p>
-      </b-col>
+      <b-row>
+        <b-col class="componentSubtitleContainer">
+          <p class="componentTitle removeMargin">Full-time</p>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col lg="12" class="cardContainer">
+          <customCard projectName="upliftFT"></customCard>
+        </b-col>
+      </b-row>
     </b-row>
     <b-row v-scrollAnimation>
-      <b-col lg="4" class="cardContainer">
-        <customCard projectName="endgame"></customCard>
-      </b-col>
-      <b-col lg="4" class="cardContainer">
-        <customCard projectName="grow"></customCard>
-      </b-col>
-      <b-col lg="4" class="cardContainer">
-        <customCard projectName="healthline"></customCard>
-      </b-col>
+      <b-row>
+        <b-col class="componentSubtitleContainer">
+          <p class="componentTitle removeMargin">Internship</p>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col lg="6" class="cardContainer">
+          <customCard projectName="uplift"></customCard>
+        </b-col>
+        <b-col lg="6" class="cardContainer">
+          <customCard projectName="shopify"></customCard>
+        </b-col>
+        <b-col lg="6" class="cardContainer">
+          <customCard projectName="tile"></customCard>
+        </b-col>
+        <b-col lg="6" class="cardContainer">
+          <customCard projectName="td"></customCard>
+        </b-col>
+      </b-row>
     </b-row>
     <b-row v-scrollAnimation>
-      <b-col lg="4" class="cardContainer">
-        <customCard projectName="blindsight"></customCard>
-      </b-col>
-      <b-col lg="4" class="cardContainer">
-        <customCard projectName="instameet"></customCard>
-      </b-col>
-      <b-col lg="4" class="cardContainer">
-        <customCard projectName="paypool"></customCard>
-      </b-col>
+      <b-row>
+        <b-col class="componentTitleContainer">
+          <p class="componentTitle removeMargin">Personal Projects</p>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col lg="4" class="cardContainer">
+          <customCard projectName="endgame"></customCard>
+        </b-col>
+        <b-col lg="4" class="cardContainer">
+          <customCard projectName="grow"></customCard>
+        </b-col>
+        <b-col lg="4" class="cardContainer">
+          <customCard projectName="healthline"></customCard>
+        </b-col>
+        <b-col lg="4" class="cardContainer">
+          <customCard projectName="blindsight"></customCard>
+        </b-col>
+        <b-col lg="4" class="cardContainer">
+          <customCard projectName="instameet"></customCard>
+        </b-col>
+        <b-col lg="4" class="cardContainer">
+          <customCard projectName="paypool"></customCard>
+        </b-col>
+      </b-row>
     </b-row>
   </b-container>
 </template>
@@ -64,7 +81,7 @@
     url("../static/assets/dotBackground-2.png"),
     url("../static/assets/dotBackground-2.png"),
     url("../static/assets/dotBackground-2.png");
-  background-position: top 3% left, top 27% right, top 52% left, top 95% right;
+  background-position: top 3% left, top 27% right, top 55% left, top 97% right;
   padding: 5% 7.5% 5% 7.5%;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -88,5 +105,9 @@
     line-height: 6.5vw;
     text-align: center;
   }
+}
+.componentSubtitleContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 </style>

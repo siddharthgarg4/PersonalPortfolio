@@ -5,10 +5,24 @@
       :img-alt="json[projectName].title"
       class="customCard cursorPointer h-100"
       @click="goToLink(json[projectName].link)"
+      :img-left="isPositionFT() && !isScreenMedorSmaller"
     >
       <p class="cardTitle removeMargin">{{ json[projectName].title }}</p>
       <p class="cardSubtitle">{{ json[projectName].subtitle }}</p>
-      <p class="cardParagraph">{{ json[projectName].description }}</p>
+      <div class="ftPosition" v-if="isPositionFT()">
+        <ul>
+          <p class="cardParagraph">{{ parsedFTDescription()[0] }}</p>
+          <li
+            v-for="(ftDescriptionItem, index) in parsedFTDescription().slice(1)"
+            :key="index"
+          >
+            <p class="cardParagraph">{{ ftDescriptionItem }}</p>
+          </li>
+        </ul>
+      </div>
+      <div class="internPosition" v-else>
+        <p class="cardParagraph">{{ json[projectName].description }}</p>
+      </div>
       <div class="viewProjectOverlay">
         <p class="overlayText removeMargin">
           {{ json[projectName].overlayTitle }}
@@ -25,15 +39,42 @@ export default Vue.extend({
   created() {
     this.json = json;
   },
+  mounted() {
+    this.$nextTick(function () {
+      window.addEventListener("resize", this.onResize);
+      this.onResize();
+    });
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.onResize);
+  },
+  methods: {
+    onResize() {
+      if (document.documentElement.clientWidth < 992) {
+        this.isScreenMedorSmaller = true;
+      } else {
+        this.isScreenMedorSmaller = false;
+      }
+    },
+    isPositionFT() {
+      return json[this.projectName].positionType == "full-time";
+    },
+    parsedFTDescription() {
+      return json[this.projectName].description.split(";");
+    },
+    goToLink(givenLink) {
+      window.open(givenLink, "_blank");
+    },
+  },
+  data() {
+    return {
+      isScreenMedorSmaller: false,
+    };
+  },
   props: {
     projectName: {
       type: String,
       required: true,
-    },
-  },
-  methods: {
-    goToLink(givenLink) {
-      window.open(givenLink, "_blank");
     },
   },
 });
@@ -44,6 +85,11 @@ export default Vue.extend({
 .customCard {
   background-color: $offWhiteColor;
   border: none;
+  .card-img-left {
+    height: auto;
+    width: 49%;
+    object-fit: cover;
+  }
 }
 .customCard:hover {
   -webkit-transform: scale(0.95);
@@ -101,6 +147,28 @@ export default Vue.extend({
   padding: 1.25rem;
   @media (max-width: $screen-md) {
     font-size: 5.58vw;
+  }
+}
+.ftPosition {
+  ul {
+    padding-left: 0;
+    list-style: decimal;
+    ::marker {
+      font-size: 1.3vw;
+      @media (max-width: $screen-md) {
+        font-size: 2.6vw;
+      }
+    }
+  }
+  li {
+    margin-left: 1.5vw;
+    @media (max-width: $screen-md) {
+      margin-left: 3vw;
+    }
+  }
+  .cardParagraph {
+    text-align: left;
+    margin-bottom: 0.5rem;
   }
 }
 </style>
