@@ -14,7 +14,7 @@
         "coverImageName" : "td.png",
         "description" : "Enhanced a POC mobile application focused on innovative methods for scheduling meetings, finding resources and contacting colleagues in a flex-workspace.",
         "overlayTitle" : "Learn more about TD",
-        "link" : "https://www.td.com/ca/en/about-td/",
+        "link" : "https://www.td.com/ca/en/personal-banking",
         "positionType" : "internship"
     },
     "shopify" : {
@@ -39,7 +39,7 @@
         "title" : "Junior Product Manager at Uplift",
         "subtitle" : "October 2022 - June 2023" ,
         "coverImageName" : "upliftFT.png",
-        "description" : "Lending (Fraud) product owner responsible for:;Executing the end-to-end product process and delivery of multiple compliance projects enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.;Assisting engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
+        "description" : "Fraud and Identity product owner responsible for:;Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.;Assisting engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
         "overlayTitle" : "Learn more about Uplift",
         "link" : "https://www.uplift.com",
         "positionType" : "full-time"
@@ -129,5 +129,5 @@
     },
     "github" : "https://github.com/siddharthgarg4",
     "linkedin" : "https://www.linkedin.com/in/siddharthgarg4/",
-    "email" : "mailto:s38garg@uwaterloo.ca"
+    "email" : "mailto:s38garg@gmail.com"
 }
