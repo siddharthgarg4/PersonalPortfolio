@@ -31,7 +31,7 @@
       <b-col lg="6" class="extraPadding" v-scrollAnimation>
         <img
           class="img-responsive fitImage"
-          src="../assets/coverMainPicture.png"
+          src="../assets/coverMainPictureTransparent.png"
         />
       </b-col>
     </b-row>
