@@ -1,8 +1,8 @@
 <template>
-  <div :class="{ loader: true, fadeout: !keepLoading }">Loading ...</div>
+  <div :class="{ loader: true, fadeout: !keepLoading }"></div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: "LoadingScreen",
   props: ["keepLoading"],
@@ -12,17 +12,18 @@ export default {
 <style lang="scss">
 @import "../styles/main.scss";
 .loader {
-  background-color: $springGreenColor;
+  background-image: url("../assets/loading-moving-car.svg");
+  background-color: #12390c;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
   bottom: 0;
-  color: white;
   display: block;
-  font-size: 32px;
   left: 0;
   overflow: hidden;
-  padding-top: 10vh;
   position: fixed;
   right: 0;
-  text-align: center;
   top: 0;
   z-index: 9999;
 }

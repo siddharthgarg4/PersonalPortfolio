@@ -51,7 +51,7 @@ export default Vue.extend({
 <style lang="scss">
 @import "../styles/main.scss";
 .contactContainer {
-  background: $springGreenColor;
+  background: $royalGreenColor;
   padding: 5% 7.5% 5% 7.5%;
   .coverTitle,
   .aboutMeDescription {
