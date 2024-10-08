@@ -221,11 +221,13 @@ export default Vue.extend({
 }
 .beforeEnter {
   opacity: 0;
+  z-index: 0;
   transform: translateY(100px);
   transition: all 5s ease-out;
 }
 .enter {
   opacity: 1;
+  z-index: 1;
   transform: translateY(0px);
 }
 .menuContainer {
