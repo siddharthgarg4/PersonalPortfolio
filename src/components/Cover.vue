@@ -115,7 +115,7 @@ export default Vue.extend({
 .coverContainer {
   min-height: 100vh;
   background: linear-gradient(
-    to right,
+    90deg,
     $offWhiteColor 72.5%,
     $royalGreenColor 27.5%
   );
@@ -209,7 +209,7 @@ export default Vue.extend({
   opacity: 0;
   z-index: 0;
   transform: translateY(100px);
-  transition: all 5s ease-out;
+  transition: all 2s ease-out;
 }
 .enter {
   opacity: 1;

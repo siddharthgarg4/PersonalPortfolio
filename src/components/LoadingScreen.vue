@@ -25,6 +25,7 @@ export default {
   position: fixed;
   right: 0;
   top: 0;
+  //should be at the top of every element
   z-index: 9999;
 }
 
