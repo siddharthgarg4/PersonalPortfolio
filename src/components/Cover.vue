@@ -57,6 +57,7 @@
 <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
+  name: "Cover",
   data() {
     return {
       position: [
@@ -64,18 +65,13 @@ export default Vue.extend({
         "product management",
         "social entrepreneurship",
       ],
-      timeElapsed: false,
-      isMounted: false,
     };
   },
-  created() {
-    setTimeout(() => {
-      this.timeElapsed = true;
-      if (this.isMounted) {
-        console.log("mounting took less time < default time");
-        this.$emit("complete-loading");
-      }
-    }, 5000);
+  mounted() {
+    window.setInterval(() => {
+      this.changePositionText();
+    }, 1750);
+    this.$emit("cover-loaded");
   },
   methods: {
     scrollToExperience() {
@@ -100,16 +96,6 @@ export default Vue.extend({
       const firstElement = this.position.shift()!;
       this.position.push(firstElement);
     },
-  },
-  mounted() {
-    window.setInterval(() => {
-      this.changePositionText();
-    }, 1750);
-    this.isMounted = true;
-    if (this.timeElapsed) {
-      console.log("mounting took more time > default time");
-      this.$emit("complete-loading");
-    }
   },
 });
 </script>

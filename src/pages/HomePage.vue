@@ -1,8 +1,11 @@
 <template>
   <div>
-    <loadingScreen id="loadingScreen" :isLoading="isLoading"></loadingScreen>
+    <loadingScreen
+      id="loadingScreen"
+      :keepLoading="!isWebsiteMounted || !minLoadingTimeElapsed"
+    ></loadingScreen>
     <div class="homePage" id="homePage">
-      <cover id="cover" @complete-loading="handleChildMounted"></cover>
+      <cover id="cover" @cover-loaded="websiteMounted"></cover>
       <expereinceAndProjects id="experience"></expereinceAndProjects>
       <aboutMe id="about"></aboutMe>
       <contact id="contact"></contact>
@@ -11,18 +14,23 @@
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-property-decorator";
+import Vue from "vue";
 export default Vue.extend({
   name: "homePage",
   data() {
     return {
-      isLoading: true,
+      isWebsiteMounted: false,
+      minLoadingTimeElapsed: false,
     };
   },
+  created() {
+    setTimeout(() => {
+      this.minLoadingTimeElapsed = true;
+    }, 5000);
+  },
   methods: {
-    handleChildMounted() {
-      console.log("loading turned to false");
-      this.isLoading = false;
+    websiteMounted() {
+      this.isWebsiteMounted = true;
     },
   },
 });

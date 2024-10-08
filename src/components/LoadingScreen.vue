@@ -1,11 +1,11 @@
 <template>
-  <div :class="{ loader: true, fadeout: !isLoading }">Loading ...</div>
+  <div :class="{ loader: true, fadeout: !keepLoading }">Loading ...</div>
 </template>
 
 <script>
 export default {
   name: "LoadingScreen",
-  props: ["isLoading"],
+  props: ["keepLoading"],
 };
 </script>
 
