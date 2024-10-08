@@ -27,7 +27,7 @@ var json = require("@/static/content.json");
 // @ is an alias to /src
 
 export default Vue.extend({
-  name: "homePage",
+  name: "app",
   components: {},
   data() {
     return {

@@ -64,7 +64,18 @@ export default Vue.extend({
         "product management",
         "social entrepreneurship",
       ],
+      timeElapsed: false,
+      isMounted: false,
     };
+  },
+  created() {
+    setTimeout(() => {
+      this.timeElapsed = true;
+      if (this.isMounted) {
+        console.log("mounting took less time < default time");
+        this.$emit("complete-loading");
+      }
+    }, 5000);
   },
   methods: {
     scrollToExperience() {
@@ -94,6 +105,11 @@ export default Vue.extend({
     window.setInterval(() => {
       this.changePositionText();
     }, 1750);
+    this.isMounted = true;
+    if (this.timeElapsed) {
+      console.log("mounting took more time > default time");
+      this.$emit("complete-loading");
+    }
   },
 });
 </script>
@@ -206,7 +222,7 @@ export default Vue.extend({
 .beforeEnter {
   opacity: 0;
   transform: translateY(100px);
-  transition: all 2s ease-out;
+  transition: all 5s ease-out;
 }
 .enter {
   opacity: 1;

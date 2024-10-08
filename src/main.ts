@@ -12,6 +12,7 @@ import RecommendationCard from "@/components/RecommendationCard.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import CustomMenu from "@/components/CustomMenu.vue";
 import Contact from "@/components/Contact.vue";
+import LoadingScreen from "@/components/LoadingScreen.vue";
 
 Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
@@ -23,6 +24,7 @@ Vue.component("recommendationCard", RecommendationCard);
 Vue.component("aboutMe", AboutMe);
 Vue.component("customMenu", CustomMenu);
 Vue.component("contact", Contact);
+Vue.component("loadingScreen", LoadingScreen);
 
 Vue.directive("scrollAnimation", ScrollAnimation);
 
