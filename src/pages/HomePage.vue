@@ -1,9 +1,9 @@
 <template>
   <div>
-    <loadingScreen
+    <!-- <loadingScreen
       id="loadingScreen"
       :keepLoading="!isWebsiteMounted || !minLoadingTimeElapsed"
-    ></loadingScreen>
+    ></loadingScreen> -->
     <div class="homePage" id="homePage">
       <cover id="cover" @cover-loaded="websiteMounted"></cover>
       <expereinceAndProjects id="experience"></expereinceAndProjects>
