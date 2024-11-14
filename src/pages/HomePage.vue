@@ -27,7 +27,7 @@ export default Vue.extend({
     setTimeout(() => {
       this.minLoadingTimeElapsed = true;
       //min loading time 6 seconds
-    }, 3000);
+    }, 4000);
   },
   methods: {
     websiteMounted() {
