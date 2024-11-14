@@ -1,11 +1,11 @@
 <template>
   <div>
-    <!-- <loadingScreen
+    <loadingScreen
       id="loadingScreen"
       :keepLoading="!isWebsiteMounted || !minLoadingTimeElapsed"
-    ></loadingScreen> -->
+    ></loadingScreen>
     <div class="homePage" id="homePage">
-      <cover id="cover"></cover>
+      <cover id="cover" @cover-loaded="websiteMounted"></cover>
       <expereinceAndProjects id="experience"></expereinceAndProjects>
       <aboutMe id="about"></aboutMe>
       <contact id="contact"></contact>
@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<!-- <script lang="ts">
+<script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
   name: "homePage",
@@ -27,7 +27,7 @@ export default Vue.extend({
     setTimeout(() => {
       this.minLoadingTimeElapsed = true;
       //min loading time 6 seconds
-    }, 6000);
+    }, 3000);
   },
   methods: {
     websiteMounted() {
@@ -35,7 +35,7 @@ export default Vue.extend({
     },
   },
 });
-</script> -->
+</script>
 
 <style lang="scss">
 @import "../styles/main.scss";
