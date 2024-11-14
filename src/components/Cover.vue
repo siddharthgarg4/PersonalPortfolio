@@ -16,9 +16,8 @@
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
             <p class="coverPara">
-              Using <span class="tintFont">{{ position[0] }}</span>
-              as a gateway to translate problems into empowering humanistic
-              solutions.
+              Using <span class="tintFont">{{ position[0] }}</span> as a gateway
+              to translate problems into empowering human-centric solutions.
             </p>
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
@@ -29,10 +28,7 @@
         </b-row>
       </b-col>
       <b-col lg="6" class="extraPadding" v-scrollAnimation>
-        <img
-          class="img-responsive fitImage"
-          src="../assets/coverMainPictureTransparent.png"
-        />
+        <img class="img-responsive fitImage" src="../assets/coverFinal.svg" />
       </b-col>
     </b-row>
     <b-row>
@@ -63,14 +59,14 @@ export default Vue.extend({
       position: [
         "software engineering",
         "product management",
-        "social entrepreneurship",
+        "technical design",
       ],
     };
   },
   mounted() {
     window.setInterval(() => {
       this.changePositionText();
-    }, 1750);
+    }, 3000);
     this.$emit("cover-loaded");
   },
   methods: {
@@ -117,14 +113,14 @@ export default Vue.extend({
   background: linear-gradient(
     90deg,
     $offWhiteColor 72.5%,
-    $royalGreenColor 27.5%
+    $dolphinBlueColor 27.5%
   );
   padding: 1.5%;
   @media (max-width: $screen-md) {
     background: linear-gradient(
       180deg,
       $offWhiteColor 72.5%,
-      $royalGreenColor 27.5%
+      $dolphinBlueColor 27.5%
     );
   }
 }
@@ -148,6 +144,7 @@ export default Vue.extend({
   }
 }
 .coverTitle {
+  padding-bottom: 1%;
   font-size: 3.125vw;
   font-weight: 400;
   text-align: start;
@@ -157,18 +154,19 @@ export default Vue.extend({
   }
 }
 .coverPara {
-  font-size: 2.5vw;
+  padding-top: 1%;
+  font-size: 2.2vw;
   font-weight: 500;
   text-align: start;
-  line-height: 3vw;
+  line-height: 2.35vw;
   @media (max-width: $screen-md) {
-    font-size: 5vw;
-    line-height: 5.5vw;
+    font-size: 4.7vw;
+    line-height: 5vw;
     text-align: center;
   }
 }
 .tintFont {
-  color: $royalGreenColor;
+  color: $dolphinBlueColor;
 }
 .coverCenter {
   min-height: 70vh;
@@ -185,7 +183,7 @@ export default Vue.extend({
   }
 }
 .solidVerticalLine {
-  border-left: 2px solid $royalGreenColor;
+  border-left: 2px solid $dolphinBlueColor;
   height: 7.5vh;
   margin: 2px;
   display: inline-block;

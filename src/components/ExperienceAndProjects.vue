@@ -78,17 +78,18 @@
 .experienceProjectContainer {
   background-color: $lightWhiteColor;
   background-image: url("../static/assets/dotBackground-2.png"),
+    url("../static/assets/dotBackground-2-flipped.png"),
     url("../static/assets/dotBackground-2.png"),
-    url("../static/assets/dotBackground-2.png"),
-    url("../static/assets/dotBackground-2.png");
-  background-position: top 3% left, top 27% right, top 55% left, top 97% right;
+    url("../static/assets/dotBackground-2-flipped.png");
+  background-position: top 6.125% left, top 26.5% right, top 54.5% left,
+    top 98% right;
   padding: 5% 7.5% 5% 7.5%;
   background-repeat: no-repeat;
   background-size: 30%;
   @media (max-width: $screen-md) {
     background-size: 70%;
-    background-position: top 2.25% left, top 35% right, top 60% left,
-      top 100% right;
+    background-position: top 2.65% left, top 41.75% right, top 62% left,
+      top 99.5% right;
   }
 }
 .componentTitleContainer {

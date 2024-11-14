@@ -5,7 +5,7 @@
       :keepLoading="!isWebsiteMounted || !minLoadingTimeElapsed"
     ></loadingScreen> -->
     <div class="homePage" id="homePage">
-      <cover id="cover" @cover-loaded="websiteMounted"></cover>
+      <cover id="cover"></cover>
       <expereinceAndProjects id="experience"></expereinceAndProjects>
       <aboutMe id="about"></aboutMe>
       <contact id="contact"></contact>
@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<!-- <script lang="ts">
 import Vue from "vue";
 export default Vue.extend({
   name: "homePage",
@@ -35,7 +35,7 @@ export default Vue.extend({
     },
   },
 });
-</script>
+</script> -->
 
 <style lang="scss">
 @import "../styles/main.scss";

@@ -16,7 +16,10 @@
             v-for="(ftDescriptionItem, index) in parsedFTDescription().slice(1)"
             :key="index"
           >
-            <p class="cardParagraph">{{ ftDescriptionItem }}</p>
+            <p
+              class="cardParagraph"
+              v-html="highlightedText(ftDescriptionItem)"
+            ></p>
           </li>
         </ul>
       </div>
@@ -64,6 +67,25 @@ export default Vue.extend({
     },
     goToLink(givenLink) {
       window.open(givenLink, "_blank");
+    },
+    highlightedText(text) {
+      let highlightedText = text;
+
+      console.log("text:", text);
+      var highlightedWords = ["multiple"];
+
+      // Loop through each word to highlight
+      highlightedWords.forEach((word) => {
+        const regex = new RegExp(`(${word})`, "gi"); // Case-insensitive match
+        highlightedText = highlightedText.replace(
+          regex,
+          '<span class="highlighted">$1</span>'
+        );
+      });
+
+      console.log(highlightedText);
+
+      return highlightedText;
     },
   },
   data() {
@@ -169,6 +191,12 @@ export default Vue.extend({
   .cardParagraph {
     text-align: left;
     margin-bottom: 0.5rem;
+  }
+  .highlighted {
+    color: $offWhiteColor;
+    background-color: $dolphinBlueColor; /* You can change this color */
+    border-radius: 25px;
+    padding: 1.5px 7.5px;
   }
 }
 </style>

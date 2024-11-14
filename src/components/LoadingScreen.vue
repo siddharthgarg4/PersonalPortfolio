@@ -12,7 +12,7 @@ export default {
 <style lang="scss">
 @import "../styles/main.scss";
 .loader {
-  background-image: url("../assets/loading-moving-car.svg");
+  // background-image: url("../assets/loading-moving-car.svg");
   background-color: #12390c;
   background-position: center;
   background-repeat: no-repeat;
