@@ -15,6 +15,13 @@
       </b-row>
       <b-row>
         <b-col lg="12" class="cardContainer">
+          <customCard projectName="ffaiFT"></customCard>
+        </b-col>
+      </b-row>
+    </b-row>
+    <b-row v-scrollAnimation>
+      <b-row>
+        <b-col lg="12" class="cardContainer">
           <customCard projectName="upliftFT"></customCard>
         </b-col>
       </b-row>

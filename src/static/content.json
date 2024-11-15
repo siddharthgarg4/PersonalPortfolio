@@ -39,10 +39,21 @@
     "upliftFT": {
         "title": "Junior Product Manager at Uplift",
         "subtitle": "October 2022 - June 2023",
-        "coverImageName": "upliftFT.png",
+        "coverImageName": "upliftFT2.png",
         "description": "Fraud and Identity product owner responsible for:;Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.;Assisting engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
+        "highlightedWords" : ["Fraud and Identity"],
         "overlayTitle": "Learn more about Uplift",
         "link": "https://www.uplift.com",
+        "positionType": "full-time"
+    },
+    "ffaiFT": {
+        "title": "Technical Product Manager at FutureFit AI",
+        "subtitle": "January 2023 - Present",
+        "coverImageName": "ffaiFT2.png",
+        "description": "Access and Reach technical product owner responsible for:;Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.;Assisting engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
+        "highlightedWords" : ["Access and Reach"],
+        "overlayTitle": "Learn more about FutureFit AI",
+        "link": "https://www.futurefit.ai",
         "positionType": "full-time"
     },
     "grow": {

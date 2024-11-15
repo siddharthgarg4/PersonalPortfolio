@@ -11,7 +11,10 @@
       <p class="cardSubtitle">{{ json[projectName].subtitle }}</p>
       <div class="ftPosition" v-if="isPositionFT()">
         <ul>
-          <p class="cardParagraph">{{ parsedFTDescription()[0] }}</p>
+          <p
+            class="cardParagraph"
+            v-html="highlightedText(parsedFTDescription()[0])"
+          ></p>
           <li
             v-for="(ftDescriptionItem, index) in parsedFTDescription().slice(1)"
             :key="index"
@@ -72,7 +75,7 @@ export default Vue.extend({
       let highlightedText = text;
 
       console.log("text:", text);
-      var highlightedWords = ["multiple"];
+      var highlightedWords = json[this.projectName].highlightedWords;
 
       // Loop through each word to highlight
       highlightedWords.forEach((word) => {

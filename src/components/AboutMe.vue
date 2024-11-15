@@ -43,11 +43,11 @@
           intersection of technology and societal impact–focused on empowering
           individuals and organisations to thrive in a rapidly digital
           environment. <br /><br />
-          <!-- 5. Extracurricular Commented out
-          Outside of school and work, I love soccer, hiking, exploring new
-          cities, going on unplanned adventures and meeting new people.
-          <br /><br /> -->
-          <!-- 5. Outro -->
+          <!-- 5. Extracurricular -->
+          Outside of school and work, I enjoy hiking, playing soccer, exploring
+          new cities, going on unplanned adventures and meeting new people.
+          <br /><br />
+          <!-- 6. Outro -->
           With a strong desire to contribute to the greater social good, I'm
           <!-- eslint-disable-next-line -->
           currently <span class="tintFont">seeking new projects and opportunities</span>
