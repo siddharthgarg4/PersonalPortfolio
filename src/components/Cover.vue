@@ -17,7 +17,7 @@
           <b-col class="align-items-center removePadding" cols="12">
             <p class="coverPara">
               Using <span class="tintFont">{{ position[0] }}</span> as a gateway
-              to translate problems into empowering human-centric solutions.
+              to translate problems into empowering, empathy-driven solutions.
             </p>
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">

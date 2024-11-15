@@ -76,7 +76,7 @@ export default {
     border-radius: 50%;
   }
   &:hover {
-    box-shadow: rgba(34, 129, 102, 0.75) 0px 19px 43px;
+    box-shadow: $dolphinBlueColor 0px 19px 43px;
     -webkit-transform: translate3d(0px, -1px, 0px);
     -moz-transform: translate3d(0px, -1px, 0px);
     -ms-transform: translate3d(0px, -1px, 0px);
@@ -92,7 +92,8 @@ export default {
     font-weight: 400;
     text-align: center;
     @media (max-width: $screen-md) {
-      font-size: 2.5vw;
+      font-size: 3.4vw;
+      text-align: left;
     }
   }
 }

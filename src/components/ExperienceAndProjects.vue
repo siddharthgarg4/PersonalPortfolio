@@ -82,13 +82,13 @@
     url("../static/assets/dotBackground-2.png"),
     url("../static/assets/dotBackground-2-flipped.png");
   background-position: top 6.125% left, top 26.5% right, top 54.5% left,
-    top 98% right;
+    top 99% right;
   padding: 5% 7.5% 5% 7.5%;
   background-repeat: no-repeat;
   background-size: 30%;
   @media (max-width: $screen-md) {
     background-size: 70%;
-    background-position: top 2.65% left, top 41.75% right, top 62% left,
+    background-position: top 2.65% left, top 28.75% right, top 62% left,
       top 99.5% right;
   }
 }
