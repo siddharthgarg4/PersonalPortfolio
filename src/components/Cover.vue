@@ -16,7 +16,7 @@
           </b-col>
           <b-col class="align-items-center removePadding" cols="12">
             <p class="coverPara">
-              Using <span class="tintFont">{{ position[0] }}</span> as a gateway
+              Using <span class="tintFont">{{ position[0] }}</span>
               to translate problems into empowering, empathy-driven solutions.
             </p>
           </b-col>
@@ -155,13 +155,13 @@ export default Vue.extend({
 }
 .coverPara {
   padding-top: 1%;
-  font-size: 2.2vw;
+  font-size: 2vw;
   font-weight: 500;
   text-align: start;
-  line-height: 2.35vw;
+  line-height: 2.2vw;
   @media (max-width: $screen-md) {
-    font-size: 4.7vw;
-    line-height: 5vw;
+    font-size: 4.3vw;
+    line-height: 4.7vw;
     text-align: center;
   }
 }

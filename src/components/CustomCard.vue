@@ -11,12 +11,8 @@
       <p class="cardSubtitle">{{ json[projectName].subtitle }}</p>
       <div class="ftPosition" v-if="isPositionFT()">
         <ul>
-          <p
-            class="cardParagraph"
-            v-html="highlightedText(parsedFTDescription()[0])"
-          ></p>
           <li
-            v-for="(ftDescriptionItem, index) in parsedFTDescription().slice(1)"
+            v-for="(ftDescriptionItem, index) in parsedFTDescription().slice()"
             :key="index"
           >
             <p
@@ -113,7 +109,7 @@ export default Vue.extend({
   .card-img-left {
     height: auto;
     width: 49%;
-    object-fit: cover;
+    object-fit: contain;
   }
 }
 .customCard:hover {
@@ -136,8 +132,9 @@ export default Vue.extend({
 }
 .cardSubtitle {
   font-size: 1.4vw;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
+  color: $dolphinBlueColor;
   @media (max-width: $screen-md) {
     font-size: 2.8vw;
   }
