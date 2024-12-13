@@ -65,18 +65,18 @@ export default {
   align-items: center;
   .card-img {
     height: 7.5vw;
-    width: auto;
+    width: auto !important;
     margin-top: 1.25rem;
     border-radius: 50%;
   }
   .card-img-left {
     height: 15vw;
-    width: auto;
+    width: auto !important;
     margin-left: 1.25rem;
     border-radius: 50%;
   }
   &:hover {
-    box-shadow: $dolphinBlueColor 0px 19px 43px;
+    box-shadow: $dolphinBlueColor 0px 15px 25px;
     -webkit-transform: translate3d(0px, -1px, 0px);
     -moz-transform: translate3d(0px, -1px, 0px);
     -ms-transform: translate3d(0px, -1px, 0px);
@@ -86,6 +86,11 @@ export default {
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
     transition: all 500ms ease;
+  }
+  @media (max-width: $screen-md) {
+    & {
+      pointer-events: none; /* Disables hover interaction */
+    }
   }
   .cardParagraph {
     font-size: 1.25vw;

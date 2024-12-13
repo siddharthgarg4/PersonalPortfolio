@@ -66,36 +66,70 @@
       </b-col>
     </b-row>
     <b-row v-scrollAnimation>
-      <b-col lg="4" class="cardContainer">
-        <recommendationCard
-          recommendation="nathanAptRecommendation"
-        ></recommendationCard>
-      </b-col>
-      <b-col lg="4" class="cardContainer">
-        <recommendationCard
-          recommendation="kellyWengertRecommendation"
-        ></recommendationCard>
-      </b-col>
-      <b-col lg="4" class="cardContainer">
-        <recommendationCard
-          recommendation="aaronStuartRecommendation"
-        ></recommendationCard>
-      </b-col>
+      <b-row class="removePadding">
+        <b-col class="componentSubtitleContainer">
+          <p class="componentTitle removeMargin">Recommendations</p>
+        </b-col>
+      </b-row>
+      <carousel
+        :responsive="carouselItemsPerWidth"
+        :margin="5"
+        :loop="true"
+        :nav="false"
+        :autoplay="true"
+        :autoplayHoverPause="true"
+        :dots="false"
+      >
+        <div
+          v-for="(rec, i) in recommendations"
+          :key="i"
+          class="cardContainer custom-carousel-content"
+        >
+          <recommendationCard :recommendation="rec"></recommendationCard>
+        </div>
+      </carousel>
     </b-row>
   </b-container>
 </template>
 
 <script>
+import carousel from "vue-owl-carousel";
 var json = require("@/static/content.json");
 export default {
+  data() {
+    return {
+      recommendations: [
+        "nathanAptRecommendation",
+        "kellyWengertRecommendation",
+        "aaronStuartRecommendation",
+        "aaronStuartRecommendation",
+      ],
+      carouselItemsPerWidth: {
+        0: {
+          //less than 991px
+          items: 1,
+        },
+        991: {
+          //991px - med
+          items: 3,
+        },
+      },
+    };
+  },
   created() {
     this.json = json;
+  },
+  components: {
+    carousel,
   },
 };
 </script>
 
 <style lang="scss">
 @import "../styles/main.scss";
+.owl-stage {
+  margin: 15px 0px 25px;
+}
 .aboutMeContainer {
   background: $offWhiteColor;
   padding: 5% 7.5% 5% 7.5%;
@@ -112,12 +146,10 @@ export default {
   @media (max-width: $screen-md) {
     font-size: 3.8vw;
   }
-
   .tintFont {
     font-weight: 600;
   }
 }
-
 .aboutMeDescriptionContainer {
   margin-bottom: 35px;
 }
@@ -137,5 +169,17 @@ export default {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.custom-carousel-content {
+  width: 100%; /* Full width of the carousel item */
+  height: 100%;
+  padding: 0px 15px 15px; /* Add spacing around the content */
+  @media (max-width: $screen-md) {
+    padding: 0px 0px 0px 0px;
+  }
+}
+.owl-carousel .owl-stage {
+  display: flex !important; /* Enables full length cards */
 }
 </style>
