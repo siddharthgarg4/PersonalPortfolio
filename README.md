@@ -1,39 +1,52 @@
-# personal-portfolio-v3-2024
+# PersonalPortfolio
 
-This template should help get you started developing with Vue 3 in Vite.
+## Project Description
 
-## Recommended IDE Setup
+This website was built to showcase myself and the projects that I have worked on.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Inspiration 
 
-## Type Support for `.vue` Imports in TS
+Pursuing co-op in my academic program, I regularly have to apply to jobs and look for opportunities. This felt like the perfect complement to a resume.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## How I built it
 
-## Customize configuration
+**Figma** - Wireframing for UI/UX
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+**Vue JS** - Framework (TypeScript, HTML, SCSS)
 
-## Project Setup
+**Bootstrap 4** - Styling library 
 
-```sh
+
+## Challenges I ran into
+
+**Fonts** - using font face and locally stored fonts
+
+**Deployment** - deploying the website on Github Pages
+
+## Link to the project
+https://siddharthgarg4.github.io/
+
+
+# Project setup
+```
 npm install
+npm run format
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
+### Compiles and hot-reloads for development
+```
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
+### Compiles and minifies for production
+```
 npm run build
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
+### Lints and fixes files
+```
 npm run lint
 ```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
