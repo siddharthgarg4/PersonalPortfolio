@@ -7,7 +7,7 @@
 </template>
 
 <style lang="scss">
-@use "../styles/main" as *;
+@use "../assets/styles/variables.scss" as *;
 html,
 body {
   width: 100%;

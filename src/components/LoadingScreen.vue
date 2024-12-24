@@ -20,7 +20,7 @@
 </script>
 
 <style lang="scss">
-@use "../styles/main" as *;
+@use "../assets/styles/variables.scss" as *;
 .loader {
   background-image: url("../assets/loading-moving-car.svg");
   background-color: $dolphinBlueColor;
