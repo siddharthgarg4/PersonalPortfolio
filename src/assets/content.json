@@ -1,145 +1,145 @@
 {
-    "tile": {
-        "title": "Software Engineer Intern at Tile",
-        "subtitle": "Winter 2020",
-        "coverImageName": "tile.png",
-        "description": "Spearheaded a cross-functional project within the iOS mobile application, aimed at creatively engaging new consumers into the Tile premium ecosystem.",
-        "overlayTitle": "Learn more about Tile",
-        "highlightedWords": ["mobile", "meeting", "flex-workspace"],
-        "link": "https://www.thetileapp.com/",
-        "positionType": "internship"
-    },
-    "td": {
-        "title": "Software Engineer Intern at TD",
-        "subtitle": "Winter 2019",
-        "coverImageName": "td.png",
-        "description": "Enhanced a POC mobile application focused on innovative methods for scheduling meetings, finding resources and contacting colleagues in a flex-workspace.",
-        "overlayTitle": "Learn more about TD",
-        "link": "https://www.td.com/ca/en/personal-banking",
-        "positionType": "internship"
-    },
-    "shopify": {
-        "title": "Software Engineer Intern at Shopify",
-        "subtitle": "Winter/Spring 2021",
-        "coverImageName": "shopify.png",
-        "description": "Streamlined the order life-cycle through a dynamic workflow engine, aimed at improving transparency and scalability for Shopify Fulfillment Network.",
-        "overlayTitle": "Learn more about Shopify",
-        "link": "https://www.shopify.ca",
-        "positionType": "internship"
-    },
-    "uplift": {
-        "title": "Product Manager Intern at Uplift",
-        "subtitle": "Fall 2021",
-        "coverImageName": "uplift.png",
-        "description": "Project lead for the design, development and subsequent release of the revamped partner-developer portal and the first customer document submission platform.",
-        "overlayTitle": "Learn more about Uplift",
-        "link": "https://www.uplift.com",
-        "positionType": "internship"
-    },
-    "upliftFT": {
-        "title": "Junior Product Manager at Uplift",
-        "subtitle": "Fraud and Identity | October 2022 - June 2023",
-        "coverImageName": "upliftFT2.png",
-        "description": "Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.;Assisting engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
-        "highlightedWords" : [],
-        "overlayTitle": "Learn more about Uplift",
-        "link": "https://www.uplift.com",
-        "positionType": "full-time"
-    },
-    "ffaiFT": {
-        "title": "Technical Product Manager at FutureFit AI",
-        "subtitle": "Access and Reach | January 2023 - Present",
-        "coverImageName": "ffaiFT2.png",
-        "description": "Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.",
-        "highlightedWords" : [],
-        "overlayTitle": "Learn more about FutureFit AI",
-        "link": "https://www.futurefit.ai",
-        "positionType": "full-time"
-    },
-    "grow": {
-        "title": "Grow",
-        "subtitle": "1st Place at HackLassonde",
-        "coverImageName": "grow.png",
-        "description": "iOS, ARKit, CoreML",
-        "overlayTitle": "View Project Grow",
-        "link": "https://github.com/siddharthgarg4/Grow"
-    },
-    "healthline": {
-        "title": "HealthLine",
-        "subtitle": "Top 5 at RUHacks",
-        "coverImageName": "healthline.png",
-        "description": "iOS, Twilio, Python",
-        "overlayTitle": "View Project HealthLine",
-        "link": "https://github.com/siddharthgarg4/HealthLine"
-    },
-    "blindsight": {
-        "title": "BlindSight",
-        "subtitle": "2nd Place at PCHacks",
-        "coverImageName": "blindsight.png",
-        "description": "iOS, Twilio, CoreML",
-        "overlayTitle": "View Project BlindSight",
-        "link": "https://github.com/siddharthgarg4/BlindSight"
-    },
-    "instameet": {
-        "title": "InstaMeet",
-        "subtitle": "MHacks Project",
-        "coverImageName": "instameet.png",
-        "description": "iOS, Firebase, Google Cloud",
-        "overlayTitle": "View Project InstaMeet",
-        "link": "https://github.com/siddharthgarg4/InstaMeet"
-    },
-    "paypool": {
-        "title": "PayPool",
-        "subtitle": "TD Lab Project",
-        "coverImageName": "paypool.png",
-        "description": "iOS, Interac, Firebase",
-        "overlayTitle": "View Project PayPool",
-        "link": "https://tdlab.io/project/payPool"
-    },
-    "flysafe": {
-        "title": "FlySafe",
-        "subtitle": "Hack The North Project",
-        "coverImageName": "flysafe.png",
-        "description": "iOS, Azure, Xe, BlinkId",
-        "overlayTitle": "View Project FlySafe",
-        "link": "https://github.com/siddharthgarg4/FlySafe"
-    },
-    "endgame": {
-        "title": "EndGame Engine",
-        "subtitle": "Passion Project",
-        "coverImageName": "pacman.png",
-        "description": "C++, OpenGL, GLFW, GLM",
-        "overlayTitle": "View Project EndGame",
-        "link": "https://github.com/siddharthgarg4/EndGame"
-    },
-    "me": {
-        "description": "I am currently a 4th year student pursuing a dual degree in Computer Science and Business at the University of Waterloo and Wilfrid Laurier University respectively.\n\nAt my previous internships, I was given the opportunity to explore the field of mobile and backend development in a collaborative and fast paced environment. These opportunities have allowed me to refine my leadership and technical skills while working on a product currently in market.\n\nAs a software engineer, I am constantly looking for new challenges to push me outside my comfort zone, as I believe that we stop growing once we are unwilling to have new experiences.\n\nOutside of school and work, I love exploring new cities, going on unplanned adventures, watching soccer and trying new food. Feel free to send me a message and say hi :)"
-    },
-    "andreGattiRecommendation": {
-        "recommenderImage": "andreGatti.png",
-        "recommenderName": "André Gatti, Tile",
-        "recommenderPosition": "Senior iOS Software Engineer",
-        "recommendationDescription": "\"Sid was able to successfully deliver a very complex project utilizing his strong technical skills. He was very proactive in suggesting solutions while interacting with the different groups such as backend, product management and design, while taking full ownership of the project.\""
-    },
-    "nathanAptRecommendation": {
-        "recommenderImage": "nathanApt.png",
-        "recommenderName": "Nathan Apt, Uplift",
-        "recommenderPosition": "Product Manager",
-        "recommendationDescription": "\"As an intern in the Product team at Uplift, Sid was able to take ownership of the modernization of our developer documentation. He successfully navigated ambiguity and collaborated cross-functionally with the Data Engineering, Data Analytics, Application Engineering, and Merchant Success teams to guide the creation of new documentation that was up-to-date with our functionality and product offering and also guided developers to integrate with Uplift. As a result, we saw improvements in the time-to-onboard and data quality from partners as well as operational efficiencies in our internal processes.\""
-    },
-    "kellyWengertRecommendation": {
-        "recommenderImage": "kellyWengert.png",
-        "recommenderName": "Kelly Wengert, Tile",
-        "recommenderPosition": "Manager, Product Design",
-        "recommendationDescription": "\"Sid always asked thoughtful questions. He cared about the quality of the experience and would pro-actively seek me out for my thoughts as he progressed. I'm excited for future designers to work with Sid as he demonstrates the joy and power of a collaborative developer/designer relationship.\""
-    },
-    "aaronStuartRecommendation": {
-        "recommenderImage": "aaronStuart.png",
-        "recommenderName": "Aaron Stuart, TD Lab",
-        "recommenderPosition": "Product Management Leader",
-        "recommendationDescription": "\"Siddharth did exceptional work and was a pleasure to work with for the time he was with us at TD Lab. He demonstrated both curiosity and drive with projects. He had equal interest and aptitude in the technical and business aspects of the work. He's a quick learner and I recommend him as top talent.\""
-    },
-    "github": "https://github.com/siddharthgarg4",
-    "linkedin": "https://www.linkedin.com/in/siddharthgarg4/",
-    "email": "mailto:s38garg@gmail.com"
+  "tile": {
+    "title": "Software Engineer Intern at Tile",
+    "subtitle": "Winter 2020",
+    "coverImageName": "tile.png",
+    "description": "Spearheaded a cross-functional project within the iOS mobile application, aimed at creatively engaging new consumers into the Tile premium ecosystem.",
+    "overlayTitle": "Learn more about Tile",
+    "highlightedWords": ["mobile", "meeting", "flex-workspace"],
+    "link": "https://www.thetileapp.com/",
+    "positionType": "internship"
+  },
+  "td": {
+    "title": "Software Engineer Intern at TD",
+    "subtitle": "Winter 2019",
+    "coverImageName": "td.png",
+    "description": "Enhanced a POC mobile application focused on innovative methods for scheduling meetings, finding resources and contacting colleagues in a flex-workspace.",
+    "overlayTitle": "Learn more about TD",
+    "link": "https://www.td.com/ca/en/personal-banking",
+    "positionType": "internship"
+  },
+  "shopify": {
+    "title": "Software Engineer Intern at Shopify",
+    "subtitle": "Winter/Spring 2021",
+    "coverImageName": "shopify.png",
+    "description": "Streamlined the order life-cycle through a dynamic workflow engine, aimed at improving transparency and scalability for Shopify Fulfillment Network.",
+    "overlayTitle": "Learn more about Shopify",
+    "link": "https://www.shopify.ca",
+    "positionType": "internship"
+  },
+  "uplift": {
+    "title": "Product Manager Intern at Uplift",
+    "subtitle": "Fall 2021",
+    "coverImageName": "uplift.png",
+    "description": "Project lead for the design, development and subsequent release of the revamped partner-developer portal and the first customer document submission platform.",
+    "overlayTitle": "Learn more about Uplift",
+    "link": "https://www.uplift.com",
+    "positionType": "internship"
+  },
+  "upliftFT": {
+    "title": "Junior Product Manager at Uplift",
+    "subtitle": "Fraud and Identity | October 2022 - June 2023",
+    "coverImageName": "upliftFT2.png",
+    "description": "Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.;Assisting engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
+    "highlightedWords": [],
+    "overlayTitle": "Learn more about Uplift",
+    "link": "https://www.uplift.com",
+    "positionType": "full-time"
+  },
+  "ffaiFT": {
+    "title": "Technical Product Manager at FutureFit AI",
+    "subtitle": "Access and Reach | January 2023 - Present",
+    "coverImageName": "ffaiFT2.png",
+    "description": "Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.",
+    "highlightedWords": [],
+    "overlayTitle": "Learn more about FutureFit AI",
+    "link": "https://www.futurefit.ai",
+    "positionType": "full-time"
+  },
+  "grow": {
+    "title": "Grow",
+    "subtitle": "1st Place at HackLassonde",
+    "coverImageName": "grow.png",
+    "description": "iOS, ARKit, CoreML",
+    "overlayTitle": "View Project Grow",
+    "link": "https://github.com/siddharthgarg4/Grow"
+  },
+  "healthline": {
+    "title": "HealthLine",
+    "subtitle": "Top 5 at RUHacks",
+    "coverImageName": "healthline.png",
+    "description": "iOS, Twilio, Python",
+    "overlayTitle": "View Project HealthLine",
+    "link": "https://github.com/siddharthgarg4/HealthLine"
+  },
+  "blindsight": {
+    "title": "BlindSight",
+    "subtitle": "2nd Place at PCHacks",
+    "coverImageName": "blindsight.png",
+    "description": "iOS, Twilio, CoreML",
+    "overlayTitle": "View Project BlindSight",
+    "link": "https://github.com/siddharthgarg4/BlindSight"
+  },
+  "instameet": {
+    "title": "InstaMeet",
+    "subtitle": "MHacks Project",
+    "coverImageName": "instameet.png",
+    "description": "iOS, Firebase, Google Cloud",
+    "overlayTitle": "View Project InstaMeet",
+    "link": "https://github.com/siddharthgarg4/InstaMeet"
+  },
+  "paypool": {
+    "title": "PayPool",
+    "subtitle": "TD Lab Project",
+    "coverImageName": "paypool.png",
+    "description": "iOS, Interac, Firebase",
+    "overlayTitle": "View Project PayPool",
+    "link": "https://tdlab.io/project/payPool"
+  },
+  "flysafe": {
+    "title": "FlySafe",
+    "subtitle": "Hack The North Project",
+    "coverImageName": "flysafe.png",
+    "description": "iOS, Azure, Xe, BlinkId",
+    "overlayTitle": "View Project FlySafe",
+    "link": "https://github.com/siddharthgarg4/FlySafe"
+  },
+  "endgame": {
+    "title": "EndGame Engine",
+    "subtitle": "Passion Project",
+    "coverImageName": "pacman.png",
+    "description": "C++, OpenGL, GLFW, GLM",
+    "overlayTitle": "View Project EndGame",
+    "link": "https://github.com/siddharthgarg4/EndGame"
+  },
+  "me": {
+    "description": "I am currently a 4th year student pursuing a dual degree in Computer Science and Business at the University of Waterloo and Wilfrid Laurier University respectively.\n\nAt my previous internships, I was given the opportunity to explore the field of mobile and backend development in a collaborative and fast paced environment. These opportunities have allowed me to refine my leadership and technical skills while working on a product currently in market.\n\nAs a software engineer, I am constantly looking for new challenges to push me outside my comfort zone, as I believe that we stop growing once we are unwilling to have new experiences.\n\nOutside of school and work, I love exploring new cities, going on unplanned adventures, watching soccer and trying new food. Feel free to send me a message and say hi :)"
+  },
+  "andreGattiRecommendation": {
+    "recommenderImage": "andreGatti.png",
+    "recommenderName": "André Gatti, Tile",
+    "recommenderPosition": "Senior iOS Software Engineer",
+    "recommendationDescription": "\"Sid was able to successfully deliver a very complex project utilizing his strong technical skills. He was very proactive in suggesting solutions while interacting with the different groups such as backend, product management and design, while taking full ownership of the project.\""
+  },
+  "nathanAptRecommendation": {
+    "recommenderImage": "nathanApt.png",
+    "recommenderName": "Nathan Apt, Uplift",
+    "recommenderPosition": "Product Manager",
+    "recommendationDescription": "\"As an intern in the Product team at Uplift, Sid was able to take ownership of the modernization of our developer documentation. He successfully navigated ambiguity and collaborated cross-functionally with the Data Engineering, Data Analytics, Application Engineering, and Merchant Success teams to guide the creation of new documentation that was up-to-date with our functionality and product offering and also guided developers to integrate with Uplift. As a result, we saw improvements in the time-to-onboard and data quality from partners as well as operational efficiencies in our internal processes.\""
+  },
+  "kellyWengertRecommendation": {
+    "recommenderImage": "kellyWengert.png",
+    "recommenderName": "Kelly Wengert, Tile",
+    "recommenderPosition": "Manager, Product Design",
+    "recommendationDescription": "\"Sid always asked thoughtful questions. He cared about the quality of the experience and would pro-actively seek me out for my thoughts as he progressed. I'm excited for future designers to work with Sid as he demonstrates the joy and power of a collaborative developer/designer relationship.\""
+  },
+  "aaronStuartRecommendation": {
+    "recommenderImage": "aaronStuart.png",
+    "recommenderName": "Aaron Stuart, TD Lab",
+    "recommenderPosition": "Product Management Leader",
+    "recommendationDescription": "\"Siddharth did exceptional work and was a pleasure to work with for the time he was with us at TD Lab. He demonstrated both curiosity and drive with projects. He had equal interest and aptitude in the technical and business aspects of the work. He's a quick learner and I recommend him as top talent.\""
+  },
+  "github": "https://github.com/siddharthgarg4",
+  "linkedin": "https://www.linkedin.com/in/siddharthgarg4/",
+  "email": "mailto:s38garg@gmail.com"
 }
