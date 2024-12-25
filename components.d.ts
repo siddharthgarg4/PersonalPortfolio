@@ -11,6 +11,7 @@ declare module 'vue' {
     BContainer: typeof import('bootstrap-vue-next/components/BContainer')['BContainer']
     BRow: typeof import('bootstrap-vue-next/components/BContainer')['BRow']
     CoverSection: typeof import('./src/components/CoverSection.vue')['default']
+    CustomMenu: typeof import('./src/components/CustomMenu.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']

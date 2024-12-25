@@ -19,7 +19,7 @@
 // });
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @use "../assets/styles/variables.scss" as *;
 .loader {
   background-image: url("../assets/loading-moving-car.svg");

@@ -5,7 +5,7 @@
         <img class="sgLogo" src="../assets/sgLogo.png" />
       </BCol>
       <BCol class="justify-content-end d-flex menuContainer removePadding">
-        <!-- <customMenu></customMenu> -->
+        <customMenu></customMenu>
       </BCol>
     </BRow>
     <BRow align-v="center" class="coverCenter align-items-center d-flex">
