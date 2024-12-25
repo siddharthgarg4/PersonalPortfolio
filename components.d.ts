@@ -7,6 +7,10 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BCol: typeof import('bootstrap-vue-next/components/BContainer')['BCol']
+    BContainer: typeof import('bootstrap-vue-next/components/BContainer')['BContainer']
+    BRow: typeof import('bootstrap-vue-next/components/BContainer')['BRow']
+    CoverSection: typeof import('./src/components/CoverSection.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']

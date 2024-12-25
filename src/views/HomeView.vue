@@ -1,10 +1,11 @@
-<script setup lang="ts">
-// import LoadingScreen from "@/components/LoadingScreen.vue";
-</script>
-
 <template>
-  <LoadingScreen />
+  <!-- <LoadingScreen id="loadingScreen" /> -->
+  <div class="homeView" id="homeView">
+    <CoverSection id="coverSection"></CoverSection>
+  </div>
 </template>
+
+<script setup lang="ts"></script>
 
 <style lang="scss">
 @use "../assets/styles/variables.scss" as *;
@@ -18,7 +19,7 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-.homePage {
+.homeView {
   background-color: $offWhiteColor;
 }
 .cursorPointer {
