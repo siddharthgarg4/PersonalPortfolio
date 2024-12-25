@@ -45,13 +45,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from "vue";
+import { defineComponent, ref, onMounted, onBeforeUnmount } from "vue";
 
 export default defineComponent({
   name: "CoverSection",
   setup() {
     // Reactive state
-    const position = ref([
+    const position = ref<string[]>([
       "software engineering",
       "product management",
       "technical design",
@@ -59,11 +59,15 @@ export default defineComponent({
 
     // Mounted lifecycle hook
     onMounted(() => {
-      window.setInterval(() => {
+      const interval = window.setInterval(() => {
         changePositionText();
       }, 3000);
       // // Emit event when mounted
       // window.dispatchEvent(new CustomEvent("cover-loaded"));
+
+      onBeforeUnmount(() => {
+        clearInterval(interval);
+      });
     });
 
     // Methods (defined as functions)
@@ -78,14 +82,14 @@ export default defineComponent({
     //   }
     // };
 
-    const goToResume = () => {
+    const goToResume = (): void => {
       window.open(
         "https://drive.google.com/open?id=1znD9D40aV2y3--KMBDNguyxXOTcXZnXw",
         "_blank",
       );
     };
 
-    const changePositionText = () => {
+    const changePositionText = (): void => {
       // Safely shift and push the first element of the position array
       const firstElement = position.value.shift()!;
       position.value.push(firstElement);

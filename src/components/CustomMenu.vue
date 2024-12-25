@@ -51,13 +51,13 @@ export default defineComponent({
   name: "CustomMenu",
   setup() {
     //Reactives
-    const isActivated = ref(false);
+    const isActivated = ref<boolean>(false);
 
     //Methods
-    const toggleMenu = () => {
+    const toggleMenu = (): void => {
       isActivated.value = !isActivated.value;
     };
-    const scrollToSection = (section: string) => {
+    const scrollToSection = (section: string): void => {
       console.log(section);
     };
 
