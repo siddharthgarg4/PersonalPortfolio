@@ -18,7 +18,10 @@
             class="img-fluid navIcon"
           />
         </div>
-        <div class="optionContainer" @click="scrollToSection('experienceSection')">
+        <div
+          class="optionContainer"
+          @click="scrollToSection('experienceSection')"
+        >
           <img
             src="../assets/images/projectsNav.png"
             alt="Experience"

@@ -2,6 +2,9 @@
   <!-- <LoadingScreen id="loadingScreen" /> -->
   <div class="homeView" id="homeView">
     <CoverSection id="coverSection"></CoverSection>
+    <ExperienceAndProjectsSection
+      id="experienceSection"
+    ></ExperienceAndProjectsSection>
   </div>
 </template>
 
