@@ -7,7 +7,7 @@
     "overlayTitle": "Learn more about Tile",
     "highlightedWords": ["mobile", "meeting", "flex-workspace"],
     "link": "https://www.thetileapp.com/",
-    "positionType": "internship"
+    "experienceType": "internship"
   },
   "td": {
     "title": "Software Engineer Intern at TD",
@@ -16,7 +16,7 @@
     "description": "Enhanced a POC mobile application focused on innovative methods for scheduling meetings, finding resources and contacting colleagues in a flex-workspace.",
     "overlayTitle": "Learn more about TD",
     "link": "https://www.td.com/ca/en/personal-banking",
-    "positionType": "internship"
+    "experienceType": "internship"
   },
   "shopify": {
     "title": "Software Engineer Intern at Shopify",
@@ -25,7 +25,7 @@
     "description": "Streamlined the order life-cycle through a dynamic workflow engine, aimed at improving transparency and scalability for Shopify Fulfillment Network.",
     "overlayTitle": "Learn more about Shopify",
     "link": "https://www.shopify.ca",
-    "positionType": "internship"
+    "experienceType": "internship"
   },
   "uplift": {
     "title": "Product Manager Intern at Uplift",
@@ -34,7 +34,7 @@
     "description": "Project lead for the design, development and subsequent release of the revamped partner-developer portal and the first customer document submission platform.",
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
-    "positionType": "internship"
+    "experienceType": "internship"
   },
   "upliftFT": {
     "title": "Junior Product Manager at Uplift",
@@ -44,7 +44,7 @@
     "highlightedWords": [],
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
-    "positionType": "full-time"
+    "experienceType": "full-time"
   },
   "ffaiFT": {
     "title": "Technical Product Manager at FutureFit AI",
@@ -54,7 +54,7 @@
     "highlightedWords": [],
     "overlayTitle": "Learn more about FutureFit AI",
     "link": "https://www.futurefit.ai",
-    "positionType": "full-time"
+    "experienceType": "full-time"
   },
   "grow": {
     "title": "Grow",
@@ -63,7 +63,7 @@
     "description": "iOS, ARKit, CoreML",
     "overlayTitle": "View Project Grow",
     "link": "https://github.com/siddharthgarg4/Grow",
-    "positionType": "project"
+    "experienceType": "project"
   },
   "healthline": {
     "title": "HealthLine",
@@ -72,7 +72,7 @@
     "description": "iOS, Twilio, Python",
     "overlayTitle": "View Project HealthLine",
     "link": "https://github.com/siddharthgarg4/HealthLine",
-    "positionType": "project"
+    "experienceType": "project"
   },
   "blindsight": {
     "title": "BlindSight",
@@ -81,7 +81,7 @@
     "description": "iOS, Twilio, CoreML",
     "overlayTitle": "View Project BlindSight",
     "link": "https://github.com/siddharthgarg4/BlindSight",
-    "positionType": "project"
+    "experienceType": "project"
   },
   "instameet": {
     "title": "InstaMeet",
@@ -90,7 +90,7 @@
     "description": "iOS, Firebase, Google Cloud",
     "overlayTitle": "View Project InstaMeet",
     "link": "https://github.com/siddharthgarg4/InstaMeet",
-    "positionType": "project"
+    "experienceType": "project"
   },
   "paypool": {
     "title": "PayPool",
@@ -99,7 +99,7 @@
     "description": "iOS, Interac, Firebase",
     "overlayTitle": "View Project PayPool",
     "link": "https://tdlab.io/project/payPool",
-    "positionType": "project"
+    "experienceType": "project"
   },
   "flysafe": {
     "title": "FlySafe",
@@ -108,7 +108,7 @@
     "description": "iOS, Azure, Xe, BlinkId",
     "overlayTitle": "View Project FlySafe",
     "link": "https://github.com/siddharthgarg4/FlySafe",
-    "positionType": "project"
+    "experienceType": "project"
   },
   "endgame": {
     "title": "EndGame Engine",
@@ -117,7 +117,7 @@
     "description": "C++, OpenGL, GLFW, GLM",
     "overlayTitle": "View Project EndGame",
     "link": "https://github.com/siddharthgarg4/EndGame",
-    "positionType": "project"
+    "experienceType": "project"
   },
   "andreGattiRecommendation": {
     "recommenderImage": "andreGatti.png",

@@ -2,7 +2,7 @@
   <BContainer fluid class="removePadding h-100">
     <div v-if="currentExperienceDetails">
       <BCard
-        :img-src="getExperienceImageURL()"
+        :img-src="`/images/${currentExperienceDetails.coverImageName}`"
         :img-alt="currentExperienceDetails.title"
         class="customCard cursorPointer h-100"
         :img-left="isExperienceFT"
@@ -12,7 +12,9 @@
         </p>
         <p class="cardSubtitle">{{ currentExperienceDetails.subtitle }}</p>
         <div class="ftPosition" v-if="isExperienceFT">
-          <ul></ul>
+          <ul>
+            THIS IS FT EXPERIENCE (PLACEHOLDER)
+          </ul>
         </div>
         <div class="internPosition" v-else>
           <p class="cardParagraph">
@@ -33,7 +35,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 // Type-only import for PropType
 import type { PropType } from "vue";
 // Import content for cards
@@ -50,27 +52,46 @@ export default defineComponent({
   setup(props) {
     //Reactives
     const isScreenMedorSmaller = ref<boolean>(false);
+    const currentExperienceDetails = ref<ExperienceType | null>(null);
+    const isExperienceFT = ref<boolean>(false);
 
-    //Computed
-    const currentExperienceDetails = computed<ExperienceType>(() => {
-      return json[props.experienceName] as ExperienceType;
+    //Method to load data
+    const loadExperienceDetails = (): void => {
+      const experience = json[props.experienceName] as ExperienceType | null;
+      if (experience) {
+        console.log(experience);
+        currentExperienceDetails.value = experience;
+        isExperienceFT.value =
+          currentExperienceDetails.value.experienceType === "full-time";
+        console.log(isExperienceFT.value);
+      }
+    };
+
+    //Mounted
+    onMounted(() => {
+      loadExperienceDetails();
     });
-    const isExperienceFT = computed<boolean>(() => {
-      return currentExperienceDetails.value.experienceType === "full-time";
-    });
+
+    // //Computed
+    // const currentExperienceDetails = computed<ExperienceType>(() => {
+    //   return json[props.experienceName] as ExperienceType;
+    // });
+    // const isExperienceFT = computed<boolean>(() => {
+    //   return currentExperienceDetails.value.experienceType === "full-time";
+    // });
 
     // Method to get image URL
-    const getExperienceImageURL = () => {
-      //need to resolve the card image URLs
-      // return require(`@/assets/images/${props.experienceName}.png`);
-      return new URL('@/assets/images/flysafe.png', import.meta.url).href;
-    };
+    // const getExperienceImageURL = () => {
+    //   //need to resolve the card image URLs
+    //   // return require(`@/assets/images/${props.experienceName}.png`);
+    //   return new URL("@/assets/images/flysafe.png", import.meta.url).href;
+    // };
 
     return {
       isScreenMedorSmaller,
       currentExperienceDetails,
       isExperienceFT,
-      getExperienceImageURL,
+      // getExperienceImageURL,
     };
   },
 });
@@ -87,6 +108,19 @@ export default defineComponent({
     object-fit: contain;
   }
 }
+
+// .card-body-with-image {
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+// }
+// .experience-image-left {
+//   width: 40%;
+//   height: auto;
+//   object-fit: contain;
+//   margin-right: 2rem;
+// }
+
 .customCard:hover {
   -webkit-transform: scale(0.95);
   -ms-transform: scale(0.95);
