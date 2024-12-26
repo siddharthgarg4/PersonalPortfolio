@@ -3,14 +3,14 @@
     <div v-if="currentExperienceDetails">
       <BCard no-body class="customCard cursorPointer h-100 overflow-hidden">
         <BRow class="g-0">
-          <BCol :cols="isExperienceFT ? 4 : 12">
+          <BCol md="12" :lg="isExperienceFT ? 6 : 12">
             <BCardImg
-              :src="`/images/${currentExperienceDetails.coverImageName}`"
+              :src="computedImageSrc"
               :alt="currentExperienceDetails.title"
               class="rounded-0"
             />
           </BCol>
-          <BCol :cols="isExperienceFT ? 6 : 12">
+          <BCol md="12" :lg="isExperienceFT ? 6 : 12">
             <BCardBody>
               <p class="cardTitle removeMargin">
                 {{ currentExperienceDetails.title }}
@@ -45,7 +45,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from "vue";
+import { defineComponent, ref, onMounted, computed } from "vue";
 // Type-only import for PropType
 import type { PropType } from "vue";
 // Import content for cards
@@ -78,7 +78,14 @@ export default defineComponent({
       loadExperienceDetails();
     });
 
+    const computedImageSrc = computed(() => {
+      return currentExperienceDetails.value
+        ? `/images/${currentExperienceDetails.value.coverImageName}`
+        : "";
+    });
+
     return {
+      computedImageSrc,
       currentExperienceDetails,
       isExperienceFT,
     };
