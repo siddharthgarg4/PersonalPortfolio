@@ -1,26 +1,36 @@
 <template>
   <BContainer fluid class="removePadding h-100">
     <div v-if="currentExperienceDetails">
-      <BCard
-        :img-src="`/images/${currentExperienceDetails.coverImageName}`"
-        :img-alt="currentExperienceDetails.title"
-        class="customCard cursorPointer h-100"
-        :img-left="isExperienceFT"
-      >
-        <p class="cardTitle removeMargin">
-          {{ currentExperienceDetails.title }}
-        </p>
-        <p class="cardSubtitle">{{ currentExperienceDetails.subtitle }}</p>
-        <div class="ftPosition" v-if="isExperienceFT">
-          <ul>
-            THIS IS FT EXPERIENCE (PLACEHOLDER)
-          </ul>
-        </div>
-        <div class="internPosition" v-else>
-          <p class="cardParagraph">
-            {{ currentExperienceDetails.description }}
-          </p>
-        </div>
+      <BCard no-body class="customCard cursorPointer h-100 overflow-hidden">
+        <BRow class="g-0">
+          <BCol :cols="isExperienceFT ? 4 : 12">
+            <BCardImg
+              :src="`/images/${currentExperienceDetails.coverImageName}`"
+              :alt="currentExperienceDetails.title"
+              class="rounded-0"
+            />
+          </BCol>
+          <BCol :cols="isExperienceFT ? 6 : 12">
+            <BCardBody>
+              <p class="cardTitle removeMargin">
+                {{ currentExperienceDetails.title }}
+              </p>
+              <p class="cardSubtitle">
+                {{ currentExperienceDetails.subtitle }}
+              </p>
+              <div v-if="isExperienceFT" class="ftPosition">
+                <ul>
+                  THIS IS FT EXPERIENCE (PLACEHOLDER)
+                </ul>
+              </div>
+              <div v-else class="internPosition">
+                <p class="cardParagraph">
+                  {{ currentExperienceDetails.description }}
+                </p>
+              </div>
+            </BCardBody>
+          </BCol>
+        </BRow>
         <div class="viewProjectOverlay">
           <p class="overlayText removeMargin">
             {{ currentExperienceDetails.overlayTitle }}
@@ -50,48 +60,27 @@ export default defineComponent({
     },
   },
   setup(props) {
-    //Reactives
-    const isScreenMedorSmaller = ref<boolean>(false);
+    // Reactives
     const currentExperienceDetails = ref<ExperienceType | null>(null);
     const isExperienceFT = ref<boolean>(false);
 
-    //Method to load data
+    // Method to load data
     const loadExperienceDetails = (): void => {
       const experience = json[props.experienceName] as ExperienceType | null;
       if (experience) {
-        console.log(experience);
         currentExperienceDetails.value = experience;
-        isExperienceFT.value =
-          currentExperienceDetails.value.experienceType === "full-time";
-        console.log(isExperienceFT.value);
+        isExperienceFT.value = experience.experienceType === "full-time";
       }
     };
 
-    //Mounted
+    // Mounted
     onMounted(() => {
       loadExperienceDetails();
     });
 
-    // //Computed
-    // const currentExperienceDetails = computed<ExperienceType>(() => {
-    //   return json[props.experienceName] as ExperienceType;
-    // });
-    // const isExperienceFT = computed<boolean>(() => {
-    //   return currentExperienceDetails.value.experienceType === "full-time";
-    // });
-
-    // Method to get image URL
-    // const getExperienceImageURL = () => {
-    //   //need to resolve the card image URLs
-    //   // return require(`@/assets/images/${props.experienceName}.png`);
-    //   return new URL("@/assets/images/flysafe.png", import.meta.url).href;
-    // };
-
     return {
-      isScreenMedorSmaller,
       currentExperienceDetails,
       isExperienceFT,
-      // getExperienceImageURL,
     };
   },
 });
@@ -108,18 +97,6 @@ export default defineComponent({
     object-fit: contain;
   }
 }
-
-// .card-body-with-image {
-//   display: flex;
-//   align-items: center;
-//   justify-content: flex-start;
-// }
-// .experience-image-left {
-//   width: 40%;
-//   height: auto;
-//   object-fit: contain;
-//   margin-right: 2rem;
-// }
 
 .customCard:hover {
   -webkit-transform: scale(0.95);
