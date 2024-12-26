@@ -20,9 +20,9 @@
 </script>
 
 <style scoped lang="scss">
-@use "../assets/styles/variables.scss" as *;
+@use "@/assets/styles/variables.scss" as *;
 .loader {
-  background-image: url("../assets/loading-moving-car.svg");
+  background-image: url("@/assets/loading-moving-car.svg");
   background-color: $dolphinBlueColor;
   background-position: center;
   background-repeat: no-repeat;

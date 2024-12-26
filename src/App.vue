@@ -9,7 +9,7 @@ import { RouterView } from "vue-router";
 </script>
 
 <style lang="scss">
-@use "./assets/styles/variables.scss" as *;
+@use "@/assets/styles/variables.scss" as *;
 html {
   scroll-behavior: smooth;
 }

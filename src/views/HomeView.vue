@@ -11,7 +11,7 @@
 <script setup lang="ts"></script>
 
 <style lang="scss">
-@use "../assets/styles/variables.scss" as *;
+@use "@/assets/styles/variables.scss" as *;
 html,
 body {
   width: 100%;

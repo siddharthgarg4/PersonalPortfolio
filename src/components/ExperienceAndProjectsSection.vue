@@ -5,7 +5,7 @@
         <p class="componentTitle removeMargin">Work Experience</p>
       </BCol>
     </BRow>
-    <!-- <BRow>
+    <BRow>
       <BRow>
         <BCol class="componentSubtitleContainer">
           <p class="componentTitle removeMargin">Full-time</p>
@@ -13,37 +13,37 @@
       </BRow>
       <BRow>
         <BCol lg="12" class="cardContainer">
-          <customCard projectName="ffaiFT"></customCard>
+          <customCard experienceName="ffaiFT"></customCard>
         </BCol>
       </BRow>
     </BRow>
     <BRow>
       <BRow>
         <BCol lg="12" class="cardContainer">
-          <customCard projectName="upliftFT"></customCard>
+          <customCard experienceName="upliftFT"></customCard>
         </BCol>
       </BRow>
-    </BRow> -->
+    </BRow>
     <BRow>
       <BRow>
         <BCol class="componentSubtitleContainer">
           <p class="componentTitle removeMargin">Internship</p>
         </BCol>
       </BRow>
-      <!-- <BRow>
+      <BRow>
         <BCol lg="6" class="cardContainer">
-          <customCard projectName="uplift"></customCard>
+          <customCard experienceName="uplift"></customCard>
         </BCol>
         <BCol lg="6" class="cardContainer">
-          <customCard projectName="shopify"></customCard>
+          <customCard experienceName="shopify"></customCard>
         </BCol>
         <BCol lg="6" class="cardContainer">
-          <customCard projectName="tile"></customCard>
+          <customCard experienceName="tile"></customCard>
         </BCol>
         <BCol lg="6" class="cardContainer">
-          <customCard projectName="td"></customCard>
+          <customCard experienceName="td"></customCard>
         </BCol>
-      </BRow> -->
+      </BRow>
     </BRow>
     <BRow>
       <BRow>
@@ -51,41 +51,41 @@
           <p class="componentTitle removeMargin">Personal Projects</p>
         </BCol>
       </BRow>
-      <!-- <BRow>
+      <BRow>
         <BCol lg="4" class="cardContainer">
-          <customCard projectName="endgame"></customCard>
+          <customCard experienceName="endgame"></customCard>
         </BCol>
         <BCol lg="4" class="cardContainer">
-          <customCard projectName="grow"></customCard>
+          <customCard experienceName="grow"></customCard>
         </BCol>
         <BCol lg="4" class="cardContainer">
-          <customCard projectName="healthline"></customCard>
+          <customCard experienceName="healthline"></customCard>
         </BCol>
         <BCol lg="4" class="cardContainer">
-          <customCard projectName="blindsight"></customCard>
+          <customCard experienceName="blindsight"></customCard>
         </BCol>
         <BCol lg="4" class="cardContainer">
-          <customCard projectName="instameet"></customCard>
+          <customCard experienceName="instameet"></customCard>
         </BCol>
         <BCol lg="4" class="cardContainer">
-          <customCard projectName="paypool"></customCard>
+          <customCard experienceName="paypool"></customCard>
         </BCol>
-      </BRow> -->
+      </BRow>
     </BRow>
   </BContainer>
 </template>
 
 <style scoped lang="scss">
-@use "../assets/styles/variables.scss" as *;
+@use "@/assets/styles/variables.scss" as *;
 .cardContainer {
   margin-bottom: 35px;
 }
 .experienceProjectContainer {
   background-color: $lightWhiteColor;
-  background-image: url("../assets/images/dotBackground-2.png"),
-    url("../assets/images/dotBackground-2-flipped.png"),
-    url("../assets/images/dotBackground-2.png"),
-    url("../assets/images/dotBackground-2-flipped.png");
+  background-image: url("@/assets/images/dotBackground-2.png"),
+    url("@/assets/images/dotBackground-2-flipped.png"),
+    url("@/assets/images/dotBackground-2.png"),
+    url("@/assets/images/dotBackground-2-flipped.png");
   background-position:
     top 6.125% left,
     top 26.5% right,

@@ -7,10 +7,12 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    BCard: typeof import('bootstrap-vue-next/components/BCard')['BCard']
     BCol: typeof import('bootstrap-vue-next/components/BContainer')['BCol']
     BContainer: typeof import('bootstrap-vue-next/components/BContainer')['BContainer']
     BRow: typeof import('bootstrap-vue-next/components/BContainer')['BRow']
     CoverSection: typeof import('./src/components/CoverSection.vue')['default']
+    CustomCard: typeof import('./src/components/CustomCard.vue')['default']
     CustomMenu: typeof import('./src/components/CustomMenu.vue')['default']
     ExperienceAndProjectsSection: typeof import('./src/components/ExperienceAndProjectsSection.vue')['default']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']

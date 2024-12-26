@@ -62,7 +62,8 @@
     "coverImageName": "grow.png",
     "description": "iOS, ARKit, CoreML",
     "overlayTitle": "View Project Grow",
-    "link": "https://github.com/siddharthgarg4/Grow"
+    "link": "https://github.com/siddharthgarg4/Grow",
+    "positionType": "project"
   },
   "healthline": {
     "title": "HealthLine",
@@ -70,7 +71,8 @@
     "coverImageName": "healthline.png",
     "description": "iOS, Twilio, Python",
     "overlayTitle": "View Project HealthLine",
-    "link": "https://github.com/siddharthgarg4/HealthLine"
+    "link": "https://github.com/siddharthgarg4/HealthLine",
+    "positionType": "project"
   },
   "blindsight": {
     "title": "BlindSight",
@@ -78,7 +80,8 @@
     "coverImageName": "blindsight.png",
     "description": "iOS, Twilio, CoreML",
     "overlayTitle": "View Project BlindSight",
-    "link": "https://github.com/siddharthgarg4/BlindSight"
+    "link": "https://github.com/siddharthgarg4/BlindSight",
+    "positionType": "project"
   },
   "instameet": {
     "title": "InstaMeet",
@@ -86,7 +89,8 @@
     "coverImageName": "instameet.png",
     "description": "iOS, Firebase, Google Cloud",
     "overlayTitle": "View Project InstaMeet",
-    "link": "https://github.com/siddharthgarg4/InstaMeet"
+    "link": "https://github.com/siddharthgarg4/InstaMeet",
+    "positionType": "project"
   },
   "paypool": {
     "title": "PayPool",
@@ -94,7 +98,8 @@
     "coverImageName": "paypool.png",
     "description": "iOS, Interac, Firebase",
     "overlayTitle": "View Project PayPool",
-    "link": "https://tdlab.io/project/payPool"
+    "link": "https://tdlab.io/project/payPool",
+    "positionType": "project"
   },
   "flysafe": {
     "title": "FlySafe",
@@ -102,7 +107,8 @@
     "coverImageName": "flysafe.png",
     "description": "iOS, Azure, Xe, BlinkId",
     "overlayTitle": "View Project FlySafe",
-    "link": "https://github.com/siddharthgarg4/FlySafe"
+    "link": "https://github.com/siddharthgarg4/FlySafe",
+    "positionType": "project"
   },
   "endgame": {
     "title": "EndGame Engine",
@@ -110,10 +116,8 @@
     "coverImageName": "pacman.png",
     "description": "C++, OpenGL, GLFW, GLM",
     "overlayTitle": "View Project EndGame",
-    "link": "https://github.com/siddharthgarg4/EndGame"
-  },
-  "me": {
-    "description": "I am currently a 4th year student pursuing a dual degree in Computer Science and Business at the University of Waterloo and Wilfrid Laurier University respectively.\n\nAt my previous internships, I was given the opportunity to explore the field of mobile and backend development in a collaborative and fast paced environment. These opportunities have allowed me to refine my leadership and technical skills while working on a product currently in market.\n\nAs a software engineer, I am constantly looking for new challenges to push me outside my comfort zone, as I believe that we stop growing once we are unwilling to have new experiences.\n\nOutside of school and work, I love exploring new cities, going on unplanned adventures, watching soccer and trying new food. Feel free to send me a message and say hi :)"
+    "link": "https://github.com/siddharthgarg4/EndGame",
+    "positionType": "project"
   },
   "andreGattiRecommendation": {
     "recommenderImage": "andreGatti.png",
@@ -139,7 +143,10 @@
     "recommenderPosition": "Product Management Leader",
     "recommendationDescription": "\"Siddharth did exceptional work and was a pleasure to work with for the time he was with us at TD Lab. He demonstrated both curiosity and drive with projects. He had equal interest and aptitude in the technical and business aspects of the work. He's a quick learner and I recommend him as top talent.\""
   },
-  "github": "https://github.com/siddharthgarg4",
-  "linkedin": "https://www.linkedin.com/in/siddharthgarg4/",
-  "email": "mailto:s38garg@gmail.com"
+  "me": {
+    "description": "I am currently a 4th year student pursuing a dual degree in Computer Science and Business at the University of Waterloo and Wilfrid Laurier University respectively.\n\nAt my previous internships, I was given the opportunity to explore the field of mobile and backend development in a collaborative and fast paced environment. These opportunities have allowed me to refine my leadership and technical skills while working on a product currently in market.\n\nAs a software engineer, I am constantly looking for new challenges to push me outside my comfort zone, as I believe that we stop growing once we are unwilling to have new experiences.\n\nOutside of school and work, I love exploring new cities, going on unplanned adventures, watching soccer and trying new food. Feel free to send me a message and say hi :)",
+    "github": "https://github.com/siddharthgarg4",
+    "linkedin": "https://www.linkedin.com/in/siddharthgarg4/",
+    "email": "mailto:s38garg@gmail.com"
+  }
 }

@@ -2,7 +2,7 @@
   <BContainer class="coverContainer" fluid>
     <BRow>
       <BCol class="justify-content-start d-flex">
-        <img class="sgLogo" src="../assets/sgLogo.png" />
+        <img class="sgLogo" src="@/assets/sgLogo.png" />
       </BCol>
       <BCol class="justify-content-end d-flex menuContainer removePadding">
         <customMenu></customMenu>
@@ -28,7 +28,7 @@
         </BRow>
       </BCol>
       <BCol lg="6" class="extraPadding">
-        <img class="img-responsive fitImage" src="../assets/coverFinal.svg" />
+        <img class="img-responsive fitImage" src="@/assets/coverFinal.svg" />
       </BCol>
     </BRow>
     <BRow>
@@ -106,7 +106,7 @@ export default defineComponent({
 </script>
 
 <style scoped lang="scss">
-@use "../assets/styles/variables.scss" as *;
+@use "@/assets/styles/variables.scss" as *;
 .row {
   margin-right: 0px;
   margin-left: 0px;
