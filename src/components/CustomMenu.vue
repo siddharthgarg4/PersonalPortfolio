@@ -28,7 +28,7 @@
             class="img-fluid navIcon"
           />
         </div>
-        <div class="optionContainer" @click="scrollToSection('aboutSection')">
+        <div class="optionContainer" @click="scrollToSection('aboutMeSection')">
           <img
             :src="`/images/aboutNav.png`"
             alt="About Me"

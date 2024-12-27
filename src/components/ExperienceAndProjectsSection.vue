@@ -107,19 +107,4 @@
   margin-top: 35px;
   margin-bottom: 35px;
 }
-.componentTitle {
-  font-size: 2.5vw;
-  font-weight: 600;
-  text-align: start;
-  line-height: 3.25vw;
-  @media (max-width: $screen-md) {
-    font-size: 5.58vw;
-    line-height: 6.5vw;
-    text-align: center;
-  }
-}
-.componentSubtitleContainer {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
 </style>

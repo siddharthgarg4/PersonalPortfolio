@@ -5,6 +5,7 @@
     <ExperienceAndProjectsSection
       id="experienceSection"
     ></ExperienceAndProjectsSection>
+    <AboutMeSection id="aboutMeSection"></AboutMeSection>
     <ContactSection id="contactSection"></ContactSection>
   </div>
 </template>

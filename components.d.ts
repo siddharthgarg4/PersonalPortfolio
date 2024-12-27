@@ -7,6 +7,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AboutMeSection: typeof import('./src/components/AboutMeSection.vue')['default']
     BCard: typeof import('bootstrap-vue-next/components/BCard')['BCard']
     BCardBody: typeof import('bootstrap-vue-next/components/BCard')['BCardBody']
     BCardImg: typeof import('bootstrap-vue-next/components/BCard')['BCardImg']
