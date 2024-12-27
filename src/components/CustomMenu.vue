@@ -49,6 +49,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+import { visitSection } from "@/composables/sharedUtils";
 
 export default defineComponent({
   name: "CustomMenu",
@@ -61,7 +62,8 @@ export default defineComponent({
       isActivated.value = !isActivated.value;
     };
     const scrollToSection = (section: string): void => {
-      console.log(section);
+      visitSection(section);
+      toggleMenu();
     };
 
     return {

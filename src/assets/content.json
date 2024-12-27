@@ -41,7 +41,7 @@
     "subtitle": "Fraud and Identity | October 2022 - June 2023",
     "coverImageName": "upliftFT2.png",
     "description": "Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.;Assisting engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
-    "highlightedWords": [],
+    "highlightedWords": ["KYC"],
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
     "experienceType": "full-time"
@@ -147,6 +147,12 @@
     "description": "I am currently a 4th year student pursuing a dual degree in Computer Science and Business at the University of Waterloo and Wilfrid Laurier University respectively.\n\nAt my previous internships, I was given the opportunity to explore the field of mobile and backend development in a collaborative and fast paced environment. These opportunities have allowed me to refine my leadership and technical skills while working on a product currently in market.\n\nAs a software engineer, I am constantly looking for new challenges to push me outside my comfort zone, as I believe that we stop growing once we are unwilling to have new experiences.\n\nOutside of school and work, I love exploring new cities, going on unplanned adventures, watching soccer and trying new food. Feel free to send me a message and say hi :)",
     "github": "https://github.com/siddharthgarg4",
     "linkedin": "https://www.linkedin.com/in/siddharthgarg4/",
-    "email": "mailto:s38garg@gmail.com"
+    "email": "mailto:s38garg@gmail.com",
+    "resume": "https://drive.google.com/open?id=1znD9D40aV2y3--KMBDNguyxXOTcXZnXw",
+    "keySkills": [
+      "software engineering",
+      "product management",
+      "technical design"
+    ]
   }
 }

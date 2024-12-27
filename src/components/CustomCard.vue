@@ -1,8 +1,13 @@
 <template>
   <BContainer fluid class="removePadding h-100">
     <div v-if="currentExperienceDetails">
-      <BCard no-body class="customCard cursorPointer h-100 overflow-hidden">
+      <BCard
+        no-body
+        class="customCard cursorPointer h-100 overflow-hidden"
+        @click="visitLink(currentExperienceDetails.link)"
+      >
         <BRow class="g-0">
+          <!-- The image is displayed on the left side for full-time experiences !-->
           <BCol md="12" :lg="isExperienceFT ? 6 : 12">
             <BCardImg
               :src="computedImageSrc"
@@ -20,7 +25,14 @@
               </p>
               <div v-if="isExperienceFT" class="ftPosition">
                 <ul>
-                  THIS IS FT EXPERIENCE (PLACEHOLDER)
+                  <li
+                    v-for="(
+                      ftDescriptionItem, index
+                    ) in parsedFTDescription().slice()"
+                    :key="index"
+                  >
+                    <p class="cardParagraph">{{ ftDescriptionItem }}</p>
+                  </li>
                 </ul>
               </div>
               <div v-else class="internPosition">
@@ -50,6 +62,7 @@ import { defineComponent, ref, onMounted, computed } from "vue";
 import type { PropType } from "vue";
 // Import content for cards
 import json from "@/assets/content.json";
+import { visitLink } from "@/composables/sharedUtils";
 
 export default defineComponent({
   name: "CustomCard",
@@ -63,6 +76,32 @@ export default defineComponent({
     // Reactives
     const currentExperienceDetails = ref<ExperienceType | null>(null);
     const isExperienceFT = ref<boolean>(false);
+
+    // Computed
+    const computedImageSrc = computed(() => {
+      return `/images/${currentExperienceDetails.value?.coverImageName}` || "";
+    });
+
+    // Method to parse FT description
+    const parsedFTDescription = (): string[] => {
+      return currentExperienceDetails.value?.description.split(";") || [];
+    };
+    // Method to highlight certain words (also need to remove scoped from style tag)
+    // const highlightedText = (text: string): string => {
+    //   let highlightedText: string = text;
+    //   // Fetch highlightedWords from the json object
+    //   const highlightedWords: string[] = currentExperienceDetails.value?.highlightedWords || [];
+    //   // Loop through each word to highlight
+    //   highlightedWords.forEach((word) => {
+    //     const regex = new RegExp(`(${word})`, "gi"); // Case-insensitive match
+    //     highlightedText = highlightedText.replace(
+    //       regex,
+    //       '<span class="highlighted">$1</span>'
+    //     );
+    //   });
+    //   console.log(highlightedText);
+    //   return highlightedText;
+    // };
 
     // Method to load data
     const loadExperienceDetails = (): void => {
@@ -78,16 +117,12 @@ export default defineComponent({
       loadExperienceDetails();
     });
 
-    const computedImageSrc = computed(() => {
-      return currentExperienceDetails.value
-        ? `/images/${currentExperienceDetails.value.coverImageName}`
-        : "";
-    });
-
     return {
       computedImageSrc,
       currentExperienceDetails,
       isExperienceFT,
+      parsedFTDescription,
+      visitLink,
     };
   },
 });
@@ -185,11 +220,11 @@ export default defineComponent({
     text-align: left;
     margin-bottom: 0.5rem;
   }
-  .highlighted {
-    color: $offWhiteColor;
-    background-color: $dolphinBlueColor; /* You can change this color */
-    border-radius: 25px;
-    padding: 1.5px 7.5px;
-  }
+  // .highlighted {
+  //   color: $offWhiteColor;
+  //   background-color: $dolphinBlueColor; /* You can change this color */
+  //   border-radius: 25px;
+  //   padding: 1.5px 7.5px;
+  // }
 }
 </style>

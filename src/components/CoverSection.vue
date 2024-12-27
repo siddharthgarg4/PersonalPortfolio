@@ -16,12 +16,15 @@
           </BCol>
           <BCol class="align-items-center removePadding" cols="12">
             <p class="coverPara">
-              Using <span class="tintFont">{{ position[0] }}</span>
+              Using
+              <span class="tintFont">{{
+                getCurrentHighlightedKeySkill()
+              }}</span>
               to translate problems into empowering, empathy-driven solutions.
             </p>
           </BCol>
           <BCol class="align-items-center removePadding" cols="12">
-            <p class="coverResume cursorPointer" @click="goToResume">
+            <p class="coverResume cursorPointer" @click="handleVisitResume">
               In a hurry? Check out my <span class="tintFont">resume</span>.
             </p>
           </BCol>
@@ -33,10 +36,16 @@
     </BRow>
     <BRow>
       <BCol cols="12" class="d-flex justify-content-start">
-        <div class="solidVerticalLine cursorPointer"></div>
+        <div
+          class="solidVerticalLine cursorPointer"
+          @click="visitSection('experienceSection')"
+        ></div>
       </BCol>
       <BCol cols="12" class="d-flex justify-content-start">
-        <p class="scrollMoreText removeMargin cursorPointer">
+        <p
+          class="scrollMoreText removeMargin cursorPointer"
+          @click="visitSection('experienceSection')"
+        >
           Scroll to Learn More
         </p>
       </BCol>
@@ -46,21 +55,47 @@
 
 <script lang="ts">
 import { defineComponent, ref, onMounted, onBeforeUnmount } from "vue";
+import { visitLink, visitSection } from "@/composables/sharedUtils";
+import json from "@/assets/content.json";
 
 export default defineComponent({
   name: "CoverSection",
   setup() {
-    // Reactive state
-    const position = ref<string[]>([
-      "software engineering",
-      "product management",
-      "technical design",
-    ]);
+    // Reactives
+    const currentPersonalDetails = ref<AboutMeType | null>(null);
+    const currentHighlightedKeySkillIndex = ref<number>(0);
+
+    // Method to handle resume click event and ensure link exists
+    const handleVisitResume = (): void => {
+      if (currentPersonalDetails.value) {
+        visitLink(currentPersonalDetails.value.resume);
+      }
+    };
+    // Method to shift key skill text for rotating cover text
+    const getCurrentHighlightedKeySkill = (): string => {
+      console.log("Changing key skill");
+      if (currentPersonalDetails.value) {
+        return currentPersonalDetails.value.keySkills[
+          currentHighlightedKeySkillIndex.value
+        ];
+      }
+      return "";
+    };
+
+    // Method to load data
+    const loadAboutMeData = (): void => {
+      currentPersonalDetails.value = json["me"] as AboutMeType | null;
+    };
 
     // Mounted lifecycle hook
     onMounted(() => {
+      loadAboutMeData();
+      // Set interval to shift key skill text every 3 seconds
       const interval = window.setInterval(() => {
-        changePositionText();
+        currentHighlightedKeySkillIndex.value++;
+        // Divide by length of key skills to ensure it doesn't exceed length
+        currentHighlightedKeySkillIndex.value %=
+          currentPersonalDetails.value?.keySkills.length || 1;
       }, 3000);
       // // Emit event when mounted
       // window.dispatchEvent(new CustomEvent("cover-loaded"));
@@ -70,36 +105,10 @@ export default defineComponent({
       });
     });
 
-    // Methods (defined as functions)
-    // const scrollToExperience = () => {
-    //   const sectionElement = document.getElementById("experience");
-    //   if (sectionElement) {
-    //     sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
-    //   } else {
-    //     console.log(
-    //       "The element associated with the menu item is null / could not be found."
-    //     );
-    //   }
-    // };
-
-    const goToResume = (): void => {
-      window.open(
-        "https://drive.google.com/open?id=1znD9D40aV2y3--KMBDNguyxXOTcXZnXw",
-        "_blank",
-      );
-    };
-
-    const changePositionText = (): void => {
-      // Safely shift and push the first element of the position array
-      const firstElement = position.value.shift()!;
-      position.value.push(firstElement);
-    };
-
-    // Return the reactive state and methods to the template
     return {
-      position,
-      // scrollToExperience,
-      goToResume,
+      visitSection,
+      handleVisitResume,
+      getCurrentHighlightedKeySkill,
     };
   },
 });

@@ -24,6 +24,8 @@ interface AboutMeType {
   github: string;
   linkedin: string;
   email: string;
+  resume: string;
+  keySkills: string[];
 }
 
 // src/types/content.d.ts
