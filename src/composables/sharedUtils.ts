@@ -8,7 +8,7 @@ export const visitSection = (sectionId: string): void => {
   if (sectionElement) {
     sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
   } else {
-    console.log(
+    console.error(
       "The element associated with the sectionId is null / could not be found.",
     );
   }

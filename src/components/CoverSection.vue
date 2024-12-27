@@ -73,7 +73,6 @@ export default defineComponent({
     };
     // Method to shift key skill text for rotating cover text
     const getCurrentHighlightedKeySkill = (): string => {
-      console.log("Changing key skill");
       if (currentPersonalDetails.value) {
         return currentPersonalDetails.value.keySkills[
           currentHighlightedKeySkillIndex.value

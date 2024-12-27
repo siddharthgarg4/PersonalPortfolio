@@ -8,14 +8,14 @@
       >
         <BRow class="g-0">
           <!-- The image is displayed on the left side for full-time experiences !-->
-          <BCol md="12" :lg="isExperienceFT ? 6 : 12">
+          <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
             <BCardImg
               :src="computedImageSrc"
               :alt="currentExperienceDetails.title"
               class="rounded-0"
             />
           </BCol>
-          <BCol md="12" :lg="isExperienceFT ? 6 : 12">
+          <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
             <BCardBody>
               <p class="cardTitle removeMargin">
                 {{ currentExperienceDetails.title }}
@@ -28,7 +28,7 @@
                   <li
                     v-for="(
                       ftDescriptionItem, index
-                    ) in parsedFTDescription().slice()"
+                    ) in parsedFTDescription.slice()"
                     :key="index"
                   >
                     <p class="cardParagraph">{{ ftDescriptionItem }}</p>
@@ -83,9 +83,9 @@ export default defineComponent({
     });
 
     // Method to parse FT description
-    const parsedFTDescription = (): string[] => {
+    const parsedFTDescription = computed((): string[] => {
       return currentExperienceDetails.value?.description.split(";") || [];
-    };
+    });
     // Method to highlight certain words (also need to remove scoped from style tag)
     // const highlightedText = (text: string): string => {
     //   let highlightedText: string = text;
@@ -149,32 +149,6 @@ export default defineComponent({
 }
 .customCard:hover .viewProjectOverlay {
   opacity: 1;
-}
-.cardTitle {
-  font-weight: 500;
-  font-size: 1.9vw;
-  text-align: center;
-  @media (max-width: $screen-md) {
-    font-size: 3.8vw;
-  }
-}
-.cardSubtitle {
-  font-size: 1.4vw;
-  font-weight: 600;
-  text-align: center;
-  color: $dolphinBlueColor;
-  @media (max-width: $screen-md) {
-    font-size: 2.8vw;
-  }
-}
-.cardParagraph {
-  font-size: 1.3vw;
-  font-weight: 400;
-  text-align: center;
-  line-height: 1.25;
-  @media (max-width: $screen-md) {
-    font-size: 3.4vw;
-  }
 }
 .viewProjectOverlay {
   position: absolute;

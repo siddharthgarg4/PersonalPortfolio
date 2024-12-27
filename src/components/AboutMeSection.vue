@@ -92,6 +92,28 @@
         </div>
       </carousel>
     </BRow> -->
+    <BRow class="removePadding">
+      <BCol class="componentSubtitleContainer">
+        <p class="componentTitle removeMargin">Recommendations</p>
+      </BCol>
+    </BRow>
+    <BRow>
+      <BCol lg="4" class="cardContainer">
+        <recommendationCard
+          recommendation="nathanAptRecommendation"
+        ></recommendationCard>
+      </BCol>
+      <BCol lg="4" class="cardContainer">
+        <recommendationCard
+          recommendation="kellyWengertRecommendation"
+        ></recommendationCard>
+      </BCol>
+      <BCol lg="4" class="cardContainer">
+        <recommendationCard
+          recommendation="aaronStuartRecommendation"
+        ></recommendationCard>
+      </BCol>
+    </BRow>
   </BContainer>
 </template>
 
@@ -116,19 +138,6 @@ export default defineComponent({
   padding: 5% 7.5% 5% 7.5%;
   @media (max-width: $screen-md) {
     padding: 7.5% 5% 7.5% 5%;
-  }
-}
-.aboutMeDescription {
-  font-weight: 400;
-  font-size: 1.25vw;
-  text-align: start;
-  white-space: pre-line;
-  line-height: 1.25;
-  @media (max-width: $screen-md) {
-    font-size: 3.8vw;
-  }
-  .tintFont {
-    font-weight: 600;
   }
 }
 .aboutMeDescriptionContainer {

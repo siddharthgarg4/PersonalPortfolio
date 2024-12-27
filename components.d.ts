@@ -20,6 +20,7 @@ declare module 'vue' {
     CustomMenu: typeof import('./src/components/CustomMenu.vue')['default']
     ExperienceAndProjectsSection: typeof import('./src/components/ExperienceAndProjectsSection.vue')['default']
     LoadingScreen: typeof import('./src/components/LoadingScreen.vue')['default']
+    RecommendationCard: typeof import('./src/components/RecommendationCard.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
