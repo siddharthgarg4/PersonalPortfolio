@@ -12,10 +12,10 @@ interface ExperienceType {
 
 //RecommendationType
 interface RecommendationType {
-  description: string;
-  recommenderImage: string;
   recommenderName: string;
+  recommenderImage: string;
   recommenderPosition: string;
+  recommendationDescription: string;
 }
 
 //AboutMeType

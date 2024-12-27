@@ -68,62 +68,67 @@
         <img class="img-fluid divider" src="/images/divider.png" />
       </BCol>
     </BRow>
-    <!-- <BRow>
+    <BRow>
       <BRow class="removePadding">
         <BCol class="componentSubtitleContainer">
           <p class="componentTitle removeMargin">Recommendations</p>
         </BCol>
       </BRow>
-      <carousel
-        :responsive="carouselItemsPerWidth"
-        :margin="5"
-        :loop="true"
-        :nav="false"
-        :autoplay="true"
-        :autoplayHoverPause="true"
-        :dots="false"
-      >
-        <div
+      <Carousel v-bind="carouselConfig">
+        <Slide
           v-for="(rec, i) in recommendations"
           :key="i"
-          class="cardContainer custom-carousel-content"
+          class="cardContainer customCarouselContent"
         >
           <recommendationCard :recommendation="rec"></recommendationCard>
-        </div>
-      </carousel>
-    </BRow> -->
-    <BRow class="removePadding">
-      <BCol class="componentSubtitleContainer">
-        <p class="componentTitle removeMargin">Recommendations</p>
-      </BCol>
-    </BRow>
-    <BRow>
-      <BCol lg="4" class="cardContainer">
-        <recommendationCard
-          recommendation="nathanAptRecommendation"
-        ></recommendationCard>
-      </BCol>
-      <BCol lg="4" class="cardContainer">
-        <recommendationCard
-          recommendation="kellyWengertRecommendation"
-        ></recommendationCard>
-      </BCol>
-      <BCol lg="4" class="cardContainer">
-        <recommendationCard
-          recommendation="aaronStuartRecommendation"
-        ></recommendationCard>
-      </BCol>
+        </Slide>
+      </Carousel>
     </BRow>
   </BContainer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+// Carousel specific imports
+import { Carousel, Slide } from "vue3-carousel";
+import "vue3-carousel/carousel.css";
 
 export default defineComponent({
   name: "AboutMeSection",
+  components: {
+    Carousel,
+    Slide,
+    // Navigation,
+    // Pagination,
+  },
   setup() {
-    return {};
+    // Reactives
+    const carouselConfig = {
+      wrapAround: true,
+      snapAlign: "start",
+      autoplay: 5000,
+      pauseAutoplayOnHover: true,
+      gap: 20,
+      breakpoints: {
+        0: {
+          itemsToShow: 1,
+        },
+        992: {
+          itemsToShow: 3,
+        },
+      },
+    };
+
+    const recommendations: string[] = [
+      "nathanAptRecommendation",
+      "kellyWengertRecommendation",
+      "aaronStuartRecommendation",
+    ];
+
+    return {
+      carouselConfig,
+      recommendations,
+    };
   },
 });
 </script>
@@ -160,16 +165,11 @@ export default defineComponent({
   align-items: center;
   flex-wrap: wrap;
 }
-
-// .custom-carousel-content {
-//   width: 100%; /* Full width of the carousel item */
-//   height: 100%;
+// .customCarouselContent {
+//   height: inherit !important;
 //   padding: 0px 15px 15px; /* Add spacing around the content */
 //   @media (max-width: $screen-md) {
 //     padding: 0px 0px 0px 0px;
 //   }
-// }
-// .owl-carousel .owl-stage {
-//   display: flex !important; /* Enables full length cards */
 // }
 </style>

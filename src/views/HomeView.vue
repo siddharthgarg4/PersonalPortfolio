@@ -29,7 +29,4 @@ body {
 .homeView {
   background-color: $offWhiteColor;
 }
-.cursorPointer {
-  cursor: pointer;
-}
 </style>

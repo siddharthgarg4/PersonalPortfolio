@@ -1,7 +1,7 @@
 <template>
   <BContainer fluid class="removePadding h-100">
-    <div v-if="currentRecommendationDetails">
-      <BCard no-body class="recommendationCard h-100">
+    <div v-if="currentRecommendationDetails" class="recommendationCardContainer h-100">
+      <BCard no-body class="recommendationCard h-100 cursorPointer">
         <BRow class="g-0">
           <!-- The image is displayed on the left side for smaller sizes !-->
           <BCol
@@ -31,7 +31,7 @@
         </BRow>
       </BCard>
     </div>
-    <div v-else>
+    <div v-else class="h-100">
       <p>No recommendation details found.</p>
     </div>
   </BContainer>
@@ -105,6 +105,7 @@ export default defineComponent({
     & {
       pointer-events: none; /* Disables hover interaction */
     }
+    justify-content: center;
   }
   .cardParagraph {
     font-size: 1.25vw;
@@ -126,5 +127,11 @@ export default defineComponent({
     margin-left: 1.25rem;
     margin-top: 0;
   }
+}
+.recommendationCardContainer {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>
