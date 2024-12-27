@@ -1,6 +1,6 @@
 <template>
   <BContainer fluid class="removePadding h-100">
-    <div v-if="currentRecommendationDetails" class="recommendationCardContainer h-100">
+    <div v-if="currentRecommendationDetails" class="h-100">
       <BCard no-body class="recommendationCard h-100 cursorPointer">
         <BRow class="g-0">
           <!-- The image is displayed on the left side for smaller sizes !-->
@@ -102,10 +102,10 @@ export default defineComponent({
     transition: all 500ms ease;
   }
   @media (max-width: $screen-md) {
+    justify-content: center;
     & {
       pointer-events: none; /* Disables hover interaction */
     }
-    justify-content: center;
   }
   .cardParagraph {
     font-size: 1.25vw;
@@ -127,11 +127,5 @@ export default defineComponent({
     margin-left: 1.25rem;
     margin-top: 0;
   }
-}
-.recommendationCardContainer {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 </style>
