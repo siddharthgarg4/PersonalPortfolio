@@ -13,6 +13,7 @@ declare module 'vue' {
     BCol: typeof import('bootstrap-vue-next/components/BContainer')['BCol']
     BContainer: typeof import('bootstrap-vue-next/components/BContainer')['BContainer']
     BRow: typeof import('bootstrap-vue-next/components/BContainer')['BRow']
+    ContactSection: typeof import('./src/components/ContactSection.vue')['default']
     CoverSection: typeof import('./src/components/CoverSection.vue')['default']
     CustomCard: typeof import('./src/components/CustomCard.vue')['default']
     CustomMenu: typeof import('./src/components/CustomMenu.vue')['default']

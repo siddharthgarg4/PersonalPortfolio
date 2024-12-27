@@ -84,7 +84,9 @@ export default defineComponent({
 
     // Method to load data
     const loadAboutMeData = (): void => {
-      currentPersonalDetails.value = json["me"] as AboutMeType | null;
+      currentPersonalDetails.value = json[
+        "me"
+      ] as typeof currentPersonalDetails.value;
     };
 
     // Mounted lifecycle hook
@@ -153,16 +155,6 @@ export default defineComponent({
   }
   @media (max-width: $screen-xs) {
     width: 65vw;
-  }
-}
-.coverTitle {
-  padding-bottom: 1%;
-  font-size: 3.125vw;
-  font-weight: 400;
-  text-align: start;
-  @media (max-width: $screen-md) {
-    font-size: 6.7vw;
-    text-align: center;
   }
 }
 .coverPara {

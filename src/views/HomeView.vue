@@ -5,10 +5,13 @@
     <ExperienceAndProjectsSection
       id="experienceSection"
     ></ExperienceAndProjectsSection>
+    <ContactSection id="contactSection"></ContactSection>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ContactSection from "@/components/ContactSection.vue";
+</script>
 
 <style lang="scss">
 @use "@/assets/styles/variables.scss" as *;
