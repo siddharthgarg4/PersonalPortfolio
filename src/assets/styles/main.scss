@@ -1,0 +1,10 @@
+@use "@/assets/styles/variables.scss" as *;
+.removePadding {
+  padding: 0;
+}
+.removeMargin {
+  margin: 0;
+}
+.tintFont {
+  color: $dolphinBlueColor;
+}

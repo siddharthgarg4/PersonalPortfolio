@@ -10,6 +10,7 @@ import router from "./router";
 // Add the necessary CSS
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue-next/dist/bootstrap-vue-next.css";
+import "@/assets/styles/main.scss";
 
 const app = createApp(App);
 

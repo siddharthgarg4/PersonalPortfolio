@@ -120,12 +120,6 @@ export default defineComponent({
   margin-right: 0px;
   margin-left: 0px;
 }
-.removePadding {
-  padding: 0;
-}
-.removeMargin {
-  margin: 0;
-}
 .coverContainer {
   min-height: 100vh;
   padding: 1.5%;
@@ -182,9 +176,6 @@ export default defineComponent({
     line-height: 4.7vw;
     text-align: center;
   }
-}
-.tintFont {
-  color: $dolphinBlueColor;
 }
 .coverCenter {
   min-height: 70vh;
