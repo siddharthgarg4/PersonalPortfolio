@@ -30,7 +30,6 @@ https://siddharthgarg4.github.io/
 # Project setup
 ```
 npm install
-npm run format
 ```
 
 ### Compiles and hot-reloads for development
@@ -45,7 +44,7 @@ npm run build
 
 ### Lints and fixes files
 ```
-npm run lint
+npm run format
 ```
 
 ### Customize configuration
