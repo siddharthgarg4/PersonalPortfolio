@@ -1,11 +1,11 @@
 <template>
   <BContainer class="experienceProjectContainer" fluid>
-    <BRow>
+    <BRow v-animated-scroll>
       <BCol class="componentTitleContainer">
         <p class="componentTitle removeMargin">Work Experience</p>
       </BCol>
     </BRow>
-    <BRow>
+    <BRow v-animated-scroll>
       <BRow>
         <BCol class="componentSubtitleContainer">
           <p class="componentTitle removeMargin">Full-time</p>
@@ -24,7 +24,7 @@
         </BCol>
       </BRow>
     </BRow>
-    <BRow>
+    <BRow v-animated-scroll>
       <BRow>
         <BCol class="componentSubtitleContainer">
           <p class="componentTitle removeMargin">Internship</p>
@@ -45,7 +45,7 @@
         </BCol>
       </BRow>
     </BRow>
-    <BRow>
+    <BRow v-animated-scroll>
       <BRow>
         <BCol class="componentTitleContainer">
           <p class="componentTitle removeMargin">Personal Projects</p>
@@ -74,6 +74,18 @@
     </BRow>
   </BContainer>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import animatedScroll from "@/directives/scrollAnimation.ts";
+
+export default defineComponent({
+  name: "ExperienceAndProjectsSection",
+  directives: {
+    "animated-scroll": animatedScroll,
+  },
+});
+</script>
 
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
