@@ -1,6 +1,34 @@
 <template>
-  <div class="loader"></div>
+  <div class="loader" :class="{ fadeoutLoader: !isVisible }"></div>
 </template>
+
+<script lang="ts">
+import { defineComponent, ref, watch } from "vue";
+
+export default defineComponent({
+  name: "LoadingScreen",
+  props: {
+    stopLoading: {
+      type: Boolean,
+      required: true,
+    },
+  },
+  setup(props) {
+    const isVisible = ref<boolean>(true);
+
+    watch(
+      () => props.stopLoading,
+      (newVal) => {
+        isVisible.value = !newVal;
+      },
+    );
+
+    return {
+      isVisible,
+    };
+  },
+});
+</script>
 
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
@@ -19,5 +47,12 @@
   right: 0;
   top: 0;
   z-index: 9999; /* should be at the top of every element */
+}
+.fadeoutLoader {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 2s,
+    visibility 2s;
 }
 </style>

@@ -1,9 +1,6 @@
 <template>
   <div class="homeView" id="homeView">
-    <LoadingScreen
-      id="loadingScreen"
-      :class="{ fadeoutLoadingScreen: isMinLoadTimeElapsed && isCoverMounted }"
-    />
+    <LoadingScreen id="loadingScreen" :stopLoading="shouldStopLoading" />
     <CoverSection id="coverSection" @coverLoaded="coverMounted"></CoverSection>
     <ExperienceAndProjectsSection
       id="experienceSection"
@@ -14,7 +11,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, computed } from "vue";
 
 export default defineComponent({
   name: "homeView",
@@ -22,6 +19,11 @@ export default defineComponent({
     // Reactives
     const isCoverMounted = ref<boolean>(false);
     const isMinLoadTimeElapsed = ref<boolean>(false);
+
+    // Computed
+    const shouldStopLoading = computed((): boolean => {
+      return isCoverMounted.value && isMinLoadTimeElapsed.value;
+    });
 
     // Created
     setTimeout(() => {
@@ -35,8 +37,7 @@ export default defineComponent({
 
     return {
       coverMounted,
-      isCoverMounted,
-      isMinLoadTimeElapsed,
+      shouldStopLoading,
     };
   },
 });
@@ -56,12 +57,5 @@ body {
 }
 .homeView {
   background-color: $offWhiteColor;
-}
-.fadeoutLoadingScreen {
-  opacity: 0;
-  visibility: hidden;
-  transition:
-    opacity 2s,
-    visibility 2s;
 }
 </style>
