@@ -60,7 +60,7 @@ import json from "@/assets/content.json";
 
 export default defineComponent({
   name: "CoverSection",
-  setup() {
+  setup(_, { emit }) {
     // Reactives
     const currentPersonalDetails = ref<AboutMeType | null>(null);
     const currentHighlightedKeySkillIndex = ref<number>(0);
@@ -98,8 +98,8 @@ export default defineComponent({
         currentHighlightedKeySkillIndex.value %=
           currentPersonalDetails.value?.keySkills.length || 1;
       }, 3000);
-      // // Emit event when mounted
-      // window.dispatchEvent(new CustomEvent("cover-loaded"));
+      // Emit event when mounted
+      emit("coverLoaded");
 
       onBeforeUnmount(() => {
         clearInterval(interval);

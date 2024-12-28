@@ -98,17 +98,15 @@ export default defineComponent({
   components: {
     Carousel,
     Slide,
-    // Navigation,
-    // Pagination,
   },
   setup() {
     // Reactives
     const carouselConfig = {
       wrapAround: true,
       snapAlign: "start",
-      autoplay: 5000,
+      gap: 15,
+      autoplay: 8000,
       pauseAutoplayOnHover: true,
-      gap: 20,
       breakpoints: {
         0: {
           itemsToShow: 1,
