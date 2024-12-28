@@ -43,6 +43,7 @@ import { defineComponent, ref, onMounted, computed } from "vue";
 import type { PropType } from "vue";
 // Import content for cards
 import json from "@/assets/content.json";
+import { getDynamicImageUrl } from "@/composables/sharedUtils";
 
 export default defineComponent({
   name: "CustomCard",
@@ -58,8 +59,8 @@ export default defineComponent({
 
     // Computed
     const computedImageSrc = computed(() => {
-      return (
-        `/images/${currentRecommendationDetails.value?.recommenderImage}` || ""
+      return getDynamicImageUrl(
+        currentRecommendationDetails.value?.recommenderImage || ``,
       );
     });
 

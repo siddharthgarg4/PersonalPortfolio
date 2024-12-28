@@ -15,17 +15,17 @@
     <BRow class="contactIconContainer">
       <BCol>
         <img
-          :src="`/images/linkedinContact.png`"
+          src="@/assets/images/linkedinContact.png"
           class="img-fluid contactIcon cursorPointer"
           @click="handleContactLink('linkedin')"
         />
         <img
-          :src="`/images/emailContact.png`"
+          src="@/assets/images/emailContact.png"
           class="img-fluid contactIcon emailIcon cursorPointer"
           @click="handleContactLink('email')"
         />
         <img
-          :src="`/images/githubContact.png`"
+          src="@/assets/images/githubContact.png"
           class="img-fluid contactIcon cursorPointer"
           @click="handleContactLink('github')"
         />

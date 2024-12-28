@@ -62,7 +62,7 @@ import { defineComponent, ref, onMounted, computed } from "vue";
 import type { PropType } from "vue";
 // Import content for cards
 import json from "@/assets/content.json";
-import { visitLink } from "@/composables/sharedUtils";
+import { visitLink, getDynamicImageUrl } from "@/composables/sharedUtils";
 
 export default defineComponent({
   name: "CustomCard",
@@ -79,7 +79,9 @@ export default defineComponent({
 
     // Computed
     const computedImageSrc = computed(() => {
-      return `/images/${currentExperienceDetails.value?.coverImageName}` || "";
+      return getDynamicImageUrl(
+        currentExperienceDetails.value?.coverImageName || ``,
+      );
     });
 
     // Method to parse FT description
