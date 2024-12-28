@@ -106,6 +106,7 @@ export default defineComponent({
       snapAlign: "start",
       gap: 15,
       autoplay: 8000,
+      transition: 1000,
       pauseAutoplayOnHover: true,
       breakpoints: {
         0: {

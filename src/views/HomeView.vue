@@ -2,7 +2,7 @@
   <div class="homeView" id="homeView">
     <LoadingScreen
       id="loadingScreen"
-      :class="{ fadeout: isMinLoadTimeElapsed && isCoverMounted }"
+      :class="{ fadeoutLoadingScreen: isMinLoadTimeElapsed && isCoverMounted }"
     />
     <CoverSection id="coverSection" @coverLoaded="coverMounted"></CoverSection>
     <ExperienceAndProjectsSection
@@ -57,13 +57,11 @@ body {
 .homeView {
   background-color: $offWhiteColor;
 }
-.fadeout {
-  animation: fadeout 2s forwards;
-}
-@keyframes fadeout {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+.fadeoutLoadingScreen {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 2s,
+    visibility 2s;
 }
 </style>
