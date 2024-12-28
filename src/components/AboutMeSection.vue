@@ -74,7 +74,7 @@
           <p class="componentTitle removeMargin">Recommendations</p>
         </BCol>
       </BRow>
-      <Carousel v-bind="carouselConfig">
+      <Carousel v-bind="carouselConfig" class="removePadding">
         <Slide
           v-for="(rec, i) in recommendations"
           :key="i"
@@ -82,6 +82,10 @@
         >
           <recommendationCard :recommendation="rec"></recommendationCard>
         </Slide>
+        <template #addons>
+          <Navigation />
+          <Pagination />
+        </template>
       </Carousel>
     </BRow>
   </BContainer>
@@ -90,7 +94,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 // Carousel specific imports
-import { Carousel, Slide } from "vue3-carousel";
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import "vue3-carousel/carousel.css";
 
 export default defineComponent({
@@ -98,13 +102,14 @@ export default defineComponent({
   components: {
     Carousel,
     Slide,
+    Pagination,
+    Navigation,
   },
   setup() {
     // Reactives
     const carouselConfig = {
       wrapAround: true,
       snapAlign: "start",
-      gap: 15,
       autoplay: 8000,
       transition: 300,
       pauseAutoplayOnHover: true,
@@ -134,9 +139,6 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
-// .owl-stage {
-//   margin: 15px 0px 25px;
-// }
 .aboutMeContainer {
   background: $offWhiteColor;
   padding: 5% 7.5% 5% 7.5%;
@@ -164,11 +166,10 @@ export default defineComponent({
   align-items: center;
   flex-wrap: wrap;
 }
-// .customCarouselContent {
-//   height: inherit !important;
-//   padding: 0px 15px 15px; /* Add spacing around the content */
-//   @media (max-width: $screen-md) {
-//     padding: 0px 0px 0px 0px;
-//   }
-// }
+.customCarouselContent {
+  padding: 10px 15px;
+  @media (max-width: $screen-md) {
+    padding: 0px;
+  }
+}
 </style>
