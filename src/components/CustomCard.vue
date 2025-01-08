@@ -28,7 +28,7 @@
                   <li
                     v-for="(
                       ftDescriptionItem, index
-                    ) in parsedFTDescription.slice()"
+                    ) in cachedParsedFTDescription"
                     :key="index"
                   >
                     <p class="cardParagraph">{{ ftDescriptionItem }}</p>
@@ -88,6 +88,12 @@ export default defineComponent({
     const parsedFTDescription = computed((): string[] => {
       return currentExperienceDetails.value?.description.split(";") || [];
     });
+    
+    // Cache the parsed FT description
+    const cachedParsedFTDescription = computed(() => {
+      return parsedFTDescription.value.slice();
+    });
+
     // Method to highlight certain words (also need to remove scoped from style tag)
     // const highlightedText = (text: string): string => {
     //   let highlightedText: string = text;
@@ -125,6 +131,7 @@ export default defineComponent({
       isExperienceFT,
       parsedFTDescription,
       visitLink,
+      cachedParsedFTDescription
     };
   },
 });
@@ -188,6 +195,7 @@ export default defineComponent({
   }
   li {
     margin-left: 1.5vw;
+    line-height: 1.25;
     @media (max-width: $screen-md) {
       margin-left: 3vw;
     }
@@ -195,6 +203,7 @@ export default defineComponent({
   .cardParagraph {
     text-align: left;
     margin-bottom: 0.5rem;
+    line-height: inherit;
   }
   // .highlighted {
   //   color: $offWhiteColor;
