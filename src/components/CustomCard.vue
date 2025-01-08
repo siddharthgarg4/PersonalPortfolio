@@ -12,7 +12,7 @@
             <BCardImg
               :src="computedImageSrc"
               :alt="currentExperienceDetails.title"
-              class="rounded-0"
+              class="rounded-0 h-100"
             />
           </BCol>
           <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
