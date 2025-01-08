@@ -88,7 +88,7 @@ export default defineComponent({
     const parsedFTDescription = computed((): string[] => {
       return currentExperienceDetails.value?.description.split(";") || [];
     });
-    
+
     // Cache the parsed FT description
     const cachedParsedFTDescription = computed(() => {
       return parsedFTDescription.value.slice();
@@ -131,7 +131,7 @@ export default defineComponent({
       isExperienceFT,
       parsedFTDescription,
       visitLink,
-      cachedParsedFTDescription
+      cachedParsedFTDescription,
     };
   },
 });
