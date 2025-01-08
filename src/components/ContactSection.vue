@@ -2,13 +2,14 @@
   <BContainer class="contactContainer" fluid>
     <BRow>
       <BCol cols="12">
-        <p class="coverTitle removeMargin">Like what you see? Let’s talk!</p>
+        <p class="coverTitle removeMargin">Like what you see? Let’s talk.</p>
       </BCol>
       <BCol cols="12">
         <p class="aboutMeDescription">
           <!-- eslint-disable-next-line -->
-          I am currently seeking full-time opportunities starting Spring
-          2024.<br />Made with 🤍 in Waterloo
+          <!-- I am currently seeking full-time opportunities starting Spring
+          2024.<br /> -->
+          Made with 🤍 in Toronto
         </p>
       </BCol>
     </BRow>

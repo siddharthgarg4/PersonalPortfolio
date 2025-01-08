@@ -5,7 +5,7 @@
     "coverImageName": "tile.png",
     "description": "Spearheaded a cross-functional project within the iOS mobile application, aimed at creatively engaging new consumers into the Tile premium ecosystem.",
     "overlayTitle": "Learn more about Tile",
-    "highlightedWords": ["mobile", "meeting", "flex-workspace"],
+    "highlightedWords": [],
     "link": "https://www.thetileapp.com/",
     "experienceType": "internship"
   },
@@ -31,7 +31,7 @@
     "title": "Product Manager Intern at Uplift",
     "subtitle": "Fall 2021",
     "coverImageName": "uplift.png",
-    "description": "Project lead for the design, development and subsequent release of the revamped partner-developer portal and the first customer document submission platform.",
+    "description": "Led the design, development and subsequent release of the revamped partner-developer portal and the first customer document submission platform.",
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
     "experienceType": "internship"
@@ -40,8 +40,8 @@
     "title": "Junior Product Manager at Uplift",
     "subtitle": "Fraud and Identity | October 2022 - June 2023",
     "coverImageName": "upliftFT2.png",
-    "description": "Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.;Assisting engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
-    "highlightedWords": ["KYC"],
+    "description": "Revamped multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managed the technical development and deployment of fraud controls, notably the first FraudML model.;Formalized key processes and architecture documentation, while highlighting areas for redesign across engineering and business domains.;Assisted engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
+    "highlightedWords": [],
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
     "experienceType": "full-time"
@@ -50,8 +50,8 @@
     "title": "Technical Product Manager at FutureFit AI",
     "subtitle": "Access and Reach | January 2024 - Present",
     "coverImageName": "ffaiFT2.png",
-    "description": "Revamping multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managing the technical development and deployment of fraud controls, notably the first FraudML model.;Formalizing the process documentation and highlighting key areas for redesign across business and engineering domains.",
-    "highlightedWords": [],
+    "description": "Developed a scalable and cost-effective localization framework enabling product-driven expansion into Quebec and Europe.;Architected abstract entity grouping with scoped permissions and dynamic associations to mirror complex workforce development ecosystems.;Managed the development and release of a lean R&D copilot integrating platform services with an LLM user chat interface.;Authored an enriched data dictionary comprising of attributes across services and databases, integral to technical discovery.",
+    "highlightedWords": ["localization"],
     "overlayTitle": "Learn more about FutureFit AI",
     "link": "https://www.futurefit.ai",
     "experienceType": "full-time"
