@@ -94,10 +94,10 @@ export default defineComponent({
 }
 .experienceProjectContainer {
   background-color: $lightWhiteColor;
-  background-image: url("@/assets/images/dotBackground-2.png"),
-    url("@/assets/images/dotBackground-2-flipped.png"),
-    url("@/assets/images/dotBackground-2.png"),
-    url("@/assets/images/dotBackground-2-flipped.png");
+  background-image: url("/images/dotBackground-2.png"),
+    url("/images/dotBackground-2-flipped.png"),
+    url("/images/dotBackground-2.png"),
+    url("/images/dotBackground-2-flipped.png");
   background-position:
     top 6.125% left,
     top 26.5% right,

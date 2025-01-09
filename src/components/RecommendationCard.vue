@@ -10,7 +10,7 @@
             class="d-flex justify-content-center align-items-center"
           >
             <BCardImg
-              :src="computedImageSrc"
+              :src="`/images/${currentRecommendationDetails.recommenderImage}`"
               :alt="currentRecommendationDetails.recommenderName"
               class="recommendationCardImg"
             />
@@ -38,12 +38,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, computed } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 // Type-only import for PropType
 import type { PropType } from "vue";
 // Import content for cards
 import json from "@/assets/content.json";
-import { getDynamicImageUrl } from "@/composables/sharedUtils";
+// import { getDynamicImageUrl } from "@/composables/sharedUtils";
 
 export default defineComponent({
   name: "CustomCard",
@@ -58,11 +58,11 @@ export default defineComponent({
     const currentRecommendationDetails = ref<RecommendationType | null>(null);
 
     // Computed
-    const computedImageSrc = computed(() => {
-      return getDynamicImageUrl(
-        currentRecommendationDetails.value?.recommenderImage || ``,
-      );
-    });
+    // const computedImageSrc = computed(() => {
+    //   return getDynamicImageUrl(
+    //     currentRecommendationDetails.value?.recommenderImage || ``,
+    //   );
+    // });
 
     // Method to load data
     const loadRecommendationDetails = (): void => {
@@ -78,7 +78,7 @@ export default defineComponent({
 
     return {
       currentRecommendationDetails,
-      computedImageSrc,
+      // computedImageSrc,
     };
   },
 });

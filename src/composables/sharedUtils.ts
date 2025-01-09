@@ -14,12 +14,12 @@ export const visitSection = (sectionId: string): void => {
   }
 };
 
-export const getDynamicImageUrl = (
-  imageName: string,
-  relativePathToAssets: string = `..`,
-): string => {
-  return new URL(
-    `${relativePathToAssets}/assets/images/${imageName}`,
-    import.meta.url,
-  ).href;
-};
+// export const getDynamicImageUrl = (
+//   imageName: string,
+//   relativePathToAssets: string = `..`,
+// ): string => {
+//   return new URL(
+//     `${relativePathToAssets}/assets/images/${imageName}`,
+//     import.meta.url,
+//   ).href;
+// };

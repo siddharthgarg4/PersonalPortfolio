@@ -10,7 +10,7 @@
           <!-- The image is displayed on the left side for full-time experiences !-->
           <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
             <BCardImg
-              :src="computedImageSrc"
+              :src="`/images/${currentExperienceDetails.coverImageName}`"
               :alt="currentExperienceDetails.title"
               class="rounded-0 h-100"
             />
@@ -62,7 +62,7 @@ import { defineComponent, ref, onMounted, computed } from "vue";
 import type { PropType } from "vue";
 // Import content for cards
 import json from "@/assets/content.json";
-import { visitLink, getDynamicImageUrl } from "@/composables/sharedUtils";
+import { visitLink } from "@/composables/sharedUtils";
 
 export default defineComponent({
   name: "CustomCard",
@@ -78,11 +78,11 @@ export default defineComponent({
     const isExperienceFT = ref<boolean>(false);
 
     // Computed
-    const computedImageSrc = computed(() => {
-      return getDynamicImageUrl(
-        currentExperienceDetails.value?.coverImageName || ``,
-      );
-    });
+    // const computedImageSrc = computed(() => {
+    //   return getDynamicImageUrl(
+    //     currentExperienceDetails.value?.coverImageName || ``,
+    //   );
+    // });
 
     // Method to parse FT description
     const parsedFTDescription = computed((): string[] => {
@@ -126,7 +126,7 @@ export default defineComponent({
     });
 
     return {
-      computedImageSrc,
+      // computedImageSrc,
       currentExperienceDetails,
       isExperienceFT,
       parsedFTDescription,

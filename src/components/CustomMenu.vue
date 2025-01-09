@@ -12,32 +12,28 @@
       </div>
       <div class="subMenu" :class="{ active: isActivated }">
         <div class="optionContainer" @click="scrollToSection('coverSection')">
-          <img
-            src="@/assets/images/homeNav.png"
-            alt="Home"
-            class="img-fluid navIcon"
-          />
+          <img src="/images/homeNav.png" alt="Home" class="img-fluid navIcon" />
         </div>
         <div
           class="optionContainer"
           @click="scrollToSection('experienceSection')"
         >
           <img
-            src="@/assets/images/projectsNav.png"
+            src="/images/projectsNav.png"
             alt="Experience"
             class="img-fluid navIcon"
           />
         </div>
         <div class="optionContainer" @click="scrollToSection('aboutMeSection')">
           <img
-            src="@/assets/images/aboutNav.png"
+            src="/images/aboutNav.png"
             alt="About Me"
             class="img-fluid navIcon"
           />
         </div>
         <div class="optionContainer" @click="scrollToSection('contactSection')">
           <img
-            src="@/assets/images/contactNav.png"
+            src="/images/contactNav.png"
             alt="Contact"
             class="img-fluid navIcon"
           />
