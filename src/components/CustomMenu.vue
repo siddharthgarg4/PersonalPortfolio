@@ -1,6 +1,6 @@
 <template>
-  <b-container fluid class="removePadding customMenuContainer">
-    <b-row class="menu">
+  <BContainer fluid class="removePadding customMenuContainer">
+    <BRow class="menu">
       <div
         class="optionContainer coreMenu"
         @click="toggleMenu"
@@ -11,69 +11,68 @@
         <div class="bar bottom"></div>
       </div>
       <div class="subMenu" :class="{ active: isActivated }">
-        <div class="optionContainer" @click="scrollToSection('cover')">
-          <img
-            src="../static/assets/homeNav.png"
-            alt="Home"
-            class="img-fluid navIcon"
-          />
+        <div class="optionContainer" @click="scrollToSection('coverSection')">
+          <img src="/images/homeNav.png" alt="Home" class="img-fluid navIcon" />
         </div>
-        <div class="optionContainer" @click="scrollToSection('experience')">
+        <div
+          class="optionContainer"
+          @click="scrollToSection('experienceSection')"
+        >
           <img
-            src="../static/assets/projectsNav.png"
+            src="/images/projectsNav.png"
             alt="Experience"
             class="img-fluid navIcon"
           />
         </div>
-        <div class="optionContainer" @click="scrollToSection('about')">
+        <div class="optionContainer" @click="scrollToSection('aboutMeSection')">
           <img
-            src="../static/assets/aboutNav.png"
+            src="/images/aboutNav.png"
             alt="About Me"
             class="img-fluid navIcon"
           />
         </div>
-        <div class="optionContainer" @click="scrollToSection('contact')">
+        <div class="optionContainer" @click="scrollToSection('contactSection')">
           <img
-            src="../static/assets/contactNav.png"
+            src="/images/contactNav.png"
             alt="Contact"
             class="img-fluid navIcon"
           />
         </div>
       </div>
-    </b-row>
-  </b-container>
+    </BRow>
+  </BContainer>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-export default Vue.extend({
-  data() {
-    return {
-      isActivated: false,
+import { defineComponent, ref } from "vue";
+import { visitSection } from "@/composables/sharedUtils";
+
+export default defineComponent({
+  name: "CustomMenu",
+  setup() {
+    //Reactives
+    const isActivated = ref<boolean>(false);
+
+    //Methods
+    const toggleMenu = (): void => {
+      isActivated.value = !isActivated.value;
     };
-  },
-  methods: {
-    toggleMenu() {
-      this.isActivated = !this.isActivated;
-    },
-    scrollToSection(section: string) {
-      let sectionElement = document.getElementById(section);
-      if (sectionElement != null) {
-        sectionElement.scrollIntoView({ block: "start", behavior: "smooth" });
-        this.isActivated = !this.isActivated;
-      } else {
-        // eslint-disable-next-line
-        console.log(
-          "The element associated with the menu item is null / could not be found."
-        );
-      }
-    },
+    const scrollToSection = (section: string): void => {
+      visitSection(section);
+      toggleMenu();
+    };
+
+    return {
+      isActivated,
+      toggleMenu,
+      scrollToSection,
+    };
   },
 });
 </script>
 
-<style lang="scss">
-@import "../styles/main.scss";
+<style scoped lang="scss">
+@use "@/assets/styles/variables.scss" as *;
 .menu {
   position: relative;
   border: 1px solid transparent;
