@@ -8,7 +8,7 @@
         <p class="aboutMeDescription">
           <!-- eslint-disable-next-line -->
           <!-- I am currently seeking full-time opportunities starting Spring
-          2024.<br /> -->
+          © 2025.<br /> -->
           Made with 🤍 in Toronto
         </p>
       </BCol>

@@ -15,7 +15,7 @@ export default defineConfig({
       dts: true,
     })],
   server: {
-    port: 2024,
+    port: 2025,
     host: '0.0.0.0',
   },
   resolve: {

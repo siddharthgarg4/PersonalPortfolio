@@ -124,7 +124,10 @@ export default defineComponent({
     };
 
     const recommendations: string[] = [
+      "andrewKalymonRecommendation",
       "nathanAptRecommendation",
+      "mikeCRecommendation",
+      "andreGattiRecommendation",
       "kellyWengertRecommendation",
       "aaronStuartRecommendation",
     ];
