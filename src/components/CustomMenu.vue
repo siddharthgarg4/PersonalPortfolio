@@ -127,6 +127,18 @@ export default defineComponent({
     left: 20%;
     width: 60%;
   }
+  &:hover {
+    transition: all 300ms ease;
+    border-color: $offWhiteColor;
+    background-color: $dolphinBlueColor;
+    .bar {
+      background-color: $offWhiteColor;
+    }
+    .navIcon {
+      filter: invert(100%) brightness(1)
+        contrast(1) saturate(100%);
+    }
+  }
   &.active {
     -webkit-transform: scale(0.8);
     -moz-transform: scale(0.8);
@@ -181,5 +193,9 @@ export default defineComponent({
   top: 20%;
   height: 60%;
   width: 60%;
+  -webkit-user-drag: none;
+  user-select: none;
+  // ensures hover/clicks still work
+  pointer-events: auto;
 }
 </style>
