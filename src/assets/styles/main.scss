@@ -1,0 +1,89 @@
+@use "@/assets/styles/variables.scss" as *;
+.removePadding {
+  padding: 0;
+}
+.removeMargin {
+  margin: 0;
+}
+.tintFont {
+  color: $dolphinBlueColor;
+}
+.coverTitle {
+  padding-bottom: 1%;
+  font-size: 3.125vw;
+  font-weight: 400;
+  text-align: start;
+  @media (max-width: $screen-md) {
+    font-size: 6.7vw;
+    text-align: center;
+  }
+}
+.componentTitle {
+  font-size: 2.5vw;
+  font-weight: 600;
+  text-align: start;
+  line-height: 3.25vw;
+  @media (max-width: $screen-md) {
+    font-size: 5.58vw;
+    line-height: 6.5vw;
+    text-align: center;
+  }
+}
+.componentSubtitleContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.aboutMeDescription {
+  font-weight: 400;
+  font-size: 1.25vw;
+  text-align: start;
+  white-space: pre-line;
+  line-height: 1.25;
+  @media (max-width: $screen-md) {
+    font-size: 3.8vw;
+  }
+  .tintFont {
+    font-weight: 600;
+  }
+}
+.cardTitle {
+  font-weight: 500;
+  font-size: 1.9vw;
+  text-align: center;
+  @media (max-width: $screen-md) {
+    font-size: 3.8vw;
+  }
+}
+.cardSubtitle {
+  font-size: 1.4vw;
+  font-weight: 600;
+  text-align: center;
+  color: $dolphinBlueColor;
+  @media (max-width: $screen-md) {
+    font-size: 2.8vw;
+  }
+}
+.cardParagraph {
+  font-size: 1.3vw;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.25;
+  @media (max-width: $screen-md) {
+    font-size: 3.4vw;
+  }
+}
+.cursorPointer {
+  cursor: pointer;
+}
+// component animation
+.before-enter {
+  opacity: 0;
+  z-index: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.enter {
+  opacity: 1;
+  z-index: 1;
+  transform: translateY(0px);
+}

@@ -10,7 +10,7 @@ Pursuing co-op in my academic program, I regularly have to apply to jobs and loo
 
 ## How I built it
 
-**Sketch** - Wireframing for UI/UX
+**Figma** - Wireframing for UI/UX
 
 **Vue JS** - Framework (TypeScript, HTML, SCSS)
 
@@ -31,10 +31,15 @@ https://siddharthgarg4.github.io/
 ```
 npm install
 ```
+# File manager
+```
+git lfs install
+git lfs pull
+```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production
@@ -42,14 +47,9 @@ npm run serve
 npm run build
 ```
 
-### Run your tests
-```
-npm run test
-```
-
 ### Lints and fixes files
 ```
-npm run lint
+npm run format
 ```
 
 ### Customize configuration
