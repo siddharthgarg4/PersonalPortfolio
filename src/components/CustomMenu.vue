@@ -135,8 +135,7 @@ export default defineComponent({
       background-color: $offWhiteColor;
     }
     .navIcon {
-      filter: invert(100%) brightness(1)
-        contrast(1) saturate(100%);
+      filter: invert(100%) brightness(1) contrast(1) saturate(100%);
     }
   }
   &.active {

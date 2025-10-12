@@ -1,28 +1,29 @@
 {
-  "tile": {
-    "title": "Software Engineer Intern at Tile",
-    "subtitle": "Winter 2020",
-    "coverImageName": "tile.png",
-    "description": "Spearheaded a cross-functional project within the iOS mobile application, aimed at creatively engaging new consumers into the Tile premium ecosystem.",
-    "overlayTitle": "Learn more about Tile",
-    "highlightedWords": [],
-    "link": "https://www.thetileapp.com/",
-    "experienceType": "internship"
-  },
   "td": {
     "title": "Software Engineer Intern at TD",
     "subtitle": "Winter 2019",
     "coverImageName": "td.png",
-    "description": "Enhanced a POC mobile application focused on innovative methods for scheduling meetings, finding resources and contacting colleagues in a flex-workspace.",
+    "description": "Innovation Lab, Prtotyping, iOS, Firebase, Notifications",
     "overlayTitle": "Learn more about TD",
+    "highlightedWords": ["iOS"],
     "link": "https://www.td.com/ca/en/personal-banking",
+    "experienceType": "internship"
+  },
+  "tile": {
+    "title": "Software Engineer Intern at Tile",
+    "subtitle": "Winter 2020",
+    "coverImageName": "tile.png",
+    "description": "Consumer Electronics, Research, iOS, Swift, Bluetooth",
+    "overlayTitle": "Learn more about Tile",
+    "highlightedWords": [],
+    "link": "https://www.thetileapp.com/",
     "experienceType": "internship"
   },
   "shopify": {
     "title": "Software Engineer Intern at Shopify",
     "subtitle": "Winter/Spring 2021",
     "coverImageName": "shopify.png",
-    "description": "Streamlined the order life-cycle through a dynamic workflow engine, aimed at improving transparency and scalability for Shopify Fulfillment Network.",
+    "description": "Fulfillment Network, Backend, Ruby on Rails, GraphQL",
     "overlayTitle": "Learn more about Shopify",
     "link": "https://www.shopify.ca",
     "experienceType": "internship"
@@ -31,14 +32,14 @@
     "title": "Product Manager Intern at Uplift",
     "subtitle": "Fall 2021",
     "coverImageName": "uplift.png",
-    "description": "Led the design, development and subsequent release of the revamped partner-developer portal and the first customer document submission platform.",
+    "description": "Fin-Tech, Customer Journey Mapping, API Documentation",
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
     "experienceType": "internship"
   },
   "upliftFT": {
     "title": "Junior Product Manager at Uplift",
-    "subtitle": "Fraud and Identity | October 2022 - June 2023",
+    "subtitle": "October 2022 - June 2023",
     "coverImageName": "upliftFT2.png",
     "description": "Revamped multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managed the technical development and deployment of fraud controls, notably the first FraudML model.;Formalized key processes and architecture documentation, while highlighting areas for redesign across engineering and business domains.;Assisted engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
     "highlightedWords": [],
@@ -48,7 +49,7 @@
   },
   "ffaiFT": {
     "title": "Technical Product Manager at FutureFit AI",
-    "subtitle": "Access and Reach | January 2024 - Present",
+    "subtitle": "January 2024 - July 2025",
     "coverImageName": "ffaiFT2.png",
     "description": "Developed a scalable and cost-effective localization framework enabling product-driven expansion into Quebec and Europe.;Architected abstract entity grouping with scoped permissions and dynamic associations to mirror complex workforce development ecosystems.;Managed the development and release of a lean R&D copilot integrating platform services with an LLM user chat interface.;Authored an enriched data dictionary comprising of attributes across services and databases, integral to technical discovery.",
     "highlightedWords": ["localization"],

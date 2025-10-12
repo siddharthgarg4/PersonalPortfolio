@@ -37,6 +37,7 @@
               </div>
               <div v-else class="internPosition">
                 <p class="cardParagraph">
+                  <!-- Inject highlighted html here if used !-->
                   {{ currentExperienceDetails.description }}
                 </p>
               </div>
@@ -127,6 +128,7 @@ export default defineComponent({
 
     return {
       // computedImageSrc,
+      // highlightedText,
       currentExperienceDetails,
       isExperienceFT,
       parsedFTDescription,
