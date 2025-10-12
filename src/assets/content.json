@@ -144,6 +144,18 @@
     "recommenderPosition": "Product Management Leader",
     "recommendationDescription": "\"Siddharth did exceptional work and was a pleasure to work with for the time he was with us at TD Lab. He demonstrated both curiosity and drive with projects. He had equal interest and aptitude in the technical and business aspects of the work. He's a quick learner and I recommend him as top talent.\""
   },
+  "andrewKalymonRecommendation": {
+    "recommenderImage": "andrewKalymon.jpeg",
+    "recommenderName": "Andrew Kalymon, Uplift",
+    "recommenderPosition": "Engineering Manager",
+    "recommendationDescription": "\"I had the pleasure of working with Sid for over a year on several projects, and I was consistently impressed by his abilities. Sid quickly proved himself to be a strong technical project manager, excelling in breaking down tasks with clear, concise ticket definitions that significantly improved our team’s workflow. His ability to dive into technical discussions and understand the details was a standout quality. Sid shows great potential and has a bright future ahead of him.\""
+  },
+  "mikeCRecommendation": {
+    "recommenderImage": "mikeC.jpeg",
+    "recommenderName": "Mike Chrabaszcz, Uplift",
+    "recommenderPosition": "Mobile Engineering Manager",
+    "recommendationDescription": "\"Sid was an intern at Tile during early 2020. He was given the opportunity to take ownership of a full iOS feature that engages customers to activate and maintain a subscription to the services offered by Tile Inc. In addition, he worked on experiments to identify the performance of the App establishing a baseline. Sid was an exceptional intern. He embraced the technology, the team and our development process. He is articulate and able to coordinate across multiple teams. Sid has a friendly disposition and was an awesome team player.\""
+  },
   "me": {
     "description": "I am currently a 4th year student pursuing a dual degree in Computer Science and Business at the University of Waterloo and Wilfrid Laurier University respectively.\n\nAt my previous internships, I was given the opportunity to explore the field of mobile and backend development in a collaborative and fast paced environment. These opportunities have allowed me to refine my leadership and technical skills while working on a product currently in market.\n\nAs a software engineer, I am constantly looking for new challenges to push me outside my comfort zone, as I believe that we stop growing once we are unwilling to have new experiences.\n\nOutside of school and work, I love exploring new cities, going on unplanned adventures, watching soccer and trying new food. Feel free to send me a message and say hi :)",
     "github": "https://github.com/siddharthgarg4",
