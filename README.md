@@ -31,6 +31,11 @@ https://siddharthgarg4.github.io/
 ```
 npm install
 ```
+# File manager
+```
+git lfs install
+git lfs pull
+```
 
 ### Compiles and hot-reloads for development
 ```
