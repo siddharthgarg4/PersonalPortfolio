@@ -1,39 +1,58 @@
 <template>
-  <div :class="{ loader: true, fadeout: !isLoading }">Loading ...</div>
+  <div class="loader" :class="{ fadeoutLoader: !isVisible }"></div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent, ref, watch } from "vue";
+
+export default defineComponent({
   name: "LoadingScreen",
-  props: ["isLoading"],
-};
+  props: {
+    stopLoading: {
+      type: Boolean,
+      required: true,
+    },
+  },
+  setup(props) {
+    const isVisible = ref<boolean>(true);
+
+    watch(
+      () => props.stopLoading,
+      (newVal) => {
+        isVisible.value = !newVal;
+      },
+    );
+
+    return {
+      isVisible,
+    };
+  },
+});
 </script>
 
-<style lang="scss">
-@import "../styles/main.scss";
+<style scoped lang="scss">
+@use "@/assets/styles/variables.scss" as *;
 .loader {
-  background-color: $honeyYellowColor;
+  background-image: url("@/assets/loading-moving-car.svg");
+  background-color: $dolphinBlueColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
   bottom: 0;
-  color: white;
   display: block;
-  font-size: 32px;
   left: 0;
   overflow: hidden;
-  padding-top: 10vh;
   position: fixed;
   right: 0;
-  text-align: center;
   top: 0;
+  z-index: 9999; /* should be at the top of every element */
 }
-
-.fadeout {
-  animation: fadeout 2s forwards;
-}
-
-@keyframes fadeout {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
+.fadeoutLoader {
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 2s,
+    visibility 2s;
 }
 </style>

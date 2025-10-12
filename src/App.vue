@@ -1,13 +1,15 @@
 <template>
   <div id="app">
-    <router-view />
+    <RouterView />
   </div>
 </template>
 
+<script setup lang="ts">
+import { RouterView } from "vue-router";
+</script>
+
 <style lang="scss">
-@import "styles/main.scss";
-@import "~bootstrap/scss/bootstrap.scss";
-@import "~bootstrap-vue/dist/bootstrap-vue.css";
+@use "@/assets/styles/variables.scss" as *;
 html {
   scroll-behavior: smooth;
 }
@@ -20,22 +22,3 @@ html {
   color: $darkBlackColor;
 }
 </style>
-
-<script lang="ts">
-import Vue from "vue";
-var json = require("@/static/content.json");
-// @ is an alias to /src
-
-export default Vue.extend({
-  name: "homePage",
-  components: {},
-  data() {
-    return {
-      json: {},
-    };
-  },
-  mounted() {
-    this.json = json;
-  },
-});
-</script>
