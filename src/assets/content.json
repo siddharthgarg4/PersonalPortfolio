@@ -3,7 +3,13 @@
     "title": "Software Engineer Intern at TD",
     "subtitle": "Winter 2019",
     "coverImageName": "td.png",
-    "description": "Innovation Lab, Prtotyping, iOS, Firebase, Notifications",
+    "skills": [
+      "Innovation Lab",
+      "Prtotyping",
+      "iOS",
+      "Firebase",
+      "Notifications"
+    ],
     "overlayTitle": "Learn more about TD",
     "highlightedWords": ["iOS"],
     "link": "https://www.td.com/ca/en/personal-banking",
@@ -13,7 +19,7 @@
     "title": "Software Engineer Intern at Tile",
     "subtitle": "Winter 2020",
     "coverImageName": "tile.png",
-    "description": "Consumer Electronics, Research, iOS, Swift, Bluetooth",
+    "skills": ["Consumer Electronics", "Research", "iOS", "Swift", "Bluetooth"],
     "overlayTitle": "Learn more about Tile",
     "highlightedWords": [],
     "link": "https://www.thetileapp.com/",
@@ -23,7 +29,7 @@
     "title": "Software Engineer Intern at Shopify",
     "subtitle": "Winter/Spring 2021",
     "coverImageName": "shopify.png",
-    "description": "Fulfillment Network, Backend, Ruby on Rails, GraphQL",
+    "skills": ["Fulfillment Network", "Backend", "Ruby on Rails", "GraphQL"],
     "overlayTitle": "Learn more about Shopify",
     "link": "https://www.shopify.ca",
     "experienceType": "internship"
@@ -32,7 +38,7 @@
     "title": "Product Manager Intern at Uplift",
     "subtitle": "Fall 2021",
     "coverImageName": "uplift.png",
-    "description": "Fin-Tech, Customer Journey Mapping, API Documentation",
+    "skills": ["Fin-Tech", "Customer Journey Mapping", "API Documentation"],
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
     "experienceType": "internship"
@@ -61,7 +67,7 @@
     "title": "Grow",
     "subtitle": "1st Place at HackLassonde",
     "coverImageName": "grow.png",
-    "description": "iOS, ARKit, CoreML",
+    "skills": ["iOS", "ARKit", "CoreML"],
     "overlayTitle": "View Project Grow",
     "link": "https://github.com/siddharthgarg4/Grow",
     "experienceType": "project"
@@ -70,7 +76,7 @@
     "title": "HealthLine",
     "subtitle": "Top 5 at RUHacks",
     "coverImageName": "healthline.png",
-    "description": "iOS, Twilio, Python",
+    "skills": ["iOS", "Twilio", "Python"],
     "overlayTitle": "View Project HealthLine",
     "link": "https://github.com/siddharthgarg4/HealthLine",
     "experienceType": "project"
@@ -79,7 +85,7 @@
     "title": "BlindSight",
     "subtitle": "2nd Place at PCHacks",
     "coverImageName": "blindsight.png",
-    "description": "iOS, Twilio, CoreML",
+    "skills": ["iOS", "Twilio", "CoreML"],
     "overlayTitle": "View Project BlindSight",
     "link": "https://github.com/siddharthgarg4/BlindSight",
     "experienceType": "project"
@@ -88,7 +94,7 @@
     "title": "InstaMeet",
     "subtitle": "MHacks Project",
     "coverImageName": "instameet.png",
-    "description": "iOS, Firebase, Google Cloud",
+    "skills": ["iOS", "Firebase", "Google Cloud"],
     "overlayTitle": "View Project InstaMeet",
     "link": "https://github.com/siddharthgarg4/InstaMeet",
     "experienceType": "project"
@@ -97,7 +103,7 @@
     "title": "PayPool",
     "subtitle": "TD Lab Project",
     "coverImageName": "paypool.png",
-    "description": "iOS, Interac, Firebase",
+    "skills": ["iOS", "Firebase", "Google Cloud"],
     "overlayTitle": "View Project PayPool",
     "link": "https://tdlab.io/project/payPool",
     "experienceType": "project"
@@ -106,7 +112,7 @@
     "title": "FlySafe",
     "subtitle": "Hack The North Project",
     "coverImageName": "flysafe.png",
-    "description": "iOS, Azure, Xe, BlinkId",
+    "skills": ["iOS", "Azure", "Xe", "BlinkId"],
     "overlayTitle": "View Project FlySafe",
     "link": "https://github.com/siddharthgarg4/FlySafe",
     "experienceType": "project"
@@ -115,7 +121,7 @@
     "title": "EndGame Engine",
     "subtitle": "Passion Project",
     "coverImageName": "pacman.png",
-    "description": "C++, OpenGL, GLFW, GLM",
+    "skills": ["C++", "OpenGL", "GLFW", "GLM"],
     "overlayTitle": "View Project EndGame",
     "link": "https://github.com/siddharthgarg4/EndGame",
     "experienceType": "project"

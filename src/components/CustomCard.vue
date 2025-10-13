@@ -36,9 +36,15 @@
                 </ul>
               </div>
               <div v-else class="internPosition">
-                <p class="cardParagraph">
-                  <!-- Inject highlighted html here if used !-->
-                  {{ currentExperienceDetails.description }}
+                <!-- Internship and Projects !-->
+                <p class="carcardParagraph skillsList">
+                  <span
+                    v-for="(skill, index) in currentExperienceDetails.skills"
+                    :key="index"
+                    class="highlightedPill cardParagraph"
+                  >
+                    {{ skill }}
+                  </span>
                 </p>
               </div>
             </BCardBody>
@@ -87,7 +93,7 @@ export default defineComponent({
 
     // Method to parse FT description
     const parsedFTDescription = computed((): string[] => {
-      return currentExperienceDetails.value?.description.split(";") || [];
+      return currentExperienceDetails.value?.description?.split(";") || [];
     });
 
     // Cache the parsed FT description
@@ -207,11 +213,20 @@ export default defineComponent({
     margin-bottom: 0.5rem;
     line-height: inherit;
   }
-  // .highlighted {
-  //   color: $offWhiteColor;
-  //   background-color: $dolphinBlueColor; /* You can change this color */
-  //   border-radius: 25px;
-  //   padding: 1.5px 7.5px;
-  // }
+}
+// :deep(highlighted) - if you want to pierce scope
+.highlightedPill {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  padding: 1.5px 7.5px;
+}
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25em;
+}
+.skillsList .highlighted {
+  white-space: nowrap;
 }
 </style>

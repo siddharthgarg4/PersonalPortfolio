@@ -3,7 +3,8 @@ interface ExperienceType {
   title: string;
   subtitle: string;
   coverImageName: string;
-  description: string;
+  description?: string;
+  skills?: string[];
   overlayTitle: string;
   link: string;
   experienceType: "internship" | "full-time" | "project";
