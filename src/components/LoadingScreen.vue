@@ -47,10 +47,13 @@ export default defineComponent({
   right: 0;
   top: 0;
   z-index: 9999; /* should be at the top of every element */
+  pointer-events: auto;
 }
 .fadeoutLoader {
   opacity: 0;
   visibility: hidden;
+  /* Allow clicks through */
+  pointer-events: none;
   transition:
     opacity 2s,
     visibility 2s;
