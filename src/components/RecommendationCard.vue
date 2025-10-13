@@ -13,6 +13,7 @@
               :src="`/images/${currentRecommendationDetails.recommenderImage}`"
               :alt="currentRecommendationDetails.recommenderName"
               class="recommendationCardImg"
+              loading="lazy"
             />
           </BCol>
           <BCol cols="9" lg="12">

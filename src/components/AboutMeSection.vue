@@ -63,9 +63,17 @@
         </p>
       </BCol>
       <BCol lg="6" class="myImageContainer">
-        <img class="img-fluid divider" src="/images/divider.png" />
-        <img class="img-fluid myImage" src="/images/me-2.png" />
-        <img class="img-fluid divider" src="/images/divider.png" />
+        <img
+          class="img-fluid divider"
+          src="/images/divider.png"
+          loading="lazy"
+        />
+        <img class="img-fluid myImage" src="/images/me-2.png" loading="lazy" />
+        <img
+          class="img-fluid divider"
+          src="/images/divider.png"
+          loading="lazy"
+        />
       </BCol>
     </BRow>
     <BRow>

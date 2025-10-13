@@ -19,16 +19,19 @@
           src="/images/linkedinContact.png"
           class="img-fluid contactIcon cursorPointer"
           @click="handleContactLink('linkedin')"
+          loading="lazy"
         />
         <img
           src="/images/emailContact.png"
           class="img-fluid contactIcon emailIcon cursorPointer"
           @click="handleContactLink('email')"
+          loading="lazy"
         />
         <img
           src="/images/githubContact.png"
           class="img-fluid contactIcon cursorPointer"
           @click="handleContactLink('github')"
+          loading="lazy"
         />
       </BCol>
     </BRow>

@@ -13,6 +13,7 @@
               :src="`/images/${currentExperienceDetails.coverImageName}`"
               :alt="currentExperienceDetails.title"
               class="rounded-0 h-100"
+              loading="lazy"
             />
           </BCol>
           <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
