@@ -5,49 +5,41 @@
         <p class="componentTitle">This is Me</p>
         <p class="aboutMeDescription removeMargin">
           <!-- 1. Intro -->
-          Hello again! 👋🏽<br /><br />My name’s Siddharth (Sid), and I'm thrilled
-          that you have taken an interest in learning more about me. A guiding
-          principle in my life, and a common theme underlying my professional
-          and personal journey so far, has been to
-          <span class="tintFont">“Seek Discomfort”</span>. That is, a constant
-          reminder to myself that true, holistic growth happens outside my
-          comfort zone, through new challenges and ventures into the unknown.
+          Hello again! 👋🏽
           <br /><br />
+          My name's Siddharth (Sid), and here's a little glimpse of my journey
+          so far.
+          <br /><br />
+          <span class="tintFont">“Seek Discomfort”</span> has been a defining
+          theme throughout — a constant reminder that holistic growth comes from
+          the steadfast pursuit of new opportunities and challenges in
+          unfamiliar environments. <br /><br />
           <!-- 2. International -->
-          I stumbled across this slogan as a high-school teenager through a
-          Youtube channel called “Yes Theory”; a group of young individuals open
-          to new possibilities and an unwavering quest to seek opportunities to
-          fulfil their goals. Their inspiring message resonated deeply within
-          me, to the extent that I embarked on a journey of higher education as
-          an <span class="tintFont">international student in Canada</span>, away
-          from my family, at the age of eighteen. <br /><br />
           <!-- 3. Education -->
-          However, this did not diminish my inner desire to seek further
-          challenges. I participated in hackathons across North America, an
-          academic exchange in Europe, worked part-time at the university
-          library and engaged in extracurriculars such as Habitat for Humanity
-          among others during my studies. In October of 2022, I had the pleasure
-          of graduating with
-          <!-- eslint-disable-next-line -->
-          <span class="tintFont">dean’s honors in a dual degree program</span>
-          with a Bachelor of Computer Science (University of Waterloo) and a
-          Bachelor of Business Administration (Wilfrid Laurier University).<br /><br />
+          This mindset is reflected throughout my higher education in Canada,
+          where I participated in several hackathons across North America,
+          engaged in extracurriculars like Habitat for Humanity, took part in an
+          academic exchange in Europe, and worked part-time at the university
+          library, among other experiences. In October 2022, I graduated with
+          dual degrees — a
+          <span class="tintFont">Bachelor of Computer Science</span> and a
+          <span class="tintFont">Bachelor of Business Administration</span>.
+          <br /><br />
           <!-- 4. Experiences -->
-          Through my education, I got numerous co-operative (internship) work
-          experiences to explore roles ranging from
+          Fascinated by the intersection of these fields, I explored roles
+          ranging from
           <!-- eslint-disable-next-line -->
-          <span class="tintFont"
-            >software engineering to product management</span
-          >
-          at companies of varying locations, industries and stages of growth.
-          Currently, I am honing my craft at an ed-tech company, working on
-          <span class="tintFont">AI-powered workforce systems</span>–at the
-          intersection of technology and societal impact–focused on empowering
-          individuals and organisations to thrive in a rapidly digital
-          environment. <br /><br />
+          <span class="tintFont">
+            software engineering to product management
+          </span>
+          at companies across different sizes, industries, and market segments.
+          My most recent experience was at an ed-tech company, building
+          <span class="tintFont">AI-powered workforce systems</span> aimed at
+          empowering individuals, organizations, and governments in a rapidly
+          evolving digital world. <br /><br />
           <!-- 5. Extracurricular -->
           Outside of school and work, I enjoy hiking, playing soccer, exploring
-          new cities, going on unplanned adventures and meeting new people.
+          cities, going on unplanned adventures, and meeting new people.
           <br /><br />
           <!-- 6. Outro -->
           With a strong desire to contribute to the greater social good, I'm
@@ -57,6 +49,7 @@
           with an aligned goal of creating
           <!-- eslint-disable-next-line -->
           <span class="tintFont">long-term, positive societal impact</span>.
+          <br /><br />
           Feel free to reach out through any of the social links at the bottom
           of the page to discuss outrageous ideas, grab a coffee or even just to
           say hi! 💬 ☕ 🙌🏽
@@ -159,6 +152,7 @@ export default defineComponent({
 }
 .aboutMeDescriptionContainer {
   margin-bottom: 35px;
+  // align-items: center;
 }
 .aboutMeImageContainer {
   justify-content: flex-end;
@@ -166,16 +160,21 @@ export default defineComponent({
 .divider {
   width: 50%;
   opacity: 0.25;
-  margin: 0 25% 0 25%;
+  margin: 7.5% 25% 7.5% 25%;
 }
 .myImage {
   margin: auto;
-  height: 60%;
+  // width: auto;
+  // height: auto;
+  // max-height: 100%;
+  width: 67.5%;
 }
 .myImageContainer {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
 }
 .customCarouselContent {
   padding: 10px 15px;
