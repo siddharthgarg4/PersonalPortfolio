@@ -70,7 +70,7 @@
       </BCol>
     </BRow>
     <BRow>
-      <BRow class="removePadding">
+      <BRow>
         <BCol class="componentSubtitleContainer">
           <p class="componentTitle removeMargin">Recommendations</p>
         </BCol>

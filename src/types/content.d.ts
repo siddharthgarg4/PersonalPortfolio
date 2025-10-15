@@ -3,7 +3,7 @@ interface ExperienceType {
   title: string;
   subtitle: string;
   coverImageName: string;
-  description?: string;
+  ftDescription?: { string: string };
   skills?: string[];
   overlayTitle: string;
   link: string;

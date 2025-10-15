@@ -38,7 +38,7 @@
     "title": "Product Manager Intern at Uplift",
     "subtitle": "Fall 2021",
     "coverImageName": "uplift.png",
-    "skills": ["Fin-Tech", "Customer Journey Mapping", "API Documentation"],
+    "skills": ["Fin-Tech", "User Journey Mapping", "API Documentation"],
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
     "experienceType": "internship"
@@ -47,8 +47,25 @@
     "title": "Junior Product Manager at Uplift",
     "subtitle": "October 2022 - June 2023",
     "coverImageName": "upliftFT2.png",
-    "description": "Revamped multiple cross-functional KYC processes in the application funnel enabling partner bank migration.;Managed the technical development and deployment of fraud controls, notably the first FraudML model.;Formalized key processes and architecture documentation, while highlighting areas for redesign across engineering and business domains.;Assisted engineering counterparts in managing cross-functional relationships, resources, sprint goals and resolving any blockers.",
+    "ftDescription": {
+      "🧠 FraudML:": "Tested and deployed first fraud detection model",
+      "🪪 ID Verification:": "Automated and improved KYC workflows",
+      "🗺️ Roadmap:": "Prioritized key redesign initiatives for 2023",
+      "⚡ Agile:": "Managed sprints, aligned teams, and cleared blockers"
+    },
     "highlightedWords": [],
+    "skills": [
+      "Buy Now Pay Later",
+      "Fraud and Identity",
+      "Product Strategy",
+      "OKRs",
+      "JIRA",
+      "Heap",
+      "Equifax",
+      "Snowflake",
+      "MLOps",
+      "Databricks"
+    ],
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
     "experienceType": "full-time"
@@ -57,8 +74,24 @@
     "title": "Technical Product Manager at FutureFit AI",
     "subtitle": "January 2024 - July 2025",
     "coverImageName": "ffaiFT2.png",
-    "description": "Developed a scalable and cost-effective localization framework enabling product-driven expansion into Quebec and Europe.;Architected abstract entity grouping with scoped permissions and dynamic associations to mirror complex workforce development ecosystems.;Managed the development and release of a lean R&D copilot integrating platform services with an LLM user chat interface.;Authored an enriched data dictionary comprising of attributes across services and databases, integral to technical discovery.",
-    "highlightedWords": ["localization"],
+    "ftDescription": {
+      "🤖 LLM:": "Enhanced data processing and pipelines with reasoning",
+      "🌐 Localization:": "Extended across 4 languages within 2 months",
+      "💾 Permissions:": "Designed scoped groups for multi-org workflows",
+      "⚒️ Integrations:": "Coordinated 3rd-party systems and stakeholders"
+    },
+    "highlightedWords": [],
+    "skills": [
+      "Workforce and Economic Development",
+      "Access and Reach",
+      "LLM",
+      "Notion",
+      "Figma",
+      "React",
+      "AWS",
+      "REST API",
+      "MongoDB"
+    ],
     "overlayTitle": "Learn more about FutureFit AI",
     "link": "https://www.futurefit.ai",
     "experienceType": "full-time"
