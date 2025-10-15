@@ -16,30 +16,36 @@
             />
           </BCol>
           <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
-            <BCardBody>
+            <BCardBody class="centerCardContent">
+              <!-- <BCardBody> -->
               <p class="cardTitle removeMargin">
                 {{ currentExperienceDetails.title }}
               </p>
               <p class="cardSubtitle">
                 {{ currentExperienceDetails.subtitle }}
               </p>
+              <p class="skillsList">
+                <span
+                  v-for="(skill, index) in currentExperienceDetails.skills"
+                  :key="index"
+                  class="highlightedPill cardParagraph"
+                >
+                  {{ skill }}
+                </span>
+              </p>
               <div v-if="isExperienceFT" class="ftPosition">
                 <ul>
                   <li
                     v-for="(
-                      ftDescriptionItem, index
-                    ) in cachedParsedFTDescription"
-                    :key="index"
+                      contribution, project
+                    ) in currentExperienceDetails.ftDescription"
+                    :key="project"
                   >
-                    <p class="cardParagraph">{{ ftDescriptionItem }}</p>
+                    <p class="cardParagraph">
+                      <strong>{{ project }}</strong> {{ contribution }}
+                    </p>
                   </li>
                 </ul>
-              </div>
-              <div v-else class="internPosition">
-                <p class="cardParagraph">
-                  <!-- Inject highlighted html here if used !-->
-                  {{ currentExperienceDetails.description }}
-                </p>
               </div>
             </BCardBody>
           </BCol>
@@ -85,16 +91,6 @@ export default defineComponent({
     //   );
     // });
 
-    // Method to parse FT description
-    const parsedFTDescription = computed((): string[] => {
-      return currentExperienceDetails.value?.description.split(";") || [];
-    });
-
-    // Cache the parsed FT description
-    const cachedParsedFTDescription = computed(() => {
-      return parsedFTDescription.value.slice();
-    });
-
     // Method to highlight certain words (also need to remove scoped from style tag)
     // const highlightedText = (text: string): string => {
     //   let highlightedText: string = text;
@@ -131,9 +127,7 @@ export default defineComponent({
       // highlightedText,
       currentExperienceDetails,
       isExperienceFT,
-      parsedFTDescription,
       visitLink,
-      cachedParsedFTDescription,
     };
   },
 });
@@ -161,6 +155,13 @@ export default defineComponent({
 .customCard:hover .viewProjectOverlay {
   opacity: 1;
 }
+.centerCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
 .viewProjectOverlay {
   position: absolute;
   left: 0%;
@@ -185,9 +186,12 @@ export default defineComponent({
   }
 }
 .ftPosition {
+  margin-top: 0.5rem;
   ul {
     padding-left: 0;
-    list-style: decimal;
+    list-style: disc;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
     ::marker {
       font-size: 1.3vw;
       @media (max-width: $screen-md) {
@@ -207,11 +211,23 @@ export default defineComponent({
     margin-bottom: 0.5rem;
     line-height: inherit;
   }
-  // .highlighted {
-  //   color: $offWhiteColor;
-  //   background-color: $dolphinBlueColor; /* You can change this color */
-  //   border-radius: 25px;
-  //   padding: 1.5px 7.5px;
-  // }
+  @media (max-width: $screen-md) {
+    display: none;
+  }
+}
+// :deep(highlighted) - if you want to pierce scope
+.highlightedPill {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 25px;
+  padding: 1.5px 7.5px;
+}
+.skillsList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25em;
+}
+.skillsList .highlightedPill {
+  white-space: nowrap;
 }
 </style>
