@@ -51,7 +51,7 @@
       "🧠 FraudML:": "Tested and deployed first fraud detection model",
       "🪪 ID Verification:": "Automated and improved KYC workflows",
       "🗺️ Roadmap:": "Prioritized key redesign initiatives for 2023",
-      "⚡ Agile:": "Managed sprints, aligned teams, and cleared blockers"
+      "⚡ Agile:": "Managed sprints, team goals, and cleared blockers"
     },
     "highlightedWords": [],
     "skills": [
@@ -61,10 +61,9 @@
       "OKRs",
       "JIRA",
       "Heap",
-      "Equifax",
       "Snowflake",
-      "MLOps",
-      "Databricks"
+      "SQL",
+      "MLOps"
     ],
     "overlayTitle": "Learn more about Uplift",
     "link": "https://www.uplift.com",
@@ -75,10 +74,10 @@
     "subtitle": "January 2024 - July 2025",
     "coverImageName": "ffaiFT2.png",
     "ftDescription": {
-      "🤖 LLM:": "Enhanced data processing and pipelines with reasoning",
-      "🌐 Localization:": "Extended across 4 languages within 2 months",
-      "💾 Permissions:": "Designed scoped groups for multi-org workflows",
-      "⚒️ Integrations:": "Coordinated 3rd-party systems and stakeholders"
+      "🤖 AI:": "Enhanced data pipelines with LLM reasoning",
+      "🌐 Localization:": "Launched 4-language expansion in 2 months",
+      "💾 Permissions:": "Scoped groups for multi-org workflows",
+      "⚒️ REST Integrations:": "Directed 3rd party data connections"
     },
     "highlightedWords": [],
     "skills": [
@@ -87,10 +86,9 @@
       "LLM",
       "Notion",
       "Figma",
-      "React",
+      "MongoDB",
       "AWS",
-      "REST API",
-      "MongoDB"
+      "Node.js"
     ],
     "overlayTitle": "Learn more about FutureFit AI",
     "link": "https://www.futurefit.ai",
