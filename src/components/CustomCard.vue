@@ -4,7 +4,12 @@
       <BCard
         no-body
         class="customCard cursorPointer h-100 overflow-hidden"
-        @click="visitLink(currentExperienceDetails.link)"
+        @pointerdown="onPointerDown"
+        @pointermove="onPointerMove"
+        @pointerup="onPointerUp"
+        @pointercancel="onPointerUp"
+        @pointerleave="onPointerUp"
+        @click="onClick"
       >
         <BRow class="g-0">
           <!-- The image is displayed on the left side for full-time experiences !-->
@@ -84,6 +89,40 @@ export default defineComponent({
     const currentExperienceDetails = ref<ExperienceType | null>(null);
     const isExperienceFT = ref<boolean>(false);
 
+    let startX = 0;
+    let startY = 0;
+    const DRAG_THRESHOLD = 8; // px
+
+    const onPointerDown = (e: PointerEvent) => {
+      startX = e.clientX;
+      startY = e.clientY;
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      const dx = Math.abs(e.clientX - startX);
+      const dy = Math.abs(e.clientY - startY);
+
+      if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
+        //its a drag event
+        return;
+      }
+    };
+
+    const onPointerUp = () => {
+      // no-op, click handler decides
+    };
+
+    const onClick = (e: PointerEvent) => {
+      const dx = Math.abs(e.clientX - startX);
+      const dy = Math.abs(e.clientY - startY);
+      if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
+        //was a drag, not a click
+        return;
+      }
+      //legit click
+      visitLink(currentExperienceDetails.value?.link || ``);
+    };
+
     // Computed
     // const computedImageSrc = computed(() => {
     //   return getDynamicImageUrl(
@@ -128,6 +167,10 @@ export default defineComponent({
       currentExperienceDetails,
       isExperienceFT,
       visitLink,
+      onPointerDown,
+      onPointerMove,
+      onPointerUp,
+      onClick,
     };
   },
 });

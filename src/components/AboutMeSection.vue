@@ -3,7 +3,7 @@
     <BRow class="aboutMeDescriptionContainer">
       <BCol cols="12" lg="6">
         <BRow>
-          <BCol cols="12" class="componentTitleContainer">
+          <BCol cols="12" class="componentSubtitleContainer">
             <p class="componentTitle removeMargin">This is Me</p>
           </BCol>
         </BRow>
