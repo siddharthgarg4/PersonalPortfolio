@@ -6,8 +6,6 @@
           <BCol cols="12" class="componentSubtitleContainer">
             <p class="componentTitle removeMargin">This is Me</p>
           </BCol>
-        </BRow>
-        <BRow>
           <BCol cols="12">
             <p class="aboutMeDescription removeMargin">
               <!-- 1. Intro -->
