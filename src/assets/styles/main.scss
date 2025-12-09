@@ -31,9 +31,18 @@
     text-align: center;
   }
 }
+.componentTitleContainer {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
 .componentSubtitleContainer {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.componentCarouselTitleContainer {
+  margin-top: 20px;
+  //carousel slides add 10px padding-top
+  margin-bottom: 10px;
 }
 .aboutMeDescription {
   font-weight: 400;
@@ -73,6 +82,26 @@
   @media (max-width: $screen-md) {
     font-size: 3.4vw;
   }
+}
+.cardContainer,
+.carouselContainer {
+  margin-bottom: 25px;
+}
+.paddingForCarouselNav {
+  padding-bottom: 30px;
+}
+//MARK: carousel navigation customization
+.carousel__prev {
+  left: -40px !important;
+}
+.carousel__next {
+  right: -40px !important;
+}
+.carousel__slide {
+  padding-left: calc(var(--bs-gutter-x) * 0.5) !important;
+  padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 .cursorPointer {
   cursor: pointer;

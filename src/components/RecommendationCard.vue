@@ -1,37 +1,39 @@
 <template>
   <BContainer fluid class="removePadding h-100">
-    <div v-if="currentRecommendationDetails" class="h-100">
-      <BCard no-body class="recommendationCard h-100 cursorPointer">
-        <BRow class="g-0">
-          <!-- The image is displayed on the left side for smaller sizes !-->
-          <BCol
-            cols="3"
-            lg="12"
-            class="d-flex justify-content-center align-items-center"
-          >
-            <BCardImg
-              :src="`/images/${currentRecommendationDetails.recommenderImage}`"
-              :alt="currentRecommendationDetails.recommenderName"
-              class="recommendationCardImg"
-              loading="lazy"
-            />
-          </BCol>
-          <BCol cols="9" lg="12">
-            <BCardBody>
-              <p class="cardTitle removeMargin">
-                {{ currentRecommendationDetails.recommenderName }}
-              </p>
-              <p class="cardSubtitle">
-                {{ currentRecommendationDetails.recommenderPosition }}
-              </p>
-              <p class="cardParagraph">
-                {{ currentRecommendationDetails.recommendationDescription }}
-              </p>
-            </BCardBody>
-          </BCol>
-        </BRow>
-      </BCard>
-    </div>
+    <BCard
+      v-if="currentRecommendationDetails"
+      no-body
+      class="recommendationCard h-100 cursorPointer"
+    >
+      <BRow class="g-0">
+        <!-- The image is displayed on the left side for smaller sizes !-->
+        <BCol
+          cols="3"
+          lg="12"
+          class="d-flex justify-content-center align-items-center"
+        >
+          <BCardImg
+            :src="`/images/${currentRecommendationDetails.recommenderImage}`"
+            :alt="currentRecommendationDetails.recommenderName"
+            class="recommendationCardImg"
+            loading="lazy"
+          />
+        </BCol>
+        <BCol cols="9" lg="12">
+          <BCardBody>
+            <p class="cardTitle removeMargin">
+              {{ currentRecommendationDetails.recommenderName }}
+            </p>
+            <p class="cardSubtitle">
+              {{ currentRecommendationDetails.recommenderPosition }}
+            </p>
+            <p class="cardParagraph">
+              {{ currentRecommendationDetails.recommendationDescription }}
+            </p>
+          </BCardBody>
+        </BCol>
+      </BRow>
+    </BCard>
     <div v-else class="h-100">
       <p>No recommendation details found.</p>
     </div>
@@ -91,17 +93,11 @@ export default defineComponent({
   background-color: $lightWhiteColor;
   border: none;
   align-items: center;
-  &:hover {
-    box-shadow: $dolphinBlueColor 0px 5px 10px;
-    -webkit-transform: translate3d(0px, -5px, 0px);
-    -moz-transform: translate3d(0px, -5px, 0px);
-    -ms-transform: translate3d(0px, -5px, 0px);
-    -o-transform: translate3d(0px, -5px, 0px);
-    transform: translate3d(0px, -5px, 0px);
 
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    transition: all 500ms ease;
+  transition: transform 0.5s ease;
+  &:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow($dolphinBlueColor 0px 5px 5px);
   }
   @media (max-width: $screen-md) {
     justify-content: center;

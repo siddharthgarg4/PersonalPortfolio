@@ -22,12 +22,12 @@ $screen-lg: 1199px;
 
 //Mark: carousel component style variables
 :root {
+  //vc-navigation
+  --vc-nav-width: 35px;
+  --vc-nav-height: 35px;
   --vc-nav-color: #{$dolphinBlueColor};
-  --vc-pgn-background-color: #{$offWhiteColor};
+  --vc-nav-color-hover: rgba(0, 108, 147, 0.75);
+  //vc-pagination
+  --vc-pgn-background-color: rgba(0, 108, 147, 0.5);
   --vc-pgn-active-color: #{$dolphinBlueColor};
-  // adding 10px to the margin for recommendation card effect
-  --vc-pgn-margin: 16px 5px;
-  @media (max-width: $screen-md) {
-    --vc-pgn-margin: 6px 5px;
-  }
 }

@@ -1,6 +1,6 @@
 <template>
   <BContainer fluid class="removePadding h-100">
-    <div v-if="currentExperienceDetails">
+    <div v-if="currentExperienceDetails" class="h-100">
       <BCard
         no-body
         class="customCard cursorPointer h-100 overflow-hidden"
@@ -64,7 +64,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, computed } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 // Type-only import for PropType
 import type { PropType } from "vue";
 // Import content for cards
