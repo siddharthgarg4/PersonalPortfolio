@@ -13,8 +13,8 @@
         </p>
       </BCol>
     </BRow>
-    <BRow class="contactIconContainer">
-      <BCol>
+    <BRow class="contactIconContainer d-flex justify-content-center">
+      <BCol class="text-center">
         <img
           src="/images/linkedinContact.png"
           class="img-fluid contactIcon cursorPointer"

@@ -1,6 +1,30 @@
 @use "@/assets/styles/variables.scss" as *;
 @use "@/assets/styles/fonts.scss" as *;
 
+//MARK: global styles
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+html {
+  scroll-behavior: smooth;
+}
+#app {
+  // backup font styles
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Nunito", sans-serif;
+  color: $darkBlackColor;
+  // backup background color
+  background-color: $lightWhiteColor;
+}
+
 .removePadding {
   padding: 0;
 }

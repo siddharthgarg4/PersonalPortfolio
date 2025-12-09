@@ -30,7 +30,7 @@
           </BCol>
         </BRow>
       </BCol>
-      <BCol lg="6" class="extraPadding">
+      <BCol lg="6" class="extraPadding d-flex justify-content-center">
         <img class="img-responsive fitImage" src="@/assets/coverFinal.svg" />
       </BCol>
     </BRow>
