@@ -1,68 +1,67 @@
 <template>
   <BContainer fluid class="removePadding h-100">
-    <div v-if="currentExperienceDetails" class="h-100">
-      <BCard
-        no-body
-        class="customCard cursorPointer h-100 overflow-hidden"
-        @pointerdown="onPointerDown"
-        @pointermove="onPointerMove"
-        @pointerup="onPointerUp"
-        @pointercancel="onPointerUp"
-        @pointerleave="onPointerUp"
-        @click="onClick"
-      >
-        <BRow class="g-0">
-          <!-- The image is displayed on the left side for full-time experiences !-->
-          <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
-            <BCardImg
-              :src="`/images/${currentExperienceDetails.coverImageName}`"
-              :alt="currentExperienceDetails.title"
-              class="rounded-0 h-100"
-            />
-          </BCol>
-          <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
-            <BCardBody class="centerCardContent">
-              <!-- <BCardBody> -->
-              <p class="cardTitle removeMargin">
-                {{ currentExperienceDetails.title }}
-              </p>
-              <p class="cardSubtitle">
-                {{ currentExperienceDetails.subtitle }}
-              </p>
-              <p class="skillsList">
-                <span
-                  v-for="(skill, index) in currentExperienceDetails.skills"
-                  :key="index"
-                  class="highlightedPill cardParagraph"
+    <BCard
+      v-if="currentExperienceDetails"
+      no-body
+      class="customCard cursorPointer h-100"
+      @pointerdown="onPointerDown"
+      @pointermove="onPointerMove"
+      @pointerup="onPointerUp"
+      @pointercancel="onPointerUp"
+      @pointerleave="onPointerUp"
+      @click="onClick"
+    >
+      <BRow class="g-0">
+        <!-- The image is displayed on the left side for full-time experiences !-->
+        <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
+          <BCardImg
+            :src="`/images/${currentExperienceDetails.coverImageName}`"
+            :alt="currentExperienceDetails.title"
+            class="rounded-0 h-100"
+          />
+        </BCol>
+        <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
+          <BCardBody class="centerCardContent">
+            <!-- <BCardBody> -->
+            <p class="cardTitle removeMargin">
+              {{ currentExperienceDetails.title }}
+            </p>
+            <p class="cardSubtitle">
+              {{ currentExperienceDetails.subtitle }}
+            </p>
+            <p class="skillsList">
+              <span
+                v-for="(skill, index) in currentExperienceDetails.skills"
+                :key="index"
+                class="highlightedPill cardParagraph"
+              >
+                {{ skill }}
+              </span>
+            </p>
+            <div v-if="isExperienceFT" class="ftPosition">
+              <ul>
+                <li
+                  v-for="(
+                    contribution, project
+                  ) in currentExperienceDetails.ftDescription"
+                  :key="project"
                 >
-                  {{ skill }}
-                </span>
-              </p>
-              <div v-if="isExperienceFT" class="ftPosition">
-                <ul>
-                  <li
-                    v-for="(
-                      contribution, project
-                    ) in currentExperienceDetails.ftDescription"
-                    :key="project"
-                  >
-                    <p class="cardParagraph">
-                      <strong>{{ project }}</strong> {{ contribution }}
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </BCardBody>
-          </BCol>
-        </BRow>
-        <div class="viewProjectOverlay">
-          <p class="overlayText removeMargin">
-            {{ currentExperienceDetails.overlayTitle }}
-          </p>
-        </div>
-      </BCard>
-    </div>
-    <div v-else>
+                  <p class="cardParagraph">
+                    <strong>{{ project }}</strong> {{ contribution }}
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </BCardBody>
+        </BCol>
+      </BRow>
+      <div class="viewProjectOverlay">
+        <p class="overlayText removeMargin">
+          {{ currentExperienceDetails.overlayTitle }}
+        </p>
+      </div>
+    </BCard>
+    <div v-else class="h-100">
       <p>No experience details found.</p>
     </div>
   </BContainer>
