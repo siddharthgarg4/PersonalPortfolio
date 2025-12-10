@@ -106,11 +106,9 @@ export default defineComponent({
     }
   }
   .cardParagraph {
-    font-size: 1.25vw;
     font-weight: 400;
     text-align: center;
     @media (max-width: $screen-md) {
-      font-size: 3.4vw;
       text-align: left;
     }
   }

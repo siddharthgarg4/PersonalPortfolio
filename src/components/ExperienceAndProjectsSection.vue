@@ -102,7 +102,7 @@ export default defineComponent({
     url("/images/dotBackground-2.png"),
     url("/images/dotBackground-2-flipped.png");
   background-position:
-    top 6.125% left,
+    top 7.5% left,
     top 26.5% right,
     top 54.5% left,
     top 81.5% right;
@@ -112,7 +112,7 @@ export default defineComponent({
   @media (max-width: $screen-md) {
     background-size: 70%;
     background-position:
-      top 2.65% left,
+      top 4.5% left,
       top 28.75% right,
       top 62% left,
       top 78.5% right;

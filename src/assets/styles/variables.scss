@@ -19,6 +19,27 @@ $screen-xs: 575px;
 $screen-sm: 767px;
 $screen-md: 991px;
 $screen-lg: 1199px;
+$font-scale-md: 2.167;
+$font-line-height-scale: 1.25;
+
+//Mark: mixins
+@mixin media-xs-to-md {
+  @media (max-width: $screen-md) and (min-width: $screen-xs) {
+    @content;
+  }
+}
+@mixin responsive-font($default-font-size, $font-weight) {
+  & {
+    font-size: $default-font-size;
+    font-weight: $font-weight;
+    line-height: $default-font-size * $font-line-height-scale;
+  }
+  // scaling font for smaller than med devices
+  @media (max-width: $screen-md) {
+    font-size: $default-font-size * $font-scale-md;
+    line-height: ($default-font-size * $font-scale-md) * $font-line-height-scale;
+  }
+}
 
 //Mark: carousel component style variables
 :root {

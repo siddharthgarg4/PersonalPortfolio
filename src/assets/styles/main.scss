@@ -34,26 +34,28 @@ html {
 .tintFont {
   color: $dolphinBlueColor;
 }
-.coverTitle {
-  padding-bottom: 1%;
-  font-size: 3.125vw;
-  font-weight: 400;
+.responsiveTextAlign {
   text-align: start;
   @media (max-width: $screen-md) {
-    font-size: 6.7vw;
     text-align: center;
   }
 }
+.coverTitle {
+  @extend .responsiveTextAlign;
+  @include responsive-font(2.8vw, 400);
+}
+.coverPara {
+  // margin-bottom: 10%;
+  @extend .responsiveTextAlign;
+  @include responsive-font(1.8vw, 500);
+}
+.coverResume {
+  @extend .responsiveTextAlign;
+  @include responsive-font(1.35vw, 600);
+}
 .componentTitle {
-  font-size: 2.5vw;
-  font-weight: 600;
-  text-align: start;
-  line-height: 3.25vw;
-  @media (max-width: $screen-md) {
-    font-size: 5.58vw;
-    line-height: 6.5vw;
-    text-align: center;
-  }
+  @extend .responsiveTextAlign;
+  @include responsive-font(2.35vw, 600);
 }
 .componentTitleContainer {
   margin-top: 35px;
@@ -69,43 +71,25 @@ html {
   margin-bottom: 10px;
 }
 .aboutMeDescription {
-  font-weight: 400;
-  font-size: 1.25vw;
-  text-align: start;
   white-space: pre-line;
-  line-height: 1.25;
-  @media (max-width: $screen-md) {
-    font-size: 3.8vw;
-  }
   .tintFont {
     font-weight: 600;
   }
+  text-align: start;
+  @include responsive-font(1.2vw, 400);
 }
 .cardTitle {
-  font-weight: 500;
-  font-size: 1.9vw;
   text-align: center;
-  @media (max-width: $screen-md) {
-    font-size: 3.8vw;
-  }
+  @include responsive-font(1.7vw, 500);
 }
 .cardSubtitle {
-  font-size: 1.4vw;
-  font-weight: 600;
   text-align: center;
   color: $dolphinBlueColor;
-  @media (max-width: $screen-md) {
-    font-size: 2.8vw;
-  }
+  @include responsive-font(1.2vw, 600);
 }
 .cardParagraph {
-  font-size: 1.3vw;
-  font-weight: 400;
   text-align: center;
-  line-height: 1.25;
-  @media (max-width: $screen-md) {
-    font-size: 3.4vw;
-  }
+  @include responsive-font(1.25vw, 400);
 }
 .cardContainer,
 .carouselContainer {
@@ -114,6 +98,7 @@ html {
 .paddingForCarouselNav {
   padding-bottom: 30px;
 }
+
 //MARK: carousel navigation customization
 .carousel__prev {
   left: -40px !important;

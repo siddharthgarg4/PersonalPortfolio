@@ -1,5 +1,5 @@
 <template>
-  <BContainer fluid class="removePadding customMenuContainer">
+  <BContainer fluid class="customMenuContainer">
     <BRow class="menu">
       <div
         class="optionContainer coreMenu"
