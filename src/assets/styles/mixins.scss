@@ -1,0 +1,41 @@
+@use "@/assets/styles/variables.scss" as *;
+
+//MARK: mixins
+// @mixin media-xs-to-md {
+//   @media (max-width: $screen-md) and (min-width: $screen-xs) {
+//     @content;
+//   }
+// }
+
+//MARK: scaling factors
+$font-scale-md: 2.167;
+$portrait-font-scale: 2.167;
+$font-line-height-scale: 1.25;
+
+@mixin responsive-font($default-font-size, $font-weight) {
+  & {
+    font-size: $default-font-size;
+    font-weight: $font-weight;
+    line-height: $default-font-size * $font-line-height-scale;
+  }
+  // scaling font for smaller than med devices
+  @media (max-width: $screen-md) {
+    font-size: $default-font-size * $font-scale-md;
+    line-height: ($default-font-size * $font-scale-md) * $font-line-height-scale;
+  }
+}
+
+//MARK: need to clean up this mixin
+@mixin orientation-responsive-font($default-font-size, $font-weight) {
+  & {
+    font-size: $default-font-size;
+    font-weight: $font-weight;
+    line-height: $default-font-size * $font-line-height-scale;
+  }
+  // scaling font for smaller than med devices
+  @media (orientation: portrait) {
+    font-size: $default-font-size * $portrait-font-scale;
+    line-height: ($default-font-size * $portrait-font-scale) *
+      $font-line-height-scale;
+  }
+}

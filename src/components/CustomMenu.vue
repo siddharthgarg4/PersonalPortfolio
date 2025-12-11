@@ -1,46 +1,44 @@
 <template>
-  <BContainer fluid class="customMenuContainer">
-    <BRow class="menu">
+  <div class="customMenuContainer">
+    <div
+      class="optionContainer coreMenu"
+      @click="toggleMenu"
+      :class="{ active: isActivated }"
+    >
+      <div class="bar top"></div>
+      <div class="bar center"></div>
+      <div class="bar bottom"></div>
+    </div>
+    <div class="subMenu" :class="{ active: isActivated }">
+      <div class="optionContainer" @click="scrollToSection('coverSection')">
+        <img src="/images/homeNav.png" alt="Home" class="img-fluid navIcon" />
+      </div>
       <div
-        class="optionContainer coreMenu"
-        @click="toggleMenu"
-        :class="{ active: isActivated }"
+        class="optionContainer"
+        @click="scrollToSection('experienceSection')"
       >
-        <div class="bar top"></div>
-        <div class="bar center"></div>
-        <div class="bar bottom"></div>
+        <img
+          src="/images/projectsNav.png"
+          alt="Experience"
+          class="img-fluid navIcon"
+        />
       </div>
-      <div class="subMenu" :class="{ active: isActivated }">
-        <div class="optionContainer" @click="scrollToSection('coverSection')">
-          <img src="/images/homeNav.png" alt="Home" class="img-fluid navIcon" />
-        </div>
-        <div
-          class="optionContainer"
-          @click="scrollToSection('experienceSection')"
-        >
-          <img
-            src="/images/projectsNav.png"
-            alt="Experience"
-            class="img-fluid navIcon"
-          />
-        </div>
-        <div class="optionContainer" @click="scrollToSection('aboutMeSection')">
-          <img
-            src="/images/aboutNav.png"
-            alt="About Me"
-            class="img-fluid navIcon"
-          />
-        </div>
-        <div class="optionContainer" @click="scrollToSection('contactSection')">
-          <img
-            src="/images/contactNav.png"
-            alt="Contact"
-            class="img-fluid navIcon"
-          />
-        </div>
+      <div class="optionContainer" @click="scrollToSection('aboutMeSection')">
+        <img
+          src="/images/aboutNav.png"
+          alt="About Me"
+          class="img-fluid navIcon"
+        />
       </div>
-    </BRow>
-  </BContainer>
+      <div class="optionContainer" @click="scrollToSection('contactSection')">
+        <img
+          src="/images/contactNav.png"
+          alt="Contact"
+          class="img-fluid navIcon"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -73,37 +71,36 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
-.menu {
-  position: relative;
-  border: 1px solid transparent;
-}
 .customMenuContainer {
+  min-width: 35px;
+  width: calc((0.06 * (47.5% - (0.5 * var(--bs-gutter-x)))));
+  aspect-ratio: 1 / 1;
   position: fixed;
-  z-index: 2 !important;
+  // below the loader but above everything else
+  z-index: 9998 !important;
+  @media (orientation: portrait) {
+    width: calc((0.15 * (46.25% - (0.5 * var(--bs-gutter-x)))));
+  }
 }
 .coreMenu {
-  overflow: hidden;
+  // overflow: hidden;
+  height: 100%;
+  width: 100%;
+  position: relative;
 }
 .optionContainer {
   cursor: pointer;
   display: block;
-  height: 50px;
-  width: 50px;
-  margin: 15px 0 0 0;
+  height: 100%;
+  width: 100%;
+  // margin: 15px 0 0 0;
   background: $lightWhiteColor;
-  padding: 0;
-  right: 0;
   border-radius: 50%;
   position: absolute;
-  z-index: 2;
   border: 1px solid $darkBlackColor;
   -webkit-transition: all 500ms ease;
   -moz-transition: all 500ms ease;
   transition: all 500ms ease;
-  @media (max-width: $screen-sm) {
-    height: 35px !important;
-    width: 35px !important;
-  }
   .bar {
     -webkit-transition: all 500ms ease;
     -moz-transition: all 500ms ease;
@@ -168,19 +165,16 @@ export default defineComponent({
   }
 }
 .subMenu {
+  width: 100%;
+  height: 100%;
+  margin-top: 85%;
   position: absolute;
-  right: 0;
   display: none;
-  margin-top: 65px;
-  width: unset;
-  padding: unset;
-  @media (max-width: $screen-sm) {
-    margin-top: 50px;
-  }
   .optionContainer {
     position: relative;
-    margin-top: 0px;
-    margin-bottom: 10px;
+    width: 100%;
+    height: 100%;
+    margin-top: 15%;
   }
   &.active {
     display: block;

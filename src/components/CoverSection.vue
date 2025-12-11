@@ -9,7 +9,7 @@
       </BCol>
     </BRow>
     <BRow class="d-flex align-items-center coverCenter">
-      <BCol cols="12" lg="6">
+      <BCol cols="6" class="flipOnOrientation">
         <p class="coverTitle">Hi 👋🏽 I’m Siddharth</p>
         <p class="coverPara">
           Using
@@ -20,7 +20,7 @@
           In a hurry? Check out my <span class="tintFont">resume</span>.
         </p>
       </BCol>
-      <BCol cols="12" lg="6" class="d-flex justify-content-center">
+      <BCol cols="6" class="d-flex justify-content-center flipOnOrientation">
         <img class="fitImage" src="@/assets/coverFinal.svg" />
       </BCol>
     </BRow>
@@ -113,6 +113,7 @@ export default defineComponent({
 @use "@/assets/styles/variables.scss" as *;
 // @use "@/assets/styles/main.scss" as *;
 .coverContainer {
+  min-height: 100dvh;
   min-height: 100vh;
   padding: 1.5% 2.5%;
   background: linear-gradient(
@@ -120,47 +121,51 @@ export default defineComponent({
     $offWhiteColor 72.5%,
     $dolphinBlueColor 27.5%
   );
-  @media (max-width: $screen-md) {
+  @media (orientation: portrait) {
     background: linear-gradient(
       180deg,
       $offWhiteColor 72.5%,
       $dolphinBlueColor 27.5%
     );
+    padding: 2.5% 3.75%;
   }
 }
 .sgLogo {
-  height: 50px;
-  width: auto;
-  margin: 15px 0 0 0;
-  @media (max-width: $screen-sm) {
-    height: 35px !important;
+  height: auto;
+  width: 6%;
+  min-width: 35px;
+  @media (orientation: portrait) {
+    width: 15% !important;
   }
 }
 .coverCenter {
   flex-grow: 1;
+  @media (orientation: portrait) {
+    flex-direction: column !important; // override Bootstrap horizontal layout
+    justify-content: space-around;
+    // align-items: center !important;
+    .flipOnOrientation {
+      width: 100% !important; // Same as cols="6"
+      align-self: center; // optional, centers them
+    }
+  }
 }
 .fitImage {
-  width: 70%;
+  width: 57.5%;
   height: auto;
   object-fit: contain;
 }
 .solidVerticalLine {
   border-left: 2px solid $dolphinBlueColor;
+  height: 7.5dvh;
   height: 7.5vh;
   margin: 2px;
   display: inline-block;
-  @media (max-width: $screen-md) {
+  @media (orientation: portrait) {
     border-left: 2px solid $offWhiteColor;
+    height: 5dvh;
     height: 5vh;
   }
-}
-.scrollMoreText {
-  display: inline-block;
-  text-align: start;
-  @media (max-width: $screen-md) {
-    color: $offWhiteColor;
-  }
-  @include responsive-font(1.35vw, 600);
 }
 .beforeEnter {
   opacity: 0;

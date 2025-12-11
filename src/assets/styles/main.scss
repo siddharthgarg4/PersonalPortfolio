@@ -1,5 +1,6 @@
 @use "@/assets/styles/variables.scss" as *;
 @use "@/assets/styles/fonts.scss" as *;
+@use "@/assets/styles/mixins.scss" as *;
 
 //MARK: global styles
 html,
@@ -36,22 +37,30 @@ html {
 }
 .responsiveTextAlign {
   text-align: start;
-  @media (max-width: $screen-md) {
+  @media (orientation: portrait) {
     text-align: center;
   }
 }
 .coverTitle {
   @extend .responsiveTextAlign;
-  @include responsive-font(2.8vw, 400);
+  @include orientation-responsive-font(2.8vw, 400);
 }
 .coverPara {
   // margin-bottom: 10%;
   @extend .responsiveTextAlign;
-  @include responsive-font(1.8vw, 500);
+  @include orientation-responsive-font(1.8vw, 500);
 }
 .coverResume {
   @extend .responsiveTextAlign;
-  @include responsive-font(1.35vw, 600);
+  @include orientation-responsive-font(1.35vw, 600);
+}
+.scrollMoreText {
+  display: inline-block;
+  text-align: start;
+  @media (orientation: portrait) {
+    color: $offWhiteColor;
+  }
+  @include orientation-responsive-font(1.35vw, 600);
 }
 .componentTitle {
   @extend .responsiveTextAlign;
