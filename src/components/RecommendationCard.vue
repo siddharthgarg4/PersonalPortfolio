@@ -21,7 +21,7 @@
         </BCol>
         <BCol cols="9" lg="12">
           <BCardBody>
-            <p class="cardTitle removeMargin">
+            <p class="cardTitle">
               {{ currentRecommendationDetails.recommenderName }}
             </p>
             <p class="cardSubtitle">

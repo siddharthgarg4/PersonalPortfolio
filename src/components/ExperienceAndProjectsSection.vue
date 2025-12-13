@@ -2,12 +2,12 @@
   <BContainer class="experienceProjectContainer" fluid>
     <BRow v-animated-scroll>
       <BCol class="componentTitleContainer">
-        <p class="componentTitle removeMargin">Work Experience</p>
+        <p class="componentTitle">Work Experience</p>
       </BCol>
     </BRow>
     <BRow v-animated-scroll>
       <BCol cols="12" class="componentSubtitleContainer">
-        <p class="componentTitle removeMargin">Full-time</p>
+        <p class="componentTitle">Full-time</p>
       </BCol>
       <BCol cols="12" class="cardContainer">
         <customCard experienceName="ffaiFT"></customCard>
@@ -18,7 +18,7 @@
     </BRow>
     <BRow v-animated-scroll class="align-items-stretch">
       <BCol cols="12" class="componentSubtitleContainer">
-        <p class="componentTitle removeMargin">Internship</p>
+        <p class="componentTitle">Internship</p>
       </BCol>
       <BCol cols="12" lg="6" class="cardContainer">
         <customCard experienceName="uplift"></customCard>
@@ -35,7 +35,7 @@
     </BRow>
     <BRow v-animated-scroll>
       <BCol cols="12" class="componentCarouselTitleContainer">
-        <p class="componentTitle removeMargin">Personal Projects</p>
+        <p class="componentTitle">Personal Projects</p>
       </BCol>
       <BCol cols="12" class="removePadding carouselContainer">
         <Carousel v-bind="carouselConfig" class="paddingForCarouselNav">

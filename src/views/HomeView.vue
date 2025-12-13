@@ -11,7 +11,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, computed } from "vue";
+import {
+  defineComponent,
+  ref,
+  computed,
+  onMounted,
+  onBeforeUnmount,
+} from "vue";
 
 export default defineComponent({
   name: "homeView",
@@ -23,6 +29,23 @@ export default defineComponent({
     // Computed
     const shouldStopLoading = computed((): boolean => {
       return isCoverMounted.value && isMinLoadTimeElapsed.value;
+    });
+
+    // Function to set dynamic vh
+    const setInnerVh = () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--inner--vh", `${vh}px`);
+    };
+
+    // Mounted lifecycle
+    onMounted(() => {
+      setInnerVh(); // initial set
+      window.addEventListener("resize", setInnerVh);
+    });
+
+    // Cleanup
+    onBeforeUnmount(() => {
+      window.removeEventListener("resize", setInnerVh);
     });
 
     // Created

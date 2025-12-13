@@ -23,7 +23,7 @@
         <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
           <BCardBody class="centerCardContent">
             <!-- <BCardBody> -->
-            <p class="cardTitle removeMargin">
+            <p class="cardTitle">
               {{ currentExperienceDetails.title }}
             </p>
             <p class="cardSubtitle">

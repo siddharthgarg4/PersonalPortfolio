@@ -25,6 +25,9 @@ html {
   // backup background color
   background-color: $lightWhiteColor;
 }
+// p {
+//   margin: 0px !important;
+// }
 
 .removePadding {
   padding: 0;
@@ -63,6 +66,7 @@ html {
   @include orientation-responsive-font(1.35vw, 600);
 }
 .componentTitle {
+  margin: 0;
   @extend .responsiveTextAlign;
   @include responsive-font(2.35vw, 600);
 }
@@ -88,6 +92,7 @@ html {
   @include responsive-font(1.2vw, 400);
 }
 .cardTitle {
+  margin: 0;
   text-align: center;
   @include responsive-font(1.7vw, 500);
 }

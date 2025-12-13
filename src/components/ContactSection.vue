@@ -2,19 +2,17 @@
   <BContainer class="contactContainer" fluid>
     <BRow>
       <BCol cols="12">
-        <p class="coverTitle removeMargin">Like what you see? Let’s talk.</p>
+        <p class="coverTitle">Like what you see? Let’s talk.</p>
       </BCol>
       <BCol cols="12">
-        <p class="aboutMeDescription">
+        <p class="coverResume">
           <!-- eslint-disable-next-line -->
           <!-- I am currently seeking full-time opportunities starting Spring
           © 2025.<br /> -->
           Made with 🤍 in Toronto
         </p>
       </BCol>
-    </BRow>
-    <BRow class="contactIconContainer d-flex justify-content-center">
-      <BCol class="text-center">
+      <BCol cols="12" class="d-flex justify-content-center iconRow">
         <img
           src="/images/linkedinContact.png"
           class="img-fluid contactIcon cursorPointer"
@@ -23,7 +21,7 @@
         />
         <img
           src="/images/emailContact.png"
-          class="img-fluid contactIcon emailIcon cursorPointer"
+          class="img-fluid contactIcon cursorPointer"
           @click="handleContactLink('email')"
           loading="lazy"
         />
@@ -88,34 +86,34 @@ export default defineComponent({
   background: $dolphinBlueColor;
   padding: 5% 7.5% 5% 7.5%;
   .coverTitle,
-  .aboutMeDescription {
+  .coverResume {
     color: $lightWhiteColor;
     text-align: center;
   }
-  .coverTitle {
-    font-weight: 500;
-    line-height: 3.5vw;
-    @media (max-width: $screen-md) {
-      line-height: 7vw;
-    }
-  }
-  .aboutMeDescription {
-    margin: 15px 0 0 0;
-    font-weight: 500;
+  // .coverTitle {
+  //   font-weight: 500;
+  // }
+  // .coverResume {
+  //   font-weight: 500;
+  // }
+}
+// .contactIconContainer {
+//   justify-content: space-around;
+//   flex-direction: row !important;
+// }
+.iconRow {
+  gap: 3.25%;
+  @media (orientation: portrait) {
+    gap: 6.5%;
   }
 }
 .contactIcon {
-  height: auto;
-  width: 3vw;
-  margin: 30px 2.5vw 15px 2.5vw;
-  @media (max-width: $screen-lg) and (min-width: $screen-sm) {
-    width: 50px;
+  min-width: 35px;
+  width: 3.25%;
+  object-fit: contain;
+  @media (orientation: portrait) {
+    width: 6.5% !important;
   }
-  @media (max-width: $screen-sm) and (min-width: $screen-xs) {
-    width: 40px;
-  }
-  @media (max-width: $screen-xs) {
-    width: 30px;
-  }
+  // margin: 30px 2.5vw 15px 2.5vw;
 }
 </style>

@@ -9,7 +9,7 @@
       </BCol>
     </BRow>
     <BRow class="d-flex align-items-center coverCenter">
-      <BCol cols="6" class="flipOnOrientation">
+      <BCol cols="6" class="fullWidthOnPortrait">
         <p class="coverTitle">Hi 👋🏽 I’m Siddharth</p>
         <p class="coverPara">
           Using
@@ -20,7 +20,7 @@
           In a hurry? Check out my <span class="tintFont">resume</span>.
         </p>
       </BCol>
-      <BCol cols="6" class="d-flex justify-content-center flipOnOrientation">
+      <BCol cols="6" class="d-flex justify-content-center fullWidthOnPortrait">
         <img class="fitImage" src="@/assets/coverFinal.svg" />
       </BCol>
     </BRow>
@@ -113,9 +113,11 @@ export default defineComponent({
 @use "@/assets/styles/variables.scss" as *;
 // @use "@/assets/styles/main.scss" as *;
 .coverContainer {
-  min-height: 100dvh;
-  min-height: 100vh;
-  padding: 1.5% 2.5%;
+  height: calc(var(--inner--vh) * 100);
+  width: 100dvw;
+  width: 100vw;
+  // min-height: 100vh;
+  padding: 1.5% 3.75%;
   background: linear-gradient(
     90deg,
     $offWhiteColor 72.5%,
@@ -127,7 +129,7 @@ export default defineComponent({
       $offWhiteColor 72.5%,
       $dolphinBlueColor 27.5%
     );
-    padding: 2.5% 3.75%;
+    padding: 3.75%;
   }
 }
 .sgLogo {
@@ -135,24 +137,22 @@ export default defineComponent({
   width: 6%;
   min-width: 35px;
   @media (orientation: portrait) {
-    width: 15% !important;
+    width: 12% !important;
   }
 }
 .coverCenter {
   flex-grow: 1;
   @media (orientation: portrait) {
-    flex-direction: column !important; // override Bootstrap horizontal layout
+    // override Bootstrap horizontal layout
+    flex-direction: column !important;
     justify-content: space-around;
-    // align-items: center !important;
-    .flipOnOrientation {
-      width: 100% !important; // Same as cols="6"
-      align-self: center; // optional, centers them
+    .fullWidthOnPortrait {
+      width: 100% !important;
     }
   }
 }
 .fitImage {
   width: 57.5%;
-  height: auto;
   object-fit: contain;
 }
 .solidVerticalLine {
@@ -167,15 +167,15 @@ export default defineComponent({
     height: 5vh;
   }
 }
-.beforeEnter {
-  opacity: 0;
-  z-index: 0;
-  transform: translateY(100px);
-  transition: all 2s ease-out;
-}
-.enter {
-  opacity: 1;
-  z-index: 1;
-  transform: translateY(0px);
-}
+// .beforeEnter {
+//   opacity: 0;
+//   z-index: 0;
+//   transform: translateY(100px);
+//   transition: all 2s ease-out;
+// }
+// .enter {
+//   opacity: 1;
+//   z-index: 1;
+//   transform: translateY(0px);
+// }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="customMenuContainer">
     <div
-      class="optionContainer coreMenu"
+      class="optionContainer"
       @click="toggleMenu"
       :class="{ active: isActivated }"
     >
@@ -73,41 +73,29 @@ export default defineComponent({
 @use "@/assets/styles/variables.scss" as *;
 .customMenuContainer {
   min-width: 35px;
-  width: calc((0.06 * (47.5% - (0.5 * var(--bs-gutter-x)))));
+  width: calc(0.06 * (47.5% - (0.5 * var(--bs-gutter-x))));
   aspect-ratio: 1 / 1;
   position: fixed;
   // below the loader but above everything else
   z-index: 9998 !important;
   @media (orientation: portrait) {
-    width: calc((0.15 * (46.25% - (0.5 * var(--bs-gutter-x)))));
+    width: calc(0.12 * (46.25% - (0.5 * var(--bs-gutter-x))));
   }
-}
-.coreMenu {
-  // overflow: hidden;
-  height: 100%;
-  width: 100%;
-  position: relative;
 }
 .optionContainer {
   cursor: pointer;
-  display: block;
+  // display: block;
   height: 100%;
   width: 100%;
-  // margin: 15px 0 0 0;
   background: $lightWhiteColor;
   border-radius: 50%;
-  position: absolute;
   border: 1px solid $darkBlackColor;
-  -webkit-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
   transition: all 500ms ease;
   .bar {
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    transition: all 500ms ease;
+    position: absolute;
     height: 1px;
     background: $darkBlackColor;
-    position: absolute;
+    transition: all 500ms ease;
   }
   .top {
     top: 35%;
@@ -136,30 +124,12 @@ export default defineComponent({
     }
   }
   &.active {
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
     transform: scale(0.8);
     .center {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
       transform: rotate(-45deg);
     }
-    .top {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
+    .top,
     .bottom {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
       transform: rotate(45deg);
     }
   }
@@ -167,13 +137,9 @@ export default defineComponent({
 .subMenu {
   width: 100%;
   height: 100%;
-  margin-top: 85%;
-  position: absolute;
   display: none;
   .optionContainer {
     position: relative;
-    width: 100%;
-    height: 100%;
     margin-top: 15%;
   }
   &.active {
@@ -182,12 +148,15 @@ export default defineComponent({
 }
 .navIcon {
   position: absolute;
-  right: 20%;
-  top: 20%;
   height: 60%;
   width: 60%;
-  -webkit-user-drag: none;
+  // center icon
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // prevent user drag
   user-select: none;
+  -webkit-user-drag: none;
   // ensures hover/clicks still work
   pointer-events: auto;
 }

@@ -4,10 +4,10 @@
       <BCol cols="12" lg="6">
         <BRow>
           <BCol cols="12" class="componentSubtitleContainer">
-            <p class="componentTitle removeMargin">This is Me</p>
+            <p class="componentTitle">This is Me</p>
           </BCol>
           <BCol cols="12">
-            <p class="aboutMeDescription removeMargin">
+            <p class="aboutMeDescription">
               <!-- 1. Intro -->
               Hello again! 👋🏽
               <br /><br />
@@ -81,7 +81,7 @@
     </BRow>
     <BRow>
       <BCol cols="12" class="componentCarouselTitleContainer">
-        <p class="componentTitle removeMargin">Recommendations</p>
+        <p class="componentTitle">Recommendations</p>
       </BCol>
       <BCol cols="12" class="removePadding carouselContainer">
         <Carousel v-bind="carouselConfig" class="paddingForCarouselNav">
