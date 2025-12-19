@@ -25,16 +25,7 @@ html {
   // backup background color
   background-color: $lightWhiteColor;
 }
-// p {
-//   margin: 0px !important;
-// }
-
-.removePadding {
-  padding: 0;
-}
-.removeMargin {
-  margin: 0;
-}
+//MARK: font styles
 .tintFont {
   color: $dolphinBlueColor;
 }
@@ -58,7 +49,7 @@ html {
   @include orientation-responsive-font(1.35vw, 600);
 }
 .scrollMoreText {
-  display: inline-block;
+  margin: 0;
   text-align: start;
   @media (orientation: portrait) {
     color: $offWhiteColor;
@@ -70,25 +61,13 @@ html {
   @extend .responsiveTextAlign;
   @include responsive-font(2.35vw, 600);
 }
-.componentTitleContainer {
-  margin-top: 35px;
-  margin-bottom: 35px;
-}
-.componentSubtitleContainer {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.componentCarouselTitleContainer {
-  margin-top: 20px;
-  //carousel slides add 10px padding-top
-  margin-bottom: 10px;
-}
 .aboutMeDescription {
+  margin: 0;
+  text-align: start;
   white-space: pre-line;
   .tintFont {
     font-weight: 600;
   }
-  text-align: start;
   @include responsive-font(1.2vw, 400);
 }
 .cardTitle {
@@ -105,26 +84,39 @@ html {
   text-align: center;
   @include responsive-font(1.25vw, 400);
 }
+.overlayText {
+  margin: 0;
+  color: $lightWhiteColor;
+  //safety css
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @include responsive-font(2.5vw, 400);
+}
+.componentContainerPadding {
+  padding: 5% 7.5% 5% 7.5%;
+}
+.componentTitleContainer {
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.componentSubtitleContainer {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .cardContainer,
 .carouselContainer {
   margin-bottom: 25px;
+  padding: 0;
 }
 .paddingForCarouselNav {
   padding-bottom: 30px;
 }
-
 //MARK: carousel navigation customization
 .carousel__prev {
   left: -40px !important;
 }
 .carousel__next {
   right: -40px !important;
-}
-.carousel__slide {
-  padding: 10px calc(var(--bs-gutter-x) * 0.5) !important;
-}
-.cursorPointer {
-  cursor: pointer;
 }
 // component animation
 .before-enter {

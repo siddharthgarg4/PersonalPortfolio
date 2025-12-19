@@ -1,5 +1,8 @@
 <template>
-  <BContainer class="experienceProjectContainer" fluid>
+  <BContainer
+    class="experienceProjectContainer componentContainerPadding"
+    fluid
+  >
     <BRow v-animated-scroll>
       <BCol class="componentTitleContainer">
         <p class="componentTitle">Work Experience</p>
@@ -16,9 +19,9 @@
         <customCard experienceName="upliftFT"></customCard>
       </BCol>
     </BRow>
-    <BRow v-animated-scroll class="align-items-stretch">
+    <BRow v-animated-scroll>
       <BCol cols="12" class="componentSubtitleContainer">
-        <p class="componentTitle">Internship</p>
+        <p class="componentTitle">Internships</p>
       </BCol>
       <BCol cols="12" lg="6" class="cardContainer">
         <customCard experienceName="uplift"></customCard>
@@ -34,10 +37,10 @@
       </BCol>
     </BRow>
     <BRow v-animated-scroll>
-      <BCol cols="12" class="componentCarouselTitleContainer">
-        <p class="componentTitle">Personal Projects</p>
+      <BCol cols="12" class="componentSubtitleContainer">
+        <p class="componentTitle">Projects</p>
       </BCol>
-      <BCol cols="12" class="removePadding carouselContainer">
+      <BCol cols="12" class="carouselContainer">
         <Carousel v-bind="carouselConfig" class="paddingForCarouselNav">
           <Slide v-for="(project, i) in projects" :key="i">
             <customCard :experienceName="project"></customCard>
@@ -101,14 +104,13 @@ export default defineComponent({
     url("/images/dotBackground-2-flipped.png"),
     url("/images/dotBackground-2.png"),
     url("/images/dotBackground-2-flipped.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
   background-position:
     top 7.5% left,
     top 26.5% right,
     top 54.5% left,
     top 81.5% right;
-  padding: 5% 7.5% 5% 7.5%;
-  background-repeat: no-repeat;
-  background-size: 30%;
   @media (max-width: $screen-md) {
     background-size: 70%;
     background-position:

@@ -1,41 +1,36 @@
 <template>
-  <BContainer class="d-flex flex-column coverContainer" fluid>
+  <BContainer class="coverContainer" fluid>
     <BRow>
-      <BCol class="d-flex justify-content-start">
+      <BCol class="logoContainer">
         <img class="sgLogo" src="@/assets/sgLogo.png" />
       </BCol>
-      <BCol class="d-flex justify-content-end">
+      <BCol class="menuContainer">
         <customMenu></customMenu>
       </BCol>
     </BRow>
-    <BRow class="d-flex align-items-center coverCenter">
-      <BCol cols="6" class="fullWidthOnPortrait">
+    <BRow class="coverCenter">
+      <BCol class="coverTextContainer">
         <p class="coverTitle">Hi 👋🏽 I’m Siddharth</p>
         <p class="coverPara">
           Using
           <span class="tintFont">{{ currentHighlightedKeySkill }}</span>
           to translate problems into empowering, empathy-driven solutions.
         </p>
-        <p class="cursorPointer coverResume" @click="handleVisitResume">
+        <p class="viewResumePointer coverResume" @click="handleVisitResume">
           In a hurry? Check out my <span class="tintFont">resume</span>.
         </p>
       </BCol>
-      <BCol cols="6" class="d-flex justify-content-center fullWidthOnPortrait">
-        <img class="fitImage" src="@/assets/coverFinal.svg" />
+      <BCol class="coverImageContainer">
+        <img class="coverImage" src="@/assets/coverFinal.svg" />
       </BCol>
     </BRow>
     <BRow>
-      <BCol class="d-flex flex-column">
-        <div
-          class="cursorPointer solidVerticalLine"
-          @click="visitSection('experienceSection')"
-        ></div>
-        <p
-          class="cursorPointer removeMargin scrollMoreText"
-          @click="visitSection('experienceSection')"
-        >
-          Scroll to Learn More
-        </p>
+      <BCol
+        class="scrollMoreContainer"
+        @click="visitSection('experienceSection')"
+      >
+        <div class="solidVerticalLine"></div>
+        <p class="scrollMoreText">Scroll to Learn More</p>
       </BCol>
     </BRow>
   </BContainer>
@@ -113,6 +108,8 @@ export default defineComponent({
 @use "@/assets/styles/variables.scss" as *;
 // @use "@/assets/styles/main.scss" as *;
 .coverContainer {
+  display: flex;
+  flex-direction: column;
   height: calc(var(--inner--vh) * 100);
   width: 100dvw;
   width: 100vw;
@@ -132,6 +129,10 @@ export default defineComponent({
     padding: 3.75%;
   }
 }
+.logoContainer {
+  display: flex;
+  justify-content: start;
+}
 .sgLogo {
   height: auto;
   width: 6%;
@@ -140,42 +141,54 @@ export default defineComponent({
     width: 12% !important;
   }
 }
+.menuContainer {
+  display: flex;
+  justify-content: end;
+}
 .coverCenter {
+  display: flex;
   flex-grow: 1;
+  //safety css
+  justify-content: center;
   @media (orientation: portrait) {
     // override Bootstrap horizontal layout
     flex-direction: column !important;
-    justify-content: space-around;
-    .fullWidthOnPortrait {
-      width: 100% !important;
-    }
   }
 }
-.fitImage {
+.coverTextContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  @media (orientation: portrait) {
+    align-items: center;
+  }
+}
+.coverImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.viewResumePointer {
+  cursor: pointer;
+}
+.coverImage {
   width: 57.5%;
   object-fit: contain;
 }
+.scrollMoreContainer {
+  cursor: pointer;
+}
 .solidVerticalLine {
+  // margin to align with text
+  margin-bottom: 2px;
+  margin-left: 2px;
+  // vertical border - so entire width is clickable
   border-left: 2px solid $dolphinBlueColor;
-  height: 7.5dvh;
-  height: 7.5vh;
-  margin: 2px;
-  display: inline-block;
+  height: calc(var(--inner--vh) * 7.5);
   @media (orientation: portrait) {
-    border-left: 2px solid $offWhiteColor;
-    height: 5dvh;
-    height: 5vh;
+    border-left: 1.5px solid $offWhiteColor;
+    height: calc(var(--inner--vh) * 5);
   }
 }
-// .beforeEnter {
-//   opacity: 0;
-//   z-index: 0;
-//   transform: translateY(100px);
-//   transition: all 2s ease-out;
-// }
-// .enter {
-//   opacity: 1;
-//   z-index: 1;
-//   transform: translateY(0px);
-// }
 </style>

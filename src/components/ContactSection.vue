@@ -1,5 +1,5 @@
 <template>
-  <BContainer class="contactContainer" fluid>
+  <BContainer class="contactContainer componentContainerPadding" fluid>
     <BRow>
       <BCol cols="12">
         <p class="coverTitle">Like what you see? Let’s talk.</p>
@@ -7,27 +7,27 @@
       <BCol cols="12">
         <p class="coverResume">
           <!-- eslint-disable-next-line -->
-          <!-- I am currently seeking full-time opportunities starting Spring
-          © 2025.<br /> -->
+          I'm seeking full-time opportunities starting winter 2026.<br />
+          <!-- © copyright icon -->
           Made with 🤍 in Toronto
         </p>
       </BCol>
-      <BCol cols="12" class="d-flex justify-content-center iconRow">
+      <BCol cols="12" class="iconRow">
         <img
           src="/images/linkedinContact.png"
-          class="img-fluid contactIcon cursorPointer"
+          class="img-fluid contactIcon"
           @click="handleContactLink('linkedin')"
           loading="lazy"
         />
         <img
           src="/images/emailContact.png"
-          class="img-fluid contactIcon cursorPointer"
+          class="img-fluid contactIcon"
           @click="handleContactLink('email')"
           loading="lazy"
         />
         <img
           src="/images/githubContact.png"
-          class="img-fluid contactIcon cursorPointer"
+          class="img-fluid contactIcon"
           @click="handleContactLink('github')"
           loading="lazy"
         />
@@ -84,36 +84,27 @@ export default defineComponent({
 @use "@/assets/styles/variables.scss" as *;
 .contactContainer {
   background: $dolphinBlueColor;
-  padding: 5% 7.5% 5% 7.5%;
   .coverTitle,
   .coverResume {
     color: $lightWhiteColor;
     text-align: center;
   }
-  // .coverTitle {
-  //   font-weight: 500;
-  // }
-  // .coverResume {
-  //   font-weight: 500;
-  // }
 }
-// .contactIconContainer {
-//   justify-content: space-around;
-//   flex-direction: row !important;
-// }
 .iconRow {
+  display: flex;
+  justify-content: center;
   gap: 3.25%;
   @media (orientation: portrait) {
     gap: 6.5%;
   }
 }
 .contactIcon {
+  cursor: pointer;
   min-width: 35px;
   width: 3.25%;
   object-fit: contain;
   @media (orientation: portrait) {
     width: 6.5% !important;
   }
-  // margin: 30px 2.5vw 15px 2.5vw;
 }
 </style>

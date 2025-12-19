@@ -1,17 +1,14 @@
 <template>
-  <BContainer fluid class="removePadding h-100">
+  <BContainer fluid class="h-100">
     <BCard
       v-if="currentRecommendationDetails"
       no-body
-      class="recommendationCard h-100 cursorPointer"
+      class="recommendationCard h-100"
+      :preventExcessiveDragging="true"
     >
       <BRow class="g-0">
         <!-- The image is displayed on the left side for smaller sizes !-->
-        <BCol
-          cols="3"
-          lg="12"
-          class="d-flex justify-content-center align-items-center"
-        >
+        <BCol cols="3" lg="12" class="recommendationCardImgContainer">
           <BCardImg
             :src="`/images/${currentRecommendationDetails.recommenderImage}`"
             :alt="currentRecommendationDetails.recommenderName"
@@ -34,7 +31,7 @@
         </BCol>
       </BRow>
     </BCard>
-    <div v-else class="h-100">
+    <div v-else>
       <p>No recommendation details found.</p>
     </div>
   </BContainer>
@@ -90,37 +87,39 @@ export default defineComponent({
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
 .recommendationCard {
+  cursor: pointer;
   background-color: $lightWhiteColor;
   border: none;
-  align-items: center;
+  transition:
+    transform 500ms ease,
+    filter 500ms ease;
 
-  transition: transform 0.5s ease;
-  &:hover {
-    transform: translateY(-5px);
-    filter: drop-shadow($dolphinBlueColor 0px 5px 5px);
-  }
-  @media (max-width: $screen-md) {
-    justify-content: center;
-    & {
-      pointer-events: none; /* Disables hover interaction */
+  @media (hover: hover) {
+    &:hover {
+      transform: translateY(-5px);
+      filter: drop-shadow($dolphinBlueColor 0px 5px 5px);
     }
   }
-  .cardParagraph {
-    font-weight: 400;
-    text-align: center;
-    @media (max-width: $screen-md) {
+
+  @media (max-width: $screen-md) {
+    justify-content: center;
+
+    .cardParagraph {
       text-align: left;
     }
   }
 }
+.recommendationCardImgContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .recommendationCardImg {
-  height: 7.5vw;
-  width: auto !important;
-  margin-top: 1.25rem;
   border-radius: 50%;
+  width: 25%;
+  margin-top: 1.25rem;
   @media (max-width: $screen-md) {
-    height: 15vw;
-    margin-left: 1.25rem;
+    width: 75%;
     margin-top: 0;
   }
 }

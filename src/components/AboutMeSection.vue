@@ -1,12 +1,12 @@
 <template>
-  <BContainer class="aboutMeContainer" fluid>
-    <BRow class="aboutMeDescriptionContainer">
+  <BContainer class="aboutMeContainer componentContainerPadding" fluid>
+    <BRow>
       <BCol cols="12" lg="6">
         <BRow>
           <BCol cols="12" class="componentSubtitleContainer">
             <p class="componentTitle">This is Me</p>
           </BCol>
-          <BCol cols="12">
+          <BCol cols="12" class="aboutMeDescriptionContainer">
             <p class="aboutMeDescription">
               <!-- 1. Intro -->
               Hello again! 👋🏽
@@ -79,11 +79,11 @@
         />
       </BCol>
     </BRow>
-    <BRow>
-      <BCol cols="12" class="componentCarouselTitleContainer">
+    <BRow class="recommendationComponentContainer">
+      <BCol cols="12" class="componentSubtitleContainer">
         <p class="componentTitle">Recommendations</p>
       </BCol>
-      <BCol cols="12" class="removePadding carouselContainer">
+      <BCol cols="12" class="carouselContainer">
         <Carousel v-bind="carouselConfig" class="paddingForCarouselNav">
           <Slide v-for="(rec, i) in recommendations" :key="i">
             <recommendationCard :recommendation="rec"></recommendationCard>
@@ -139,32 +139,42 @@ export default defineComponent({
 @use "@/assets/styles/variables.scss" as *;
 .aboutMeContainer {
   background-color: $offWhiteColor;
-  padding: 5% 7.5% 5% 7.5%;
 }
 .aboutMeDescriptionContainer {
   margin-bottom: 25px;
-  // align-items: center;
-}
-.aboutMeImageContainer {
-  justify-content: flex-end;
-}
-.divider {
-  width: 50%;
-  opacity: 0.25;
-  margin: 7.5% 25% 7.5% 25%;
-}
-.myImage {
-  margin: auto;
-  // width: auto;
-  // height: auto;
-  // max-height: 100%;
-  width: 67.5%;
 }
 .myImageContainer {
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  margin-bottom: 25px;
+}
+.divider {
+  width: 50%;
+  opacity: 0.25;
+}
+.divider:first-of-type {
+  margin-block-end: 7.5%;
+}
+.divider:last-of-type {
+  margin-block-start: 7.5%;
+}
+.myImage {
+  width: 67.5%;
+}
+:deep(.carousel__viewport) {
+  // to account for recommendation card effect
+  padding: 15px 0px;
+}
+.recommendationComponentContainer {
+  // subtract padding (15px) above
+  .componentSubtitleContainer {
+    margin-bottom: 5px !important;
+  }
+  .paddingForCarouselNav {
+    padding-bottom: 15px !important;
+  }
 }
 </style>

@@ -1,74 +1,80 @@
 <template>
-  <BContainer fluid class="removePadding h-100">
-    <BCard
-      v-if="currentExperienceDetails"
-      no-body
-      class="customCard cursorPointer h-100"
-      @pointerdown="onPointerDown"
-      @pointermove="onPointerMove"
-      @pointerup="onPointerUp"
-      @pointercancel="onPointerUp"
-      @pointerleave="onPointerUp"
-      @click="onClick"
-    >
-      <BRow class="g-0">
-        <!-- The image is displayed on the left side for full-time experiences !-->
-        <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
-          <BCardImg
-            :src="`/images/${currentExperienceDetails.coverImageName}`"
-            :alt="currentExperienceDetails.title"
-            class="rounded-0 h-100"
-          />
-        </BCol>
-        <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
-          <BCardBody class="centerCardContent">
-            <!-- <BCardBody> -->
-            <p class="cardTitle">
-              {{ currentExperienceDetails.title }}
-            </p>
-            <p class="cardSubtitle">
-              {{ currentExperienceDetails.subtitle }}
-            </p>
-            <p class="skillsList">
-              <span
-                v-for="(skill, index) in currentExperienceDetails.skills"
-                :key="index"
-                class="highlightedPill cardParagraph"
-              >
-                {{ skill }}
-              </span>
-            </p>
-            <div v-if="isExperienceFT" class="ftPosition">
-              <ul>
-                <li
-                  v-for="(
-                    contribution, project
-                  ) in currentExperienceDetails.ftDescription"
-                  :key="project"
+  <BContainer fluid class="h-100">
+    <div ref="customCardRef">
+      <BCard
+        v-if="currentExperienceDetails"
+        no-body
+        class="customCard h-100"
+        @pointerdown="onPointerDown"
+        @pointermove="onPointerMove"
+        @pointerup="onPointerUp"
+        @pointercancel="onPointerUp"
+        @pointerleave="onPointerUp"
+        @click="onClick"
+        :preventExcessiveDragging="true"
+        :class="{ touchScreenPreview: isTouchPreviewVisible }"
+      >
+        <BRow class="g-0">
+          <!-- The image is displayed on the left side for full-time experiences !-->
+          <BCol :lg="isExperienceFT ? 6 : 12">
+            <BCardImg
+              :src="`/images/${currentExperienceDetails.coverImageName}`"
+              :alt="currentExperienceDetails.title"
+              class="rounded-0"
+            />
+          </BCol>
+          <BCol :lg="isExperienceFT ? 6 : 12">
+            <BCardBody class="centerCardContent">
+              <!-- <BCardBody> -->
+              <p class="cardTitle">
+                {{ currentExperienceDetails.title }}
+              </p>
+              <p class="cardSubtitle">
+                {{ currentExperienceDetails.subtitle }}
+              </p>
+              <p class="skillsList">
+                <span
+                  v-for="(skill, index) in currentExperienceDetails.skills"
+                  :key="index"
+                  class="highlightedPill cardParagraph"
                 >
-                  <p class="cardParagraph">
+                  {{ skill }}
+                </span>
+              </p>
+              <div v-if="isExperienceFT" class="ftPosition">
+                <ul>
+                  <li
+                    v-for="(
+                      contribution, project
+                    ) in currentExperienceDetails.ftDescription"
+                    :key="project"
+                    class="cardParagraph"
+                  >
                     <strong>{{ project }}</strong> {{ contribution }}
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </BCardBody>
-        </BCol>
-      </BRow>
-      <div class="viewProjectOverlay">
-        <p class="overlayText removeMargin">
-          {{ currentExperienceDetails.overlayTitle }}
-        </p>
+                  </li>
+                </ul>
+              </div>
+            </BCardBody>
+          </BCol>
+        </BRow>
+        <div
+          class="cardOverlay"
+          :class="{ touchScreenPreview: isTouchPreviewVisible }"
+        >
+          <p class="overlayText">
+            {{ currentExperienceDetails.overlayTitle }}
+          </p>
+        </div>
+      </BCard>
+      <div v-else>
+        <p>No experience details found.</p>
       </div>
-    </BCard>
-    <div v-else class="h-100">
-      <p>No experience details found.</p>
     </div>
   </BContainer>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted } from "vue";
+import { defineComponent, ref, onMounted, onBeforeUnmount } from "vue";
 // Type-only import for PropType
 import type { PropType } from "vue";
 // Import content for cards
@@ -87,11 +93,16 @@ export default defineComponent({
     // Reactives
     const currentExperienceDetails = ref<ExperienceType | null>(null);
     const isExperienceFT = ref<boolean>(false);
-
+    // Touch screen reactives
+    const customCardRef = ref<HTMLElement | null>(null);
+    const isTouchPreviewVisible = ref<boolean>(false);
+    const doesDeviceSupportHover = window.matchMedia("(hover: hover)").matches;
+    // Drag reactives
     let startX = 0;
     let startY = 0;
     const DRAG_THRESHOLD = 8; // px
 
+    // Handle pointer events
     const onPointerDown = (e: PointerEvent) => {
       startX = e.clientX;
       startY = e.clientY;
@@ -116,10 +127,28 @@ export default defineComponent({
       const dy = Math.abs(e.clientY - startY);
       if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
         //was a drag, not a click
+        isTouchPreviewVisible.value = false;
+        return;
+      }
+      if (!doesDeviceSupportHover && !isTouchPreviewVisible.value) {
+        isTouchPreviewVisible.value = true;
         return;
       }
       //legit click
       visitLink(currentExperienceDetails.value?.link || ``);
+      //clean up the touchpreview if true
+      isTouchPreviewVisible.value = false;
+    };
+
+    // Handle document pointer events
+    const onDocumentPointerDown = (e: PointerEvent) => {
+      if (!isTouchPreviewVisible.value) return;
+      // check if touch was within the card
+      const target = e.target as Node;
+
+      if (customCardRef.value && !customCardRef.value.contains(target)) {
+        isTouchPreviewVisible.value = false;
+      }
     };
 
     // Computed
@@ -158,18 +187,25 @@ export default defineComponent({
     // Mounted
     onMounted(() => {
       loadExperienceDetails();
+      document.addEventListener("pointerdown", onDocumentPointerDown);
+    });
+
+    onBeforeUnmount(() => {
+      document.removeEventListener("pointerdown", onDocumentPointerDown);
     });
 
     return {
       // computedImageSrc,
       // highlightedText,
-      currentExperienceDetails,
       isExperienceFT,
+      currentExperienceDetails,
       visitLink,
+      onClick,
       onPointerDown,
       onPointerMove,
       onPointerUp,
-      onClick,
+      customCardRef,
+      isTouchPreviewVisible,
     };
   },
 });
@@ -178,98 +214,78 @@ export default defineComponent({
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
 .customCard {
+  cursor: pointer;
   background-color: $offWhiteColor;
   border: none;
-  .card-img-left {
-    height: auto;
-    width: 49%;
-    object-fit: contain;
-  }
-}
+  transition: transform 300ms ease;
 
-.customCard:hover {
-  -webkit-transform: scale(0.95);
-  -ms-transform: scale(0.95);
-  transform: scale(0.95);
-  -webkit-transition: 300ms ease;
-  transition: 300ms ease;
-}
-.customCard:hover .viewProjectOverlay {
-  opacity: 1;
-}
-.centerCardContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  height: 100%;
-}
-.viewProjectOverlay {
-  position: absolute;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  pointer-events: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-}
-.overlayText {
-  color: $lightWhiteColor;
-  font-size: 2.5vw;
-  font-weight: 400;
-  padding: 1.25rem;
-  @media (max-width: $screen-md) {
-    font-size: 5.58vw;
-  }
-}
-.ftPosition {
-  margin-top: 0.5rem;
-  ul {
-    padding-left: 0;
-    list-style: disc;
-    // display: grid;
-    // grid-template-columns: repeat(2, 1fr);
-    ::marker {
-      font-size: 1.3vw;
-      @media (max-width: $screen-md) {
-        font-size: 2.6vw;
+  @media (hover: hover) {
+    &:hover {
+      transform: scale(0.95);
+      .cardOverlay {
+        opacity: 1;
       }
     }
   }
-  li {
-    margin-left: 1.5vw;
-    line-height: 1.25;
-    @media (max-width: $screen-md) {
-      margin-left: 3vw;
-    }
-  }
-  .cardParagraph {
-    text-align: left;
-    margin-bottom: 0.5rem;
-    line-height: inherit;
-  }
-  @media (max-width: $screen-md) {
-    display: none;
-  }
 }
-// :deep(highlighted) - if you want to pierce scope
-.highlightedPill {
-  background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 25px;
-  padding: 1.5px 7.5px;
+.customCard.touchScreenPreview {
+  transform: scale(0.95);
+}
+.centerCardContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .skillsList {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.25em;
+  gap: 0.3em;
 }
-.skillsList .highlightedPill {
+// :deep(highlighted) - if you want to pierce scope
+.highlightedPill {
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 0.6em;
+  padding: 0.1em 0.5em;
   white-space: nowrap;
+  //safety css
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ftPosition {
+  ul {
+    margin-top: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style: disc;
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+  }
+  .cardParagraph {
+    text-align: left;
+  }
+  @media (max-width: $screen-md) {
+    display: none;
+  }
+}
+.cardOverlay {
+  //sets top, right, bottom, left to 0
+  inset: 0;
+  position: absolute;
+  display: flex;
+  // center horizontally and vertically
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 300ms ease;
+  // above the card but below menu/loader
+  z-index: 10 !important;
+  pointer-events: none;
+}
+.cardOverlay.touchScreenPreview {
+  opacity: 1;
 }
 </style>
