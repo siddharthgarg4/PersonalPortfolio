@@ -175,6 +175,9 @@ export default defineComponent({
 .coverImage {
   width: 57.5%;
   object-fit: contain;
+  @media (orientation: portrait) and (min-width: $screen-sm) {
+    width: 47.5%;
+  }
 }
 .scrollMoreContainer {
   cursor: pointer;

@@ -1,6 +1,6 @@
 <template>
   <BContainer fluid class="h-100">
-    <div ref="customCardRef">
+    <div ref="customCardRef" class="h-100">
       <BCard
         v-if="currentExperienceDetails"
         no-body
@@ -266,7 +266,7 @@ export default defineComponent({
   .cardParagraph {
     text-align: left;
   }
-  @media (max-width: $screen-md) {
+  @media (orientation: portrait) {
     display: none;
   }
 }
