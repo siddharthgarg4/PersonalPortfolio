@@ -16,11 +16,24 @@ export default defineComponent({
   setup(props) {
     const isVisible = ref<boolean>(true);
 
+    // function to lock and unlock scroll
+    const toggleScrollLock = (lock: boolean): void => {
+      if (lock) {
+        document.body.classList.add("no-scroll");
+        document.documentElement.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+        document.documentElement.classList.remove("no-scroll");
+      }
+    };
+
     watch(
       () => props.stopLoading,
       (newVal) => {
         isVisible.value = !newVal;
+        toggleScrollLock(!newVal);
       },
+      { immediate: true },
     );
 
     return {

@@ -110,10 +110,9 @@ export default defineComponent({
 .coverContainer {
   display: flex;
   flex-direction: column;
-  height: calc(var(--inner--vh) * 100);
-  width: 100dvw;
-  width: 100vw;
-  // min-height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh; // fallback only
+  // width: 100%;
   padding: 1.5% 3.75%;
   background: linear-gradient(
     90deg,
@@ -188,10 +187,9 @@ export default defineComponent({
   margin-left: 2px;
   // vertical border - so entire width is clickable
   border-left: 2px solid $dolphinBlueColor;
-  height: calc(var(--inner--vh) * 7.5);
+  height: 3.5rem;
   @media (orientation: portrait) {
     border-left: 1.5px solid $offWhiteColor;
-    height: calc(var(--inner--vh) * 5);
   }
 }
 </style>
