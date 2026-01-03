@@ -101,6 +101,14 @@ export default defineComponent({
     }
   }
 
+  @media (hover: none) {
+    //mobile devices - user tap
+    &:active {
+      transform: translateY(-5px);
+      filter: drop-shadow($dolphinBlueColor 0px 5px 5px);
+    }
+  }
+
   @media (max-width: $screen-md) {
     justify-content: center;
 
