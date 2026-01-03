@@ -116,7 +116,14 @@ export default defineComponent({
   },
   setup() {
     // Reactives
-    const carouselConfig = useCarouselConfig();
+    const carouselConfig = useCarouselConfig({
+      breakpoints: {
+        0: { itemsToShow: 1 },
+        // needed to adjust for ipad pro
+        991: { itemsToShow: 2 },
+        1199: { itemsToShow: 3 },
+      },
+    });
 
     const recommendations: string[] = [
       "andrewKalymonRecommendation",

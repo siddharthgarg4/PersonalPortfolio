@@ -23,8 +23,8 @@ $screen-lg: 1199px;
 //Mark: carousel component style variables
 :root {
   //vc-navigation
-  --vc-nav-width: 35px;
-  --vc-nav-height: 35px;
+  --vc-nav-width: 2.75rem;
+  --vc-nav-height: 2.75rem;
   --vc-nav-color: #{$dolphinBlueColor};
   --vc-nav-color-hover: #{rgba($dolphinBlueColor, 0.5)};
   //vc-pagination
