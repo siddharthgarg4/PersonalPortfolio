@@ -11,7 +11,6 @@
         @pointercancel="onPointerUp"
         @pointerleave="onPointerUp"
         @click="onClick"
-        :preventExcessiveDragging="true"
         :class="{ touchScreenPreview: isTouchPreviewVisible }"
       >
         <BRow class="g-0">

@@ -30,7 +30,7 @@ export default defineConfig({
     })
   ],
   server: {
-    port: 2025,
+    port: 2026,
     host: '0.0.0.0',
   },
   resolve: {

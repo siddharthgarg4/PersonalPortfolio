@@ -4,7 +4,6 @@
       v-if="currentRecommendationDetails"
       no-body
       class="recommendationCard h-100"
-      :preventExcessiveDragging="true"
     >
       <BRow class="g-0">
         <!-- The image is displayed on the left side for smaller sizes !-->
