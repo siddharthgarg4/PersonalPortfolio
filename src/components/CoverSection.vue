@@ -133,12 +133,7 @@ export default defineComponent({
   justify-content: start;
 }
 .sgLogo {
-  height: auto;
-  width: 6%;
-  min-width: 35px;
-  @media (orientation: portrait) {
-    width: 12% !important;
-  }
+  width: 2.75rem;
 }
 .menuContainer {
   display: flex;

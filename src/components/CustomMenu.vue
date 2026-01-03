@@ -72,15 +72,11 @@ export default defineComponent({
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
 .customMenuContainer {
-  min-width: 35px;
-  width: calc(0.06 * (47.5% - (0.5 * var(--bs-gutter-x))));
+  width: 2.75rem;
   aspect-ratio: 1 / 1;
   position: fixed;
   // below the loader but above everything else
   z-index: 9998 !important;
-  @media (orientation: portrait) {
-    width: calc(0.12 * (46.25% - (0.5 * var(--bs-gutter-x))));
-  }
 }
 .optionContainer {
   cursor: pointer;

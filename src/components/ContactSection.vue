@@ -100,11 +100,7 @@ export default defineComponent({
 }
 .contactIcon {
   cursor: pointer;
-  min-width: 35px;
-  width: 3.25%;
   object-fit: contain;
-  @media (orientation: portrait) {
-    width: 6.5% !important;
-  }
+  width: 2.75rem;
 }
 </style>

@@ -31,22 +31,22 @@ export default defineComponent({
       return isCoverMounted.value && isMinLoadTimeElapsed.value;
     });
 
-    // Function to set dynamic vh
-    const setInnerVh = () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty("--inner--vh", `${vh}px`);
-    };
+    // // Function to set dynamic vh
+    // const setInnerVh = () => {
+    //   const vh = window.innerHeight * 0.01;
+    //   document.documentElement.style.setProperty("--inner--vh", `${vh}px`);
+    // };
 
-    // Mounted lifecycle
-    onMounted(() => {
-      setInnerVh(); // initial set
-      window.addEventListener("resize", setInnerVh);
-    });
+    // // Mounted lifecycle
+    // onMounted(() => {
+    //   setInnerVh(); // initial set
+    //   window.addEventListener("resize", setInnerVh);
+    // });
 
-    // Cleanup
-    onBeforeUnmount(() => {
-      window.removeEventListener("resize", setInnerVh);
-    });
+    // // Cleanup
+    // onBeforeUnmount(() => {
+    //   window.removeEventListener("resize", setInnerVh);
+    // });
 
     // Created
     setTimeout(() => {
