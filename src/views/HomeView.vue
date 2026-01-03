@@ -51,7 +51,7 @@ export default defineComponent({
     // Created
     setTimeout(() => {
       isMinLoadTimeElapsed.value = true;
-    }, 4000);
+    }, 3000);
 
     // Method to handle website mounted event
     const coverMounted = (): void => {

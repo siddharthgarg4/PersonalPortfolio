@@ -91,8 +91,8 @@ export default defineComponent({
   background-color: $lightWhiteColor;
   border: none;
   transition:
-    transform 500ms ease,
-    filter 500ms ease;
+    transform 300ms ease,
+    filter 300ms ease;
 
   @media (hover: hover) {
     &:hover {

@@ -86,12 +86,12 @@ export default defineComponent({
   background: $lightWhiteColor;
   border-radius: 50%;
   border: 1px solid $darkBlackColor;
-  transition: all 500ms ease;
+  transition: all 300ms ease;
   .bar {
     position: absolute;
     height: 1px;
     background: $darkBlackColor;
-    transition: all 500ms ease;
+    transition: all 300ms ease;
   }
   .top {
     top: 35%;
