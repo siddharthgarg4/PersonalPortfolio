@@ -6,71 +6,48 @@
       </BCol>
     </BRow>
     <BRow v-animated-scroll>
-      <BRow>
-        <BCol class="componentSubtitleContainer">
-          <p class="componentTitle removeMargin">Full-time</p>
-        </BCol>
-      </BRow>
-      <BRow>
-        <BCol lg="12" class="cardContainer">
-          <customCard experienceName="ffaiFT"></customCard>
-        </BCol>
-      </BRow>
+      <BCol cols="12" class="componentSubtitleContainer">
+        <p class="componentTitle removeMargin">Full-time</p>
+      </BCol>
+      <BCol cols="12" class="cardContainer">
+        <customCard experienceName="ffaiFT"></customCard>
+      </BCol>
+      <BCol cols="12" class="cardContainer">
+        <customCard experienceName="upliftFT"></customCard>
+      </BCol>
     </BRow>
-    <BRow>
-      <BRow>
-        <BCol lg="12" class="cardContainer">
-          <customCard experienceName="upliftFT"></customCard>
-        </BCol>
-      </BRow>
-    </BRow>
-    <BRow v-animated-scroll>
-      <BRow>
-        <BCol class="componentSubtitleContainer">
-          <p class="componentTitle removeMargin">Internship</p>
-        </BCol>
-      </BRow>
-      <BRow>
-        <BCol lg="6" class="cardContainer">
-          <customCard experienceName="uplift"></customCard>
-        </BCol>
-        <BCol lg="6" class="cardContainer">
-          <customCard experienceName="shopify"></customCard>
-        </BCol>
-        <BCol lg="6" class="cardContainer">
-          <customCard experienceName="tile"></customCard>
-        </BCol>
-        <BCol lg="6" class="cardContainer">
-          <customCard experienceName="td"></customCard>
-        </BCol>
-      </BRow>
+    <BRow v-animated-scroll class="align-items-stretch">
+      <BCol cols="12" class="componentSubtitleContainer">
+        <p class="componentTitle removeMargin">Internship</p>
+      </BCol>
+      <BCol cols="12" lg="6" class="cardContainer">
+        <customCard experienceName="uplift"></customCard>
+      </BCol>
+      <BCol cols="12" lg="6" class="cardContainer">
+        <customCard experienceName="shopify"></customCard>
+      </BCol>
+      <BCol cols="12" lg="6" class="cardContainer">
+        <customCard experienceName="tile"></customCard>
+      </BCol>
+      <BCol cols="12" lg="6" class="cardContainer">
+        <customCard experienceName="td"></customCard>
+      </BCol>
     </BRow>
     <BRow v-animated-scroll>
-      <BRow>
-        <BCol class="componentTitleContainer">
-          <p class="componentTitle removeMargin">Personal Projects</p>
-        </BCol>
-      </BRow>
-      <BRow>
-        <BCol lg="4" class="cardContainer">
-          <customCard experienceName="endgame"></customCard>
-        </BCol>
-        <BCol lg="4" class="cardContainer">
-          <customCard experienceName="grow"></customCard>
-        </BCol>
-        <BCol lg="4" class="cardContainer">
-          <customCard experienceName="healthline"></customCard>
-        </BCol>
-        <BCol lg="4" class="cardContainer">
-          <customCard experienceName="blindsight"></customCard>
-        </BCol>
-        <BCol lg="4" class="cardContainer">
-          <customCard experienceName="instameet"></customCard>
-        </BCol>
-        <BCol lg="4" class="cardContainer">
-          <customCard experienceName="paypool"></customCard>
-        </BCol>
-      </BRow>
+      <BCol cols="12" class="componentCarouselTitleContainer">
+        <p class="componentTitle removeMargin">Personal Projects</p>
+      </BCol>
+      <BCol cols="12" class="removePadding carouselContainer">
+        <Carousel v-bind="carouselConfig" class="paddingForCarouselNav">
+          <Slide v-for="(project, i) in projects" :key="i">
+            <customCard :experienceName="project"></customCard>
+          </Slide>
+          <template #addons>
+            <Navigation />
+            <Pagination />
+          </template>
+        </Carousel>
+      </BCol>
     </BRow>
   </BContainer>
 </template>
@@ -78,20 +55,46 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import animatedScroll from "@/directives/scrollAnimation.ts";
+// Carousel specific imports
+import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
+import "vue3-carousel/carousel.css";
+// Carousel custom default configs
+import { useCarouselConfig } from "@/composables/carouselConfig";
 
 export default defineComponent({
   name: "ExperienceAndProjectsSection",
   directives: {
     "animated-scroll": animatedScroll,
   },
+  components: {
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
+  },
+  setup() {
+    // Reactives
+    const carouselConfig = useCarouselConfig();
+
+    const projects: string[] = [
+      "endgame",
+      "grow",
+      "healthline",
+      "blindsight",
+      "instameet",
+      "paypool",
+    ];
+
+    return {
+      projects,
+      carouselConfig,
+    };
+  },
 });
 </script>
 
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
-.cardContainer {
-  margin-bottom: 35px;
-}
 .experienceProjectContainer {
   background-color: $lightWhiteColor;
   background-image: url("/images/dotBackground-2.png"),
@@ -102,7 +105,7 @@ export default defineComponent({
     top 6.125% left,
     top 26.5% right,
     top 54.5% left,
-    top 99% right;
+    top 81.5% right;
   padding: 5% 7.5% 5% 7.5%;
   background-repeat: no-repeat;
   background-size: 30%;
@@ -112,11 +115,7 @@ export default defineComponent({
       top 2.65% left,
       top 28.75% right,
       top 62% left,
-      top 99.5% right;
+      top 78.5% right;
   }
-}
-.componentTitleContainer {
-  margin-top: 35px;
-  margin-bottom: 35px;
 }
 </style>

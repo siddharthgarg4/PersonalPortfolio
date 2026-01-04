@@ -1,70 +1,74 @@
 <template>
   <BContainer fluid class="removePadding h-100">
-    <div v-if="currentExperienceDetails">
-      <BCard
-        no-body
-        class="customCard cursorPointer h-100 overflow-hidden"
-        @click="visitLink(currentExperienceDetails.link)"
-      >
-        <BRow class="g-0">
-          <!-- The image is displayed on the left side for full-time experiences !-->
-          <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
-            <BCardImg
-              :src="`/images/${currentExperienceDetails.coverImageName}`"
-              :alt="currentExperienceDetails.title"
-              class="rounded-0 h-100"
-            />
-          </BCol>
-          <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
-            <BCardBody class="centerCardContent">
-              <!-- <BCardBody> -->
-              <p class="cardTitle removeMargin">
-                {{ currentExperienceDetails.title }}
-              </p>
-              <p class="cardSubtitle">
-                {{ currentExperienceDetails.subtitle }}
-              </p>
-              <p class="skillsList">
-                <span
-                  v-for="(skill, index) in currentExperienceDetails.skills"
-                  :key="index"
-                  class="highlightedPill cardParagraph"
+    <BCard
+      v-if="currentExperienceDetails"
+      no-body
+      class="customCard cursorPointer h-100"
+      @pointerdown="onPointerDown"
+      @pointermove="onPointerMove"
+      @pointerup="onPointerUp"
+      @pointercancel="onPointerUp"
+      @pointerleave="onPointerUp"
+      @click="onClick"
+    >
+      <BRow class="g-0">
+        <!-- The image is displayed on the left side for full-time experiences !-->
+        <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
+          <BCardImg
+            :src="`/images/${currentExperienceDetails.coverImageName}`"
+            :alt="currentExperienceDetails.title"
+            class="rounded-0 h-100"
+          />
+        </BCol>
+        <BCol cols="12" :lg="isExperienceFT ? 6 : 12">
+          <BCardBody class="centerCardContent">
+            <!-- <BCardBody> -->
+            <p class="cardTitle removeMargin">
+              {{ currentExperienceDetails.title }}
+            </p>
+            <p class="cardSubtitle">
+              {{ currentExperienceDetails.subtitle }}
+            </p>
+            <p class="skillsList">
+              <span
+                v-for="(skill, index) in currentExperienceDetails.skills"
+                :key="index"
+                class="highlightedPill cardParagraph"
+              >
+                {{ skill }}
+              </span>
+            </p>
+            <div v-if="isExperienceFT" class="ftPosition">
+              <ul>
+                <li
+                  v-for="(
+                    contribution, project
+                  ) in currentExperienceDetails.ftDescription"
+                  :key="project"
                 >
-                  {{ skill }}
-                </span>
-              </p>
-              <div v-if="isExperienceFT" class="ftPosition">
-                <ul>
-                  <li
-                    v-for="(
-                      contribution, project
-                    ) in currentExperienceDetails.ftDescription"
-                    :key="project"
-                  >
-                    <p class="cardParagraph">
-                      <strong>{{ project }}</strong> {{ contribution }}
-                    </p>
-                  </li>
-                </ul>
-              </div>
-            </BCardBody>
-          </BCol>
-        </BRow>
-        <div class="viewProjectOverlay">
-          <p class="overlayText removeMargin">
-            {{ currentExperienceDetails.overlayTitle }}
-          </p>
-        </div>
-      </BCard>
-    </div>
-    <div v-else>
+                  <p class="cardParagraph">
+                    <strong>{{ project }}</strong> {{ contribution }}
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </BCardBody>
+        </BCol>
+      </BRow>
+      <div class="viewProjectOverlay">
+        <p class="overlayText removeMargin">
+          {{ currentExperienceDetails.overlayTitle }}
+        </p>
+      </div>
+    </BCard>
+    <div v-else class="h-100">
       <p>No experience details found.</p>
     </div>
   </BContainer>
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, onMounted, computed } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 // Type-only import for PropType
 import type { PropType } from "vue";
 // Import content for cards
@@ -83,6 +87,40 @@ export default defineComponent({
     // Reactives
     const currentExperienceDetails = ref<ExperienceType | null>(null);
     const isExperienceFT = ref<boolean>(false);
+
+    let startX = 0;
+    let startY = 0;
+    const DRAG_THRESHOLD = 8; // px
+
+    const onPointerDown = (e: PointerEvent) => {
+      startX = e.clientX;
+      startY = e.clientY;
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      const dx = Math.abs(e.clientX - startX);
+      const dy = Math.abs(e.clientY - startY);
+
+      if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
+        //its a drag event
+        return;
+      }
+    };
+
+    const onPointerUp = () => {
+      // no-op, click handler decides
+    };
+
+    const onClick = (e: PointerEvent) => {
+      const dx = Math.abs(e.clientX - startX);
+      const dy = Math.abs(e.clientY - startY);
+      if (dx > DRAG_THRESHOLD || dy > DRAG_THRESHOLD) {
+        //was a drag, not a click
+        return;
+      }
+      //legit click
+      visitLink(currentExperienceDetails.value?.link || ``);
+    };
 
     // Computed
     // const computedImageSrc = computed(() => {
@@ -128,6 +166,10 @@ export default defineComponent({
       currentExperienceDetails,
       isExperienceFT,
       visitLink,
+      onPointerDown,
+      onPointerMove,
+      onPointerUp,
+      onClick,
     };
   },
 });
