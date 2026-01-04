@@ -4,6 +4,7 @@ interface CarouselConfig {
   wrapAround: boolean;
   autoplay: number;
   pauseAutoplayOnHover: boolean;
+  snapAlign: string;
   gap: number;
   transition: number;
   // mouseWheel: boolean;
@@ -20,6 +21,7 @@ export function useCarouselConfig(overrides: Partial<CarouselConfig> = {}) {
     wrapAround: true,
     autoplay: 8000,
     pauseAutoplayOnHover: true,
+    snapAlign: "start",
     // default values being explicit
     gap: 0,
     transition: 300,

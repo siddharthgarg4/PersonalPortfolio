@@ -123,11 +123,7 @@ export default defineComponent({
 }
 .recommendationCardImg {
   border-radius: 50%;
-  width: 25%;
+  width: 5.5rem;
   margin-top: 1.25rem;
-  @media (max-width: $screen-md) {
-    width: 75%;
-    margin-top: 0;
-  }
 }
 </style>
