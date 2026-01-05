@@ -11,7 +11,10 @@
         @pointercancel="onPointerUp"
         @pointerleave="onPointerUp"
         @click="onClick"
-        :class="{ touchScreenPreview: isTouchPreviewVisible }"
+        :class="{
+          touchScreenPreview: isTouchPreviewVisible,
+          isFT: isExperienceFT,
+        }"
       >
         <BRow class="g-0">
           <!-- The image is displayed on the left side for full-time experiences !-->
@@ -58,10 +61,7 @@
         </BRow>
         <div
           class="cardOverlay"
-          :class="{
-            touchScreenPreview: isTouchPreviewVisible,
-            ftCardOverlay: isExperienceFT,
-          }"
+          :class="{ touchScreenPreview: isTouchPreviewVisible }"
         >
           <p class="overlayText">
             {{ currentExperienceDetails.overlayTitle }}
@@ -291,9 +291,9 @@ export default defineComponent({
   border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
 }
 
-.ftCardOverlay.cardOverlay {
+.isFT .cardOverlay {
   @media (min-width: $screen-md) {
-    border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0 !important;
+    border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0;
   }
 }
 
