@@ -58,7 +58,10 @@
         </BRow>
         <div
           class="cardOverlay"
-          :class="{ touchScreenPreview: isTouchPreviewVisible }"
+          :class="{
+            touchScreenPreview: isTouchPreviewVisible,
+            ftCardOverlay: isExperienceFT,
+          }"
         >
           <p class="overlayText">
             {{ currentExperienceDetails.overlayTitle }}
@@ -217,6 +220,7 @@ export default defineComponent({
   background-color: $offWhiteColor;
   border: none;
   transition: transform 300ms ease;
+  // overflow: hidden;
 
   @media (hover: hover) {
     &:hover {
@@ -283,7 +287,16 @@ export default defineComponent({
   // above the card but below menu/loader
   z-index: 10 !important;
   pointer-events: none;
+  // match card bottom rounding
+  border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
 }
+
+.ftCardOverlay.cardOverlay {
+  @media (min-width: $screen-md) {
+    border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0 !important;
+  }
+}
+
 .cardOverlay.touchScreenPreview {
   opacity: 1;
 }

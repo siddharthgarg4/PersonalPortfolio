@@ -3,11 +3,11 @@
     <BRow>
       <BCol cols="12">
         <p class="coverTitle">Like what you see? Let’s talk.</p>
-      </BCol>
-      <BCol cols="12">
-        <p class="coverResume">
+        <p class="coverPara">
           <!-- eslint-disable-next-line -->
-          I'm seeking full-time opportunities starting winter 2026.<br />
+          I'm currently seeking full-time opportunities starting winter 2026.<br />
+        </p>
+        <p class="coverResume">
           <!-- © copyright icon -->
           Made with 🤍 in Toronto
         </p>
@@ -84,8 +84,16 @@ export default defineComponent({
 @use "@/assets/styles/variables.scss" as *;
 .contactContainer {
   background: $dolphinBlueColor;
+  .coverTitle {
+    margin-bottom: 0.25rem;
+  }
+  .coverPara {
+    margin-bottom: 1.75rem;
+  }
+
   .coverTitle,
-  .coverResume {
+  .coverResume,
+  .coverPara {
     color: $lightWhiteColor;
     text-align: center;
   }
