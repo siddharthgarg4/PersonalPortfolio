@@ -101,10 +101,7 @@ export default defineComponent({
 .iconRow {
   display: flex;
   justify-content: center;
-  gap: 3.25%;
-  @media (orientation: portrait) {
-    gap: 6.5%;
-  }
+  gap: 3.25rem;
 }
 .contactIcon {
   cursor: pointer;
