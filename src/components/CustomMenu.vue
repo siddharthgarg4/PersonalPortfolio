@@ -1,46 +1,44 @@
 <template>
-  <BContainer fluid class="removePadding customMenuContainer">
-    <BRow class="menu">
+  <div class="customMenuContainer">
+    <div
+      class="optionContainer"
+      @click="toggleMenu"
+      :class="{ active: isActivated }"
+    >
+      <div class="bar top"></div>
+      <div class="bar center"></div>
+      <div class="bar bottom"></div>
+    </div>
+    <div class="subMenu" :class="{ active: isActivated }">
+      <div class="optionContainer" @click="scrollToSection('coverSection')">
+        <img src="/images/homeNav.png" alt="Home" class="img-fluid navIcon" />
+      </div>
       <div
-        class="optionContainer coreMenu"
-        @click="toggleMenu"
-        :class="{ active: isActivated }"
+        class="optionContainer"
+        @click="scrollToSection('experienceSection')"
       >
-        <div class="bar top"></div>
-        <div class="bar center"></div>
-        <div class="bar bottom"></div>
+        <img
+          src="/images/projectsNav.png"
+          alt="Experience"
+          class="img-fluid navIcon"
+        />
       </div>
-      <div class="subMenu" :class="{ active: isActivated }">
-        <div class="optionContainer" @click="scrollToSection('coverSection')">
-          <img src="/images/homeNav.png" alt="Home" class="img-fluid navIcon" />
-        </div>
-        <div
-          class="optionContainer"
-          @click="scrollToSection('experienceSection')"
-        >
-          <img
-            src="/images/projectsNav.png"
-            alt="Experience"
-            class="img-fluid navIcon"
-          />
-        </div>
-        <div class="optionContainer" @click="scrollToSection('aboutMeSection')">
-          <img
-            src="/images/aboutNav.png"
-            alt="About Me"
-            class="img-fluid navIcon"
-          />
-        </div>
-        <div class="optionContainer" @click="scrollToSection('contactSection')">
-          <img
-            src="/images/contactNav.png"
-            alt="Contact"
-            class="img-fluid navIcon"
-          />
-        </div>
+      <div class="optionContainer" @click="scrollToSection('aboutMeSection')">
+        <img
+          src="/images/aboutNav.png"
+          alt="About Me"
+          class="img-fluid navIcon"
+        />
       </div>
-    </BRow>
-  </BContainer>
+      <div class="optionContainer" @click="scrollToSection('contactSection')">
+        <img
+          src="/images/contactNav.png"
+          alt="Contact"
+          class="img-fluid navIcon"
+        />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -73,44 +71,27 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
-.menu {
-  position: relative;
-  border: 1px solid transparent;
-}
 .customMenuContainer {
+  width: 2.75rem;
+  aspect-ratio: 1 / 1;
   position: fixed;
-  z-index: 2 !important;
-}
-.coreMenu {
-  overflow: hidden;
+  // below the loader but above everything else
+  z-index: 9998 !important;
 }
 .optionContainer {
   cursor: pointer;
-  display: block;
-  height: 50px;
-  width: 50px;
-  margin: 15px 0 0 0;
+  // display: block;
+  height: 100%;
+  width: 100%;
   background: $lightWhiteColor;
-  padding: 0;
-  right: 0;
   border-radius: 50%;
-  position: absolute;
-  z-index: 2;
   border: 1px solid $darkBlackColor;
-  -webkit-transition: all 500ms ease;
-  -moz-transition: all 500ms ease;
-  transition: all 500ms ease;
-  @media (max-width: $screen-sm) {
-    height: 35px !important;
-    width: 35px !important;
-  }
+  transition: all 300ms ease;
   .bar {
-    -webkit-transition: all 500ms ease;
-    -moz-transition: all 500ms ease;
-    transition: all 500ms ease;
+    position: absolute;
     height: 1px;
     background: $darkBlackColor;
-    position: absolute;
+    transition: all 300ms ease;
   }
   .top {
     top: 35%;
@@ -139,48 +120,23 @@ export default defineComponent({
     }
   }
   &.active {
-    -webkit-transform: scale(0.8);
-    -moz-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    -o-transform: scale(0.8);
     transform: scale(0.8);
     .center {
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-      -o-transform: rotate(-45deg);
       transform: rotate(-45deg);
     }
-    .top {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
-      transform: rotate(45deg);
-    }
+    .top,
     .bottom {
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-      -o-transform: rotate(45deg);
       transform: rotate(45deg);
     }
   }
 }
 .subMenu {
-  position: absolute;
-  right: 0;
+  width: 100%;
+  height: 100%;
   display: none;
-  margin-top: 65px;
-  width: unset;
-  padding: unset;
-  @media (max-width: $screen-sm) {
-    margin-top: 50px;
-  }
   .optionContainer {
     position: relative;
-    margin-top: 0px;
-    margin-bottom: 10px;
+    margin-top: 15%;
   }
   &.active {
     display: block;
@@ -188,12 +144,15 @@ export default defineComponent({
 }
 .navIcon {
   position: absolute;
-  right: 20%;
-  top: 20%;
   height: 60%;
   width: 60%;
-  -webkit-user-drag: none;
+  // center icon
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // prevent user drag
   user-select: none;
+  -webkit-user-drag: none;
   // ensures hover/clicks still work
   pointer-events: auto;
 }

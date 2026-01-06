@@ -25,10 +25,27 @@ export default defineComponent({
       return isCoverMounted.value && isMinLoadTimeElapsed.value;
     });
 
+    // // Function to set dynamic vh
+    // const setInnerVh = () => {
+    //   const vh = window.innerHeight * 0.01;
+    //   document.documentElement.style.setProperty("--inner--vh", `${vh}px`);
+    // };
+
+    // // Mounted lifecycle
+    // onMounted(() => {
+    //   setInnerVh(); // initial set
+    //   window.addEventListener("resize", setInnerVh);
+    // });
+
+    // // Cleanup
+    // onBeforeUnmount(() => {
+    //   window.removeEventListener("resize", setInnerVh);
+    // });
+
     // Created
     setTimeout(() => {
       isMinLoadTimeElapsed.value = true;
-    }, 4000);
+    }, 3000);
 
     // Method to handle website mounted event
     const coverMounted = (): void => {
@@ -42,20 +59,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="scss">
-@use "@/assets/styles/variables.scss" as *;
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-}
-.homeView {
-  background-color: $offWhiteColor;
-}
-</style>

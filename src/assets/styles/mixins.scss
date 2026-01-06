@@ -1,0 +1,108 @@
+// @use "@/assets/styles/variables.scss" as *;
+
+// //MARK: mixins
+// // @mixin media-xs-to-md {
+// //   @media (max-width: $screen-md) and (min-width: $screen-xs) {
+// //     @content;
+// //   }
+// // }
+
+// //MARK: scaling factors
+// $font-scale-md: 2.167;
+// $portrait-font-scale: 2.167;
+// $font-line-height-scale: 1.25;
+
+// @mixin responsive-font($default-font-size, $font-weight) {
+//   & {
+//     font-size: $default-font-size;
+//     font-weight: $font-weight;
+//     line-height: $default-font-size * $font-line-height-scale;
+//   }
+//   // scaling font for smaller than med devices
+//   @media (max-width: $screen-md) {
+//     font-size: $default-font-size * $font-scale-md;
+//     line-height: ($default-font-size * $font-scale-md) * $font-line-height-scale;
+//   }
+// }
+
+// //MARK: need to clean up this mixin
+// @mixin orientation-responsive-font($default-font-size, $font-weight) {
+//   & {
+//     font-size: $default-font-size;
+//     font-weight: $font-weight;
+//     line-height: $default-font-size * $font-line-height-scale;
+//   }
+//   // scaling font for smaller than med devices
+//   @media (orientation: portrait) and (max-width: $screen-sm) {
+//     font-size: $default-font-size * $portrait-font-scale;
+//     line-height: ($default-font-size * $portrait-font-scale) *
+//       $font-line-height-scale;
+//   }
+
+//   @media (orientation: portrait) and (min-width: ($screen-sm + 1)) {
+//     font-size: $default-font-size * 1.833;
+//     line-height: ($default-font-size * 1.833) * $font-line-height-scale;
+//   }
+// }
+
+// @mixin chatgpt-font($size, $weight) {
+//   & {
+//     font-size: $size;
+//     font-weight: $weight;
+//     line-height: $size * $font-line-height-scale;
+//   }
+//   // @media (max-width: $screen-sm) {
+//   //   font-size: $size * 0.75;
+//   //   line-height: ($size * 0.75) * $font-line-height-scale;
+//   // }
+//   // @media (min-width: ($screen-sm + 1)) and (max-width: $screen-md) {
+//   //   font-size: $size * 1;
+//   //   line-height: ($size * 1) * $font-line-height-scale;
+//   // }
+//   // @media (min-width: ($screen-md + 1))  {
+//   //   font-size: $size * 1;
+//   //   line-height: ($size * 1) * $font-line-height-scale;
+//   // }
+//   @media (min-width: ($screen-xs + 1)) and (orientation: portrait) {
+//     //cover font needs to be larger
+//     //main font is good
+//     //recommendation might need to break to be only 1 if portrait orientation
+//     font-size: $size * 1.4;
+//     line-height: ($size * 1.4) * $font-line-height-scale;
+//   }
+
+//   // @media (max-width: $screen-lg) and (orientation: landscape){
+//   //   //cover font needs to be larger
+//   //   //main font is good
+//   //   //recommendation might need to break to be only 1 if portrait orientation
+//   //   font-size: $size * 0.5;
+//   //   line-height: ($size * 0.5) * $font-line-height-scale;
+//   // }
+
+//   // @media (orientation: landscape) {
+//   //   font-size: $size * 0.9;
+//   //   line-height: ($size * 0.9) * $font-line-height-scale;
+//   // }
+
+//   // @media (min-width: ($screen-md + 1)) and (orientation: portrait) {
+//   //   //cover font needs to be larger
+//   //   //main font is good
+//   //   //recommendation might need to break to be only 1 if portrait orientation
+//   //   font-size: $size;
+//   //   line-height: ($size) * $font-line-height-scale;
+//   // }
+
+//   //   @media ((max-width: $screen-lg) and (orientation: landscape)){
+//   //   //cover font needs to be larger
+//   //   //main font is good
+//   //   //recommendation might need to break to be only 1 if portrait orientation
+//   //   font-size: $size * 0.8;
+//   //   line-height: ($size * 0.8) * $font-line-height-scale;
+//   // }
+// }
+
+// @mixin portrait-scale($scale) {
+//   @media (orientation: portrait) {
+//     font-size: calc(1rem * $scale);
+//   }
+// }

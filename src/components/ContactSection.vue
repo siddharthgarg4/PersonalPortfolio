@@ -1,35 +1,33 @@
 <template>
-  <BContainer class="contactContainer" fluid>
+  <BContainer class="contactContainer componentContainerPadding" fluid>
     <BRow>
       <BCol cols="12">
-        <p class="coverTitle removeMargin">Like what you see? Let’s talk.</p>
-      </BCol>
-      <BCol cols="12">
-        <p class="aboutMeDescription">
+        <p class="coverTitle">Like what you see? Let’s talk.</p>
+        <p class="coverPara">
           <!-- eslint-disable-next-line -->
-          <!-- I am currently seeking full-time opportunities starting Spring
-          © 2025.<br /> -->
+          I'm currently seeking full-time opportunities starting winter 2026.<br />
+        </p>
+        <p class="coverResume">
+          <!-- © copyright icon -->
           Made with 🤍 in Toronto
         </p>
       </BCol>
-    </BRow>
-    <BRow class="contactIconContainer">
-      <BCol>
+      <BCol cols="12" class="iconRow">
         <img
           src="/images/linkedinContact.png"
-          class="img-fluid contactIcon cursorPointer"
+          class="img-fluid contactIcon"
           @click="handleContactLink('linkedin')"
           loading="lazy"
         />
         <img
           src="/images/emailContact.png"
-          class="img-fluid contactIcon emailIcon cursorPointer"
+          class="img-fluid contactIcon"
           @click="handleContactLink('email')"
           loading="lazy"
         />
         <img
           src="/images/githubContact.png"
-          class="img-fluid contactIcon cursorPointer"
+          class="img-fluid contactIcon"
           @click="handleContactLink('github')"
           loading="lazy"
         />
@@ -86,36 +84,31 @@ export default defineComponent({
 @use "@/assets/styles/variables.scss" as *;
 .contactContainer {
   background: $dolphinBlueColor;
-  padding: 5% 7.5% 5% 7.5%;
+  .coverTitle {
+    margin-bottom: 0.25rem;
+  }
+  .coverPara {
+    margin-bottom: 1.75rem;
+  }
+
   .coverTitle,
-  .aboutMeDescription {
+  .coverResume,
+  .coverPara {
     color: $lightWhiteColor;
     text-align: center;
   }
-  .coverTitle {
-    font-weight: 500;
-    line-height: 3.5vw;
-    @media (max-width: $screen-md) {
-      line-height: 7vw;
-    }
-  }
-  .aboutMeDescription {
-    margin: 15px 0 0 0;
-    font-weight: 500;
+}
+.iconRow {
+  display: flex;
+  justify-content: center;
+  gap: 3.25%;
+  @media (orientation: portrait) {
+    gap: 6.5%;
   }
 }
 .contactIcon {
-  height: auto;
-  width: 3vw;
-  margin: 30px 2.5vw 15px 2.5vw;
-  @media (max-width: $screen-lg) and (min-width: $screen-sm) {
-    width: 50px;
-  }
-  @media (max-width: $screen-sm) and (min-width: $screen-xs) {
-    width: 40px;
-  }
-  @media (max-width: $screen-xs) {
-    width: 30px;
-  }
+  cursor: pointer;
+  object-fit: contain;
+  width: 2.75rem;
 }
 </style>

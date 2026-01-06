@@ -16,11 +16,24 @@ export default defineComponent({
   setup(props) {
     const isVisible = ref<boolean>(true);
 
+    // function to lock and unlock scroll
+    const toggleScrollLock = (lock: boolean): void => {
+      if (lock) {
+        document.body.classList.add("no-scroll");
+        document.documentElement.classList.add("no-scroll");
+      } else {
+        document.body.classList.remove("no-scroll");
+        document.documentElement.classList.remove("no-scroll");
+      }
+    };
+
     watch(
       () => props.stopLoading,
       (newVal) => {
         isVisible.value = !newVal;
+        toggleScrollLock(!newVal);
       },
+      { immediate: true },
     );
 
     return {
@@ -29,33 +42,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped lang="scss">
-@use "@/assets/styles/variables.scss" as *;
-.loader {
-  background-image: url("@/assets/loading-moving-car.svg");
-  background-color: $dolphinBlueColor;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100%;
-  width: 100%;
-  bottom: 0;
-  display: block;
-  left: 0;
-  overflow: hidden;
-  position: fixed;
-  right: 0;
-  top: 0;
-  z-index: 9999; /* should be at the top of every element */
-  pointer-events: auto;
-}
-.fadeoutLoader {
-  opacity: 0;
-  visibility: hidden;
-  /* Allow clicks through */
-  pointer-events: none;
-  transition:
-    opacity 2s,
-    visibility 2s;
-}
-</style>

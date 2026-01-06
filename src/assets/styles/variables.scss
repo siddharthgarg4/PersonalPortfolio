@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600&display=swap");
 
 //Mark: colors
-$offWhiteColor: #efefef;
+$offWhiteColor: #e0e0e0; //#e8e8e8
 $darkBlueColor: #2c6cd9;
-$lightWhiteColor: #f8f8f8;
-$secondary: #efefef;
+$lightWhiteColor: #f4f4f4;
+$secondary: #e8e8e8;
 $darkBlackColor: #1c1c1e;
 $mediumGrayColor: #1f1f1f;
 $babyBlueColor: #6faed8;
@@ -23,8 +23,8 @@ $screen-lg: 1199px;
 //Mark: carousel component style variables
 :root {
   //vc-navigation
-  --vc-nav-width: 35px;
-  --vc-nav-height: 35px;
+  --vc-nav-width: 2.75rem;
+  --vc-nav-height: 2.75rem;
   --vc-nav-color: #{$dolphinBlueColor};
   --vc-nav-color-hover: #{rgba($dolphinBlueColor, 0.5)};
   //vc-pagination
