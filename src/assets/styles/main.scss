@@ -15,10 +15,10 @@ body {
 }
 html {
   scroll-behavior: smooth;
-  //chatgpt
-  font-size: clamp(11px, 1vw, 36px);
+  // responsive font size (rem)
+  font-size: clamp(12px, 1.1vw, 36px);
   @media (orientation: portrait) and (min-width: $screen-xs) {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
 }
 // body {

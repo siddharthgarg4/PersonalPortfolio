@@ -169,6 +169,9 @@ export default defineComponent({
 .coverImage {
   width: 57.5%;
   object-fit: contain;
+  @media (orientation: landscape) {
+    transform: translateX(17.5%);
+  }
   @media (orientation: portrait) and (min-width: $screen-sm) {
     width: 47.5%;
   }
