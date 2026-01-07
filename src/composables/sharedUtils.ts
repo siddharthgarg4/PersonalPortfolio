@@ -1,6 +1,8 @@
 // Note: Shared utility functions
 export const visitLink = (link: string): void => {
-  window.open(link, "_blank");
+  //defensive check
+  if (!link) return;
+  window.open(link, "_blank", "noopener,noreferrer");
 };
 
 export const visitSection = (sectionId: string): void => {

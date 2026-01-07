@@ -39,6 +39,12 @@ html {
 .tintFont {
   color: $dolphinBlueColor;
 }
+.urlFont {
+  cursor: pointer;
+  font-style: italic;
+  text-decoration: underline;
+  color: $dolphinBlueColor;
+}
 .responsiveTextAlign {
   text-align: start;
   @media (orientation: portrait) {

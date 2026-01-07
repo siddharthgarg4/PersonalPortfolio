@@ -26,8 +26,21 @@ interface AboutMeType {
   linkedin: string;
   email: string;
   resume: string;
+  uwCS: string;
+  wluBBA: string;
+  yesTheoryYT: string;
   keySkills: string[];
 }
+
+//AboutMeLinkType
+type AboutMeLinkType =
+  | "github"
+  | "linkedin"
+  | "email"
+  | "resume"
+  | "uwCS"
+  | "wluBBA"
+  | "yesTheoryYT";
 
 // src/types/content.d.ts
 declare module "@/assets/content.json" {

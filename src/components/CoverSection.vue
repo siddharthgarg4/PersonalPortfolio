@@ -77,8 +77,11 @@ export default defineComponent({
 
     // Method to handle resume click event and ensure link exists
     const handleVisitResume = (): void => {
-      if (currentPersonalDetails.value) {
-        visitLink(currentPersonalDetails.value.resume);
+      const link = currentPersonalDetails.value?.resume;
+      if (link) {
+        visitLink(link);
+      } else {
+        console.error(`No link found for resume`);
       }
     };
 
