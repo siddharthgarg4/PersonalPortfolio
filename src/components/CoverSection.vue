@@ -77,8 +77,11 @@ export default defineComponent({
 
     // Method to handle resume click event and ensure link exists
     const handleVisitResume = (): void => {
-      if (currentPersonalDetails.value) {
-        visitLink(currentPersonalDetails.value.resume);
+      const link = currentPersonalDetails.value?.resume;
+      if (link) {
+        visitLink(link);
+      } else {
+        console.error(`No link found for resume`);
       }
     };
 
@@ -169,6 +172,9 @@ export default defineComponent({
 .coverImage {
   width: 57.5%;
   object-fit: contain;
+  @media (orientation: landscape) {
+    transform: translateX(17.5%);
+  }
   @media (orientation: portrait) and (min-width: $screen-sm) {
     width: 47.5%;
   }

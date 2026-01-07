@@ -11,56 +11,62 @@
               <!-- 1. Intro -->
               Hello again! 👋🏽
               <br /><br />
-              My name's Siddharth (Sid), and here's a little glimpse of my
-              journey so far.
+              My name is Siddharth (Sid), and I'd love to share a glimpse into
+              my journey so far.
               <br /><br />
-              <span class="tintFont">“Seek Discomfort”</span> has been a
-              defining theme throughout — a constant reminder that holistic
-              growth comes from the steadfast pursuit of new opportunities and
-              challenges in unfamiliar environments. <br /><br />
+              <span class="tintFont">“Seek Discomfort”</span>
+              (<span class="urlFont" @click="handleAboutMeLink('yesTheoryYT')"
+                >inspired by Yes Theory - Youtube</span
+              >) has been a guiding principle for me—a constant reminder to
+              embrace new opportunities and unfamiliar challenges.
               <!-- 2. International -->
               <!-- 3. Education -->
-              This mindset is reflected throughout my higher education in
-              Canada, where I participated in several hackathons across North
-              America, engaged in extracurriculars like Habitat for Humanity,
-              took part in an academic exchange in Europe, and worked part-time
-              at the university library, among other experiences. In October
-              2022, I graduated with dual degrees — a
-              <span class="tintFont">Bachelor of Computer Science</span> and a
-              <span class="tintFont">Bachelor of Business Administration</span>.
+              This is evident throughout my higher education in Canada, where I
+              participated in hackathons across North America, held leadership
+              positions in extracurriculars such as UW Habitat for Humanity,
+              took part in an academic exchange in Europe, and even worked
+              part-time at the university library.
               <br /><br />
+              In October 2022, I was honoured with dual degrees—a
+              <span class="tintFont">Bachelor of Computer Science</span>
+              (<span class="urlFont" @click="handleAboutMeLink('uwCS')"
+                >University of Waterloo</span
+              >) and a
+              <span class="tintFont">
+                Bachelor of Business Administration - Finance
+              </span>
+              (<span class="urlFont" @click="handleAboutMeLink('wluBBA')"
+                >Wilfrid Laurier University</span
+              >).
               <!-- 4. Experiences -->
-              Fascinated by the intersection of these fields, I explored roles
+              Intrigued by the blend of these fields, I have explored roles
               ranging from
-              <!-- eslint-disable-next-line -->
               <span class="tintFont">
                 software engineering to product management
               </span>
-              at companies across different sizes, industries, and market
-              segments. My most recent experience was at an ed-tech company,
-              building
-              <span class="tintFont">AI-powered workforce systems</span> aimed
-              at empowering individuals, organizations, and governments in a
-              rapidly evolving digital world. <br /><br />
+              at companies of varying sizes, industries, and market segments.
+              <br /><br />
+              In my most recent role at an ed-tech company, I helped build
+              <span class="tintFont">AI-powered workforce systems</span>
+              designed to empower individuals, organizations, and governments in
+              a rapidly evolving digital landscape.
               <!-- 5. Extracurricular -->
               Outside of school and work, I enjoy hiking, playing soccer,
-              exploring cities, going on unplanned adventures, and meeting new
-              people.
+              exploring cities, embarking on spontaneous adventures, and meeting
+              new people.
               <br /><br />
               <!-- 6. Outro -->
               With a strong desire to contribute to the greater social good, I'm
-              <!-- eslint-disable-next-line -->
               currently
-              <span class="tintFont"
-                >seeking new projects and opportunities</span
-              >
-              with an aligned goal of creating
-              <!-- eslint-disable-next-line -->
+              <span class="tintFont">
+                seeking new projects and opportunities
+              </span>
+              that align with my goal of creating
               <span class="tintFont">long-term, positive societal impact</span>.
               <br /><br />
-              Feel free to reach out through any of the social links at the
-              bottom of the page to discuss outrageous ideas, grab a coffee or
-              even just to say hi! 💬 ☕ 🙌🏽
+              Feel free to connect with me through any of the social links at
+              the bottom of the page to discuss outrageous ideas, grab a coffee,
+              or even just to say hi! 💬 ☕ 🙌🏽
             </p>
           </BCol>
         </BRow>
@@ -99,7 +105,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted, ref } from "vue";
+import { visitLink } from "@/composables/sharedUtils";
+import json from "@/assets/content.json";
 // Carousel specific imports
 import { Carousel, Slide, Pagination, Navigation } from "vue3-carousel";
 import "vue3-carousel/carousel.css";
@@ -116,6 +124,7 @@ export default defineComponent({
   },
   setup() {
     // Reactives
+    const currentPersonalDetails = ref<AboutMeType | null>(null);
     const carouselConfig = useCarouselConfig({
       breakpoints: {
         0: { itemsToShow: 1 },
@@ -134,9 +143,31 @@ export default defineComponent({
       "aaronStuartRecommendation",
     ];
 
+    // Method to handle safe link visit
+    const handleAboutMeLink = (aboutMeLink: AboutMeLinkType): void => {
+      const link = currentPersonalDetails.value?.[aboutMeLink];
+      if (link) {
+        visitLink(link);
+      } else {
+        console.error(`No link found for ${aboutMeLink}`);
+      }
+    };
+    // Method to load data
+    const loadAboutMeData = (): void => {
+      currentPersonalDetails.value = json[
+        "me"
+      ] as typeof currentPersonalDetails.value;
+    };
+
+    // Mounted lifecycle hook
+    onMounted(() => {
+      loadAboutMeData();
+    });
+
     return {
       carouselConfig,
       recommendations,
+      handleAboutMeLink,
     };
   },
 });

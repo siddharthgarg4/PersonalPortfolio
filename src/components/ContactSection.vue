@@ -41,9 +41,6 @@ import { defineComponent, ref, onMounted } from "vue";
 import { visitLink } from "@/composables/sharedUtils";
 import json from "@/assets/content.json";
 
-// Define the valid keys of currentPersonalDetails
-type ContactType = "linkedin" | "email" | "github";
-
 export default defineComponent({
   name: "ContactSection",
   setup() {
@@ -51,10 +48,8 @@ export default defineComponent({
     const currentPersonalDetails = ref<AboutMeType | null>(null);
 
     // Method to handle safe link visit
-    const handleContactLink = (contactType: ContactType): void => {
-      const link = currentPersonalDetails.value
-        ? currentPersonalDetails.value[contactType]
-        : "";
+    const handleContactLink = (contactType: AboutMeLinkType): void => {
+      const link = currentPersonalDetails.value?.[contactType];
       if (link) {
         visitLink(link);
       } else {
@@ -101,10 +96,7 @@ export default defineComponent({
 .iconRow {
   display: flex;
   justify-content: center;
-  gap: 3.25%;
-  @media (orientation: portrait) {
-    gap: 6.5%;
-  }
+  gap: 3.25rem;
 }
 .contactIcon {
   cursor: pointer;

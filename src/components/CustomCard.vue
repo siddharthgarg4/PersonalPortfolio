@@ -244,13 +244,13 @@ export default defineComponent({
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.3em;
+  gap: 0.3rem;
 }
 // :deep(highlighted) - if you want to pierce scope
 .highlightedPill {
   background-color: rgba(0, 0, 0, 0.05);
-  border-radius: 0.6em;
-  padding: 0.1em 0.5em;
+  border-radius: 0.6rem;
+  padding: 0.1rem 0.5rem;
   white-space: nowrap;
   //safety css
   overflow: hidden;
@@ -261,7 +261,7 @@ export default defineComponent({
     margin-top: 0.25rem;
     display: flex;
     flex-direction: column;
-    gap: 0.5em;
+    gap: 0.5rem;
     list-style: disc;
     // display: grid;
     // grid-template-columns: repeat(2, 1fr);
