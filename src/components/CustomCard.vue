@@ -269,7 +269,7 @@ export default defineComponent({
   .cardParagraph {
     text-align: left;
   }
-  @media (orientation: portrait) {
+  @media (orientation: portrait), (max-width: $screen-md) {
     display: none;
   }
 }

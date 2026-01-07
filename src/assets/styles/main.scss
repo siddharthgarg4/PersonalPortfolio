@@ -18,7 +18,12 @@ html {
   // responsive font size (rem)
   font-size: clamp(12px, 1.1vw, 36px);
   @media (orientation: portrait) and (min-width: $screen-xs) {
-    font-size: 2vw;
+    // needed to upper-bound clamp in portrait mode - ipad
+    font-size: clamp(12px, 2.1vw, 18px);
+  }
+  @media (orientation: landscape) and (max-width: $screen-md) {
+    // assists with smoothening smaller landscape screens - nest
+    font-size: clamp(12px, 1.5vw, 18px);
   }
 }
 // body {
