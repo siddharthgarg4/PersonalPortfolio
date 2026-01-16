@@ -9,7 +9,7 @@
         </p>
         <p class="coverResume">
           <!-- © copyright icon -->
-          Toronto, ON © 2026
+          📍 Toronto, ON © 2026
         </p>
       </BCol>
       <BCol cols="12" class="iconRow">
@@ -82,11 +82,11 @@ export default defineComponent({
   .coverTitle {
     margin-bottom: 0.25rem;
   }
-  // .coverPara {
-  //   margin-bottom: 1rem;
-  // }
+  .coverPara {
+    margin-bottom: 0.75rem;
+  }
   .coverResume {
-    margin-bottom: 1.75rem;
+    margin-bottom: 2.5rem;
   }
 
   .coverTitle,

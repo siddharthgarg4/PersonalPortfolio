@@ -148,9 +148,6 @@ export default defineComponent({
       // check if touch was within the card
       const target = e.target as Node;
 
-      console.log(e);
-      console.log(customCardRef.value);
-
       if (customCardRef.value && !customCardRef.value.contains(target)) {
         isTouchPreviewVisible.value = false;
       }

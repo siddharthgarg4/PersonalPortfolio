@@ -87,8 +87,20 @@ export default defineComponent({
 .customMenuContainer {
   width: 2.75rem;
   position: fixed;
+  // anchor to the top right
+  top: 1.75rem;
+  right: 3.5rem;
   // below the loader but above everything else
   z-index: 9998 !important;
+
+  transform: translate3d(0, 0, 0); 
+  -webkit-transform: translate3d(0, 0, 0);
+  
+  /* Prevent scrolling adjustments */
+  contain: layout;
+  @media (orientation: portrait) {
+    right: 1.75rem;
+  }
 }
 .optionContainer {
   cursor: pointer;
@@ -98,6 +110,7 @@ export default defineComponent({
   background: $lightWhiteColor;
   border-radius: 50%;
   border: 1px solid $darkBlackColor;
+  box-sizing: border-box;
   transition: all 300ms ease;
 
   &.active {
