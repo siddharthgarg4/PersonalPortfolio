@@ -1,7 +1,7 @@
 <template>
   <div class="customMenuContainer">
     <div
-      class="optionContainer"
+      class="mainMenu optionContainer"
       @click="toggleMenu"
       :class="{ active: isActivated }"
     >
@@ -10,12 +10,17 @@
       <div class="bar bottom"></div>
     </div>
     <div class="subMenu" :class="{ active: isActivated }">
-      <div class="optionContainer" @click="scrollToSection('coverSection')">
+      <div
+        class="optionContainer"
+        @click="scrollToSection('coverSection')"
+        data-label="Home"
+      >
         <img src="/images/homeNav.png" alt="Home" class="img-fluid navIcon" />
       </div>
       <div
         class="optionContainer"
         @click="scrollToSection('experienceSection')"
+        data-label="Experience"
       >
         <img
           src="/images/projectsNav.png"
@@ -23,14 +28,22 @@
           class="img-fluid navIcon"
         />
       </div>
-      <div class="optionContainer" @click="scrollToSection('aboutMeSection')">
+      <div
+        class="optionContainer"
+        @click="scrollToSection('aboutMeSection')"
+        data-label="About Me"
+      >
         <img
           src="/images/aboutNav.png"
           alt="About Me"
           class="img-fluid navIcon"
         />
       </div>
-      <div class="optionContainer" @click="scrollToSection('contactSection')">
+      <div
+        class="optionContainer"
+        @click="scrollToSection('contactSection')"
+        data-label="Contact"
+      >
         <img
           src="/images/contactNav.png"
           alt="Contact"
@@ -73,7 +86,6 @@ export default defineComponent({
 @use "@/assets/styles/variables.scss" as *;
 .customMenuContainer {
   width: 2.75rem;
-  aspect-ratio: 1 / 1;
   position: fixed;
   // below the loader but above everything else
   z-index: 9998 !important;
@@ -81,12 +93,30 @@ export default defineComponent({
 .optionContainer {
   cursor: pointer;
   // display: block;
-  height: 100%;
   width: 100%;
+  aspect-ratio: 1 / 1;
   background: $lightWhiteColor;
   border-radius: 50%;
   border: 1px solid $darkBlackColor;
   transition: all 300ms ease;
+
+  &.active {
+    // applies to both hover and touch
+    transform: scale(0.8);
+  }
+  @media (hover: hover) {
+    // only applies to hover devices (laptop)
+    &:hover {
+      transition: all 300ms ease;
+      border-color: $lightWhiteColor;
+      background-color: $dolphinBlueColor;
+      .navIcon {
+        filter: invert(100%) brightness(1) contrast(1) saturate(100%);
+      }
+    }
+  }
+}
+.mainMenu {
   .bar {
     position: absolute;
     height: 1px;
@@ -108,21 +138,7 @@ export default defineComponent({
     left: 20%;
     width: 60%;
   }
-  @media (hover: hover) {
-    &:hover {
-      transition: all 300ms ease;
-      border-color: $offWhiteColor;
-      background-color: $dolphinBlueColor;
-      .bar {
-        background-color: $offWhiteColor;
-      }
-      .navIcon {
-        filter: invert(100%) brightness(1) contrast(1) saturate(100%);
-      }
-    }
-  }
   &.active {
-    transform: scale(0.8);
     .center {
       transform: rotate(-45deg);
     }
@@ -131,17 +147,65 @@ export default defineComponent({
       transform: rotate(45deg);
     }
   }
+  @media (hover: hover) {
+    // only applies to hover devices (laptop)
+    &:hover {
+      .bar {
+        background-color: $lightWhiteColor;
+      }
+    }
+  }
 }
 .subMenu {
   width: 100%;
-  height: 100%;
-  display: none;
+  position: absolute;
+  // display: none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition:
+    opacity 300ms ease,
+    visibility 300ms;
+
+  &.active {
+    // display: block;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
   .optionContainer {
+    // only apply to submenu
     position: relative;
     margin-top: 15%;
-  }
-  &.active {
-    display: block;
+    &::after {
+      content: attr(data-label); // Grabs the text from data-label attribute
+      position: absolute;
+      right: 80%; // Positions it to the left of the circle
+      top: 50%;
+      transform: translateY(-50%);
+      background: $lightWhiteColor;
+      color: $darkBlackColor;
+      padding: 4px 10px;
+      border-radius: 0.2em;
+      border: 1px solid $darkBlackColor;
+      font-size: 0.8rem;
+      white-space: nowrap;
+      opacity: 0;
+      // pointer-events: none;
+      transition: all 300ms ease;
+    }
+    @media (hover: hover) {
+      &:hover::after {
+        opacity: 1;
+        right: 120%; // Slight slide-in effect
+      }
+    }
+    @media (hover: none) {
+      &::after {
+        opacity: 1;
+        right: 120%; // Slight slide-in effect
+      }
+    }
   }
 }
 .navIcon {
