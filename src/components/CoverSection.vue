@@ -113,7 +113,7 @@ export default defineComponent({
   min-height: 100vh;
   min-height: 100svh; // fallback only
   // width: 100%;
-  padding: 1.75rem 3.5rem;
+  padding: 1.4rem 3.4rem;
   background: linear-gradient(
     90deg,
     $offWhiteColor 72.5%,
@@ -125,7 +125,7 @@ export default defineComponent({
       $offWhiteColor 72.5%,
       $dolphinBlueColor 27.5%
     );
-    padding: 1.75rem;
+    padding: 1.4rem;
   }
 }
 .logoContainer {

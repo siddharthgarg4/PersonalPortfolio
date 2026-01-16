@@ -88,8 +88,8 @@ export default defineComponent({
   width: 2.75rem;
   position: fixed;
   //anchor to the top right
-  top: 1.75rem;
-  right: 3.5rem;
+  top: 1.4rem;
+  right: 3.4rem;
   //below the loader but above everything else
   z-index: 9998 !important;
 
@@ -99,7 +99,7 @@ export default defineComponent({
   // contain: layout;
 
   @media (orientation: portrait) {
-    right: 1.75rem;
+    right: 1.4rem;
   }
 }
 .optionContainer {
