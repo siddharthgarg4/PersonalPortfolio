@@ -9,7 +9,7 @@
         </p>
         <p class="coverResume">
           <!-- © copyright icon -->
-          📍 Toronto, ON © 2026
+          📍 Toronto, Canada
         </p>
       </BCol>
       <BCol cols="12" class="iconRow">
@@ -100,7 +100,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   gap: 3.25rem;
-  // margin-bottom: 1rem;
+  margin-bottom: 30px;
 }
 .contactIcon {
   cursor: pointer;

@@ -87,17 +87,17 @@ export default defineComponent({
 .customMenuContainer {
   width: 2.75rem;
   position: fixed;
-  // anchor to the top right
+  //anchor to the top right
   top: 1.75rem;
   right: 3.5rem;
-  // below the loader but above everything else
+  //below the loader but above everything else
   z-index: 9998 !important;
 
-  transform: translate3d(0, 0, 0); 
-  -webkit-transform: translate3d(0, 0, 0);
-  
-  /* Prevent scrolling adjustments */
-  contain: layout;
+  // attempt to prevent scroll off chrome-mobile
+  // transform: translate3d(0, 0, 0); 
+  // -webkit-transform: translate3d(0, 0, 0);
+  // contain: layout;
+
   @media (orientation: portrait) {
     right: 1.75rem;
   }
@@ -191,32 +191,33 @@ export default defineComponent({
     position: relative;
     margin-top: 15%;
     &::after {
-      content: attr(data-label); // Grabs the text from data-label attribute
-      position: absolute;
-      right: 80%; // Positions it to the left of the circle
-      top: 50%;
-      transform: translateY(-50%);
-      background: $lightWhiteColor;
-      color: $darkBlackColor;
-      padding: 4px 10px;
-      border-radius: 0.2em;
-      border: 1px solid $darkBlackColor;
+      // tooltip with option label
+      content: attr(data-label);
       font-size: 0.8rem;
       white-space: nowrap;
+      padding: 0.2rem 0.5rem;
+      color: $darkBlackColor;
+      background: $lightWhiteColor;
+      border-radius: 0.2rem;
+      border: 1px solid $darkBlackColor;
+      // needed for about me
       opacity: 0;
-      // pointer-events: none;
+      position: absolute;
+      right: 80%;
+      top: 50%;
+      transform: translateY(-50%);
       transition: all 300ms ease;
     }
     @media (hover: hover) {
       &:hover::after {
         opacity: 1;
-        right: 120%; // Slight slide-in effect
+        right: 120%;
       }
     }
     @media (hover: none) {
       &::after {
         opacity: 1;
-        right: 120%; // Slight slide-in effect
+        right: 120%;
       }
     }
   }
