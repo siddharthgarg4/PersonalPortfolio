@@ -2,6 +2,7 @@
   <div class="homeView" id="homeView">
     <LoadingScreen id="loadingScreen" :stopLoading="shouldStopLoading" />
     <CoverSection id="coverSection" @coverLoaded="coverMounted"></CoverSection>
+    <customMenu></customMenu>
     <ExperienceAndProjectsSection
       id="experienceSection"
     ></ExperienceAndProjectsSection>

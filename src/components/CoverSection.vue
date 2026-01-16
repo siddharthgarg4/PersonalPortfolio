@@ -4,9 +4,6 @@
       <BCol class="logoContainer">
         <img class="sgLogo" src="@/assets/sgLogo.png" />
       </BCol>
-      <BCol class="menuContainer">
-        <customMenu></customMenu>
-      </BCol>
     </BRow>
     <BRow class="coverCenter">
       <BCol class="coverTextContainer">
@@ -116,7 +113,7 @@ export default defineComponent({
   min-height: 100vh;
   min-height: 100svh; // fallback only
   // width: 100%;
-  padding: 1.5% 3.75%;
+  padding: 1.4rem 3.4rem;
   background: linear-gradient(
     90deg,
     $offWhiteColor 72.5%,
@@ -128,7 +125,7 @@ export default defineComponent({
       $offWhiteColor 72.5%,
       $dolphinBlueColor 27.5%
     );
-    padding: 3.75%;
+    padding: 1.4rem;
   }
 }
 .logoContainer {
@@ -137,10 +134,6 @@ export default defineComponent({
 }
 .sgLogo {
   width: 2.75rem;
-}
-.menuContainer {
-  display: flex;
-  justify-content: end;
 }
 .coverCenter {
   display: flex;

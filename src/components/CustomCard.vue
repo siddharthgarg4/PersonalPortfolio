@@ -1,6 +1,6 @@
 <template>
   <BContainer fluid class="h-100">
-    <div ref="customCardRef" class="h-100">
+    <div ref="customCardRef" class="cardWrapper h-100">
       <BCard
         v-if="currentExperienceDetails"
         no-body
@@ -215,21 +215,24 @@ export default defineComponent({
 
 <style scoped lang="scss">
 @use "@/assets/styles/variables.scss" as *;
-.customCard {
-  cursor: pointer;
-  background-color: $offWhiteColor;
-  border: none;
-  transition: transform 300ms ease;
-  // overflow: hidden;
-
+.cardWrapper {
   @media (hover: hover) {
     &:hover {
-      transform: scale(0.95);
+      .customCard {
+        transform: scale(0.95);
+      }
       .cardOverlay {
         opacity: 1;
       }
     }
   }
+}
+.customCard {
+  cursor: pointer;
+  border: none;
+  background-color: $offWhiteColor;
+  transition: transform 300ms ease;
+  // overflow: hidden;
 }
 .customCard.touchScreenPreview {
   transform: scale(0.95);
@@ -290,13 +293,11 @@ export default defineComponent({
   // match card bottom rounding
   border-radius: 0 0 var(--bs-border-radius) var(--bs-border-radius);
 }
-
 .isFT .cardOverlay {
   @media (min-width: $screen-md) {
     border-radius: 0 var(--bs-border-radius) var(--bs-border-radius) 0;
   }
 }
-
 .cardOverlay.touchScreenPreview {
   opacity: 1;
 }

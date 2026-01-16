@@ -9,7 +9,7 @@
         </p>
         <p class="coverResume">
           <!-- © copyright icon -->
-          Made with 🤍 in Toronto
+          📍 Toronto, Canada
         </p>
       </BCol>
       <BCol cols="12" class="iconRow">
@@ -83,7 +83,10 @@ export default defineComponent({
     margin-bottom: 0.25rem;
   }
   .coverPara {
-    margin-bottom: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .coverResume {
+    margin-bottom: 2.5rem;
   }
 
   .coverTitle,
@@ -97,6 +100,7 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   gap: 3.25rem;
+  margin-bottom: 30px;
 }
 .contactIcon {
   cursor: pointer;
