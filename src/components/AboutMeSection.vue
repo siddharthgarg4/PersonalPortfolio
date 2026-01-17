@@ -23,7 +23,7 @@
               <!-- 3. Education -->
               This mindset shaped my higher education in Canada, where I
               participated in hackathons across North America, held leadership
-              positions at extracurriculars such as UW Habitat for Humanity,
+              positions in extracurriculars such as UW Habitat for Humanity,
               attended an academic exchange in Europe and worked part-time at
               the university library, to name a few.
               <br /><br />
