@@ -23,9 +23,9 @@
               <!-- 3. Education -->
               This mindset shaped my higher education in Canada, where I
               participated in hackathons across North America, held leadership
-              positions in various extracurriculars, attended an academic
-              exchange in Europe and worked part-time at the university library,
-              to name a few.
+              positions at extracurriculars such as UW Habitat for Humanity,
+              attended an academic exchange in Europe and worked part-time at
+              the university library, to name a few.
               <br /><br />
               In late October 2022, I graduated with dean’s honours in dual
               degrees—a
