@@ -11,24 +11,24 @@
               <!-- 1. Intro -->
               Hello again! 👋🏽
               <br /><br />
-              My name's Siddharth (Sid), and I'd love to share with you some
-              highlights of my journey so far.
+              My name's Siddharth (Sid), and I'm an engineer fueled by empathy
+              and curiosity. I thrive at the intersection of complex
+              problem-solving and user-centric design.
               <br /><br />
+              <!-- 2. Philosophy -->
               <span class="tintFont">“Seek Discomfort”</span>
               (<span class="urlFont" @click="handleAboutMeLink('yesTheoryYT')"
                 >inspired by Yes Theory</span
               >) has been my guiding principle—a constant reminder to embrace
               new opportunities and unfamiliar challenges.
-              <!-- 2. International -->
               <!-- 3. Education -->
               This mindset shaped my higher education in Canada, where I
-              participated in hackathons across North America, held leadership
-              positions in extracurriculars such as UW Habitat for Humanity,
-              attended an academic exchange in Europe and worked part-time at
-              the university library, to name a few.
+              balanced rigorous academics with part-time work at the university
+              library, leadership positions in student extracurriculars,
+              hackathons across North America, and an academic exchange in
+              Europe.
               <br /><br />
-              In late October 2022, I graduated with dean’s honours in dual
-              degrees—a
+              In late 2022, I graduated with dual degrees—a
               <span class="tintFont">Bachelor of Computer Science</span>
               (<span class="urlFont" @click="handleAboutMeLink('uwCS')"
                 >University of Waterloo</span
@@ -40,19 +40,19 @@
                 >Wilfrid Laurier University</span
               >).
               <!-- 4. Experiences -->
-              Intrigued by the blend of different fields, I have explored roles
-              ranging from software engineering to product management at
-              companies of varying sizes, industries and market segments.
+              Fascinated by the intersection of these fields, I have explored
+              several roles ranging from software engineering to product
+              management at companies of varying sizes, industries, and market
+              segments.
               <br /><br />
-              In my most recent role at an ed-tech company, I helped build
+              Most recently, I was at an ed-tech company building
               <span class="tintFont">AI-powered workforce systems</span>
-              designed to empower individuals, organizations and governments in
+              designed to empower individuals, organizations, and governments in
               a rapidly evolving digital landscape.
               <br /><br />
               <!-- 5. Extracurricular -->
-              Outside of school and work, I enjoy hiking, playing soccer,
-              exploring cities, embarking on spontaneous adventures and meeting
-              new people.
+              Outside of school and work, you'll find me hiking, nurturing
+              plants, playing soccer, or embarking on adventures in new cities.
               <!-- 6. Outro -->
               With a strong desire to contribute to the greater social good, I'm
               currently seeking
@@ -60,9 +60,9 @@
               that align with my goal of creating
               <span class="tintFont">long-term, positive societal impact</span>.
               <br /><br />
-              Connect with me through any of the social links at the bottom of
-              the page to discuss outrageous ideas, grab a coffee, or even just
-              to say hi! 💬 ☕ 🙌🏽
+              Feel free to connect with me through any of the social links at
+              the bottom of the page to discuss outrageous ideas, grab a coffee,
+              or even just to say hi! 💬 ☕ 🙌🏽
             </p>
           </BCol>
         </BRow>
