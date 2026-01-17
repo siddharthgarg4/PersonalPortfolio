@@ -5,7 +5,7 @@
         <p class="coverTitle">Like what you see? Let’s talk.</p>
         <p class="coverPara">
           <!-- eslint-disable-next-line -->
-          I'm currently seeking full-time opportunities starting winter 2026.<br />
+          I'm currently seeking full-time opportunities starting Spring 2026.<br />
         </p>
         <p class="coverResume">
           <!-- © copyright icon -->
